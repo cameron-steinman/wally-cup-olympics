@@ -1,0 +1,4080 @@
+{
+  "updated_at": "2026-02-12T16:00:00Z",
+  "tournament_status": "group_stage",
+  "schedule": {
+    "games": [
+      {
+        "id": 2025090001,
+        "date": "2026-02-11",
+        "time": "10:30 AM ET",
+        "away": "SVK",
+        "home": "FIN",
+        "status": "FINAL",
+        "away_score": 4,
+        "home_score": 1
+      },
+      {
+        "id": 2025090002,
+        "date": "2026-02-11",
+        "time": "3:00 PM ET",
+        "away": "SWE",
+        "home": "ITA",
+        "status": "FINAL",
+        "away_score": 5,
+        "home_score": 2
+      },
+      {
+        "id": 2025090003,
+        "date": "2026-02-12",
+        "time": "6:10 AM ET",
+        "away": "SUI",
+        "home": "FRA",
+        "status": "FINAL",
+        "away_score": 4,
+        "home_score": 0
+      },
+      {
+        "id": 2025090004,
+        "date": "2026-02-12",
+        "time": "10:40 AM ET",
+        "away": "CZE",
+        "home": "CAN",
+        "status": "LIVE",
+        "away_score": 1,
+        "home_score": 2
+      },
+      {
+        "id": 2025090005,
+        "date": "2026-02-12",
+        "time": "3:10 PM ET",
+        "away": "LAT",
+        "home": "USA",
+        "status": "FUT"
+      },
+      {
+        "id": 2025090006,
+        "date": "2026-02-12",
+        "time": "3:10 PM ET",
+        "away": "GER",
+        "home": "DEN",
+        "status": "FUT"
+      }
+    ]
+  },
+  "country_status": {
+    "CAN": {
+      "status": "active",
+      "name": "Canada",
+      "flag": "\ud83c\udde8\ud83c\udde6",
+      "next_game": null
+    },
+    "USA": {
+      "status": "active",
+      "name": "United States",
+      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "next_game": {
+        "vs": "LAT",
+        "date": "2026-02-12",
+        "time": "3:10 PM ET"
+      }
+    },
+    "SWE": {
+      "status": "active",
+      "name": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "next_game": null
+    },
+    "FIN": {
+      "status": "active",
+      "name": "Finland",
+      "flag": "\ud83c\uddeb\ud83c\uddee",
+      "next_game": null
+    },
+    "CZE": {
+      "status": "active",
+      "name": "Czechia",
+      "flag": "\ud83c\udde8\ud83c\uddff",
+      "next_game": null
+    },
+    "SUI": {
+      "status": "active",
+      "name": "Switzerland",
+      "flag": "\ud83c\udde8\ud83c\udded",
+      "next_game": null
+    },
+    "GER": {
+      "status": "active",
+      "name": "Germany",
+      "flag": "\ud83c\udde9\ud83c\uddea",
+      "next_game": {
+        "vs": "DEN",
+        "date": "2026-02-12",
+        "time": "3:10 PM ET"
+      }
+    },
+    "SVK": {
+      "status": "active",
+      "name": "Slovakia",
+      "flag": "\ud83c\uddf8\ud83c\uddf0",
+      "next_game": null
+    },
+    "DEN": {
+      "status": "active",
+      "name": "Denmark",
+      "flag": "\ud83c\udde9\ud83c\uddf0",
+      "next_game": {
+        "vs": "GER",
+        "date": "2026-02-12",
+        "time": "3:10 PM ET"
+      }
+    },
+    "LAT": {
+      "status": "active",
+      "name": "Latvia",
+      "flag": "\ud83c\uddf1\ud83c\uddfb",
+      "next_game": {
+        "vs": "USA",
+        "date": "2026-02-12",
+        "time": "3:10 PM ET"
+      }
+    },
+    "ITA": {
+      "status": "active",
+      "name": "Italy",
+      "flag": "\ud83c\uddee\ud83c\uddf9",
+      "next_game": null
+    },
+    "FRA": {
+      "status": "active",
+      "name": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "next_game": null
+    }
+  },
+  "standings": [
+    {
+      "team": "Cam's Crunch",
+      "categories": {
+        "goals": {
+          "value": 4,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "assists": {
+          "value": 3,
+          "rank": 2,
+          "roto_points": 10.0
+        },
+        "plus_minus": {
+          "value": 8,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "pim": {
+          "value": 8,
+          "rank": 2,
+          "roto_points": 9.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 53.0,
+      "rank": 1
+    },
+    {
+      "team": "Johnny's Scrubbers",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "assists": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.5
+        },
+        "plus_minus": {
+          "value": 3,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "pim": {
+          "value": 8,
+          "rank": 2,
+          "roto_points": 9.5
+        },
+        "goalie_wins": {
+          "value": 1,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "save_pct": {
+          "value": 0.857,
+          "rank": 3,
+          "roto_points": 10.0,
+          "qualified": true
+        }
+      },
+      "total_roto_points": 49.5,
+      "rank": 2
+    },
+    {
+      "team": "Ice Holes",
+      "categories": {
+        "goals": {
+          "value": 4,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "assists": {
+          "value": 1,
+          "rank": 9,
+          "roto_points": 3.0
+        },
+        "plus_minus": {
+          "value": 8,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "pim": {
+          "value": 8,
+          "rank": 2,
+          "roto_points": 9.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 46.0,
+      "rank": 3
+    },
+    {
+      "team": "Big Shooters",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "assists": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.5
+        },
+        "plus_minus": {
+          "value": 5,
+          "rank": 4,
+          "roto_points": 9.0
+        },
+        "pim": {
+          "value": 8,
+          "rank": 2,
+          "roto_points": 9.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 41.5,
+      "rank": 4
+    },
+    {
+      "team": "Gabe's Gangsters",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "assists": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.5
+        },
+        "plus_minus": {
+          "value": 3,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "pim": {
+          "value": 0,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "goalie_wins": {
+          "value": 1,
+          "rank": 1,
+          "roto_points": 11.5
+        },
+        "save_pct": {
+          "value": 0.889,
+          "rank": 2,
+          "roto_points": 11.0,
+          "qualified": true
+        }
+      },
+      "total_roto_points": 39.0,
+      "rank": 5
+    },
+    {
+      "team": "Owen's Otters",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "assists": {
+          "value": 3,
+          "rank": 2,
+          "roto_points": 10.0
+        },
+        "plus_minus": {
+          "value": 2,
+          "rank": 9,
+          "roto_points": 3.5
+        },
+        "pim": {
+          "value": 12,
+          "rank": 1,
+          "roto_points": 12.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 38.0,
+      "rank": 6
+    },
+    {
+      "team": "Mark's Mafia",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "assists": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.5
+        },
+        "plus_minus": {
+          "value": 4,
+          "rank": 5,
+          "roto_points": 8.0
+        },
+        "pim": {
+          "value": 4,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 37.0,
+      "rank": 7
+    },
+    {
+      "team": "Willy's Warlocks",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "assists": {
+          "value": 4,
+          "rank": 1,
+          "roto_points": 12.0
+        },
+        "plus_minus": {
+          "value": 2,
+          "rank": 9,
+          "roto_points": 3.5
+        },
+        "pim": {
+          "value": 0,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0.913,
+          "rank": 1,
+          "roto_points": 12.0,
+          "qualified": true
+        }
+      },
+      "total_roto_points": 37.0,
+      "rank": 8
+    },
+    {
+      "team": "Todd's Hitmen",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "assists": {
+          "value": 1,
+          "rank": 9,
+          "roto_points": 3.0
+        },
+        "plus_minus": {
+          "value": 6,
+          "rank": 3,
+          "roto_points": 10.0
+        },
+        "pim": {
+          "value": 4,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 35.5,
+      "rank": 9
+    },
+    {
+      "team": "Cross's Beavers",
+      "categories": {
+        "goals": {
+          "value": 3,
+          "rank": 3,
+          "roto_points": 9.5
+        },
+        "assists": {
+          "value": 0,
+          "rank": 12,
+          "roto_points": 1.0
+        },
+        "plus_minus": {
+          "value": 3,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "pim": {
+          "value": 4,
+          "rank": 6,
+          "roto_points": 6.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 33.0,
+      "rank": 10
+    },
+    {
+      "team": "Bardown",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "assists": {
+          "value": 3,
+          "rank": 2,
+          "roto_points": 10.0
+        },
+        "plus_minus": {
+          "value": 0,
+          "rank": 11,
+          "roto_points": 2.0
+        },
+        "pim": {
+          "value": 0,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 30.5,
+      "rank": 11
+    },
+    {
+      "team": "Gators",
+      "categories": {
+        "goals": {
+          "value": 3,
+          "rank": 3,
+          "roto_points": 9.5
+        },
+        "assists": {
+          "value": 1,
+          "rank": 9,
+          "roto_points": 3.0
+        },
+        "plus_minus": {
+          "value": -3,
+          "rank": 12,
+          "roto_points": 1.0
+        },
+        "pim": {
+          "value": 2,
+          "rank": 9,
+          "roto_points": 4.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 3,
+          "roto_points": 5.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 4,
+          "roto_points": 5.0,
+          "qualified": false
+        }
+      },
+      "total_roto_points": 28.0,
+      "rank": 12
+    }
+  ],
+  "teams": {
+    "Todd's Hitmen": {
+      "players": [
+        {
+          "name": "Leon Draisaitl",
+          "country": "GER",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Adrian Kempe",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Artturi Lehkonen",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Gabriel Vilardi",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Evander Kane",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Sidney Crosby",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Nico Hischier",
+          "country": "SUI",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Trevor Zegras",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Roope Hintz",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 3,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Matthew Knies",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ridly Greig",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Shane Pinto",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Arber Xhekaj",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Travis Sanheim",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Noah Hanifin",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Darnell Nurse",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Darren Raddysh",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ryan McDonagh",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Igor Shesterkin",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Spencer Knight",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Elias Lindholm",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Brady Skjei",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Connor McMichael",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Simon Edvinsson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dawson Mercer",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Michael Kesselring",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Zayne Parekh",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Marco Kasper",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brett Howden",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Carter Hart",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 2,
+        "assists": 1,
+        "plus_minus": 6,
+        "pim": 4,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Bardown": {
+      "players": [
+        {
+          "name": "Ryan O'Reilly",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Taylor Hall",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake DeBrusk",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Nikita Kucherov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Macklin Celebrini",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jack Quinn",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Steven Stamkos",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brock Nelson",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Connor Bedard",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Will Smith",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jordan Eberle",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brent Burns",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Matt Roy",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "J.J. Moser",
+          "country": "SUI",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Justin Faulk",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Radko Gudas",
+          "country": "CZE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 2,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jaccob Slavin",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Filip Gustavsson",
+          "country": "SWE",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Brandon Bussi",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Yanni Gourde",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Kaapo Kakko",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Brayden Point",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jacob Trouba",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Trevor Moore",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Kris Letang",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jamie Drysdale",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Michael Misa",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Sergei Bobrovsky",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Calvin Pickard",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 2,
+        "assists": 3,
+        "plus_minus": 0,
+        "pim": 0,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Big Shooters": {
+      "players": [
+        {
+          "name": "Matt Boldy",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jesper Bratt",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Vladislav Namestnikov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Erik Haula",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Tim Stutzle",
+          "country": "GER",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Alex Ovechkin",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dylan Strome",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Auston Matthews",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 1,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Cole Perfetti",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Timo Meier",
+          "country": "SUI",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Matias Maccelli",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Frank Nazar",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Miro Heiskanen",
+          "country": "FIN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jared Spurgeon",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Owen Power",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Esa Lindell",
+          "country": "FIN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Roman Josi",
+          "country": "SUI",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "John Carlson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jesper Wallstedt",
+          "country": "SWE",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Andrei Vasilevskiy",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Anton Lundell",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Brad Marchand",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Erik Cernak",
+          "country": "SVK",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Brayden McNabb",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jordan Martinook",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "William Karlsson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Elias Pettersson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Frank Vatrano",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Connor Hellebuyck",
+          "country": "USA",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jordan Binnington",
+          "country": "CAN",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 2,
+        "assists": 2,
+        "plus_minus": 5,
+        "pim": 8,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Cam's Crunch": {
+      "players": [
+        {
+          "name": "Juraj Slafkovsky",
+          "country": "SVK",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Andrei Svechnikov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tom Wilson",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Travis Konecny",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brandon Hagel",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Beckett Sennecke",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tomas Hertl",
+          "country": "CZE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Ivan Barbashev",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Matthew Tkachuk",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Kevin Fiala",
+          "country": "SUI",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jack McBain",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Drake Batherson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Josh Manson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Charlie McAvoy",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Vince Dunn",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Filip Hronek",
+          "country": "CZE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Bowen Byram",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Erik Karlsson",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jet Greaves",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Joseph Woll",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ryan Leonard",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dylan Holloway",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Middleton",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Will Cuylle",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Drew Doughty",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Kiefer Sherwood",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tyler Myers",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Anthony Stolarz",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Joel Hofer",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Elvis Merzlikins",
+          "country": "LAT",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 4,
+        "assists": 3,
+        "plus_minus": 8,
+        "pim": 8,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Cross's Beavers": {
+      "players": [
+        {
+          "name": "Alex DeBrincat",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Lucas Raymond",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Matt Coronato",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Matvei Michkov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Nathan MacKinnon",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jonathan Huberdeau",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Cutter Gauthier",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Artemi Panarin",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mathew Barzal",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tyler Bertuzzi",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Rickard Rakell",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Mats Zuccarello",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Quinn Hughes",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 2,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Matthew Schaefer",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jackson LaCombe",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Mike Matheson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tony DeAngelo",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "John Klingberg",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mackenzie Blackwood",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tristan Jarry",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Luke Hughes",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Colton Parayko",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Josh Norris",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Anthony Duclair",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Logan Cooley",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Gustav Nyquist",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Alexander Romanov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Patrik Laine",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jacob Markstrom",
+          "country": "SWE",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Frederik Andersen",
+          "country": "DEN",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 3,
+        "assists": 0,
+        "plus_minus": 3,
+        "pim": 4,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Gabe's Gangsters": {
+      "players": [
+        {
+          "name": "Kyle Connor",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Dylan Guenther",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Anthony Cirelli",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Nick Suzuki",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Ivan Demidov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dylan Cozens",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mason McTavish",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Matty Beniers",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Sean Monahan",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jack Hughes",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Devon Toews",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Lane Hutson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Oliver Ekman-Larsson",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Artyom Levshunov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brock Faber",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Yaroslav Askarov",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Karel Vejmelka",
+          "country": "CZE",
+          "pos": "G",
+          "stats": {
+            "gp": 1,
+            "wins": 1,
+            "saves": 20,
+            "shots_against": 23,
+            "save_pct": 0.87
+          },
+          "status": "active"
+        },
+        {
+          "name": "Logan Stankoven",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Shea Theodore",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Sam Rinzel",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Pavel Buchnevich",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Marcus Foligno",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Patrick Kane",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Zach Benson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Rutger McGroarty",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Zeev Buium",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Pavel Mintyukov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Pierre-Luc Dubois",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Juuse Saros",
+          "country": "FIN",
+          "pos": "G",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 20,
+            "shots_against": 22,
+            "save_pct": 0.909
+          },
+          "status": "active"
+        },
+        {
+          "name": "Scott Wedgewood",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 1,
+          "saves": 40,
+          "shots_against": 45,
+          "save_pct": 0.889,
+          "qualified": true
+        }
+      },
+      "totals": {
+        "goals": 1,
+        "assists": 2,
+        "plus_minus": 3,
+        "pim": 0,
+        "goalie_wins": 1,
+        "save_pct": 0.889,
+        "sv_qualified": true
+      }
+    },
+    "Gators": {
+      "players": [
+        {
+          "name": "Pavel Dorofeyev",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mark Kastelic",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Sam Bennett",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Connor McDavid",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Martin Necas",
+          "country": "CZE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Zach Hyman",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brandon Duhaime",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ryan Nugent-Hopkins",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ryan Hartman",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Max Domi",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Evgeni Malkin",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Alex Killorn",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Aaron Ekblad",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Logan Stanley",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Nikita Zadorov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jalen Chatfield",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Logan Mailloux",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brayden Pachal",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Joey Daccord",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Casey DeSmith",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Joel Eriksson Ek",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Ross Colton",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mason Marchment",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Emil Lilleberg",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Lian Bichsel",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Walman",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jesperi Kotkaniemi",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Marco Rossi",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jimmy Snuggerud",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Stuart Skinner",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 3,
+        "assists": 1,
+        "plus_minus": -3,
+        "pim": 2,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Ice Holes": {
+      "players": [
+        {
+          "name": "Sam Reinhart",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 2,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Mikko Rantanen",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Tage Thompson",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Nazem Kadri",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mark Stone",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Anders Lee",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Adam Fantilli",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Seth Jarvis",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Boone Jenner",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jordan Kyrou",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mikael Backlund",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "William Nylander",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -2,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Alexander Nikishin",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dmitry Orlov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Moritz Seider",
+          "country": "GER",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Sam Malinski",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Thomas Harley",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Adam Larsson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Logan Thompson",
+          "country": "CAN",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Linus Ullmark",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Thomas Chabot",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Morgan Rielly",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Pavel Zacha",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mikael Granlund",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jonathan Drouin",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Leo Carlsson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Anze Kopitar",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Seth Jones",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "MacKenzie Weegar",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ukko-Pekka Luukkonen",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 4,
+        "assists": 1,
+        "plus_minus": 8,
+        "pim": 8,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Johnny's Scrubbers": {
+      "players": [
+        {
+          "name": "Sebastian Aho",
+          "country": "FIN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Cole Caufield",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "John Tavares",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "David Pastrnak",
+          "country": "CZE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Mitch Marner",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Nikolaj Ehlers",
+          "country": "DEN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "JJ Peterka",
+          "country": "GER",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Vincent Trocheck",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Alex Laferriere",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Matt Duchene",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Andrei Kuzmenko",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brady Tkachuk",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Rasmus Andersson",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "K'Andre Miller",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dylan DeMelo",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Sean Durzi",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jakob Chychrun",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brandon Montour",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ilya Sorokin",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Lukas Dostal",
+          "country": "CZE",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Neal Pionk",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Niko Mikkola",
+          "country": "FIN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Gabriel Landeskog",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Hampus Lindholm",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jonathan Toews",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Chris Tanev",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Oliver Bjorkstrand",
+          "country": "DEN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": -2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Adin Hill",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dan Vladar",
+          "country": "CZE",
+          "pos": "G",
+          "stats": {
+            "gp": 1,
+            "wins": 1,
+            "saves": 18,
+            "shots_against": 21,
+            "save_pct": 0.857
+          },
+          "status": "active"
+        },
+        {
+          "name": "Dustin Wolf",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 1,
+          "saves": 18,
+          "shots_against": 21,
+          "save_pct": 0.857,
+          "qualified": true
+        }
+      },
+      "totals": {
+        "goals": 2,
+        "assists": 2,
+        "plus_minus": 3,
+        "pim": 8,
+        "goalie_wins": 1,
+        "save_pct": 0.857,
+        "sv_qualified": true
+      }
+    },
+    "Mark's Mafia": {
+      "players": [
+        {
+          "name": "Dylan Larkin",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Bo Horvat",
+          "country": "CAN",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Alex Tuch",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brock Boeser",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tyler Toffoli",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Owen Tippett",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Nick Schmaltz",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Troy Terry",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Tanner Jeannot",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Bobby McMann",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mika Zibanejad",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Alexis Lafreniere",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Zach Werenski",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Cam Fowler",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brandt Clarke",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mattias Ekholm",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Rasmus Dahlin",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Cale Makar",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Darcy Kuemper",
+          "country": "CAN",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Pyotr Kochetkov",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Valeri Nichushkin",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Rasmus Sandin",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Conor Garland",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jamie Benn",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jared McCann",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Bryan Rust",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Chandler Stephenson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "John Gibson",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "David Rittich",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Cam Talbot",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 2,
+        "assists": 2,
+        "plus_minus": 4,
+        "pim": 4,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Owen's Otters": {
+      "players": [
+        {
+          "name": "Morgan Geekie",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Kent Johnson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Chris Kreider",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Trent Frederic",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brayden Schenn",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Zachary Bolduc",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Neighbours",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Warren Foegele",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jeff Skinner",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jack Eichel",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 4
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jason Zucker",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Aliaksei Protas",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Sanderson",
+          "country": "USA",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Gustav Forsling",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Vladislav Gavrikov",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Brenden Dillon",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake McCabe",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Victor Hedman",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jeremy Swayman",
+          "country": "USA",
+          "pos": "G",
+          "stats": {
+            "gp": 0,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0,
+            "save_pct": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Samuel Montembeault",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Philip Broberg",
+          "country": "SWE",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": -1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Adam Fox",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Blake Coleman",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Ryan Strome",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Marcus Pettersson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Aleksander Barkov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Marcus Johansson",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Shane Wright",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Martin Pospisil",
+          "country": "SVK",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 3,
+            "pim": 2
+          },
+          "status": "active"
+        },
+        {
+          "name": "Justus Annunen",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 0,
+          "shots_against": 0,
+          "save_pct": 0,
+          "qualified": false
+        }
+      },
+      "totals": {
+        "goals": 1,
+        "assists": 3,
+        "plus_minus": 2,
+        "pim": 12,
+        "goalie_wins": 0,
+        "save_pct": 0,
+        "sv_qualified": false
+      }
+    },
+    "Willy's Warlocks": {
+      "players": [
+        {
+          "name": "Jason Robertson",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mark Scheifele",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Filip Forsberg",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Kirill Kaprizov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Guentzel",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 2,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Wyatt Johnston",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dmitri Voronkov",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Clayton Keller",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Kirill Marchenko",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Carter Verhaeghe",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Quinton Byfield",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mathieu Olivier",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Evan Bouchard",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Josh Morrissey",
+          "country": "CAN",
+          "pos": "D",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Noah Dobson",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Mikhail Sergachev",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Shayne Gostisbehere",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Dougie Hamilton",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jake Oettinger",
+          "country": "USA",
+          "pos": "G",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 21,
+            "shots_against": 23,
+            "save_pct": 0.913
+          },
+          "status": "active"
+        },
+        {
+          "name": "Jake Allen",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Elias Pettersson",
+          "country": "SWE",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 1,
+            "plus_minus": 0,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Robert Thomas",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "J.T. Miller",
+          "country": "USA",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
+          "name": "Tyler Tucker",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "William Eklund",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jeremy Lauzon",
+          "country": null,
+          "pos": "D",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Andrew Mangiapane",
+          "country": null,
+          "pos": "F",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Jacob Fowler",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Thatcher Demko",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        },
+        {
+          "name": "Devon Levi",
+          "country": null,
+          "pos": "G",
+          "stats": null,
+          "status": "not_in_olympics"
+        }
+      ],
+      "goalie_stats": {
+        "aggregate": {
+          "wins": 0,
+          "saves": 21,
+          "shots_against": 23,
+          "save_pct": 0.913,
+          "qualified": true
+        }
+      },
+      "totals": {
+        "goals": 1,
+        "assists": 4,
+        "plus_minus": 2,
+        "pim": 0,
+        "goalie_wins": 0,
+        "save_pct": 0.913,
+        "sv_qualified": true
+      }
+    }
+  },
+  "flag_map": {
+    "CAN": "\ud83c\udde8\ud83c\udde6",
+    "USA": "\ud83c\uddfa\ud83c\uddf8",
+    "SWE": "\ud83c\uddf8\ud83c\uddea",
+    "FIN": "\ud83c\uddeb\ud83c\uddee",
+    "CZE": "\ud83c\udde8\ud83c\uddff",
+    "SUI": "\ud83c\udde8\ud83c\udded",
+    "GER": "\ud83c\udde9\ud83c\uddea",
+    "SVK": "\ud83c\uddf8\ud83c\uddf0",
+    "DEN": "\ud83c\udde9\ud83c\uddf0",
+    "LAT": "\ud83c\uddf1\ud83c\uddfb",
+    "ITA": "\ud83c\uddee\ud83c\uddf9",
+    "FRA": "\ud83c\uddeb\ud83c\uddf7"
+  },
+  "country_names": {
+    "CAN": "Canada",
+    "USA": "United States",
+    "SWE": "Sweden",
+    "FIN": "Finland",
+    "CZE": "Czechia",
+    "SUI": "Switzerland",
+    "GER": "Germany",
+    "SVK": "Slovakia",
+    "DEN": "Denmark",
+    "LAT": "Latvia",
+    "ITA": "Italy",
+    "FRA": "France"
+  }
+}
