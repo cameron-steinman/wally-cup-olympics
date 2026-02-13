@@ -4,6 +4,25 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Wally Cup Olympic Extravaganza 2026",
   description: "Wally Cup Fantasy Hockey Olympic Tracker — Milano Cortina 2026",
+  openGraph: {
+    title: "Wally Cup Olympic Extravaganza 2026",
+    description: "Wally Cup Fantasy Hockey Olympic Tracker — Milano Cortina 2026",
+    images: [
+      {
+        url: "https://cameron-steinman.github.io/wally-cup-olympics/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wally Cup Olympic Extravaganza 2026",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wally Cup Olympic Extravaganza 2026",
+    description: "Wally Cup Fantasy Hockey Olympic Tracker — Milano Cortina 2026",
+    images: ["https://cameron-steinman.github.io/wally-cup-olympics/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
