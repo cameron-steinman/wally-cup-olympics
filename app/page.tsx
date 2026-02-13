@@ -133,6 +133,60 @@ export default function Home() {
     return { ...s, displayRank: actualRank, isTied };
   });
 
+  // Sorting state
+  const [sortColumn, setSortColumn] = useState<string>('total_roto_points');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
+
+  // Sort function
+  const handleSort = (column: string) => {
+    if (sortColumn === column) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortColumn(column);
+      setSortDirection('asc');
+    }
+  };
+
+  // Sort the data
+  const sortedStandings = [...rankedStandings].sort((a, b) => {
+    let aVal: any, bVal: any;
+    
+    if (sortColumn === 'displayRank') {
+      aVal = a.displayRank;
+      bVal = b.displayRank;
+    } else if (sortColumn === 'team') {
+      aVal = a.team;
+      bVal = b.team;
+    } else if (sortColumn === 'gp') {
+      aVal = gpPerTeam[a.team] ?? 0;
+      bVal = gpPerTeam[b.team] ?? 0;
+    } else if (sortColumn === 'total_roto_points') {
+      aVal = a.total_roto_points;
+      bVal = b.total_roto_points;
+    } else if (sortColumn === 'players_remaining') {
+      aVal = activePlayersPerTeam[a.team]?.active ?? 0;
+      bVal = activePlayersPerTeam[b.team]?.active ?? 0;
+    } else if (categoryLabels.some(c => c.key === sortColumn)) {
+      // Category column - sort by value
+      aVal = a.categories[sortColumn]?.value ?? 0;
+      bVal = b.categories[sortColumn]?.value ?? 0;
+    } else {
+      return 0;
+    }
+
+    if (typeof aVal === 'string' && typeof bVal === 'string') {
+      return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    }
+    
+    return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+  });
+
+  // Sort indicator function
+  const getSortIndicator = (column: string) => {
+    if (sortColumn !== column) return '';
+    return sortDirection === 'asc' ? ' ▲' : ' ▼';
+  };
+
   // Last game processed info
   const schedule = (data as any).schedule;
   const games = schedule?.games || [];
@@ -202,9 +256,14 @@ export default function Home() {
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
             Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
           </p>
-          <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mt-1 inline-block mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
-            View All Olympic Players Rankings →
-          </a>
+          <div className="mt-1 flex flex-col sm:flex-row gap-2">
+            <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
+              View All Olympic Players Rankings →
+            </a>
+            <a href="/wally-cup-olympics/radar" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
+              View Team Radar Charts →
+            </a>
+          </div>
         </div>
         <div className="flex flex-col items-end gap-1.5">
           {lastGame && (
@@ -268,27 +327,59 @@ export default function Home() {
           <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col" style={{ color: 'var(--text-muted)' }}>Rank</th>
-                <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col" style={{ color: 'var(--text-muted)' }}>Team</th>
-                <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile" style={{ color: 'var(--text-muted)' }}>
-                  <div className="font-bold text-xs" style={{ color: 'var(--text-muted)' }}>GP</div>
+                <th 
+                  className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('displayRank')}
+                >
+                  Rank{getSortIndicator('displayRank')}
+                </th>
+                <th 
+                  className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('team')}
+                >
+                  Team{getSortIndicator('team')}
+                </th>
+                <th 
+                  className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('gp')}
+                >
+                  <div className="font-bold text-xs" style={{ color: 'var(--text-muted)' }}>GP{getSortIndicator('gp')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Games</div>
                 </th>
                 {categoryLabels.map(c => (
-                  <CategoryHeader key={c.key} label={c.short} sub={c.full} />
+                  <th 
+                    key={c.key} 
+                    className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer hover:bg-gray-50" 
+                    style={{ color: 'var(--text-muted)' }}
+                    onClick={() => handleSort(c.key)}
+                  >
+                    <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>{c.short}{getSortIndicator(c.key)}</div>
+                    <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{c.full}</div>
+                  </th>
                 ))}
-                <th className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>
-                  <div className="text-xs">PTS</div>
+                <th 
+                  className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  onClick={() => handleSort('total_roto_points')}
+                >
+                  <div className="text-xs">PTS{getSortIndicator('total_roto_points')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
-                <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)', minWidth: '80px' }}>
-                  <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Players</div>
+                <th 
+                  className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)', minWidth: '80px' }}
+                  onClick={() => handleSort('players_remaining')}
+                >
+                  <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Players{getSortIndicator('players_remaining')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Remaining</div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              {rankedStandings.map((s, idx) => {
+              {sortedStandings.map((s, idx) => {
                 const medalClass = medalClasses[s.displayRank];
                 const isTop3 = s.displayRank <= 3;
                 const logoSrc = teamLogos[s.team];

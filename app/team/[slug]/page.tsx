@@ -181,6 +181,101 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       .map(([k]) => k)
   );
 
+  // Default sorting (static)
+  const skaterSortColumn = 'globalRank';
+  const skaterSortDirection = 'asc';
+  const goalieSortColumn = 'globalRank';
+  const goalieSortDirection = 'asc';
+
+  // Sort functions (static, no interactivity)
+  const handleSkaterSort = (column: string) => {
+    // Static sorting - no interactivity
+  };
+
+  const handleGoalieSort = (column: string) => {
+    // Static sorting - no interactivity  
+  };
+
+  // Sort the skaters
+  const sortedSkaters = [...skaters].sort((a, b) => {
+    let aVal: any, bVal: any;
+    
+    if (skaterSortColumn === 'name') {
+      aVal = a.name;
+      bVal = b.name;
+    } else if (skaterSortColumn === 'globalRank') {
+      aVal = a.globalRank;
+      bVal = b.globalRank;
+    } else if (skaterSortColumn === 'gp') {
+      aVal = a.stats?.gp ?? 0;
+      bVal = b.stats?.gp ?? 0;
+    } else if (skaterSortColumn === 'goals') {
+      aVal = a.stats?.goals ?? 0;
+      bVal = b.stats?.goals ?? 0;
+    } else if (skaterSortColumn === 'assists') {
+      aVal = a.stats?.assists ?? 0;
+      bVal = b.stats?.assists ?? 0;
+    } else if (skaterSortColumn === 'plus_minus') {
+      aVal = a.stats?.plus_minus ?? 0;
+      bVal = b.stats?.plus_minus ?? 0;
+    } else if (skaterSortColumn === 'pim') {
+      aVal = a.stats?.pim ?? 0;
+      bVal = b.stats?.pim ?? 0;
+    } else {
+      return 0;
+    }
+
+    if (typeof aVal === 'string' && typeof bVal === 'string') {
+      return skaterSortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    }
+    
+    return skaterSortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+  });
+
+  // Sort the goalies
+  const sortedGoalies = [...goalies].sort((a, b) => {
+    let aVal: any, bVal: any;
+    
+    if (goalieSortColumn === 'name') {
+      aVal = a.name;
+      bVal = b.name;
+    } else if (goalieSortColumn === 'globalRank') {
+      aVal = a.globalRank;
+      bVal = b.globalRank;
+    } else if (goalieSortColumn === 'gp') {
+      aVal = a.stats?.gp ?? 0;
+      bVal = b.stats?.gp ?? 0;
+    } else if (goalieSortColumn === 'wins') {
+      aVal = a.stats?.wins ?? 0;
+      bVal = b.stats?.wins ?? 0;
+    } else if (goalieSortColumn === 'shots_against') {
+      aVal = a.stats?.shots_against ?? 0;
+      bVal = b.stats?.shots_against ?? 0;
+    } else if (goalieSortColumn === 'save_pct') {
+      aVal = a.stats?.save_pct ?? 0;
+      bVal = b.stats?.save_pct ?? 0;
+    } else {
+      return 0;
+    }
+
+    if (typeof aVal === 'string' && typeof bVal === 'string') {
+      return goalieSortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    }
+    
+    return goalieSortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+  });
+
+  // Sort indicator functions
+  const getSkaterSortIndicator = (column: string) => {
+    if (skaterSortColumn !== column) return '';
+    return skaterSortDirection === 'asc' ? ' ▲' : ' ▼';
+  };
+
+  const getGoalieSortIndicator = (column: string) => {
+    if (goalieSortColumn !== column) return '';
+    return goalieSortDirection === 'asc' ? ' ▲' : ' ▼';
+  };
+
   const catLabels: Record<string, string> = {
     goals: "Goals", assists: "Assists", plus_minus: "+/−", pim: "PIM", goalie_wins: "Goalie W", save_pct: "Save %"
   };
@@ -263,20 +358,62 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
           <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Player</th>
+                <th 
+                  className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('name')}
+                >
+                  Player{getSkaterSortIndicator('name')}
+                </th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  onClick={() => handleSkaterSort('globalRank')}
+                >
+                  Rank{getSkaterSortIndicator('globalRank')}
+                </th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Pos</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>GP</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>G</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>A</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>+/−</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>PIM</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('gp')}
+                >
+                  GP{getSkaterSortIndicator('gp')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('goals')}
+                >
+                  G{getSkaterSortIndicator('goals')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('assists')}
+                >
+                  A{getSkaterSortIndicator('assists')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('plus_minus')}
+                >
+                  +/−{getSkaterSortIndicator('plus_minus')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSkaterSort('pim')}
+                >
+                  PIM{getSkaterSortIndicator('pim')}
+                </th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
             <tbody>
-              {skaters.map((p, idx) => {
+              {sortedSkaters.map((p, idx) => {
                 const eliminated = p.country ? eliminatedCountries.has(p.country) : false;
                 const rowOpacity = eliminated ? 0.4 : 1;
                 const pm = p.stats?.plus_minus ?? 0;
@@ -331,18 +468,54 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
           <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Goalie</th>
+                <th 
+                  className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleGoalieSort('name')}
+                >
+                  Goalie{getGoalieSortIndicator('name')}
+                </th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>GP</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>W</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SA</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SV%</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  onClick={() => handleGoalieSort('globalRank')}
+                >
+                  Rank{getGoalieSortIndicator('globalRank')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleGoalieSort('gp')}
+                >
+                  GP{getGoalieSortIndicator('gp')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleGoalieSort('wins')}
+                >
+                  W{getGoalieSortIndicator('wins')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleGoalieSort('shots_against')}
+                >
+                  SA{getGoalieSortIndicator('shots_against')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleGoalieSort('save_pct')}
+                >
+                  SV%{getGoalieSortIndicator('save_pct')}
+                </th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
             <tbody>
-              {goalies.map((p, idx) => {
+              {sortedGoalies.map((p, idx) => {
                 const eliminated = p.country ? eliminatedCountries.has(p.country) : false;
                 return (
                   <tr key={p.name + idx} className="table-row-hover" style={{

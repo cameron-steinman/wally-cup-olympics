@@ -67,6 +67,10 @@ const PAGE_SIZE = 50;
 
 export default function PlayersPage() {
   const [page, setPage] = useState(0);
+  
+  // Sorting state
+  const [sortColumn, setSortColumn] = useState<string>('rank');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
   const allPlayers = ((data as any).all_olympic_players || []) as (AllPlayer & { zscore?: number; zscore_rank?: number; is_hot?: boolean })[];
   // Use z-score ranking from data pipeline (per-game rate normalized)
@@ -74,8 +78,76 @@ export default function PlayersPage() {
     .sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))
     .map(p => ({ ...p, rank: p.zscore_rank ?? 999 }));
 
-  const totalPages = Math.ceil(withRanks.length / PAGE_SIZE);
-  const pageData = withRanks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  // Sort function
+  const handleSort = (column: string) => {
+    if (sortColumn === column) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortColumn(column);
+      setSortDirection('asc');
+    }
+  };
+
+  // Sort the data
+  const sortedPlayers = [...withRanks].sort((a, b) => {
+    let aVal: any, bVal: any;
+    
+    if (sortColumn === 'rank') {
+      aVal = a.rank;
+      bVal = b.rank;
+    } else if (sortColumn === 'name') {
+      aVal = a.name;
+      bVal = b.name;
+    } else if (sortColumn === 'country') {
+      aVal = a.country;
+      bVal = b.country;
+    } else if (sortColumn === 'pos') {
+      aVal = a.pos;
+      bVal = b.pos;
+    } else if (sortColumn === 'gp') {
+      aVal = a.stats.gp;
+      bVal = b.stats.gp;
+    } else if (sortColumn === 'goals') {
+      aVal = a.stats.goals;
+      bVal = b.stats.goals;
+    } else if (sortColumn === 'assists') {
+      aVal = a.stats.assists;
+      bVal = b.stats.assists;
+    } else if (sortColumn === 'plus_minus') {
+      aVal = a.stats.plus_minus;
+      bVal = b.stats.plus_minus;
+    } else if (sortColumn === 'pim') {
+      aVal = a.stats.pim;
+      bVal = b.stats.pim;
+    } else if (sortColumn === 'wins') {
+      aVal = a.stats.wins ?? 0;
+      bVal = b.stats.wins ?? 0;
+    } else if (sortColumn === 'save_pct') {
+      const aShots = a.stats.shots_against ?? 0;
+      const aSaves = a.stats.saves ?? 0;
+      const bShots = b.stats.shots_against ?? 0;
+      const bSaves = b.stats.saves ?? 0;
+      aVal = aShots > 0 ? aSaves / aShots : 0;
+      bVal = bShots > 0 ? bSaves / bShots : 0;
+    } else {
+      return 0;
+    }
+
+    if (typeof aVal === 'string' && typeof bVal === 'string') {
+      return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    }
+    
+    return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+  });
+
+  // Sort indicator function
+  const getSortIndicator = (column: string) => {
+    if (sortColumn !== column) return '';
+    return sortDirection === 'asc' ? ' ▲' : ' ▼';
+  };
+
+  const totalPages = Math.ceil(sortedPlayers.length / PAGE_SIZE);
+  const pageData = sortedPlayers.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <div>
@@ -89,7 +161,7 @@ export default function PlayersPage() {
             All Olympic Players
           </h2>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            {withRanks.length} players · {withRanks.filter(p => p.wally_team).length} on Wally Cup teams · Ranked by fantasy points
+            {sortedPlayers.length} players · {sortedPlayers.filter(p => p.wally_team).length} on Wally Cup teams · Ranked by fantasy points
           </p>
         </div>
         {/* Pagination controls */}
@@ -105,7 +177,7 @@ export default function PlayersPage() {
             }}
           >← Prev</button>
           <span className="text-xs font-semibold mobile-text-xs" style={{ color: 'var(--text-secondary)' }}>
-            {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, withRanks.length)} of {withRanks.length}
+            {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, sortedPlayers.length)} of {sortedPlayers.length}
           </span>
           <button
             onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
@@ -125,18 +197,84 @@ export default function PlayersPage() {
           <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider w-12" style={{ color: 'var(--accent-blue)' }}>#</th>
-                <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Player</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider w-12 cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  onClick={() => handleSort('rank')}
+                >
+                  #{getSortIndicator('rank')}
+                </th>
+                <th 
+                  className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('name')}
+                >
+                  Player{getSortIndicator('name')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('country')}
+                >
+                  Country{getSortIndicator('country')}
+                </th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Team</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Pos</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>GP</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>G</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>A</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>+/−</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>PIM</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>W</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SV%</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('pos')}
+                >
+                  Pos{getSortIndicator('pos')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('gp')}
+                >
+                  GP{getSortIndicator('gp')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('goals')}
+                >
+                  G{getSortIndicator('goals')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('assists')}
+                >
+                  A{getSortIndicator('assists')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('plus_minus')}
+                >
+                  +/−{getSortIndicator('plus_minus')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('pim')}
+                >
+                  PIM{getSortIndicator('pim')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('wins')}
+                >
+                  W{getSortIndicator('wins')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  onClick={() => handleSort('save_pct')}
+                >
+                  SV%{getSortIndicator('save_pct')}
+                </th>
               </tr>
             </thead>
             <tbody>
