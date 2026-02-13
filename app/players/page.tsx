@@ -194,7 +194,7 @@ export default function PlayersPage() {
 
       <div className="glass-card overflow-hidden glass-card-mobile">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0, tableLayout: 'fixed' }}>
+          <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0,  }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th 

@@ -178,7 +178,7 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
       </h3>
       <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0, tableLayout: 'fixed' as const }}>
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0,  }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th 
@@ -288,7 +288,7 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
       </h3>
       <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0, tableLayout: 'fixed' as const }}>
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0,  }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th 

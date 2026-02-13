@@ -373,3 +373,13 @@ body::before {
     margin-bottom: 1rem !important;
   }
 }
+
+/* Fix column widths for sortable tables */
+.standings-table, .all-players-table, .player-table {
+  min-width: 700px;
+}
+.standings-table th, .standings-table td,
+.all-players-table th, .all-players-table td,
+.player-table th, .player-table td {
+  white-space: nowrap;
+}
