@@ -155,12 +155,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-end gap-1.5">
           {lastGame && (
-            <div className="last-game-badge">
-              <span className="font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
-              <span className="inline-flex items-center gap-1.5">
+            <div className="glass-card inline-flex items-center gap-3 px-4 py-2.5" style={{ borderRadius: '10px' }}>
+              <span className="text-xs font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
                 <Flag code={lastGame.away} /> {lastGame.away_score}–{lastGame.home_score} <Flag code={lastGame.home} />
               </span>
-              <span style={{ color: 'var(--text-muted)' }}>
+              <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
                 {lastGameDate}
               </span>
             </div>
@@ -186,9 +186,9 @@ export default function Home() {
                   <div className="text-xs">PTS</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
-                <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-                  <div className="font-bold text-xs" style={{ color: 'var(--accent-green)' }}>🟢</div>
-                  <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Active</div>
+                <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)', minWidth: '80px' }}>
+                  <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Active</div>
+                  <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Remaining</div>
                 </th>
               </tr>
             </thead>
@@ -271,7 +271,7 @@ export default function Home() {
           Save % not qualified (&lt;20 SA)
         </span>
         <span><strong>T</strong> = tied on total roto points</span>
-        <span>🟢 Active = players on teams still competing</span>
+        <span>Active Remaining = players on teams still competing</span>
         <span>Roto: 12 pts for 1st, 1 pt for 12th. Ties split evenly.</span>
       </div>
     </div>
