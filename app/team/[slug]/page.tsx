@@ -101,7 +101,7 @@ function calcFantasyPoints(p: Player): number {
 // Compute global ranking of ALL Olympic players (not just Wally Cup teams)
 function computeGlobalRankings(): Map<string, number> {
   const allPlayers: { name: string; country: string | null; points: number }[] = [];
-  const teams = data.teams as Record<string, TeamData>;
+  const teams = data.teams as unknown as Record<string, TeamData>;
   const seen = new Set<string>();
 
   for (const [, teamData] of Object.entries(teams)) {
@@ -136,7 +136,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
   const teamName = teamFromSlug(slug);
   if (!teamName) return <div style={{ color: 'var(--text-primary)', padding: 40 }}>Team not found</div>;
 
-  const team = (data.teams as Record<string, TeamData>)[teamName];
+  const team = (data.teams as unknown as Record<string, TeamData>)[teamName];
   const standing = (data.standings as Standing[]).find(s => s.team === teamName)!;
   const countryStatus = data.country_status as Record<string, { status: string; name: string; flag: string; next_game: { vs: string; date: string; time: string } | null }>;
 

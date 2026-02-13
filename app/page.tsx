@@ -152,15 +152,15 @@ export default function Home() {
   return (
     <div>
       {/* Section header */}
-      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-        <div>
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mobile-stack mobile-stack-header mobile-compact">
+        <div className="section-header-mobile">
           <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
             Standings
           </h2>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
             Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
           </p>
-          <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mt-1 inline-block" style={{ color: 'var(--accent-blue)' }}>
+          <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mt-1 inline-block mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
             View All Olympic Players Rankings →
           </a>
         </div>
