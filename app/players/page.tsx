@@ -157,7 +157,7 @@ export default function PlayersPage() {
             All Olympic Players
           </h2>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            {sortedPlayers.length} players · {sortedPlayers.filter(p => p.wally_team).length} on Wally Cup teams · Ranked by fantasy points
+            {sortedPlayers.length} players · {sortedPlayers.filter(p => p.wally_team).length} on Wally Cup teams · Ranked by player value
           </p>
         </div>
         {/* Pagination controls */}

@@ -194,7 +194,7 @@ export default function Home() {
               <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{lastGameDate}</span>
             </div>
           )}
-          <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+          <div className="text-[11px]" style={{ color: 'var(--text-secondary)' }}>
             Updated {updatedDate} ET
           </div>
         </div>

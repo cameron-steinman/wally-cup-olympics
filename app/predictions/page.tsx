@@ -60,7 +60,7 @@ export default function PredictionsPage() {
   const currentRanks: Record<string, number> = {};
   ((data as any).standings || []).forEach((s: any) => { currentRanks[s.team] = s.rank; });
 
-  const maxWinProb = Math.max(...winProbs.map(([,p]) => p), 0.01);
+  // Bar chart goes to 100%, not max team probability
 
   return (
     <div>
@@ -70,19 +70,19 @@ export default function PredictionsPage() {
           Predictions
         </h2>
         <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-          Monte Carlo simulation · 5,000 iterations · Based on current stats, per-game rates, and tournament advancement probabilities
+          Monte Carlo simulation · 5,000 iterations · Based on current stats and tournament advancement
         </p>
       </div>
 
       {/* Win Probabilities */}
       <div className="mb-6">
-        <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Wally Cup Win Probability</h3>
+        <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Wally Cup Olympics Extravaganza Win Probability</h3>
         <div className="glass-card p-4">
           <div className="space-y-3">
             {winProbs.map(([team, prob]) => {
               const logoSrc = teamLogos[team];
               const pct = (prob * 100);
-              const barWidth = Math.max((prob / maxWinProb) * 100, 1);
+              const barWidth = Math.max(pct, 0.5); // Scale to 100%
               return (
                 <div key={team} className="flex items-center gap-3">
                   <div className="w-40 flex items-center gap-2 shrink-0">

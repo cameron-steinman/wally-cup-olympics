@@ -186,10 +186,10 @@ export default function RecapPage() {
                     <div className="text-xs mt-0.5 flex items-center gap-2">
                       <span style={{ color: 'var(--text-primary)' }}>{formatStats(p)}</span>
                       {p.wally_team && (
-                        <span className="flex items-center gap-1">
+                        <a href={`/wally-cup-olympics/team/${p.wally_team.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} className="flex items-center gap-1 no-underline hover:underline">
                           {logoSrc && <img src={logoSrc} alt="" className="w-3.5 h-3.5 rounded-sm object-contain" />}
                           <span style={{ color: 'var(--accent-blue)' }}>{p.wally_team}</span>
-                        </span>
+                        </a>
                       )}
                     </div>
                   </div>

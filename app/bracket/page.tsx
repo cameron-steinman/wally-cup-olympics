@@ -37,6 +37,9 @@ export default function BracketPage() {
     Object.entries(countryStatus).filter(([_, v]: [string, any]) => v.status === 'eliminated').map(([k]) => k)
   );
 
+  // Knockout probabilities from predictions
+  const knockoutOdds = ((data as any).predictions?.country_knockout_odds || {}) as Record<string, number>;
+
   // Build country data with Wally team breakdown and best player
   const countryInfo: Record<string, {
     playerCount: number;
@@ -82,6 +85,7 @@ export default function BracketPage() {
   function CountryCard({ code }: { code: string }) {
     const ci = countryInfo[code];
     const isEliminated = eliminatedCountries.has(code);
+    const knockoutPct = (knockoutOdds[code] || 0) * 100;
     
     // Top 3 Wally teams by player count
     const topTeams = Object.entries(ci.wallyTeamCounts)
@@ -93,7 +97,7 @@ export default function BracketPage() {
            style={{ borderLeft: isEliminated ? '3px solid var(--text-muted)' : '3px solid var(--accent-blue)' }}>
         <div className="flex items-center gap-2 mb-2">
           <Flag code={code} size={28} />
-          <div>
+          <div className="flex-1">
             <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
               {countryNames[code]}
             </div>
@@ -101,10 +105,17 @@ export default function BracketPage() {
               {ci.playerCount} Wally Player{ci.playerCount !== 1 ? 's' : ''}
             </div>
           </div>
-          {isEliminated && (
-            <span className="ml-auto text-[10px] font-bold px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444' }}>
+          {isEliminated ? (
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444' }}>
               ELIMINATED
             </span>
+          ) : (
+            <div className="text-right">
+              <div className="text-lg font-bold" style={{ color: knockoutPct >= 80 ? '#22c55e' : knockoutPct >= 50 ? 'var(--accent-blue)' : knockoutPct >= 20 ? 'var(--text-primary)' : 'var(--text-muted)' }}>
+                {knockoutPct.toFixed(0)}%
+              </div>
+              <div className="text-[9px]" style={{ color: 'var(--text-secondary)' }}>knockout</div>
+            </div>
           )}
         </div>
 
