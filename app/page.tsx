@@ -149,8 +149,49 @@ export default function Home() {
     month: 'short', day: 'numeric',
   }) : null;
 
+  // Live game ticker data
+  const scheduleGames = ((data as any).schedule?.games || []) as Array<{
+    id: number; date: string; away: string; home: string; status: string;
+    away_score: number; home_score: number; period?: number | null; clock?: string | null; time?: string;
+  }>;
+  const todayGames = scheduleGames.filter(g => g.status === 'LIVE' || g.status === 'FINAL' || g.status === 'FUT');
+  const liveGames = scheduleGames.filter(g => g.status === 'LIVE');
+  const todayDate = scheduleGames.filter(g => g.status === 'LIVE').length > 0
+    ? scheduleGames.find(g => g.status === 'LIVE')!.date
+    : scheduleGames.filter(g => g.status === 'FUT')[0]?.date || scheduleGames[scheduleGames.length - 1]?.date;
+  const dayGames = scheduleGames.filter(g => g.date === todayDate || g.status === 'LIVE');
+
   return (
     <div>
+      {/* Live Game Ticker */}
+      {dayGames.length > 0 && (
+        <div className="glass-card mb-5 px-4 py-3 overflow-x-auto" style={{ borderLeft: liveGames.length > 0 ? '3px solid var(--accent-red, #ef4444)' : '3px solid var(--accent-blue)' }}>
+          <div className="flex items-center gap-5" style={{ minWidth: 'max-content' }}>
+            <span className="text-[10px] font-bold uppercase tracking-wider shrink-0" style={{ color: liveGames.length > 0 ? 'var(--accent-red, #ef4444)' : 'var(--accent-blue)' }}>
+              {liveGames.length > 0 ? '🔴 LIVE' : '📅 Today'}
+            </span>
+            {dayGames.map(g => (
+              <div key={g.id} className="flex items-center gap-2 shrink-0" style={{ opacity: g.status === 'FUT' ? 0.5 : 1 }}>
+                <div className="flex items-center gap-1.5">
+                  <Flag code={g.away} size={16} />
+                  <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{g.away_score}</span>
+                </div>
+                <span className="text-xs" style={{ color: 'var(--text-muted)' }}>-</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{g.home_score}</span>
+                  <Flag code={g.home} size={16} />
+                </div>
+                <span className="text-[10px] font-semibold ml-1" style={{
+                  color: g.status === 'LIVE' ? 'var(--accent-red, #ef4444)' : g.status === 'FINAL' ? 'var(--accent-green, #22c55e)' : 'var(--text-muted)'
+                }}>
+                  {g.status === 'LIVE' ? `P${g.period} ${g.clock}` : g.status === 'FINAL' ? 'F' : g.time ? new Date(g.time).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Toronto' }) : 'TBD'}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Section header */}
       <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mobile-stack mobile-stack-header mobile-compact">
         <div className="section-header-mobile">
