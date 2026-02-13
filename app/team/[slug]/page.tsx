@@ -299,7 +299,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th 
                   className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('name')}
+                  
                 >
                   Player{getSkaterSortIndicator('name')}
                 </th>
@@ -307,7 +307,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--accent-blue)' }}
-                  onClick={() => handleSkaterSort('globalRank')}
+                  
                 >
                   Rank{getSkaterSortIndicator('globalRank')}
                 </th>
@@ -315,35 +315,35 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('gp')}
+                  
                 >
                   GP{getSkaterSortIndicator('gp')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('goals')}
+                  
                 >
                   G{getSkaterSortIndicator('goals')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('assists')}
+                  
                 >
                   A{getSkaterSortIndicator('assists')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('plus_minus')}
+                  
                 >
                   +/−{getSkaterSortIndicator('plus_minus')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSkaterSort('pim')}
+                  
                 >
                   PIM{getSkaterSortIndicator('pim')}
                 </th>
@@ -409,7 +409,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th 
                   className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleGoalieSort('name')}
+                  
                 >
                   Goalie{getGoalieSortIndicator('name')}
                 </th>
@@ -417,35 +417,35 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--accent-blue)' }}
-                  onClick={() => handleGoalieSort('globalRank')}
+                  
                 >
                   Rank{getGoalieSortIndicator('globalRank')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleGoalieSort('gp')}
+                  
                 >
                   GP{getGoalieSortIndicator('gp')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleGoalieSort('wins')}
+                  
                 >
                   W{getGoalieSortIndicator('wins')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleGoalieSort('shots_against')}
+                  
                 >
                   SA{getGoalieSortIndicator('shots_against')}
                 </th>
                 <th 
                   className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
                   style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleGoalieSort('save_pct')}
+                  
                 >
                   SV%{getGoalieSortIndicator('save_pct')}
                 </th>
