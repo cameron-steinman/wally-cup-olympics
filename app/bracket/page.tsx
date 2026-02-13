@@ -45,7 +45,7 @@ export default function BracketPage() {
     playerCount: number;
     stats: { gp: number; goals: number; assists: number; plus_minus: number; pim: number; wins: number; saves: number; shots_against: number };
     wallyTeamCounts: Record<string, number>;
-    bestPlayer: { name: string; zscore: number } | null;
+    bestPlayer: { name: string; zscore: number; pos: string; stats: any } | null;
   }> = {};
 
   Object.keys(countryNames).forEach(code => {
@@ -78,7 +78,7 @@ export default function BracketPage() {
 
     const zscore = p.zscore ?? 0;
     if (!ci.bestPlayer || zscore > ci.bestPlayer.zscore) {
-      ci.bestPlayer = { name: p.name, zscore };
+      ci.bestPlayer = { name: p.name, zscore, pos: p.pos, stats: p.stats || {} };
     }
   });
 
@@ -114,7 +114,7 @@ export default function BracketPage() {
               <div className="text-lg font-bold" style={{ color: knockoutPct >= 80 ? '#22c55e' : knockoutPct >= 50 ? 'var(--accent-blue)' : knockoutPct >= 20 ? 'var(--text-primary)' : 'var(--text-muted)' }}>
                 {knockoutPct.toFixed(0)}%
               </div>
-              <div className="text-[9px]" style={{ color: 'var(--text-secondary)' }}>knockout</div>
+              <div className="text-[9px] leading-tight" style={{ color: 'var(--text-secondary)' }}>to move to<br/>knockout stage</div>
             </div>
           )}
         </div>
@@ -134,7 +134,21 @@ export default function BracketPage() {
         {ci.bestPlayer && (
           <div className="text-xs mt-2 pt-2" style={{ borderTop: '1px solid var(--border)' }}>
             <span style={{ color: 'var(--text-muted)' }}>Top player: </span>
-            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>{ci.bestPlayer.name}</span>
+            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+              {ci.bestPlayer.name}
+              {' '}
+              <span style={{ color: 'var(--text-secondary)', fontWeight: 'normal' }}>
+                ({ci.bestPlayer.pos === 'G'
+                  ? `${ci.bestPlayer.stats.wins || 0}W, ${ci.bestPlayer.stats.shots_against > 0 ? (ci.bestPlayer.stats.saves / ci.bestPlayer.stats.shots_against).toFixed(3).replace(/^0/, '') : '—'} SV%`
+                  : [
+                      ci.bestPlayer.stats.goals ? `${ci.bestPlayer.stats.goals}G` : null,
+                      ci.bestPlayer.stats.assists ? `${ci.bestPlayer.stats.assists}A` : null,
+                      ci.bestPlayer.stats.plus_minus ? `${ci.bestPlayer.stats.plus_minus > 0 ? '+' : ''}${ci.bestPlayer.stats.plus_minus}` : null,
+                      ci.bestPlayer.stats.pim ? `${ci.bestPlayer.stats.pim}PIM` : null,
+                    ].filter(Boolean).join(', ') || '—'
+                })
+              </span>
+            </span>
           </div>
         )}
 
