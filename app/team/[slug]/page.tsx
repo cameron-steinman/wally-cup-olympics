@@ -161,7 +161,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
       isHot: hotLookup.has(`${p.name}|${p.country}`)
     }))
-    .sort((a, b) => b.fantasyPts - a.fantasyPts);
+    .sort((a, b) => a.globalRank - b.globalRank);
 
   const goalies = team.players
     .filter(p => p.pos === 'G' && p.status !== 'not_in_olympics')
@@ -171,7 +171,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
       isHot: hotLookup.has(`${p.name}|${p.country}`)
     }))
-    .sort((a, b) => b.fantasyPts - a.fantasyPts);
+    .sort((a, b) => a.globalRank - b.globalRank);
 
   const notPlaying = team.players.filter(p => p.status === 'not_in_olympics');
 
