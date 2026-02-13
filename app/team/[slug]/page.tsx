@@ -230,6 +230,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Player</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
+                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Pos</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>GP</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>G</th>
@@ -237,7 +238,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>+/−</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>PIM</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>FPts</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
@@ -257,6 +257,11 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     <td className="px-2 py-2.5 text-center">
                       {p.country && <Flag code={p.country} size={18} />}
                     </td>
+                    <td className="px-2 py-2.5 text-center">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                        #{p.globalRank}
+                      </span>
+                    </td>
                     <td className="px-2 py-2.5 text-center text-xs" style={{ color: 'var(--text-secondary)' }}>{p.pos}</td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.gp ?? '-'}</td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.goals ?? 0}</td>
@@ -268,11 +273,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     </td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.pim ?? 0}</td>
                     <td className="px-2 py-2.5 text-center text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>{p.fantasyPts.toFixed(0)}</td>
-                    <td className="px-2 py-2.5 text-center">
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
-                        #{p.globalRank}
-                      </span>
-                    </td>
                     <td className="px-3 py-2.5 text-sm">
                       <NextGameCell country={p.country} />
                     </td>
@@ -286,7 +286,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
 
       {/* Goalies */}
       <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-        Goalies
+        Goalies <span className="text-sm font-normal" style={{ color: 'var(--text-secondary)' }}>({goalies.length} in Olympics)</span>
         {!team.goalie_stats.aggregate.qualified && (
           <span className="ml-2 text-xs font-normal px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: 'var(--accent-red)' }}>
             Not qualified for SV% ({team.goalie_stats.aggregate.shots_against} SA &lt; 20 required)
@@ -300,12 +300,12 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Goalie</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
+                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>GP</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>W</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SA</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SV%</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>FPts</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>Rank</th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
@@ -319,6 +319,11 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                   }}>
                     <td className="px-3 py-2.5 text-sm font-medium" style={{ color: 'var(--text-primary)' }}>{p.name}</td>
                     <td className="px-2 py-2.5 text-center">{p.country && <Flag code={p.country} size={18} />}</td>
+                    <td className="px-2 py-2.5 text-center">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                        #{p.globalRank}
+                      </span>
+                    </td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.gp ?? 0}</td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.wins ?? 0}</td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.shots_against ?? 0}</td>
@@ -326,11 +331,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                       {(p.stats?.save_pct ?? 0) > 0 ? (p.stats?.save_pct ?? 0).toFixed(3).replace(/^0/, '') : '—'}
                     </td>
                     <td className="px-2 py-2.5 text-center text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>{p.fantasyPts.toFixed(0)}</td>
-                    <td className="px-2 py-2.5 text-center">
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
-                        #{p.globalRank}
-                      </span>
-                    </td>
                     <td className="px-3 py-2.5 text-sm">
                       <NextGameCell country={p.country} />
                     </td>
@@ -343,12 +343,13 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <td className="px-3 py-2.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>Team Aggregate</td>
                 <td />
                 <td />
+                <td />
                 <td className="px-2 py-2.5 text-center text-sm font-bold">{team.goalie_stats.aggregate.wins}</td>
                 <td className="px-2 py-2.5 text-center text-sm font-bold">{team.goalie_stats.aggregate.shots_against}</td>
                 <td className="px-2 py-2.5 text-center text-sm font-bold">
                   {team.goalie_stats.aggregate.save_pct > 0 ? team.goalie_stats.aggregate.save_pct.toFixed(3).replace(/^0/, '') : '—'}
                 </td>
-                <td colSpan={3} />
+                <td colSpan={2} />
               </tr>
             </tfoot>
           </table>

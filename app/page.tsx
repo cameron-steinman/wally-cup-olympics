@@ -105,6 +105,14 @@ export default function Home() {
       .map(([k]) => k)
   );
 
+  // Calculate total GP per team (sum of all Olympic players' games played)
+  const gpPerTeam: Record<string, number> = {};
+  for (const [teamName, teamData] of Object.entries(teams)) {
+    gpPerTeam[teamName] = teamData.players
+      .filter((p: any) => p.status !== 'not_in_olympics' && p.stats)
+      .reduce((sum: number, p: any) => sum + (p.stats?.gp ?? 0), 0);
+  }
+
   // Calculate active Olympic players per team
   const activePlayersPerTeam: Record<string, { active: number; total: number }> = {};
   for (const [teamName, teamData] of Object.entries(teams)) {
@@ -182,6 +190,10 @@ export default function Home() {
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14" style={{ color: 'var(--text-muted)' }}>Rank</th>
                 <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Team</th>
+                <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+                  <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>GP</div>
+                  <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Games</div>
+                </th>
                 {categoryLabels.map(c => (
                   <CategoryHeader key={c.key} label={c.short} sub={c.full} />
                 ))}
@@ -231,6 +243,11 @@ export default function Home() {
                         )}
                         {s.team}
                       </a>
+                    </td>
+                    <td className="px-2 py-4 text-center">
+                      <span className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
+                        {gpPerTeam[s.team] ?? 0}
+                      </span>
                     </td>
                     {categoryLabels.map(c => {
                       const cat = s.categories[c.key];
