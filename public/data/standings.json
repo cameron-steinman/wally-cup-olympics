@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-12T21:10:51.900764Z",
+  "updated_at": "2026-02-13T02:10:44.529551Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -49,9 +49,9 @@
         "time": "TBD",
         "away": "LAT",
         "home": "USA",
-        "status": "LIVE",
+        "status": "FINAL",
         "away_score": 1,
-        "home_score": 1
+        "home_score": 5
       },
       {
         "id": 2025090006,
@@ -59,8 +59,8 @@
         "time": "TBD",
         "away": "GER",
         "home": "DEN",
-        "status": "LIVE",
-        "away_score": 1,
+        "status": "FINAL",
+        "away_score": 3,
         "home_score": 1
       },
       {
@@ -301,50 +301,12 @@
   },
   "standings": [
     {
-      "team": "Big Shooters",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 1,
-          "roto_points": 9.5
-        },
-        "assists": {
-          "value": 3,
-          "rank": 3,
-          "roto_points": 9.0
-        },
-        "plus_minus": {
-          "value": 2,
-          "rank": 4,
-          "roto_points": 7.5
-        },
-        "pim": {
-          "value": 2,
-          "rank": 1,
-          "roto_points": 11.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0.9714285714285714,
-          "rank": 1,
-          "qualified": true,
-          "roto_points": 12
-        }
-      },
-      "total_roto_points": 56.0,
-      "rank": 1
-    },
-    {
       "team": "Mark's Mafia",
       "categories": {
         "goals": {
           "value": 2,
-          "rank": 1,
-          "roto_points": 9.5
+          "rank": 4,
+          "roto_points": 8.0
         },
         "assists": {
           "value": 6,
@@ -357,9 +319,9 @@
           "roto_points": 12
         },
         "pim": {
-          "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "value": 2,
+          "rank": 2,
+          "roto_points": 10.0
         },
         "goalie_wins": {
           "value": 0,
@@ -368,36 +330,112 @@
         },
         "save_pct": {
           "value": 0,
-          "rank": 5,
+          "rank": 7,
           "qualified": false,
-          "roto_points": 4.5
+          "roto_points": 3.5
         }
       },
-      "total_roto_points": 50.0,
+      "total_roto_points": 52.0,
+      "rank": 1
+    },
+    {
+      "team": "Big Shooters",
+      "categories": {
+        "goals": {
+          "value": 3,
+          "rank": 2,
+          "roto_points": 10.5
+        },
+        "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
+          "value": 2,
+          "rank": 7,
+          "roto_points": 6
+        },
+        "pim": {
+          "value": 2,
+          "rank": 2,
+          "roto_points": 10.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0.9772727272727273,
+          "rank": 1,
+          "qualified": true,
+          "roto_points": 12
+        }
+      },
+      "total_roto_points": 51.0,
       "rank": 2
+    },
+    {
+      "team": "Gabe's Gangsters",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 7,
+          "roto_points": 5.0
+        },
+        "assists": {
+          "value": 2,
+          "rank": 10,
+          "roto_points": 3
+        },
+        "plus_minus": {
+          "value": 5,
+          "rank": 3,
+          "roto_points": 10
+        },
+        "pim": {
+          "value": 6,
+          "rank": 1,
+          "roto_points": 12
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0.875,
+          "rank": 4,
+          "qualified": true,
+          "roto_points": 8.5
+        }
+      },
+      "total_roto_points": 45.0,
+      "rank": 3
     },
     {
       "team": "Bardown",
       "categories": {
         "goals": {
-          "value": 2,
+          "value": 4,
           "rank": 1,
-          "roto_points": 9.5
+          "roto_points": 12
         },
         "assists": {
           "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
+          "rank": 11,
+          "roto_points": 2
         },
         "plus_minus": {
-          "value": 2,
+          "value": 4,
           "rank": 4,
-          "roto_points": 7.5
+          "roto_points": 8.5
         },
         "pim": {
           "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "rank": 5,
+          "roto_points": 4.5
         },
         "goalie_wins": {
           "value": 0,
@@ -411,84 +449,8 @@
           "roto_points": 11
         }
       },
-      "total_roto_points": 44.0,
-      "rank": 3
-    },
-    {
-      "team": "Gabe's Gangsters",
-      "categories": {
-        "goals": {
-          "value": 1,
-          "rank": 7,
-          "roto_points": 5.0
-        },
-        "assists": {
-          "value": 0,
-          "rank": 11,
-          "roto_points": 1.5
-        },
-        "plus_minus": {
-          "value": 2,
-          "rank": 4,
-          "roto_points": 7.5
-        },
-        "pim": {
-          "value": 2,
-          "rank": 1,
-          "roto_points": 11.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0.875,
-          "rank": 3,
-          "qualified": true,
-          "roto_points": 10
-        }
-      },
-      "total_roto_points": 42.0,
+      "total_roto_points": 44.5,
       "rank": 4
-    },
-    {
-      "team": "Owen's Otters",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 1,
-          "roto_points": 9.5
-        },
-        "assists": {
-          "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
-        },
-        "plus_minus": {
-          "value": 4,
-          "rank": 2,
-          "roto_points": 10.5
-        },
-        "pim": {
-          "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 5,
-          "qualified": false,
-          "roto_points": 4.5
-        }
-      },
-      "total_roto_points": 40.5,
-      "rank": 5
     },
     {
       "team": "Cam's Crunch",
@@ -499,95 +461,19 @@
           "roto_points": 2.0
         },
         "assists": {
-          "value": 3,
-          "rank": 3,
-          "roto_points": 9.0
-        },
-        "plus_minus": {
           "value": 4,
-          "rank": 2,
-          "roto_points": 10.5
-        },
-        "pim": {
-          "value": 0,
           "rank": 3,
-          "roto_points": 5.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 5,
-          "qualified": false,
-          "roto_points": 4.5
-        }
-      },
-      "total_roto_points": 38.0,
-      "rank": 6
-    },
-    {
-      "team": "Johnny's Scrubbers",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 1,
           "roto_points": 9.5
         },
-        "assists": {
-          "value": 2,
-          "rank": 6,
-          "roto_points": 6.5
-        },
         "plus_minus": {
-          "value": -2,
-          "rank": 12,
-          "roto_points": 1
-        },
-        "pim": {
-          "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0.8611111111111112,
-          "rank": 4,
-          "qualified": true,
-          "roto_points": 9
-        }
-      },
-      "total_roto_points": 38.0,
-      "rank": 7
-    },
-    {
-      "team": "Todd's Hitmen",
-      "categories": {
-        "goals": {
-          "value": 1,
-          "rank": 7,
-          "roto_points": 5.0
-        },
-        "assists": {
-          "value": 4,
+          "value": 6,
           "rank": 2,
           "roto_points": 11
         },
-        "plus_minus": {
-          "value": 0,
-          "rank": 9,
-          "roto_points": 3.0
-        },
         "pim": {
           "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "rank": 5,
+          "roto_points": 4.5
         },
         "goalie_wins": {
           "value": 0,
@@ -595,52 +481,14 @@
           "roto_points": 6.5
         },
         "save_pct": {
-          "value": 0,
-          "rank": 5,
-          "qualified": false,
-          "roto_points": 4.5
+          "value": 0.875,
+          "rank": 4,
+          "qualified": true,
+          "roto_points": 8.5
         }
       },
-      "total_roto_points": 35.5,
-      "rank": 8
-    },
-    {
-      "team": "Ice Holes",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 1,
-          "roto_points": 9.5
-        },
-        "assists": {
-          "value": 2,
-          "rank": 6,
-          "roto_points": 6.5
-        },
-        "plus_minus": {
-          "value": 0,
-          "rank": 9,
-          "roto_points": 3.0
-        },
-        "pim": {
-          "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 5,
-          "qualified": false,
-          "roto_points": 4.5
-        }
-      },
-      "total_roto_points": 35.5,
-      "rank": 9
+      "total_roto_points": 42.0,
+      "rank": 5
     },
     {
       "team": "Cross's Beavers",
@@ -651,19 +499,133 @@
           "roto_points": 5.0
         },
         "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
+          "value": 3,
+          "rank": 6,
+          "roto_points": 7
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0.8846153846153846,
+          "rank": 3,
+          "qualified": true,
+          "roto_points": 10
+        }
+      },
+      "total_roto_points": 39.0,
+      "rank": 6
+    },
+    {
+      "team": "Johnny's Scrubbers",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 4,
+          "roto_points": 8.0
+        },
+        "assists": {
+          "value": 4,
+          "rank": 3,
+          "roto_points": 9.5
+        },
+        "plus_minus": {
+          "value": 0,
+          "rank": 11,
+          "roto_points": 1.5
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0.8611111111111112,
+          "rank": 6,
+          "qualified": true,
+          "roto_points": 7
+        }
+      },
+      "total_roto_points": 37.0,
+      "rank": 7
+    },
+    {
+      "team": "Owen's Otters",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 4,
+          "roto_points": 8.0
+        },
+        "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
+          "value": 4,
+          "rank": 4,
+          "roto_points": 8.5
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 7,
+          "qualified": false,
+          "roto_points": 3.5
+        }
+      },
+      "total_roto_points": 37.0,
+      "rank": 8
+    },
+    {
+      "team": "Ice Holes",
+      "categories": {
+        "goals": {
+          "value": 3,
+          "rank": 2,
+          "roto_points": 10.5
+        },
+        "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
           "value": 1,
           "rank": 8,
           "roto_points": 4.0
         },
-        "plus_minus": {
-          "value": 2,
-          "rank": 4,
-          "roto_points": 7.5
-        },
         "pim": {
           "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "rank": 5,
+          "roto_points": 4.5
         },
         "goalie_wins": {
           "value": 0,
@@ -672,36 +634,36 @@
         },
         "save_pct": {
           "value": 0,
-          "rank": 5,
+          "rank": 7,
           "qualified": false,
-          "roto_points": 4.5
+          "roto_points": 3.5
         }
       },
-      "total_roto_points": 33.0,
-      "rank": 10
+      "total_roto_points": 35.0,
+      "rank": 9
     },
     {
-      "team": "Gators",
+      "team": "Todd's Hitmen",
       "categories": {
         "goals": {
-          "value": 0,
-          "rank": 10,
-          "roto_points": 2.0
+          "value": 1,
+          "rank": 7,
+          "roto_points": 5.0
         },
         "assists": {
-          "value": 3,
-          "rank": 3,
-          "roto_points": 9.0
+          "value": 5,
+          "rank": 2,
+          "roto_points": 11
         },
         "plus_minus": {
-          "value": 0,
-          "rank": 9,
-          "roto_points": 3.0
+          "value": 1,
+          "rank": 8,
+          "roto_points": 4.0
         },
         "pim": {
           "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "rank": 5,
+          "roto_points": 4.5
         },
         "goalie_wins": {
           "value": 0,
@@ -710,13 +672,13 @@
         },
         "save_pct": {
           "value": 0,
-          "rank": 5,
+          "rank": 7,
           "qualified": false,
-          "roto_points": 4.5
+          "roto_points": 3.5
         }
       },
-      "total_roto_points": 30.5,
-      "rank": 11
+      "total_roto_points": 34.5,
+      "rank": 10
     },
     {
       "team": "Willy's Warlocks",
@@ -728,18 +690,18 @@
         },
         "assists": {
           "value": 0,
-          "rank": 11,
-          "roto_points": 1.5
+          "rank": 12,
+          "roto_points": 1
         },
         "plus_minus": {
           "value": 1,
           "rank": 8,
-          "roto_points": 5
+          "roto_points": 4.0
         },
         "pim": {
-          "value": 0,
-          "rank": 3,
-          "roto_points": 5.5
+          "value": 2,
+          "rank": 2,
+          "roto_points": 10.0
         },
         "goalie_wins": {
           "value": 0,
@@ -748,12 +710,50 @@
         },
         "save_pct": {
           "value": 0,
-          "rank": 5,
+          "rank": 7,
           "qualified": false,
-          "roto_points": 4.5
+          "roto_points": 3.5
         }
       },
-      "total_roto_points": 25.0,
+      "total_roto_points": 27.0,
+      "rank": 11
+    },
+    {
+      "team": "Gators",
+      "categories": {
+        "goals": {
+          "value": 0,
+          "rank": 10,
+          "roto_points": 2.0
+        },
+        "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
+          "value": 0,
+          "rank": 11,
+          "roto_points": 1.5
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 7,
+          "qualified": false,
+          "roto_points": 3.5
+        }
+      },
+      "total_roto_points": 24.0,
       "rank": 12
     }
   ],
@@ -843,10 +843,10 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
-            "plus_minus": 1,
+            "plus_minus": 2,
             "pim": 0
           },
           "status": "active"
@@ -856,9 +856,9 @@
           "country": "GER",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 1,
-            "assists": 0,
+            "assists": 1,
             "plus_minus": 0,
             "pim": 0
           },
@@ -1023,8 +1023,8 @@
       },
       "totals": {
         "goals": 1,
-        "assists": 4,
-        "plus_minus": 0,
+        "assists": 5,
+        "plus_minus": 1,
         "pim": 0,
         "goalie_wins": 0,
         "save_pct": 0,
@@ -1103,10 +1103,10 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
-            "goals": 0,
+            "gp": 1,
+            "goals": 2,
             "assists": 0,
-            "plus_minus": 0,
+            "plus_minus": 2,
             "pim": 0
           },
           "status": "active"
@@ -1116,7 +1116,7 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": -1,
@@ -1296,9 +1296,9 @@
         }
       },
       "totals": {
-        "goals": 2,
+        "goals": 4,
         "assists": 1,
-        "plus_minus": 2,
+        "plus_minus": 4,
         "pim": 0,
         "goalie_wins": 0,
         "save_pct": 0.9090909090909091,
@@ -1442,7 +1442,7 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": -1,
@@ -1455,8 +1455,8 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
-            "goals": 0,
+            "gp": 1,
+            "goals": 1,
             "assists": 0,
             "plus_minus": 0,
             "pim": 0
@@ -1470,9 +1470,9 @@
           "stats": {
             "gp": 1,
             "wins": 0,
-            "saves": 8,
-            "shots_against": 9,
-            "save_pct": 0.8888888888888888
+            "saves": 17,
+            "shots_against": 18,
+            "save_pct": 0.9444444444444444
           },
           "status": "active"
         },
@@ -1585,19 +1585,19 @@
       "goalie_stats": {
         "aggregate": {
           "wins": 0,
-          "saves": 34,
-          "shots_against": 35,
-          "save_pct": 0.9714285714285714,
+          "saves": 43,
+          "shots_against": 44,
+          "save_pct": 0.9772727272727273,
           "qualified": true
         }
       },
       "totals": {
-        "goals": 2,
+        "goals": 3,
         "assists": 3,
         "plus_minus": 2,
         "pim": 2,
         "goalie_wins": 0,
-        "save_pct": 0.9714285714285714,
+        "save_pct": 0.9772727272727273,
         "sv_qualified": true
       }
     },
@@ -1699,10 +1699,10 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 1,
-            "plus_minus": 1,
+            "assists": 2,
+            "plus_minus": 2,
             "pim": 0
           },
           "status": "active"
@@ -1712,10 +1712,10 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
-            "plus_minus": 0,
+            "plus_minus": 1,
             "pim": 0
           },
           "status": "active"
@@ -1727,9 +1727,9 @@
           "stats": {
             "gp": 1,
             "wins": 0,
-            "saves": 14,
-            "shots_against": 15,
-            "save_pct": 0.9333333333333333
+            "saves": 28,
+            "shots_against": 32,
+            "save_pct": 0.875
           },
           "status": "active"
         },
@@ -1870,20 +1870,20 @@
       "goalie_stats": {
         "aggregate": {
           "wins": 0,
-          "saves": 14,
-          "shots_against": 15,
-          "save_pct": 0,
-          "qualified": false
+          "saves": 28,
+          "shots_against": 32,
+          "save_pct": 0.875,
+          "qualified": true
         }
       },
       "totals": {
         "goals": 0,
-        "assists": 3,
-        "plus_minus": 4,
+        "assists": 4,
+        "plus_minus": 6,
         "pim": 0,
         "goalie_wins": 0,
-        "save_pct": 0,
-        "sv_qualified": false
+        "save_pct": 0.875,
+        "sv_qualified": true
       }
     },
     "Cross's Beavers": {
@@ -1958,10 +1958,10 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
-            "plus_minus": 0,
+            "assists": 2,
+            "plus_minus": 1,
             "pim": 0
           },
           "status": "active"
@@ -1973,9 +1973,9 @@
           "stats": {
             "gp": 1,
             "wins": 0,
-            "saves": 0,
-            "shots_against": 1,
-            "save_pct": 0.0
+            "saves": 23,
+            "shots_against": 26,
+            "save_pct": 0.8846153846153846
           },
           "status": "active"
         },
@@ -2137,20 +2137,20 @@
       "goalie_stats": {
         "aggregate": {
           "wins": 0,
-          "saves": 0,
-          "shots_against": 1,
-          "save_pct": 0,
-          "qualified": false
+          "saves": 23,
+          "shots_against": 26,
+          "save_pct": 0.8846153846153846,
+          "qualified": true
         }
       },
       "totals": {
         "goals": 1,
-        "assists": 1,
-        "plus_minus": 2,
+        "assists": 3,
+        "plus_minus": 3,
         "pim": 0,
         "goalie_wins": 0,
-        "save_pct": 0,
-        "sv_qualified": false
+        "save_pct": 0.8846153846153846,
+        "sv_qualified": true
       }
     },
     "Gabe's Gangsters": {
@@ -2225,7 +2225,7 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
@@ -2238,10 +2238,10 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
-            "plus_minus": 0,
+            "assists": 2,
+            "plus_minus": 2,
             "pim": 0
           },
           "status": "active"
@@ -2251,11 +2251,11 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
-            "plus_minus": -1,
-            "pim": 0
+            "plus_minus": 0,
+            "pim": 4
           },
           "status": "active"
         },
@@ -2418,9 +2418,9 @@
       },
       "totals": {
         "goals": 1,
-        "assists": 0,
-        "plus_minus": 2,
-        "pim": 2,
+        "assists": 2,
+        "plus_minus": 5,
+        "pim": 6,
         "goalie_wins": 0,
         "save_pct": 0.875,
         "sv_qualified": true
@@ -2767,8 +2767,8 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
-            "goals": 0,
+            "gp": 1,
+            "goals": 1,
             "assists": 0,
             "plus_minus": 0,
             "pim": 0
@@ -2780,10 +2780,10 @@
           "country": "GER",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
-            "plus_minus": 0,
+            "assists": 1,
+            "plus_minus": 1,
             "pim": 0
           },
           "status": "active"
@@ -2939,9 +2939,9 @@
         }
       },
       "totals": {
-        "goals": 2,
-        "assists": 2,
-        "plus_minus": 0,
+        "goals": 3,
+        "assists": 3,
+        "plus_minus": 1,
         "pim": 0,
         "goalie_wins": 0,
         "save_pct": 0,
@@ -3059,7 +3059,7 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 1,
             "assists": 0,
             "plus_minus": 1,
@@ -3072,10 +3072,10 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
-            "plus_minus": 0,
+            "assists": 1,
+            "plus_minus": 1,
             "pim": 0
           },
           "status": "active"
@@ -3085,7 +3085,7 @@
           "country": "DEN",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 1,
             "plus_minus": 0,
@@ -3098,7 +3098,7 @@
           "country": "DEN",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
@@ -3111,10 +3111,10 @@
           "country": "GER",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
-            "plus_minus": 0,
+            "assists": 1,
+            "plus_minus": 1,
             "pim": 0
           },
           "status": "active"
@@ -3243,8 +3243,8 @@
       },
       "totals": {
         "goals": 2,
-        "assists": 2,
-        "plus_minus": -2,
+        "assists": 4,
+        "plus_minus": 0,
         "pim": 0,
         "goalie_wins": 0,
         "save_pct": 0.8611111111111112,
@@ -3310,11 +3310,11 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
-            "pim": 0
+            "pim": 2
           },
           "status": "active"
         },
@@ -3323,7 +3323,7 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 1,
             "plus_minus": 1,
@@ -3506,7 +3506,7 @@
         "goals": 2,
         "assists": 6,
         "plus_minus": 7,
-        "pim": 0,
+        "pim": 2,
         "goalie_wins": 0,
         "save_pct": 0,
         "sv_qualified": false
@@ -3571,9 +3571,9 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
-            "assists": 0,
+            "assists": 2,
             "plus_minus": 0,
             "pim": 0
           },
@@ -3584,7 +3584,7 @@
           "country": "USA",
           "pos": "D",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
@@ -3771,7 +3771,7 @@
       },
       "totals": {
         "goals": 2,
-        "assists": 1,
+        "assists": 3,
         "plus_minus": 4,
         "pim": 0,
         "goalie_wins": 0,
@@ -3825,7 +3825,7 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
@@ -3838,11 +3838,11 @@
           "country": "USA",
           "pos": "F",
           "stats": {
-            "gp": 0,
+            "gp": 1,
             "goals": 0,
             "assists": 0,
             "plus_minus": -1,
-            "pim": 0
+            "pim": 2
           },
           "status": "active"
         },
@@ -4021,7 +4021,7 @@
         "goals": 0,
         "assists": 0,
         "plus_minus": 1,
-        "pim": 0,
+        "pim": 2,
         "goalie_wins": 0,
         "save_pct": 0,
         "sv_qualified": false
