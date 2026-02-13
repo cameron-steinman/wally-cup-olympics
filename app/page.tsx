@@ -64,10 +64,10 @@ function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
   );
 }
 
-function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct }: {
-  value: number; rotoPoints: number; rank: number; qualified?: boolean; isSavePct?: boolean;
+function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct, isPlusMinus }: {
+  value: number; rotoPoints: number; rank: number; qualified?: boolean; isSavePct?: boolean; isPlusMinus?: boolean;
 }) {
-  const displayVal = isSavePct ? (value > 0 ? value.toFixed(3).replace(/^0/, '') : '—') : value;
+  const displayVal = isSavePct ? (value > 0 ? value.toFixed(3).replace(/^0/, '') : '—') : isPlusMinus ? `${value > 0 ? '+' : ''}${value}` : value;
   const unqualified = isSavePct && qualified === false;
 
   return (
@@ -191,7 +191,7 @@ export default function Home() {
                 <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col" style={{ color: 'var(--text-muted)' }}>Rank</th>
                 <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col" style={{ color: 'var(--text-muted)' }}>Team</th>
                 <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile" style={{ color: 'var(--text-muted)' }}>
-                  <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>GP</div>
+                  <div className="font-bold text-xs" style={{ color: 'var(--text-muted)' }}>GP</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Games</div>
                 </th>
                 {categoryLabels.map(c => (
@@ -202,7 +202,7 @@ export default function Home() {
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
                 <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)', minWidth: '80px' }}>
-                  <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Active</div>
+                  <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Players</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Remaining</div>
                 </th>
               </tr>
@@ -245,7 +245,7 @@ export default function Home() {
                       </a>
                     </td>
                     <td className="px-2 py-4 text-center">
-                      <span className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
+                      <span className="text-base font-medium" style={{ color: 'var(--text-muted)' }}>
                         {gpPerTeam[s.team] ?? 0}
                       </span>
                     </td>
@@ -258,6 +258,7 @@ export default function Home() {
                           rotoPoints={cat.roto_points}
                           rank={cat.rank}
                           isSavePct={c.key === 'save_pct'}
+                          isPlusMinus={c.key === 'plus_minus'}
                           qualified={cat.qualified}
                         />
                       );
@@ -291,7 +292,7 @@ export default function Home() {
           Save % not qualified (&lt;20 SA)
         </span>
         <span><strong>T</strong> = tied on total roto points</span>
-        <span>Active Remaining = players on teams still competing</span>
+        <span>Players Remaining = players on teams still competing</span>
         <span>Roto: 12 pts for 1st, 1 pt for 12th. Ties split evenly.</span>
       </div>
     </div>

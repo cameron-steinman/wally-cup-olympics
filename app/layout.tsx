@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   WALLY CUP OLYMPIC EXTRAVAGANZA
                 </h1>
                 <p className="text-[11px] font-semibold tracking-[0.2em] uppercase" style={{ color: 'var(--accent-blue)' }}>
-                  Milano Cortina 2026 🇮🇹
+                  Milano Cortina 2026 <img src="https://flagcdn.com/w40/it.png" srcSet="https://flagcdn.com/w80/it.png 2x" alt="Italy" width={20} height={15} style={{ display: 'inline-block', verticalAlign: 'middle', borderRadius: 2, marginLeft: 4 }} />
                 </p>
               </div>
             </a>
