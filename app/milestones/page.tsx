@@ -59,10 +59,12 @@ export default function MilestonesPage() {
   const [page, setPage] = useState(0);
   const [teamFilter, setTeamFilter] = useState<string>('all');
 
-  // Get unique Wally teams from milestones
-  const wallyTeams = Array.from(new Set(
-    sorted.map(m => m.team || m.wally_team).filter(Boolean)
-  )).sort() as string[];
+  // All 12 Wally teams (not just those with milestones)
+  const wallyTeams = [
+    "Bardown", "Big Shooters", "Cam's Crunch", "Cross's Beavers",
+    "Gabe's Gangsters", "Gators", "Ice Holes", "Johnny's Scrubbers",
+    "Mark's Mafia", "Owen's Otters", "Todd's Hitmen", "Willy's Warlocks"
+  ];
 
   // Filter by team
   const filtered = teamFilter === 'all'
