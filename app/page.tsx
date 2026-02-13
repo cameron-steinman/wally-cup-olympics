@@ -218,6 +218,21 @@ export default function Home() {
 
   return (
     <div>
+      {/* Navigation */}
+      <div className="glass-card mb-5 px-4 py-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-bold" style={{ color: 'var(--text-primary)' }}>
+            📊 Current Standings
+          </h2>
+          <a 
+            href="/predictions" 
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 text-sm"
+          >
+            🎲 Predictions →
+          </a>
+        </div>
+      </div>
+
       {/* Live Game Ticker */}
       {dayGames.length > 0 && (
         <div className="glass-card mb-5 px-4 py-3 overflow-x-auto" style={{ borderLeft: liveGames.length > 0 ? '3px solid var(--accent-red, #ef4444)' : '3px solid var(--accent-blue)' }}>
