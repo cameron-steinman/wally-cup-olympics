@@ -39,7 +39,7 @@ const teamLogos: Record<string, string> = {
 const teamAbbrevs: Record<string, string> = {
   "Cam's Crunch": "CC", "Mark's Mafia": "MM", "Todd's Hitmen": "TH",
   "Johnny's Scrubbers": "JS", "Bardown": "BD", "Cross's Beavers": "CB",
-  "Big Shooters": "BS", "Gators": "GG", "Gabe's Gangsters": "GAB",
+  "Big Shooters": "BS", "Gators": "MG", "Gabe's Gangsters": "GG",
   "Willy's Warlocks": "WW", "Owen's Otters": "OO", "Ice Holes": "IH",
 };
 
