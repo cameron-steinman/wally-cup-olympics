@@ -43,9 +43,14 @@ interface PageProps {
 }
 
 function findPlayerById(playerId: number): Player | null {
-  return standingsData.all_olympic_players.find(
-    (p: Player) => p.player_id === playerId
-  ) || null;
+  const players = standingsData.all_olympic_players;
+  for (let i = 0; i < players.length; i++) {
+    const player = { ...players[i] }; // Create a copy of the player object
+    if (player.player_id != null && player.player_id === playerId) {
+      return player;
+    }
+  }
+  return null;
 }
 
 function getCountryFlag(countryCode: string): string {
