@@ -237,7 +237,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>A</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>+/−</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>PIM</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>FPts</th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
@@ -272,7 +271,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                       {pm > 0 ? '+' : ''}{pm}
                     </td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.pim ?? 0}</td>
-                    <td className="px-2 py-2.5 text-center text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>{p.fantasyPts.toFixed(0)}</td>
                     <td className="px-3 py-2.5 text-sm">
                       <NextGameCell country={p.country} />
                     </td>
@@ -305,7 +303,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>W</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SA</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SV%</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>FPts</th>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
               </tr>
             </thead>
@@ -330,7 +327,6 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>
                       {(p.stats?.save_pct ?? 0) > 0 ? (p.stats?.save_pct ?? 0).toFixed(3).replace(/^0/, '') : '—'}
                     </td>
-                    <td className="px-2 py-2.5 text-center text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>{p.fantasyPts.toFixed(0)}</td>
                     <td className="px-3 py-2.5 text-sm">
                       <NextGameCell country={p.country} />
                     </td>
@@ -349,7 +345,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                 <td className="px-2 py-2.5 text-center text-sm font-bold">
                   {team.goalie_stats.aggregate.save_pct > 0 ? team.goalie_stats.aggregate.save_pct.toFixed(3).replace(/^0/, '') : '—'}
                 </td>
-                <td colSpan={2} />
+                <td />
               </tr>
             </tfoot>
           </table>

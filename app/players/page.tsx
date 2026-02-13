@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import data from "../data/standings.json";
 
 const flagIso2: Record<string, string> = {
@@ -36,18 +37,10 @@ const teamLogos: Record<string, string> = {
 };
 
 const teamAbbrevs: Record<string, string> = {
-  "Cam's Crunch": "CC",
-  "Mark's Mafia": "MM",
-  "Todd's Hitmen": "TH",
-  "Johnny's Scrubbers": "JS",
-  "Bardown": "BD",
-  "Cross's Beavers": "CB",
-  "Big Shooters": "BS",
-  "Gators": "GAT",
-  "Gabe's Gangsters": "GG",
-  "Willy's Warlocks": "WW",
-  "Owen's Otters": "OO",
-  "Ice Holes": "IH",
+  "Cam's Crunch": "CC", "Mark's Mafia": "MM", "Todd's Hitmen": "TH",
+  "Johnny's Scrubbers": "JS", "Bardown": "BD", "Cross's Beavers": "CB",
+  "Big Shooters": "BS", "Gators": "GAT", "Gabe's Gangsters": "GG",
+  "Willy's Warlocks": "WW", "Owen's Otters": "OO", "Ice Holes": "IH",
 };
 
 function teamSlug(name: string) {
@@ -55,52 +48,32 @@ function teamSlug(name: string) {
 }
 
 type AllPlayer = {
-  name: string;
-  country: string;
-  pos: string;
-  wally_team: string | null;
-  stats: {
-    gp: number;
-    goals: number;
-    assists: number;
-    plus_minus: number;
-    pim: number;
-    wins?: number;
-    saves?: number;
-    shots_against?: number;
-  };
+  name: string; country: string; pos: string; wally_team: string | null;
+  stats: { gp: number; goals: number; assists: number; plus_minus: number; pim: number; wins?: number; saves?: number; shots_against?: number; };
 };
 
-function calcFantasyPoints(p: AllPlayer): number {
+function calcFPts(p: AllPlayer): number {
   const s = p.stats;
   if (p.pos === 'G') {
-    const wins = s.wins ?? 0;
     const sa = s.shots_against ?? 0;
-    const saves = s.saves ?? 0;
-    const svPct = sa > 0 ? saves / sa : 0;
-    const svBonus = svPct > 0 ? 0.5 * ((svPct - 0.904) * 1000) : 0;
-    return 16 * wins + svBonus;
+    const sv = s.saves ?? 0;
+    const svPct = sa > 0 ? sv / sa : 0;
+    return 16 * (s.wins ?? 0) + (svPct > 0 ? 0.5 * ((svPct - 0.904) * 1000) : 0);
   }
   return 10 * s.goals + 8 * s.assists + 10 * s.plus_minus + 5 * s.pim;
 }
 
+const PAGE_SIZE = 50;
+
 export default function PlayersPage() {
+  const [page, setPage] = useState(0);
+
   const allPlayers = ((data as any).all_olympic_players || []) as AllPlayer[];
+  const ranked = allPlayers.map(p => ({ ...p, fpts: calcFPts(p) })).sort((a, b) => b.fpts - a.fpts);
+  const withRanks = ranked.map((p, i) => ({ ...p, rank: ranked.findIndex(x => x.fpts === p.fpts) + 1 }));
 
-  // Calculate fantasy points and rank
-  const ranked = allPlayers
-    .map(p => ({ ...p, fpts: calcFantasyPoints(p) }))
-    .sort((a, b) => b.fpts - a.fpts);
-
-  // Assign ranks with ties
-  const withRanks = ranked.map((p, i) => {
-    const rank = ranked.findIndex(x => x.fpts === p.fpts) + 1;
-    return { ...p, rank };
-  });
-
-  // Separate skaters and goalies for display, but show combined
-  const totalPlayers = withRanks.length;
-  const wallyCount = withRanks.filter(p => p.wally_team).length;
+  const totalPages = Math.ceil(withRanks.length / PAGE_SIZE);
+  const pageData = withRanks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <div>
@@ -108,13 +81,41 @@ export default function PlayersPage() {
         ← Back to Standings
       </a>
 
-      <div className="mb-6">
-        <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-          All Olympic Players
-        </h2>
-        <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-          {totalPlayers} players · {wallyCount} on Wally Cup teams · Ranked by fantasy points
-        </p>
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+        <div>
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+            All Olympic Players
+          </h2>
+          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
+            {withRanks.length} players · {withRanks.filter(p => p.wally_team).length} on Wally Cup teams · Ranked by fantasy points
+          </p>
+        </div>
+        {/* Pagination controls */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setPage(p => Math.max(0, p - 1))}
+            disabled={page === 0}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            style={{
+              background: page === 0 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
+              color: page === 0 ? 'var(--text-muted)' : 'var(--accent-blue)',
+              border: 'none', cursor: page === 0 ? 'default' : 'pointer'
+            }}
+          >← Prev</button>
+          <span className="text-xs font-semibold" style={{ color: 'var(--text-secondary)' }}>
+            {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, withRanks.length)} of {withRanks.length}
+          </span>
+          <button
+            onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+            disabled={page >= totalPages - 1}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            style={{
+              background: page >= totalPages - 1 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
+              color: page >= totalPages - 1 ? 'var(--text-muted)' : 'var(--accent-blue)',
+              border: 'none', cursor: page >= totalPages - 1 ? 'default' : 'pointer'
+            }}
+          >Next →</button>
+        </div>
       </div>
 
       <div className="glass-card overflow-hidden">
@@ -134,11 +135,10 @@ export default function PlayersPage() {
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>PIM</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>W</th>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>SV%</th>
-                <th className="px-2 py-2.5 text-center text-[10px] font-bold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>FPts</th>
               </tr>
             </thead>
             <tbody>
-              {withRanks.map((p, idx) => {
+              {pageData.map((p, idx) => {
                 const pm = p.stats.plus_minus ?? 0;
                 const abbrev = p.wally_team ? teamAbbrevs[p.wally_team] : null;
                 const logo = p.wally_team ? teamLogos[p.wally_team] : null;
@@ -188,9 +188,6 @@ export default function PlayersPage() {
                     <td className="px-2 py-2 text-center text-sm" style={{ color: 'var(--text-primary)' }}>
                       {isGoalie && svPct > 0 ? svPct.toFixed(3).replace(/^0/, '') : '—'}
                     </td>
-                    <td className="px-2 py-2 text-center">
-                      <span className="text-sm font-bold" style={{ color: 'var(--accent-blue)' }}>{p.fpts.toFixed(0)}</span>
-                    </td>
                   </tr>
                 );
               })}
@@ -199,8 +196,33 @@ export default function PlayersPage() {
         </div>
       </div>
 
-      <div className="mt-4 text-[11px]" style={{ color: 'var(--text-muted)' }}>
-        <strong>Fantasy Points:</strong> Skaters: 10×G + 8×A + 10×(+/−) + 5×PIM · Goalies: 16×W + 0.5×(SV%−.904)×1000
+      {/* Bottom pagination */}
+      <div className="mt-4 flex items-center justify-between">
+        <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+          Page {page + 1} of {totalPages}
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setPage(p => Math.max(0, p - 1))}
+            disabled={page === 0}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            style={{
+              background: page === 0 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
+              color: page === 0 ? 'var(--text-muted)' : 'var(--accent-blue)',
+              border: 'none', cursor: page === 0 ? 'default' : 'pointer'
+            }}
+          >← Prev</button>
+          <button
+            onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+            disabled={page >= totalPages - 1}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            style={{
+              background: page >= totalPages - 1 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
+              color: page >= totalPages - 1 ? 'var(--text-muted)' : 'var(--accent-blue)',
+              border: 'none', cursor: page >= totalPages - 1 ? 'default' : 'pointer'
+            }}
+          >Next →</button>
+        </div>
       </div>
     </div>
   );
