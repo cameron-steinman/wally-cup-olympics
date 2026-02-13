@@ -77,12 +77,12 @@ export default function PlayersPage() {
 
   return (
     <div>
-      <a href="/wally-cup-olympics/" className="text-sm no-underline mb-5 inline-flex items-center gap-1.5" style={{ color: 'var(--accent-blue)' }}>
+      <a href="/wally-cup-olympics/" className="text-sm no-underline mb-5 inline-flex items-center gap-1.5 back-link-mobile" style={{ color: 'var(--accent-blue)' }}>
         ← Back to Standings
       </a>
 
-      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-        <div>
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mobile-stack mobile-stack-header mobile-compact">
+        <div className="section-header-mobile">
           <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
             All Olympic Players
           </h2>
@@ -95,20 +95,20 @@ export default function PlayersPage() {
           <button
             onClick={() => setPage(p => Math.max(0, p - 1))}
             disabled={page === 0}
-            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            className="px-3 py-1.5 rounded-lg text-xs font-bold pagination-button"
             style={{
               background: page === 0 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
               color: page === 0 ? 'var(--text-muted)' : 'var(--accent-blue)',
               border: 'none', cursor: page === 0 ? 'default' : 'pointer'
             }}
           >← Prev</button>
-          <span className="text-xs font-semibold" style={{ color: 'var(--text-secondary)' }}>
+          <span className="text-xs font-semibold mobile-text-xs" style={{ color: 'var(--text-secondary)' }}>
             {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, withRanks.length)} of {withRanks.length}
           </span>
           <button
             onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
             disabled={page >= totalPages - 1}
-            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            className="px-3 py-1.5 rounded-lg text-xs font-bold pagination-button"
             style={{
               background: page >= totalPages - 1 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
               color: page >= totalPages - 1 ? 'var(--text-muted)' : 'var(--accent-blue)',
@@ -118,9 +118,9 @@ export default function PlayersPage() {
         </div>
       </div>
 
-      <div className="glass-card overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+      <div className="glass-card overflow-hidden glass-card-mobile">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider w-12" style={{ color: 'var(--accent-blue)' }}>#</th>
@@ -154,7 +154,7 @@ export default function PlayersPage() {
                         {p.rank}
                       </span>
                     </td>
-                    <td className="px-3 py-2 text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+                    <td className="px-3 py-2 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
                       {p.name}
                     </td>
                     <td className="px-2 py-2 text-center">
@@ -167,8 +167,8 @@ export default function PlayersPage() {
                           className="inline-flex items-center gap-1 no-underline hover:underline"
                           title={p.wally_team}
                         >
-                          {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain" />}
-                          <span className="text-[11px] font-bold" style={{ color: 'var(--accent-blue)' }}>{abbrev}</span>
+                          {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain team-logo-mobile" />}
+                          <span className="text-[11px] font-bold mobile-text-xs" style={{ color: 'var(--accent-blue)' }}>{abbrev}</span>
                         </a>
                       ) : (
                         <span className="text-[11px]" style={{ color: 'var(--text-muted)' }}>—</span>
@@ -197,15 +197,15 @@ export default function PlayersPage() {
       </div>
 
       {/* Bottom pagination */}
-      <div className="mt-4 flex items-center justify-between">
-        <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+      <div className="mt-4 flex items-center justify-between mobile-stack mobile-compact">
+        <div className="text-[11px] mobile-text-xs" style={{ color: 'var(--text-muted)' }}>
           Page {page + 1} of {totalPages}
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={() => setPage(p => Math.max(0, p - 1))}
             disabled={page === 0}
-            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            className="px-3 py-1.5 rounded-lg text-xs font-bold pagination-button"
             style={{
               background: page === 0 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
               color: page === 0 ? 'var(--text-muted)' : 'var(--accent-blue)',
@@ -215,7 +215,7 @@ export default function PlayersPage() {
           <button
             onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
             disabled={page >= totalPages - 1}
-            className="px-3 py-1.5 rounded-lg text-xs font-bold"
+            className="px-3 py-1.5 rounded-lg text-xs font-bold pagination-button"
             style={{
               background: page >= totalPages - 1 ? 'rgba(37,99,235,0.05)' : 'rgba(37,99,235,0.1)',
               color: page >= totalPages - 1 ? 'var(--text-muted)' : 'var(--accent-blue)',

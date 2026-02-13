@@ -191,23 +191,23 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div>
-      <a href="/wally-cup-olympics/" className="text-sm no-underline mb-5 inline-flex items-center gap-1.5" style={{ color: 'var(--accent-blue)' }}>
+      <a href="/wally-cup-olympics/" className="text-sm no-underline mb-5 inline-flex items-center gap-1.5 back-link-mobile" style={{ color: 'var(--accent-blue)' }}>
         ← Back to Standings
       </a>
 
       {/* Team header */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-6">
-        <div className="glass-card px-6 py-4 flex-1">
-          <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 mb-6 team-header-mobile mobile-compact">
+        <div className="glass-card px-6 py-4 flex-1 glass-card-mobile">
+          <div className="flex items-center gap-4 team-header-content">
             {teamLogos[teamName] && (
-              <img src={teamLogos[teamName]} alt={teamName} className="w-14 h-14 rounded-lg object-contain" style={{ background: 'rgba(255,255,255,0.5)' }} />
+              <img src={teamLogos[teamName]} alt={teamName} className="w-14 h-14 rounded-lg object-contain team-logo-header-mobile" style={{ background: 'rgba(255,255,255,0.5)' }} />
             )}
-            <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+            <h2 className="text-2xl font-extrabold section-header-mobile" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
               {teamName}
             </h2>
           </div>
           <div className="flex items-center gap-3 mt-2">
-            <span className="text-lg font-bold" style={{ color: 'var(--text-secondary)' }}>
+            <span className="text-lg font-bold mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>
               {standing.total_roto_points} Roto Points
             </span>
           </div>
@@ -220,19 +220,19 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Category Breakdown */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-8 category-grid-mobile mobile-compact">
         {Object.entries(standing.categories).map(([cat, info]) => (
-          <div key={cat} className="glass-card p-3 text-center">
-            <div className="text-[10px] font-semibold uppercase tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>
+          <div key={cat} className="glass-card p-3 text-center glass-card-mobile">
+            <div className="text-[10px] font-semibold uppercase tracking-wider mb-1 mobile-text-xs" style={{ color: 'var(--text-muted)' }}>
               {catLabels[cat]}
             </div>
-            <div className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
+            <div className="text-xl font-bold mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
               {cat === 'save_pct' ? (info.value > 0 ? info.value.toFixed(3).replace(/^0/, '') : '—') : info.value}
               {cat === 'save_pct' && info.qualified === false && (
                 <span className="ml-1 inline-block w-2 h-2 rounded-full" style={{ background: 'var(--accent-red)', verticalAlign: 'middle' }} title="Not qualified (<20 SA)" />
               )}
             </div>
-            <div className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+            <div className="text-xs mt-1 mobile-text-xs" style={{ color: 'var(--text-muted)' }}>
               #{info.rank} · {info.roto_points} pts
             </div>
           </div>
@@ -240,12 +240,12 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Skaters */}
-      <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-        Skaters <span className="text-sm font-normal" style={{ color: 'var(--text-secondary)' }}>({skaters.length} in Olympics)</span>
+      <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-primary)' }}>
+        Skaters <span className="text-sm font-normal mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>({skaters.length} in Olympics)</span>
       </h3>
-      <div className="glass-card overflow-hidden mb-8">
-        <div className="overflow-x-auto">
-          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+      <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Player</th>
@@ -270,14 +270,14 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     borderBottom: '1px solid var(--border)',
                     opacity: rowOpacity,
                   }}>
-                    <td className="px-3 py-2.5 text-sm font-medium" style={{ color: eliminated ? 'var(--text-muted)' : 'var(--text-primary)' }}>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: eliminated ? 'var(--text-muted)' : 'var(--text-primary)' }}>
                       {p.name}
                     </td>
                     <td className="px-2 py-2.5 text-center">
                       {p.country && <Flag code={p.country} size={18} />}
                     </td>
                     <td className="px-2 py-2.5 text-center">
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
                         #{p.globalRank}
                       </span>
                     </td>
@@ -291,7 +291,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                       {pm > 0 ? '+' : ''}{pm}
                     </td>
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.pim ?? 0}</td>
-                    <td className="px-3 py-2.5 text-sm">
+                    <td className="px-3 py-2.5 text-sm next-game-mobile">
                       <NextGameCell country={p.country} />
                     </td>
                   </tr>
@@ -303,17 +303,17 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Goalies */}
-      <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-        Goalies <span className="text-sm font-normal" style={{ color: 'var(--text-secondary)' }}>({goalies.length} in Olympics)</span>
+      <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-primary)' }}>
+        Goalies <span className="text-sm font-normal mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>({goalies.length} in Olympics)</span>
         {!team.goalie_stats.aggregate.qualified && (
           <span className="ml-2 text-xs font-normal px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: 'var(--accent-red)' }}>
             Not qualified for SV% ({team.goalie_stats.aggregate.shots_against} SA &lt; 20 required)
           </span>
         )}
       </h3>
-      <div className="glass-card overflow-hidden mb-8">
-        <div className="overflow-x-auto">
-          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+      <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Goalie</th>
@@ -334,10 +334,10 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     borderBottom: '1px solid var(--border)',
                     opacity: eliminated ? 0.4 : 1,
                   }}>
-                    <td className="px-3 py-2.5 text-sm font-medium" style={{ color: 'var(--text-primary)' }}>{p.name}</td>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.name}</td>
                     <td className="px-2 py-2.5 text-center">{p.country && <Flag code={p.country} size={18} />}</td>
                     <td className="px-2 py-2.5 text-center">
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
                         #{p.globalRank}
                       </span>
                     </td>
@@ -347,7 +347,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>
                       {(p.stats?.save_pct ?? 0) > 0 ? (p.stats?.save_pct ?? 0).toFixed(3).replace(/^0/, '') : '—'}
                     </td>
-                    <td className="px-3 py-2.5 text-sm">
+                    <td className="px-3 py-2.5 text-sm next-game-mobile">
                       <NextGameCell country={p.country} />
                     </td>
                   </tr>
@@ -375,10 +375,10 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       {/* Not in Olympics */}
       {notPlaying.length > 0 && (
         <>
-          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-muted)' }}>
-            Not in Olympics <span className="text-sm font-normal">({notPlaying.length} players)</span>
+          <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-muted)' }}>
+            Not in Olympics <span className="text-sm font-normal mobile-text-sm">({notPlaying.length} players)</span>
           </h3>
-          <div className="glass-card overflow-hidden" style={{ opacity: 0.6 }}>
+          <div className="glass-card overflow-hidden glass-card-mobile" style={{ opacity: 0.6 }}>
             <div className="overflow-x-auto">
               <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
                 <tbody>

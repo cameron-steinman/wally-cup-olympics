@@ -57,7 +57,7 @@ function teamSlug(name: string) {
 
 function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
   return (
-    <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+    <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile" style={{ color: 'var(--text-muted)' }}>
       <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>{label}</div>
       {sub && <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{sub}</div>}
     </th>
@@ -166,12 +166,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-end gap-1.5">
           {lastGame && (
-            <div className="glass-card inline-flex items-center gap-3 px-4 py-2.5" style={{ borderRadius: '10px' }}>
-              <span className="text-xs font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
-              <span className="inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+            <div className="glass-card inline-flex items-center gap-3 px-4 py-2.5 last-game-mobile" style={{ borderRadius: '10px' }}>
+              <span className="text-xs font-semibold mobile-text-xs" style={{ color: 'var(--accent-blue)' }}>Last game</span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
                 <Flag code={lastGame.away} /> {lastGame.away_score}–{lastGame.home_score} <Flag code={lastGame.home} />
               </span>
-              <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
+              <span className="text-xs mobile-text-xs" style={{ color: 'var(--text-muted)' }}>
                 {lastGameDate}
               </span>
             </div>
@@ -183,14 +183,14 @@ export default function Home() {
       </div>
 
       {/* Standings table */}
-      <div className="glass-card overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+      <div className="glass-card overflow-hidden glass-card-mobile">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14" style={{ color: 'var(--text-muted)' }}>Rank</th>
-                <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Team</th>
-                <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+                <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col" style={{ color: 'var(--text-muted)' }}>Rank</th>
+                <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col" style={{ color: 'var(--text-muted)' }}>Team</th>
+                <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile" style={{ color: 'var(--text-muted)' }}>
                   <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>GP</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Games</div>
                 </th>
@@ -235,11 +235,11 @@ export default function Home() {
                       )}
                     </td>
                     <td className="px-3 py-4">
-                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2.5 text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2.5 text-sm font-bold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
                         {logoSrc ? (
-                          <img src={logoSrc} alt={s.team} className="w-7 h-7 rounded-md object-contain" />
+                          <img src={logoSrc} alt={s.team} className="w-7 h-7 rounded-md object-contain team-logo-mobile" />
                         ) : (
-                          <span className="w-7 h-7 rounded-md flex items-center justify-center text-sm" style={{ background: 'rgba(37, 99, 235, 0.1)' }}>🏒</span>
+                          <span className="w-7 h-7 rounded-md flex items-center justify-center text-sm team-logo-mobile" style={{ background: 'rgba(37, 99, 235, 0.1)' }}>🏒</span>
                         )}
                         {s.team}
                       </a>
