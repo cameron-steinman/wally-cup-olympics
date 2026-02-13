@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-13T02:10:44.529551Z",
+  "updated_at": "2026-02-13T02:13:53.140526Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -301,50 +301,12 @@
   },
   "standings": [
     {
-      "team": "Mark's Mafia",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 4,
-          "roto_points": 8.0
-        },
-        "assists": {
-          "value": 6,
-          "rank": 1,
-          "roto_points": 12
-        },
-        "plus_minus": {
-          "value": 7,
-          "rank": 1,
-          "roto_points": 12
-        },
-        "pim": {
-          "value": 2,
-          "rank": 2,
-          "roto_points": 10.0
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 7,
-          "qualified": false,
-          "roto_points": 3.5
-        }
-      },
-      "total_roto_points": 52.0,
-      "rank": 1
-    },
-    {
       "team": "Big Shooters",
       "categories": {
         "goals": {
-          "value": 3,
-          "rank": 2,
-          "roto_points": 10.5
+          "value": 5,
+          "rank": 1,
+          "roto_points": 12
         },
         "assists": {
           "value": 3,
@@ -352,9 +314,9 @@
           "roto_points": 6.0
         },
         "plus_minus": {
-          "value": 2,
-          "rank": 7,
-          "roto_points": 6
+          "value": 3,
+          "rank": 6,
+          "roto_points": 6.5
         },
         "pim": {
           "value": 2,
@@ -373,16 +335,92 @@
           "roto_points": 12
         }
       },
-      "total_roto_points": 51.0,
+      "total_roto_points": 53.0,
+      "rank": 1
+    },
+    {
+      "team": "Mark's Mafia",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 4,
+          "roto_points": 7.5
+        },
+        "assists": {
+          "value": 6,
+          "rank": 1,
+          "roto_points": 12
+        },
+        "plus_minus": {
+          "value": 7,
+          "rank": 2,
+          "roto_points": 11
+        },
+        "pim": {
+          "value": 2,
+          "rank": 2,
+          "roto_points": 10.0
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 7,
+          "qualified": false,
+          "roto_points": 3.5
+        }
+      },
+      "total_roto_points": 50.5,
       "rank": 2
+    },
+    {
+      "team": "Cam's Crunch",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 4,
+          "roto_points": 7.5
+        },
+        "assists": {
+          "value": 5,
+          "rank": 2,
+          "roto_points": 10.5
+        },
+        "plus_minus": {
+          "value": 8,
+          "rank": 1,
+          "roto_points": 12
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0.875,
+          "rank": 4,
+          "qualified": true,
+          "roto_points": 8.5
+        }
+      },
+      "total_roto_points": 49.5,
+      "rank": 3
     },
     {
       "team": "Gabe's Gangsters",
       "categories": {
         "goals": {
           "value": 1,
-          "rank": 7,
-          "roto_points": 5.0
+          "rank": 8,
+          "roto_points": 4.0
         },
         "assists": {
           "value": 2,
@@ -411,16 +449,16 @@
           "roto_points": 8.5
         }
       },
-      "total_roto_points": 45.0,
-      "rank": 3
+      "total_roto_points": 44.0,
+      "rank": 4
     },
     {
       "team": "Bardown",
       "categories": {
         "goals": {
           "value": 4,
-          "rank": 1,
-          "roto_points": 12
+          "rank": 2,
+          "roto_points": 11
         },
         "assists": {
           "value": 1,
@@ -449,45 +487,7 @@
           "roto_points": 11
         }
       },
-      "total_roto_points": 44.5,
-      "rank": 4
-    },
-    {
-      "team": "Cam's Crunch",
-      "categories": {
-        "goals": {
-          "value": 0,
-          "rank": 10,
-          "roto_points": 2.0
-        },
-        "assists": {
-          "value": 4,
-          "rank": 3,
-          "roto_points": 9.5
-        },
-        "plus_minus": {
-          "value": 6,
-          "rank": 2,
-          "roto_points": 11
-        },
-        "pim": {
-          "value": 0,
-          "rank": 5,
-          "roto_points": 4.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0.875,
-          "rank": 4,
-          "qualified": true,
-          "roto_points": 8.5
-        }
-      },
-      "total_roto_points": 42.0,
+      "total_roto_points": 43.5,
       "rank": 5
     },
     {
@@ -495,8 +495,8 @@
       "categories": {
         "goals": {
           "value": 1,
-          "rank": 7,
-          "roto_points": 5.0
+          "rank": 8,
+          "roto_points": 4.0
         },
         "assists": {
           "value": 3,
@@ -506,7 +506,7 @@
         "plus_minus": {
           "value": 3,
           "rank": 6,
-          "roto_points": 7
+          "roto_points": 6.5
         },
         "pim": {
           "value": 0,
@@ -525,8 +525,46 @@
           "roto_points": 10
         }
       },
-      "total_roto_points": 39.0,
+      "total_roto_points": 37.5,
       "rank": 6
+    },
+    {
+      "team": "Owen's Otters",
+      "categories": {
+        "goals": {
+          "value": 2,
+          "rank": 4,
+          "roto_points": 7.5
+        },
+        "assists": {
+          "value": 3,
+          "rank": 5,
+          "roto_points": 6.0
+        },
+        "plus_minus": {
+          "value": 4,
+          "rank": 4,
+          "roto_points": 8.5
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 7,
+          "qualified": false,
+          "roto_points": 3.5
+        }
+      },
+      "total_roto_points": 36.5,
+      "rank": 7
     },
     {
       "team": "Johnny's Scrubbers",
@@ -534,12 +572,12 @@
         "goals": {
           "value": 2,
           "rank": 4,
-          "roto_points": 8.0
+          "roto_points": 7.5
         },
         "assists": {
           "value": 4,
-          "rank": 3,
-          "roto_points": 9.5
+          "rank": 4,
+          "roto_points": 9
         },
         "plus_minus": {
           "value": 0,
@@ -563,45 +601,7 @@
           "roto_points": 7
         }
       },
-      "total_roto_points": 37.0,
-      "rank": 7
-    },
-    {
-      "team": "Owen's Otters",
-      "categories": {
-        "goals": {
-          "value": 2,
-          "rank": 4,
-          "roto_points": 8.0
-        },
-        "assists": {
-          "value": 3,
-          "rank": 5,
-          "roto_points": 6.0
-        },
-        "plus_minus": {
-          "value": 4,
-          "rank": 4,
-          "roto_points": 8.5
-        },
-        "pim": {
-          "value": 0,
-          "rank": 5,
-          "roto_points": 4.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 7,
-          "qualified": false,
-          "roto_points": 3.5
-        }
-      },
-      "total_roto_points": 37.0,
+      "total_roto_points": 36.0,
       "rank": 8
     },
     {
@@ -609,51 +609,13 @@
       "categories": {
         "goals": {
           "value": 3,
-          "rank": 2,
-          "roto_points": 10.5
+          "rank": 3,
+          "roto_points": 10
         },
         "assists": {
           "value": 3,
           "rank": 5,
           "roto_points": 6.0
-        },
-        "plus_minus": {
-          "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
-        },
-        "pim": {
-          "value": 0,
-          "rank": 5,
-          "roto_points": 4.5
-        },
-        "goalie_wins": {
-          "value": 0,
-          "rank": 1,
-          "roto_points": 6.5
-        },
-        "save_pct": {
-          "value": 0,
-          "rank": 7,
-          "qualified": false,
-          "roto_points": 3.5
-        }
-      },
-      "total_roto_points": 35.0,
-      "rank": 9
-    },
-    {
-      "team": "Todd's Hitmen",
-      "categories": {
-        "goals": {
-          "value": 1,
-          "rank": 7,
-          "roto_points": 5.0
-        },
-        "assists": {
-          "value": 5,
-          "rank": 2,
-          "roto_points": 11
         },
         "plus_minus": {
           "value": 1,
@@ -678,6 +640,44 @@
         }
       },
       "total_roto_points": 34.5,
+      "rank": 9
+    },
+    {
+      "team": "Todd's Hitmen",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 8,
+          "roto_points": 4.0
+        },
+        "assists": {
+          "value": 5,
+          "rank": 2,
+          "roto_points": 10.5
+        },
+        "plus_minus": {
+          "value": 1,
+          "rank": 8,
+          "roto_points": 4.0
+        },
+        "pim": {
+          "value": 0,
+          "rank": 5,
+          "roto_points": 4.5
+        },
+        "goalie_wins": {
+          "value": 0,
+          "rank": 1,
+          "roto_points": 6.5
+        },
+        "save_pct": {
+          "value": 0,
+          "rank": 7,
+          "qualified": false,
+          "roto_points": 3.5
+        }
+      },
+      "total_roto_points": 33.0,
       "rank": 10
     },
     {
@@ -685,8 +685,8 @@
       "categories": {
         "goals": {
           "value": 0,
-          "rank": 10,
-          "roto_points": 2.0
+          "rank": 11,
+          "roto_points": 1.5
         },
         "assists": {
           "value": 0,
@@ -715,7 +715,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 27.0,
+      "total_roto_points": 26.5,
       "rank": 11
     },
     {
@@ -723,8 +723,8 @@
       "categories": {
         "goals": {
           "value": 0,
-          "rank": 10,
-          "roto_points": 2.0
+          "rank": 11,
+          "roto_points": 1.5
         },
         "assists": {
           "value": 3,
@@ -753,7 +753,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 24.0,
+      "total_roto_points": 23.5,
       "rank": 12
     }
   ],
@@ -1477,6 +1477,19 @@
           "status": "active"
         },
         {
+          "name": "Tim Stutzle",
+          "country": "GER",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 2,
+            "assists": 0,
+            "plus_minus": 1,
+            "pim": 0
+          },
+          "status": "active"
+        },
+        {
           "name": "Vladislav Namestnikov",
           "country": null,
           "pos": "F",
@@ -1592,9 +1605,9 @@
         }
       },
       "totals": {
-        "goals": 3,
+        "goals": 5,
         "assists": 3,
-        "plus_minus": 2,
+        "plus_minus": 3,
         "pim": 2,
         "goalie_wins": 0,
         "save_pct": 0.9772727272727273,
@@ -1603,6 +1616,19 @@
     },
     "Cam's Crunch": {
       "players": [
+        {
+          "name": "Juraj Slafkovsky",
+          "country": "SVK",
+          "pos": "F",
+          "stats": {
+            "gp": 1,
+            "goals": 2,
+            "assists": 1,
+            "plus_minus": 2,
+            "pim": 0
+          },
+          "status": "active"
+        },
         {
           "name": "Erik Karlsson",
           "country": "SWE",
@@ -1877,9 +1903,9 @@
         }
       },
       "totals": {
-        "goals": 0,
-        "assists": 4,
-        "plus_minus": 6,
+        "goals": 2,
+        "assists": 5,
+        "plus_minus": 8,
         "pim": 0,
         "goalie_wins": 0,
         "save_pct": 0.875,
