@@ -152,6 +152,9 @@ export default function Home() {
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
             Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
           </p>
+          <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mt-1 inline-block" style={{ color: 'var(--accent-blue)' }}>
+            View All Olympic Players Rankings →
+          </a>
         </div>
         <div className="flex flex-col items-end gap-1.5">
           {lastGame && (
