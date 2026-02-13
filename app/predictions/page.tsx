@@ -1,238 +1,238 @@
-'use client';
+"use client";
+import data from "../data/standings.json";
 
-import { useEffect, useState } from 'react';
-import standingsData from '../data/standings.json';
-
-// Flag mapping for countries
-const FLAG_MAP = {
-  CAN: 'ca',
-  USA: 'us',
-  SWE: 'se',
-  FIN: 'fi',
-  CZE: 'cz',
-  SUI: 'ch',
-  GER: 'de',
-  SVK: 'sk',
-  DEN: 'dk',
-  LAT: 'lv',
-  ITA: 'it',
-  FRA: 'fr'
+const teamLogos: Record<string, string> = {
+  "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
+  "Mark's Mafia": "/wally-cup-olympics/logos/marks-mafia.png",
+  "Todd's Hitmen": "/wally-cup-olympics/logos/todds-hitmen.png",
+  "Johnny's Scrubbers": "/wally-cup-olympics/logos/johnnys-scrubbers.png",
+  "Bardown": "/wally-cup-olympics/logos/bardown.png",
+  "Cross's Beavers": "/wally-cup-olympics/logos/crosss-beavers.png",
+  "Big Shooters": "/wally-cup-olympics/logos/big-shooters.png",
+  "Gators": "/wally-cup-olympics/logos/gators.png",
+  "Gabe's Gangsters": "/wally-cup-olympics/logos/gabes-gangsters.png",
+  "Willy's Warlocks": "/wally-cup-olympics/logos/willys-warlocks.png",
+  "Owen's Otters": "/wally-cup-olympics/logos/owens-otters.png",
+  "Ice Holes": "/wally-cup-olympics/logos/ice-holes.png",
 };
 
-const COUNTRY_NAMES = {
-  CAN: 'Canada',
-  USA: 'United States',  
-  SWE: 'Sweden',
-  FIN: 'Finland',
-  CZE: 'Czechia',
-  SUI: 'Switzerland',
-  GER: 'Germany',
-  SVK: 'Slovakia',
-  DEN: 'Denmark',
-  LAT: 'Latvia',
-  ITA: 'Italy',
-  FRA: 'France'
+const flagIso2: Record<string, string> = {
+  CAN:"ca",USA:"us",SWE:"se",FIN:"fi",CZE:"cz",SUI:"ch",GER:"de",SVK:"sk",DEN:"dk",LAT:"lv",ITA:"it",FRA:"fr"
+};
+const countryNames: Record<string, string> = {
+  CAN:"Canada",USA:"United States",SWE:"Sweden",FIN:"Finland",CZE:"Czechia",SUI:"Switzerland",
+  GER:"Germany",SVK:"Slovakia",DEN:"Denmark",LAT:"Latvia",ITA:"Italy",FRA:"France"
 };
 
-interface Predictions {
-  win_probabilities: Record<string, number>;
-  podium_probabilities: Record<string, number>;
-  projected_points: Record<string, number>;
-  country_medal_odds: Record<string, {gold: number, silver: number, bronze: number}>;
+function Flag({ code, size = 20 }: { code: string; size?: number }) {
+  const iso = flagIso2[code];
+  if (!iso) return <span>{code}</span>;
+  return (
+    <img src={`https://flagcdn.com/w40/${iso}.png`} srcSet={`https://flagcdn.com/w80/${iso}.png 2x`}
+      alt={code} width={size} height={Math.round(size * 0.75)}
+      style={{ display: 'inline-block', verticalAlign: 'middle', borderRadius: 2 }} />
+  );
 }
 
 export default function PredictionsPage() {
-  const [predictions, setPredictions] = useState<Predictions | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (standingsData.predictions) {
-      setPredictions(standingsData.predictions as Predictions);
-      setLoading(false);
-    }
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center">Loading predictions...</div>
-        </div>
-      </div>
-    );
-  }
-
+  const predictions = (data as any).predictions;
   if (!predictions) {
     return (
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center">Predictions data not available</div>
+      <div>
+        <div className="mb-6">
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Predictions</h2>
+          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>Predictions data not yet available.</p>
         </div>
       </div>
     );
   }
 
-  // Sort teams by win probability
-  const teamsByWinProb = Object.entries(predictions.win_probabilities)
+  const winProbs = Object.entries(predictions.win_probabilities as Record<string, number>)
     .sort(([,a], [,b]) => b - a);
-
-  // Sort countries by gold medal probability  
-  const countriesByGoldProb = Object.entries(predictions.country_medal_odds)
+  const podiumProbs = Object.entries(predictions.podium_probabilities as Record<string, number>)
+    .sort(([,a], [,b]) => b - a);
+  const projectedPts = Object.entries(predictions.projected_points as Record<string, number>)
+    .sort(([,a], [,b]) => b - a);
+  const medalOdds = Object.entries(predictions.country_medal_odds as Record<string, {gold: number; silver: number; bronze: number}>)
     .sort(([,a], [,b]) => b.gold - a.gold);
 
-  // Sort teams by projected points for final standings
-  const teamsByProjectedPoints = Object.entries(predictions.projected_points)
-    .sort(([,a], [,b]) => b - a)
-    .map(([team, points], index) => ({ team, points, rank: index + 1 }));
+  // Find current rank for each team
+  const currentRanks: Record<string, number> = {};
+  ((data as any).standings || []).forEach((s: any) => { currentRanks[s.team] = s.rank; });
+
+  const maxWinProb = Math.max(...winProbs.map(([,p]) => p), 0.01);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-            🎲 Wally Cup Predictions
-          </h1>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Monte Carlo simulation results based on current performance, power rankings, and tournament advancement probabilities.
-            <span className="block text-sm mt-2 text-slate-500">1,000 simulations run</span>
-          </p>
+    <div>
+      {/* Page title */}
+      <div className="mb-6">
+        <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          Predictions
+        </h2>
+        <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
+          Monte Carlo simulation · 5,000 iterations · Based on current stats, per-game rates, and tournament advancement probabilities
+        </p>
+      </div>
+
+      {/* Win Probabilities */}
+      <div className="mb-6">
+        <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Wally Cup Win Probability</h3>
+        <div className="glass-card p-4">
+          <div className="space-y-3">
+            {winProbs.map(([team, prob]) => {
+              const logoSrc = teamLogos[team];
+              const pct = (prob * 100);
+              const barWidth = Math.max((prob / maxWinProb) * 100, 1);
+              return (
+                <div key={team} className="flex items-center gap-3">
+                  <div className="w-40 flex items-center gap-2 shrink-0">
+                    {logoSrc ? (
+                      <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" />
+                    ) : (
+                      <span className="w-5 h-5 rounded-sm flex items-center justify-center text-xs" style={{ background: 'rgba(37,99,235,0.1)' }}>🏒</span>
+                    )}
+                    <span className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>{team}</span>
+                  </div>
+                  <div className="flex-1 h-6 rounded-full overflow-hidden" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}>
+                    <div className="h-full rounded-full flex items-center justify-end px-2"
+                      style={{ width: `${barWidth}%`, background: pct > 50 ? 'var(--accent-blue)' : pct > 10 ? 'rgba(37,99,235,0.6)' : 'rgba(37,99,235,0.3)', minWidth: pct > 0 ? '2rem' : '0' }}>
+                      {pct >= 1 && <span className="text-xs font-bold text-white">{pct.toFixed(1)}%</span>}
+                    </div>
+                  </div>
+                  {pct < 1 && (
+                    <span className="text-xs font-medium w-12 text-right shrink-0" style={{ color: 'var(--text-muted)' }}>
+                      {pct > 0 ? `${pct.toFixed(1)}%` : '0%'}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        {/* Projected Final Standings */}
+        <div>
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Projected Final Standings</h3>
+          <div className="glass-card p-4">
+            <div className="space-y-2">
+              {projectedPts.map(([team, pts], idx) => {
+                const logoSrc = teamLogos[team];
+                const currentRank = currentRanks[team] || 0;
+                const projRank = idx + 1;
+                const rankDiff = currentRank - projRank;
+                return (
+                  <div key={team} className="flex items-center justify-between py-2" style={{ borderBottom: '1px solid var(--border)' }}>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold w-6 text-center" style={{ color: idx < 3 ? 'var(--accent-blue)' : 'var(--text-muted)' }}>
+                        {projRank}
+                      </span>
+                      {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" />}
+                      <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{team}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      {rankDiff !== 0 && (
+                        <span className="text-xs font-medium" style={{ color: rankDiff > 0 ? '#22c55e' : '#ef4444' }}>
+                          {rankDiff > 0 ? `↑${rankDiff}` : `↓${Math.abs(rankDiff)}`}
+                        </span>
+                      )}
+                      <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{pts.toFixed(1)} pts</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
-        {/* Win Probabilities Bar Chart */}
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 mb-8 shadow-2xl">
-          <h2 className="text-2xl font-bold mb-6 text-center">🏆 Wally Cup Win Probabilities</h2>
-          <div className="space-y-4">
-            {teamsByWinProb.map(([team, probability]) => (
-              <div key={team} className="flex items-center">
-                <div className="w-48 text-right pr-4 font-medium text-slate-300">
-                  {team}
-                </div>
-                <div className="flex-1 bg-slate-700/50 rounded-full h-8 relative overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full transition-all duration-1000 ease-out flex items-center justify-end pr-3"
-                    style={{width: `${Math.max(probability * 100, 2)}%`}}
-                  >
-                    <span className="text-sm font-bold text-slate-900">
-                      {(probability * 100).toFixed(1)}%
+        {/* Top 3 Finish Probability */}
+        <div>
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Top 3 Finish Probability</h3>
+          <div className="glass-card p-4">
+            <div className="space-y-2">
+              {podiumProbs.map(([team, prob]) => {
+                const logoSrc = teamLogos[team];
+                const pct = prob * 100;
+                return (
+                  <div key={team} className="flex items-center justify-between py-2" style={{ borderBottom: '1px solid var(--border)' }}>
+                    <div className="flex items-center gap-2">
+                      {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded-sm object-contain" />}
+                      <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{team}</span>
+                    </div>
+                    <span className="text-sm font-bold" style={{ color: pct > 50 ? 'var(--accent-blue)' : pct > 10 ? 'var(--text-primary)' : 'var(--text-muted)' }}>
+                      {pct.toFixed(1)}%
                     </span>
                   </div>
-                </div>
-              </div>
-            ))}
+                );
+              })}
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Country Medal Probabilities */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 shadow-2xl">
-            <h2 className="text-2xl font-bold mb-6 text-center">🥇 Medal Probabilities</h2>
-            <div className="space-y-3">
-              {countriesByGoldProb.map(([country, odds]) => (
-                <div key={country} className="flex items-center p-3 bg-slate-700/30 rounded-xl">
-                  <img 
-                    src={`https://flagcdn.com/24x18/${FLAG_MAP[country as keyof typeof FLAG_MAP]}.png`}
-                    alt={`${country} flag`}
-                    className="w-6 h-4 mr-3 rounded"
-                  />
-                  <div className="flex-1">
-                    <div className="font-medium text-slate-200">
-                      {COUNTRY_NAMES[country as keyof typeof COUNTRY_NAMES]}
-                    </div>
-                    <div className="flex space-x-4 text-sm">
-                      <span className="text-yellow-400">
-                        🥇 {(odds.gold * 100).toFixed(1)}%
-                      </span>
-                      <span className="text-gray-300">
-                        🥈 {(odds.silver * 100).toFixed(1)}%
-                      </span>
-                      <span className="text-amber-600">
-                        🥉 {(odds.bronze * 100).toFixed(1)}%
+      {/* Country Medal Probabilities */}
+      <div className="mb-6">
+        <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Country Medal Probabilities</h3>
+        <div className="glass-card overflow-hidden">
+          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+            <thead>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
+                <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: 'var(--text-secondary)' }}>Country</th>
+                <th className="px-4 py-3 text-center text-xs font-semibold uppercase" style={{ color: '#ffd700' }}>🥇 Gold</th>
+                <th className="px-4 py-3 text-center text-xs font-semibold uppercase" style={{ color: '#c0c0c0' }}>🥈 Silver</th>
+                <th className="px-4 py-3 text-center text-xs font-semibold uppercase" style={{ color: '#cd7f32' }}>🥉 Bronze</th>
+              </tr>
+            </thead>
+            <tbody>
+              {medalOdds.map(([country, odds]) => (
+                <tr key={country} style={{ borderBottom: '1px solid var(--border)' }}>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-2">
+                      <Flag code={country} size={18} />
+                      <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
+                        {countryNames[country] || country}
                       </span>
                     </div>
-                  </div>
-                </div>
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+                    {(odds.gold * 100).toFixed(1)}%
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+                    {(odds.silver * 100).toFixed(1)}%
+                  </td>
+                  <td className="px-4 py-3 text-center text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+                    {(odds.bronze * 100).toFixed(1)}%
+                  </td>
+                </tr>
               ))}
-            </div>
-          </div>
-
-          {/* Projected Final Standings */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 shadow-2xl">
-            <h2 className="text-2xl font-bold mb-6 text-center">📊 Projected Final Standings</h2>
-            <div className="space-y-2">
-              {teamsByProjectedPoints.map(({ team, points, rank }) => (
-                <div key={team} className="flex items-center justify-between p-3 bg-slate-700/30 rounded-xl">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">
-                      {rank}
-                    </div>
-                    <span className="font-medium text-slate-200">{team}</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-bold text-lg text-slate-100">
-                      {points.toFixed(1)}
-                    </div>
-                    <div className="text-xs text-slate-400">points</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-        {/* Podium Probabilities */}
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 mt-8 shadow-2xl">
-          <h2 className="text-2xl font-bold mb-6 text-center">🏅 Top 3 Finish Probabilities</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(predictions.podium_probabilities)
-              .sort(([,a], [,b]) => b - a)
-              .map(([team, probability]) => (
-                <div key={team} className="bg-slate-700/30 rounded-xl p-4 text-center">
-                  <div className="font-medium text-slate-200 mb-2">{team}</div>
-                  <div className="text-2xl font-bold text-amber-400">
-                    {(probability * 100).toFixed(1)}%
-                  </div>
-                  <div className="text-sm text-slate-400">podium chance</div>
-                </div>
-              ))}
+      {/* Methodology */}
+      <div className="glass-card p-5">
+        <h3 className="text-base font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Methodology</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm" style={{ color: 'var(--text-secondary)' }}>
+          <div>
+            <p className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>Simulation</p>
+            <ul className="space-y-1 text-xs">
+              <li>• 5,000 Monte Carlo iterations</li>
+              <li>• Team-correlated + individual player noise</li>
+              <li>• Country advancement weighted by pre-tournament odds</li>
+              <li>• Per-game stat rates projected across remaining games</li>
+            </ul>
           </div>
-        </div>
-
-        {/* Methodology */}
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 mt-8 shadow-2xl">
-          <h2 className="text-2xl font-bold mb-4 text-center">📈 Methodology</h2>
-          <div className="grid md:grid-cols-2 gap-6 text-slate-300">
-            <div>
-              <h3 className="font-bold text-lg mb-3 text-slate-200">Simulation Process</h3>
-              <ul className="space-y-2 text-sm">
-                <li>• 1,000 Monte Carlo simulations run</li>
-                <li>• Country advancement weighted by betting odds</li>
-                <li>• Player stats projected using per-game rates</li>
-                <li>• Random noise (±30%) applied to projections</li>
-                <li>• Final roto standings calculated for each sim</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-3 text-slate-200">Data Sources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>• Power rankings from pre-tournament odds</li>
-                <li>• Current player performance statistics</li>
-                <li>• Tournament stage & advancement probabilities</li>
-                <li>• Historical per-game production rates</li>
-                <li>• Estimated remaining games by country</li>
-              </ul>
-            </div>
+          <div>
+            <p className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>Variance Factors</p>
+            <ul className="space-y-1 text-xs">
+              <li>• Team-level Gaussian noise (σ=0.25) for correlated outcomes</li>
+              <li>• Player-level Gaussian noise (σ=0.20) for individual variance</li>
+              <li>• Remaining game estimates vary by ±3 based on tournament performance</li>
+              <li>• Roto scoring with proper tie splitting</li>
+            </ul>
           </div>
-        </div>
-
-        {/* Back to Standings */}
-        <div className="text-center mt-12">
-          <a 
-            href="/" 
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
-          >
-            ← Back to Current Standings
-          </a>
         </div>
       </div>
     </div>
