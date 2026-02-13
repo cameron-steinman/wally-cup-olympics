@@ -1,20 +1,20 @@
 "use client";
 import data from "./data/standings.json";
 
-// Placeholder team icons — will be replaced with real ones
-const teamIcons: Record<string, string> = {
-  "Cam's Crunch": "🦞",
-  "Johnny's Scrubbers": "🧹",
-  "Ice Holes": "🕳️",
-  "Big Shooters": "🎯",
-  "Gabe's Gangsters": "🔫",
-  "Owen's Otters": "🦦",
-  "Mark's Mafia": "🤵",
-  "Willy's Warlocks": "🧙",
-  "Todd's Hitmen": "🎪",
-  "Cross's Beavers": "🦫",
-  "Bardown": "🏒",
-  "Gators": "🐊",
+// Team logos — path relative to public/
+const teamLogos: Record<string, string> = {
+  "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
+  "Mark's Mafia": "/wally-cup-olympics/logos/marks-mafia.png",
+  "Todd's Hitmen": "/wally-cup-olympics/logos/todds-hitmen.png",
+  "Johnny's Scrubbers": "/wally-cup-olympics/logos/johnnys-scrubbers.png",
+  "Bardown": "/wally-cup-olympics/logos/bardown.png",
+  "Cross's Beavers": "/wally-cup-olympics/logos/crosss-beavers.png",
+  "Big Shooters": "/wally-cup-olympics/logos/big-shooters.png",
+  "Gators": "/wally-cup-olympics/logos/gators.png",
+  "Gabe's Gangsters": "/wally-cup-olympics/logos/gabes-gangsters.png",
+  "Willy's Warlocks": "/wally-cup-olympics/logos/willys-warlocks.png",
+  "Owen's Otters": "",  // pending
+  "Ice Holes": "",  // pending
 };
 
 const flagMap: Record<string, string> = {
@@ -181,7 +181,7 @@ export default function Home() {
               {rankedStandings.map((s, idx) => {
                 const medalClass = medalClasses[s.displayRank];
                 const isTop3 = s.displayRank <= 3;
-                const icon = teamIcons[s.team] || '🏒';
+                const logoSrc = teamLogos[s.team];
                 const ap = activePlayersPerTeam[s.team] || { active: 0, total: 0 };
                 const allActive = ap.active === ap.total;
 
@@ -205,8 +205,12 @@ export default function Home() {
                       )}
                     </td>
                     <td className="px-3 py-4">
-                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2 text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
-                        <span className="text-lg">{icon}</span>
+                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2.5 text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+                        {logoSrc ? (
+                          <img src={logoSrc} alt={s.team} className="w-7 h-7 rounded-md object-contain" />
+                        ) : (
+                          <span className="w-7 h-7 rounded-md flex items-center justify-center text-sm" style={{ background: 'rgba(37, 99, 235, 0.1)' }}>🏒</span>
+                        )}
                         {s.team}
                       </a>
                     </td>
