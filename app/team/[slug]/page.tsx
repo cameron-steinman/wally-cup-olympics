@@ -1,6 +1,5 @@
 import data from "../../data/standings.json";
 import TeamPageClient from "./TeamPageClient";
-import TeamPageClient from "./TeamPageClient";
 
 const teamLogos: Record<string, string> = {
   "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
@@ -295,6 +294,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
         goalies={goalies}
         countryStatus={countryStatus}
         eliminatedCountries={eliminatedCountries}
+        goalieAggregateStats={team.goalie_stats.aggregate}
       />
 
       {/* Not in Olympics */}

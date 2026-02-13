@@ -365,6 +365,20 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
                 );
               })}
             </tbody>
+            <tfoot>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)', borderTop: '2px solid var(--border)' }}>
+                <td className="px-3 py-2.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>Team Aggregate</td>
+                <td />
+                <td />
+                <td />
+                <td className="px-2 py-2.5 text-center text-sm font-bold">{goalieAggregateStats.wins}</td>
+                <td className="px-2 py-2.5 text-center text-sm font-bold">{goalieAggregateStats.shots_against}</td>
+                <td className="px-2 py-2.5 text-center text-sm font-bold">
+                  {goalieAggregateStats.save_pct > 0 ? goalieAggregateStats.save_pct.toFixed(3).replace(/^0/, '') : '—'}
+                </td>
+                <td />
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
