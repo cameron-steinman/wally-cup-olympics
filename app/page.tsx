@@ -1,20 +1,10 @@
 "use client";
 import data from "./data/standings.json";
 
-const flagMap: Record<string, string> = {
-  CAN:"🇨🇦",USA:"🇺🇸",SWE:"🇸🇪",FIN:"🇫🇮",CZE:"🇨🇿",SUI:"🇨🇭",GER:"🇩🇪",SVK:"🇸🇰",DEN:"🇩🇰",LAT:"🇱🇻",ITA:"🇮🇹",FRA:"🇫🇷"
-};
-
-const medalColors: Record<number, string> = {
-  1: "var(--accent-gold)",
-  2: "var(--accent-silver)",
-  3: "var(--accent-bronze)",
-};
-
-const medalEmoji: Record<number, string> = {
-  1: "🥇",
-  2: "🥈",
-  3: "🥉",
+const medalClasses: Record<number, string> = {
+  1: "medal-badge medal-gold",
+  2: "medal-badge medal-silver",
+  3: "medal-badge medal-bronze",
 };
 
 function teamSlug(name: string) {
@@ -23,9 +13,9 @@ function teamSlug(name: string) {
 
 function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
   return (
-    <th className="px-3 py-3 text-center text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-      <div>{label}</div>
-      {sub && <div className="text-[10px] font-normal" style={{ color: 'var(--text-muted)' }}>{sub}</div>}
+    <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+      <div className="font-bold" style={{ color: 'var(--text-secondary)' }}>{label}</div>
+      {sub && <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{sub}</div>}
     </th>
   );
 }
@@ -33,17 +23,19 @@ function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
 function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct }: {
   value: number; rotoPoints: number; rank: number; qualified?: boolean; isSavePct?: boolean;
 }) {
-  const displayVal = isSavePct ? (value > 0 ? value.toFixed(3).replace(/^0/, '') : '-') : value;
+  const displayVal = isSavePct ? (value > 0 ? value.toFixed(3).replace(/^0/, '') : '—') : value;
   const unqualified = isSavePct && qualified === false;
 
   return (
-    <td className="px-3 py-3 text-center">
-      <div className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
+    <td className="px-3 py-4 text-center cat-cell">
+      <div className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
         {displayVal}
-        {unqualified && <span className="ml-1 inline-block w-2 h-2 rounded-full" style={{ background: 'var(--accent-red)', verticalAlign: 'middle' }} title="Not qualified (<20 SA)" />}
+        {unqualified && <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent-red)', verticalAlign: 'middle' }} title="Not qualified (<20 SA)" />}
       </div>
-      <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
-        {rotoPoints} pts · #{rank}
+      <div className="cat-rank mt-1 inline-flex">
+        <span>{rotoPoints} pts</span>
+        <span style={{ color: 'var(--border)' }}>·</span>
+        <span>#{rank}</span>
       </div>
     </td>
   );
@@ -64,80 +56,103 @@ export default function Home() {
 
   return (
     <div>
-      <div className="mb-6 flex items-center justify-between">
+      {/* Stats summary cards */}
+      <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="glass-card px-5 py-4">
+          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Teams</div>
+          <div className="text-2xl font-extrabold mt-1" style={{ color: 'var(--text-primary)' }}>12</div>
+        </div>
+        <div className="glass-card px-5 py-4">
+          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Categories</div>
+          <div className="text-2xl font-extrabold mt-1" style={{ color: 'var(--text-primary)' }}>6</div>
+        </div>
+        <div className="glass-card px-5 py-4">
+          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Last Updated</div>
+          <div className="text-sm font-semibold mt-1.5" style={{ color: 'var(--text-primary)' }}>{updated}</div>
+        </div>
+      </div>
+
+      {/* Section header */}
+      <div className="mb-5 flex items-end justify-between">
         <div>
-          <h2 className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>Standings</h2>
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Standings</h2>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            Rotisserie scoring · 6 categories · 12 teams
+            Rotisserie scoring across 6 categories
           </p>
         </div>
-        <div className="text-right">
-          <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Last updated</div>
-          <div className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>{updated}</div>
+      </div>
+
+      {/* Standings table */}
+      <div className="glass-card overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+            <thead>
+              <tr style={{ background: 'rgba(99, 102, 241, 0.04)' }}>
+                <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14" style={{ color: 'var(--text-muted)' }}>Rank</th>
+                <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Team</th>
+                <CategoryHeader label="G" sub="Goals" />
+                <CategoryHeader label="A" sub="Assists" />
+                <CategoryHeader label="+/−" sub="Plus/Minus" />
+                <CategoryHeader label="PIM" sub="Penalties" />
+                <CategoryHeader label="W" sub="Goalie Wins" />
+                <CategoryHeader label="SV%" sub="Save %" />
+                <th className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider" style={{ color: 'var(--gradient-start)' }}>
+                  <div>PTS</div>
+                  <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {standings.map((s, idx) => {
+                const medalClass = medalClasses[s.rank];
+                const isTop3 = s.rank <= 3;
+
+                return (
+                  <tr
+                    key={s.team}
+                    className="table-row-hover"
+                    style={{
+                      borderBottom: '1px solid var(--border)',
+                      background: isTop3 ? 'rgba(99, 102, 241, 0.02)' : 'transparent',
+                    }}
+                  >
+                    <td className="px-4 py-4">
+                      {medalClass ? (
+                        <span className={medalClass}>{s.rank}</span>
+                      ) : (
+                        <span className="text-sm font-bold pl-1.5" style={{ color: 'var(--text-muted)' }}>{s.rank}</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-4">
+                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+                        {s.team}
+                      </a>
+                    </td>
+                    <CategoryCell value={s.categories.goals.value} rotoPoints={s.categories.goals.roto_points} rank={s.categories.goals.rank} />
+                    <CategoryCell value={s.categories.assists.value} rotoPoints={s.categories.assists.roto_points} rank={s.categories.assists.rank} />
+                    <CategoryCell value={s.categories.plus_minus.value} rotoPoints={s.categories.plus_minus.roto_points} rank={s.categories.plus_minus.rank} />
+                    <CategoryCell value={s.categories.pim.value} rotoPoints={s.categories.pim.roto_points} rank={s.categories.pim.rank} />
+                    <CategoryCell value={s.categories.goalie_wins.value} rotoPoints={s.categories.goalie_wins.roto_points} rank={s.categories.goalie_wins.rank} />
+                    <CategoryCell value={s.categories.save_pct.value} rotoPoints={s.categories.save_pct.roto_points} rank={s.categories.save_pct.rank} isSavePct qualified={s.categories.save_pct.qualified} />
+                    <td className="px-5 py-4 text-center">
+                      <span className="points-pill" style={isTop3 ? { background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15))' } : {}}>
+                        {s.total_roto_points}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div className="overflow-x-auto rounded-lg" style={{ border: '1px solid var(--border)' }}>
-        <table className="w-full" style={{ borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ background: 'var(--bg-secondary)' }}>
-              <th className="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider w-8" style={{ color: 'var(--text-secondary)' }}>#</th>
-              <th className="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>Team</th>
-              <CategoryHeader label="G" sub="Goals" />
-              <CategoryHeader label="A" sub="Assists" />
-              <CategoryHeader label="+/-" sub="Plus/Minus" />
-              <CategoryHeader label="PIM" sub="Penalties" />
-              <CategoryHeader label="W" sub="Goalie Wins" />
-              <CategoryHeader label="SV%" sub="Save %" />
-              <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>
-                <div>PTS</div>
-                <div className="text-[10px] font-normal" style={{ color: 'var(--text-muted)' }}>Total</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {standings.map((s, idx) => {
-              const medal = medalEmoji[s.rank];
-              const medalColor = medalColors[s.rank];
-              return (
-                <tr
-                  key={s.team}
-                  className="transition-colors"
-                  style={{
-                    background: idx % 2 === 0 ? 'var(--bg-card)' : 'var(--bg-primary)',
-                    borderBottom: '1px solid var(--border)',
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--bg-hover)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = idx % 2 === 0 ? 'var(--bg-card)' : 'var(--bg-primary)')}
-                >
-                  <td className="px-3 py-3 text-sm font-bold" style={{ color: medalColor || 'var(--text-secondary)' }}>
-                    {medal || s.rank}
-                  </td>
-                  <td className="px-3 py-3">
-                    <a href={`/team/${teamSlug(s.team)}`} className="text-sm font-semibold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
-                      {s.team}
-                    </a>
-                  </td>
-                  <CategoryCell value={s.categories.goals.value} rotoPoints={s.categories.goals.roto_points} rank={s.categories.goals.rank} />
-                  <CategoryCell value={s.categories.assists.value} rotoPoints={s.categories.assists.roto_points} rank={s.categories.assists.rank} />
-                  <CategoryCell value={s.categories.plus_minus.value} rotoPoints={s.categories.plus_minus.roto_points} rank={s.categories.plus_minus.rank} />
-                  <CategoryCell value={s.categories.pim.value} rotoPoints={s.categories.pim.roto_points} rank={s.categories.pim.rank} />
-                  <CategoryCell value={s.categories.goalie_wins.value} rotoPoints={s.categories.goalie_wins.roto_points} rank={s.categories.goalie_wins.rank} />
-                  <CategoryCell value={s.categories.save_pct.value} rotoPoints={s.categories.save_pct.roto_points} rank={s.categories.save_pct.rank} isSavePct qualified={s.categories.save_pct.qualified} />
-                  <td className="px-4 py-3 text-center">
-                    <span className="text-lg font-bold" style={{ color: medalColor || 'var(--text-primary)' }}>
-                      {s.total_roto_points}
-                    </span>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="mt-4 flex gap-4 text-xs" style={{ color: 'var(--text-muted)' }}>
-        <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ background: 'var(--accent-red)' }} /> Save % not qualified (&lt;20 SA)</span>
+      {/* Footer legend */}
+      <div className="mt-5 flex gap-6 text-[11px]" style={{ color: 'var(--text-muted)' }}>
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent-red)' }} />
+          Save % not qualified (&lt;20 SA)
+        </span>
         <span>Roto: 12 pts for 1st, 1 pt for 12th. Ties split evenly.</span>
       </div>
     </div>
