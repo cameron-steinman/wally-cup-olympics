@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-13T17:12:08.841360Z",
+  "updated_at": "2026-02-13T17:15:09.184059Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -649,7 +649,7 @@
           "roto_points": 8.0
         },
         "save_pct": {
-          "value": 0.813953488372093,
+          "value": 0.8181818181818182,
           "rank": 6,
           "qualified": true,
           "roto_points": 7
@@ -1550,56 +1550,56 @@
       "standings_changes": {
         "risers": [
           {
+            "team": "Johnny's Scrubbers",
+            "rank_change": 3,
+            "roto_change": 9.0,
+            "previous_rank": 10,
+            "current_rank": 7,
+            "previous_roto": 29.5,
+            "current_roto": 38.5
+          },
+          {
             "team": "Cam's Crunch",
             "rank_change": 2,
-            "roto_change": 6.0,
+            "roto_change": 5.5,
             "previous_rank": 4,
             "current_rank": 2,
             "previous_roto": 44.0,
-            "current_roto": 50.0
-          },
-          {
-            "team": "Johnny's Scrubbers",
-            "rank_change": 2,
-            "roto_change": 4.5,
-            "previous_rank": 10,
-            "current_rank": 8,
-            "previous_roto": 29.5,
-            "current_roto": 34.0
+            "current_roto": 49.5
           }
         ],
         "fallers": [
           {
-            "team": "Gabe's Gangsters",
-            "rank_change": -1,
-            "roto_change": 1.5,
-            "previous_rank": 3,
-            "current_rank": 4,
-            "previous_roto": 44.5,
-            "current_roto": 46.0
-          },
-          {
             "team": "Todd's Hitmen",
             "rank_change": -1,
-            "roto_change": -1.0,
+            "roto_change": -1.5,
             "previous_rank": 8,
             "current_rank": 9,
             "previous_roto": 34.5,
-            "current_roto": 33.5
+            "current_roto": 33.0
           },
           {
             "team": "Owen's Otters",
             "rank_change": -1,
-            "roto_change": 0.0,
+            "roto_change": -1.0,
             "previous_rank": 9,
             "current_rank": 10,
             "previous_roto": 31.5,
-            "current_roto": 31.5
+            "current_roto": 30.5
+          },
+          {
+            "team": "Bardown",
+            "rank_change": -2,
+            "roto_change": 1.0,
+            "previous_rank": 2,
+            "current_rank": 4,
+            "previous_roto": 45.0,
+            "current_roto": 46.0
           }
         ]
       },
       "milestones": [],
-      "recap_text": "Day 3 featured 2 games. The highest-scoring affair was Finland 4-1 Sweden. Louis Boudon (France) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Gabe's Gangsters dropped 1 spot."
+      "recap_text": "Day 3 featured 2 games. The highest-scoring affair was Finland 4-1 Sweden. Louis Boudon (France) led the day with 2G 1A. In Wally Cup standings, Johnny's Scrubbers moved up 3 spots. Todd's Hitmen dropped 1 spot."
     }
   },
   "teams": {
@@ -5273,9 +5273,9 @@
           "stats": {
             "gp": 2,
             "wins": 1,
-            "saves": 4,
-            "shots_against": 7,
-            "save_pct": 0.5714285714285714
+            "saves": 5,
+            "shots_against": 8,
+            "save_pct": 0.625
           }
         },
         {
@@ -5295,9 +5295,9 @@
       "goalie_stats": {
         "aggregate": {
           "wins": 1,
-          "saves": 35,
-          "shots_against": 43,
-          "save_pct": 0.813953488372093,
+          "saves": 36,
+          "shots_against": 44,
+          "save_pct": 0.8181818181818182,
           "qualified": true
         }
       },
@@ -5307,7 +5307,7 @@
         "plus_minus": -1,
         "pim": 2,
         "goalie_wins": 1,
-        "save_pct": 0.813953488372093,
+        "save_pct": 0.8181818181818182,
         "sv_qualified": true
       }
     },
@@ -6683,7 +6683,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7409,7 +7409,7 @@
         }
       ],
       "zscore": 1.76,
-      "zscore_rank": 53,
+      "zscore_rank": 54,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -7994,7 +7994,7 @@
           }
         }
       ],
-      "zscore": 1.76,
+      "zscore": 1.77,
       "zscore_rank": 53,
       "hot_72h_stats": {
         "gp": 2,
@@ -8007,7 +8007,7 @@
         "shots_against": 59,
         "save_pct": 0.9322033898305084
       },
-      "hot_zscore": 1.756870450479115,
+      "hot_zscore": 1.7694901952944793,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8020,7 +8020,7 @@
         "shots_against": 59,
         "save_pct": 0.9322033898305084
       },
-      "cold_zscore": 1.756870450479115,
+      "cold_zscore": 1.7694901952944793,
       "is_cold": false
     },
     {
@@ -8397,7 +8397,7 @@
         }
       ],
       "zscore": 5.47,
-      "zscore_rank": 4,
+      "zscore_rank": 5,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -8866,7 +8866,7 @@
         }
       ],
       "zscore": 2.65,
-      "zscore_rank": 35,
+      "zscore_rank": 36,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -9392,7 +9392,7 @@
           }
         }
       ],
-      "zscore": 5.47,
+      "zscore": 5.59,
       "zscore_rank": 4,
       "hot_72h_stats": {
         "gp": 2,
@@ -9405,7 +9405,7 @@
         "shots_against": 40,
         "save_pct": 0.975
       },
-      "hot_zscore": 5.471526539712482,
+      "hot_zscore": 5.593532971039014,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -9418,7 +9418,7 @@
         "shots_against": 40,
         "save_pct": 0.975
       },
-      "cold_zscore": 5.471526539712482,
+      "cold_zscore": 5.593532971039014,
       "is_cold": false
     },
     {
@@ -9461,7 +9461,7 @@
           }
         }
       ],
-      "zscore": 3.96,
+      "zscore": 3.89,
       "zscore_rank": 21,
       "hot_72h_stats": {
         "gp": 2,
@@ -9474,7 +9474,7 @@
         "shots_against": 20,
         "save_pct": 0.9
       },
-      "hot_zscore": 3.9552858721214315,
+      "hot_zscore": 3.8855948429283917,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9487,7 +9487,7 @@
         "shots_against": 20,
         "save_pct": 0.9
       },
-      "cold_zscore": 3.9552858721214315,
+      "cold_zscore": 3.8855948429283917,
       "is_cold": false
     },
     {
@@ -9909,7 +9909,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10244,7 +10244,7 @@
         }
       ],
       "zscore": 2.65,
-      "zscore_rank": 35,
+      "zscore_rank": 36,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -10861,7 +10861,7 @@
         "shots_against": 54,
         "save_pct": 0.9259259259259259
       },
-      "hot_zscore": -1.2194947759201051,
+      "hot_zscore": -1.2229200162915643,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10874,7 +10874,7 @@
         "shots_against": 54,
         "save_pct": 0.9259259259259259
       },
-      "cold_zscore": -1.2194947759201051,
+      "cold_zscore": -1.2229200162915643,
       "is_cold": false
     },
     {
@@ -10930,7 +10930,7 @@
         "shots_against": 40,
         "save_pct": 0.925
       },
-      "hot_zscore": -1.2382137965076483,
+      "hot_zscore": -1.2440056721941637,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10943,7 +10943,7 @@
         "shots_against": 40,
         "save_pct": 0.925
       },
-      "cold_zscore": -1.2382137965076483,
+      "cold_zscore": -1.2440056721941637,
       "is_cold": false
     },
     {
@@ -11923,7 +11923,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -12258,7 +12258,7 @@
         }
       ],
       "zscore": 1.76,
-      "zscore_rank": 53,
+      "zscore_rank": 54,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -12395,7 +12395,7 @@
           }
         }
       ],
-      "zscore": 0.88,
+      "zscore": 0.78,
       "zscore_rank": 98,
       "hot_72h_stats": {
         "gp": 2,
@@ -12408,7 +12408,7 @@
         "shots_against": 45,
         "save_pct": 0.8888888888888888
       },
-      "hot_zscore": 0.8812010128245218,
+      "hot_zscore": 0.7831103598508043,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12421,7 +12421,7 @@
         "shots_against": 45,
         "save_pct": 0.8888888888888888
       },
-      "cold_zscore": 0.8812010128245218,
+      "cold_zscore": 0.7831103598508043,
       "is_cold": false
     },
     {
@@ -12597,7 +12597,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -12854,7 +12854,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13189,7 +13189,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13772,7 +13772,7 @@
           }
         }
       ],
-      "zscore": -1.6,
+      "zscore": -1.65,
       "zscore_rank": 218,
       "hot_72h_stats": {
         "gp": 1,
@@ -13785,7 +13785,7 @@
         "shots_against": 43,
         "save_pct": 0.9069767441860465
       },
-      "hot_zscore": -1.6025817088744918,
+      "hot_zscore": -1.6544404161587345,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -13798,7 +13798,7 @@
         "shots_against": 43,
         "save_pct": 0.9069767441860465
       },
-      "cold_zscore": -1.6025817088744918,
+      "cold_zscore": -1.6544404161587345,
       "is_cold": false
     },
     {
@@ -13815,9 +13815,9 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 0,
-        "saves": 18,
-        "shots_against": 22,
-        "save_pct": 0.8181818181818182
+        "saves": 19,
+        "shots_against": 23,
+        "save_pct": 0.8260869565217391
       },
       "game_log": [
         {
@@ -13836,12 +13836,12 @@
           "stats": {
             "gp": 1,
             "wins": 0,
-            "saves": 18,
-            "shots_against": 22
+            "saves": 19,
+            "shots_against": 23
           }
         }
       ],
-      "zscore": -3.4,
+      "zscore": -3.5,
       "zscore_rank": 271,
       "hot_72h_stats": {
         "gp": 2,
@@ -13850,11 +13850,11 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 0,
-        "saves": 18,
-        "shots_against": 22,
-        "save_pct": 0.8181818181818182
+        "saves": 19,
+        "shots_against": 23,
+        "save_pct": 0.8260869565217391
       },
-      "hot_zscore": -3.397708080652478,
+      "hot_zscore": -3.496503783180639,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13863,11 +13863,11 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 0,
-        "saves": 18,
-        "shots_against": 22,
-        "save_pct": 0.8181818181818182
+        "saves": 19,
+        "shots_against": 23,
+        "save_pct": 0.8260869565217391
       },
-      "cold_zscore": -3.397708080652478,
+      "cold_zscore": -3.496503783180639,
       "is_cold": true
     },
     {
@@ -14234,7 +14234,7 @@
         }
       ],
       "zscore": 5.47,
-      "zscore_rank": 4,
+      "zscore_rank": 5,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 2,
@@ -15079,7 +15079,7 @@
           }
         }
       ],
-      "zscore": 3.13,
+      "zscore": 3.31,
       "zscore_rank": 31,
       "hot_72h_stats": {
         "gp": 1,
@@ -15092,7 +15092,7 @@
         "shots_against": 27,
         "save_pct": 1.0
       },
-      "hot_zscore": 3.127483483329783,
+      "hot_zscore": 3.3133890681628406,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -15105,7 +15105,7 @@
         "shots_against": 27,
         "save_pct": 1.0
       },
-      "cold_zscore": 3.127483483329783,
+      "cold_zscore": 3.3133890681628406,
       "is_cold": false
     },
     {
@@ -16317,7 +16317,7 @@
           }
         }
       ],
-      "zscore": 3.13,
+      "zscore": 3.31,
       "zscore_rank": 31,
       "hot_72h_stats": {
         "gp": 1,
@@ -16330,7 +16330,7 @@
         "shots_against": 26,
         "save_pct": 1.0
       },
-      "hot_zscore": 3.127483483329783,
+      "hot_zscore": 3.3133890681628406,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -16343,7 +16343,7 @@
         "shots_against": 26,
         "save_pct": 1.0
       },
-      "cold_zscore": 3.127483483329783,
+      "cold_zscore": 3.3133890681628406,
       "is_cold": false
     },
     {
@@ -17379,7 +17379,7 @@
         }
       ],
       "zscore": -3.28,
-      "zscore_rank": 264,
+      "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -17694,7 +17694,7 @@
           }
         }
       ],
-      "zscore": -2.53,
+      "zscore": -2.7,
       "zscore_rank": 262,
       "hot_72h_stats": {
         "gp": 1,
@@ -17707,7 +17707,7 @@
         "shots_against": 36,
         "save_pct": 0.8611111111111112
       },
-      "hot_zscore": -2.5298262170481727,
+      "hot_zscore": -2.698915929473584,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -17720,7 +17720,7 @@
         "shots_against": 36,
         "save_pct": 0.8611111111111112
       },
-      "cold_zscore": -2.5298262170481727,
+      "cold_zscore": -2.698915929473584,
       "is_cold": true
     },
     {
@@ -17737,9 +17737,9 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 4,
-        "shots_against": 7,
-        "save_pct": 0.5714285714285714
+        "saves": 5,
+        "shots_against": 8,
+        "save_pct": 0.625
       },
       "game_log": [
         {
@@ -17758,12 +17758,12 @@
           "stats": {
             "gp": 1,
             "wins": 1,
-            "saves": 4,
-            "shots_against": 7
+            "saves": 5,
+            "shots_against": 8
           }
         }
       ],
-      "zscore": -5.54,
+      "zscore": -5.23,
       "zscore_rank": 274,
       "hot_72h_stats": {
         "gp": 2,
@@ -17772,11 +17772,11 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 4,
-        "shots_against": 7,
-        "save_pct": 0.5714285714285714
+        "saves": 5,
+        "shots_against": 8,
+        "save_pct": 0.625
       },
-      "hot_zscore": -5.536748902904793,
+      "hot_zscore": -5.226301572390279,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17785,11 +17785,11 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 4,
-        "shots_against": 7,
-        "save_pct": 0.5714285714285714
+        "saves": 5,
+        "shots_against": 8,
+        "save_pct": 0.625
       },
-      "cold_zscore": -5.536748902904793,
+      "cold_zscore": -5.226301572390279,
       "is_cold": true
     },
     {
@@ -19001,8 +19001,8 @@
           }
         }
       ],
-      "zscore": 2.0,
-      "zscore_rank": 49,
+      "zscore": 2.05,
+      "zscore_rank": 47,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19014,7 +19014,7 @@
         "shots_against": 18,
         "save_pct": 0.9444444444444444
       },
-      "hot_zscore": 2.0043422480771524,
+      "hot_zscore": 2.0482497140068228,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19027,7 +19027,7 @@
         "shots_against": 18,
         "save_pct": 0.9444444444444444
       },
-      "cold_zscore": 2.0043422480771524,
+      "cold_zscore": 2.0482497140068228,
       "is_cold": false
     },
     {
@@ -20180,7 +20180,7 @@
           }
         }
       ],
-      "zscore": -2.25,
+      "zscore": -2.38,
       "zscore_rank": 227,
       "hot_72h_stats": {
         "gp": 1,
@@ -20193,7 +20193,7 @@
         "shots_against": 32,
         "save_pct": 0.875
       },
-      "hot_zscore": -2.2490409082350165,
+      "hot_zscore": -2.3826310909345807,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20206,7 +20206,7 @@
         "shots_against": 32,
         "save_pct": 0.875
       },
-      "cold_zscore": -2.2490409082350165,
+      "cold_zscore": -2.3826310909345807,
       "is_cold": true
     },
     {
@@ -20239,8 +20239,8 @@
           }
         }
       ],
-      "zscore": -3.09,
-      "zscore_rank": 263,
+      "zscore": -3.33,
+      "zscore_rank": 270,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20252,7 +20252,7 @@
         "shots_against": 6,
         "save_pct": 0.8333333333333334
       },
-      "hot_zscore": -3.0913968346744882,
+      "hot_zscore": -3.3314856065515928,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20265,7 +20265,7 @@
         "shots_against": 6,
         "save_pct": 0.8333333333333334
       },
-      "cold_zscore": -3.0913968346744882,
+      "cold_zscore": -3.3314856065515928,
       "is_cold": true
     },
     {
@@ -20408,7 +20408,7 @@
         }
       ],
       "zscore": 1.76,
-      "zscore_rank": 53,
+      "zscore_rank": 54,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 1,
@@ -21432,7 +21432,7 @@
           }
         }
       ],
-      "zscore": -2.05,
+      "zscore": -2.16,
       "zscore_rank": 224,
       "hot_72h_stats": {
         "gp": 1,
@@ -21445,7 +21445,7 @@
         "shots_against": 26,
         "save_pct": 0.8846153846153846
       },
-      "hot_zscore": -2.054651079056677,
+      "hot_zscore": -2.1636646642537323,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21458,7 +21458,7 @@
         "shots_against": 26,
         "save_pct": 0.8846153846153846
       },
-      "cold_zscore": -2.054651079056677,
+      "cold_zscore": -2.1636646642537323,
       "is_cold": false
     },
     {
@@ -22555,8 +22555,8 @@
           }
         }
       ],
-      "zscore": 2.6,
-      "zscore_rank": 37,
+      "zscore": 2.71,
+      "zscore_rank": 35,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22568,7 +22568,7 @@
         "shots_against": 38,
         "save_pct": 0.9736842105263158
       },
-      "hot_zscore": 2.5954692139995905,
+      "hot_zscore": 2.714112531983675,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22581,7 +22581,7 @@
         "shots_against": 38,
         "save_pct": 0.9736842105263158
       },
-      "cold_zscore": 2.5954692139995905,
+      "cold_zscore": 2.714112531983675,
       "is_cold": false
     },
     {
@@ -23381,6 +23381,24 @@
       }
     },
     {
+      "name": "Samuel Hlavaj",
+      "country": "SVK",
+      "wally_team": null,
+      "pos": "G",
+      "hot_zscore": 5.593532971039014,
+      "hot_72h_stats": {
+        "gp": 2,
+        "goals": 0,
+        "assists": 0,
+        "plus_minus": 0,
+        "pim": 0,
+        "wins": 2,
+        "saves": 39,
+        "shots_against": 40,
+        "save_pct": 0.975
+      }
+    },
+    {
       "name": "Adam Ruzicka",
       "country": "SVK",
       "wally_team": null,
@@ -23414,24 +23432,6 @@
         "saves": 0,
         "shots_against": 0,
         "save_pct": 0
-      }
-    },
-    {
-      "name": "Samuel Hlavaj",
-      "country": "SVK",
-      "wally_team": null,
-      "pos": "G",
-      "hot_zscore": 5.471526539712482,
-      "hot_72h_stats": {
-        "gp": 2,
-        "goals": 0,
-        "assists": 0,
-        "plus_minus": 0,
-        "pim": 0,
-        "wins": 2,
-        "saves": 39,
-        "shots_against": 40,
-        "save_pct": 0.975
       }
     },
     {
@@ -23513,7 +23513,7 @@
       "country": "CZE",
       "wally_team": "Johnny's Scrubbers",
       "pos": "G",
-      "cold_zscore": -5.536748902904793,
+      "cold_zscore": -5.226301572390279,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -23521,9 +23521,9 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 4,
-        "shots_against": 7,
-        "save_pct": 0.5714285714285714
+        "saves": 5,
+        "shots_against": 8,
+        "save_pct": 0.625
       }
     },
     {
@@ -23567,7 +23567,7 @@
       "country": "FRA",
       "wally_team": null,
       "pos": "G",
-      "cold_zscore": -3.397708080652478,
+      "cold_zscore": -3.496503783180639,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -23575,9 +23575,27 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 0,
-        "saves": 18,
-        "shots_against": 22,
-        "save_pct": 0.8181818181818182
+        "saves": 19,
+        "shots_against": 23,
+        "save_pct": 0.8260869565217391
+      }
+    },
+    {
+      "name": "Arturs Silovs",
+      "country": "LAT",
+      "wally_team": null,
+      "pos": "G",
+      "cold_zscore": -3.3314856065515928,
+      "cold_72h_stats": {
+        "gp": 1,
+        "goals": 0,
+        "assists": 0,
+        "plus_minus": 0,
+        "pim": 0,
+        "wins": 0,
+        "saves": 5,
+        "shots_against": 6,
+        "save_pct": 0.8333333333333334
       }
     },
     {
@@ -23654,24 +23672,6 @@
     },
     {
       "name": "Sacha Treille",
-      "country": "FRA",
-      "wally_team": null,
-      "pos": "F",
-      "cold_zscore": -3.2763994602957607,
-      "cold_72h_stats": {
-        "gp": 2,
-        "goals": 0,
-        "assists": 0,
-        "plus_minus": -2,
-        "pim": 0,
-        "wins": 0,
-        "saves": 0,
-        "shots_against": 0,
-        "save_pct": 0
-      }
-    },
-    {
-      "name": "Floran Douay",
       "country": "FRA",
       "wally_team": null,
       "pos": "F",
@@ -24107,8 +24107,8 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.951,
-      "Gabe's Gangsters": 0.049,
+      "Gabe's Gangsters": 0.043,
+      "Big Shooters": 0.957,
       "Todd's Hitmen": 0.0,
       "Bardown": 0.0,
       "Cam's Crunch": 0.0,
@@ -24121,13 +24121,13 @@
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Big Shooters": 1.0,
       "Gabe's Gangsters": 1.0,
-      "Ice Holes": 0.187,
-      "Mark's Mafia": 0.249,
-      "Cam's Crunch": 0.437,
-      "Bardown": 0.101,
-      "Johnny's Scrubbers": 0.026,
+      "Big Shooters": 1.0,
+      "Mark's Mafia": 0.226,
+      "Cam's Crunch": 0.443,
+      "Ice Holes": 0.217,
+      "Bardown": 0.092,
+      "Johnny's Scrubbers": 0.022,
       "Todd's Hitmen": 0.0,
       "Cross's Beavers": 0.0,
       "Gators": 0.0,
@@ -24135,79 +24135,79 @@
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 58.421,
-      "Gabe's Gangsters": 53.042,
-      "Ice Holes": 43.0835,
-      "Cam's Crunch": 44.8065,
-      "Mark's Mafia": 43.8655,
-      "Bardown": 42.6565,
-      "Johnny's Scrubbers": 40.387,
-      "Cross's Beavers": 34.787,
-      "Gators": 27.088,
-      "Owen's Otters": 28.081,
-      "Todd's Hitmen": 33.684,
-      "Willy's Warlocks": 18.098
+      "Gabe's Gangsters": 53.0595,
+      "Big Shooters": 58.403,
+      "Mark's Mafia": 43.696,
+      "Cam's Crunch": 44.714,
+      "Bardown": 42.5365,
+      "Cross's Beavers": 34.867,
+      "Johnny's Scrubbers": 40.4305,
+      "Ice Holes": 43.161,
+      "Owen's Otters": 28.02,
+      "Todd's Hitmen": 33.735,
+      "Gators": 27.2755,
+      "Willy's Warlocks": 18.102
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.466,
-        "silver": 0.29,
-        "bronze": 0.168
+        "gold": 0.442,
+        "silver": 0.316,
+        "bronze": 0.163
       },
       "USA": {
-        "gold": 0.278,
-        "silver": 0.33,
-        "bronze": 0.224
+        "gold": 0.31,
+        "silver": 0.306,
+        "bronze": 0.229
       },
       "SWE": {
-        "gold": 0.12,
-        "silver": 0.161,
-        "bronze": 0.283
+        "gold": 0.111,
+        "silver": 0.166,
+        "bronze": 0.287
       },
       "FIN": {
         "gold": 0.063,
-        "silver": 0.087,
-        "bronze": 0.145
+        "silver": 0.088,
+        "bronze": 0.148
       },
       "CZE": {
-        "gold": 0.04,
-        "silver": 0.056,
-        "bronze": 0.082
+        "gold": 0.033,
+        "silver": 0.04,
+        "bronze": 0.079
       },
       "SUI": {
         "gold": 0.019,
-        "silver": 0.04,
-        "bronze": 0.048
+        "silver": 0.048,
+        "bronze": 0.05
       },
       "GER": {
-        "gold": 0.004,
-        "silver": 0.013,
-        "bronze": 0.022
+        "gold": 0.008,
+        "silver": 0.015,
+        "bronze": 0.014
       },
       "SVK": {
-        "gold": 0.003,
-        "silver": 0.011,
-        "bronze": 0.01
+        "gold": 0.005,
+        "silver": 0.009,
+        "bronze": 0.017
       },
       "LAT": {
-        "gold": 0.003,
+        "gold": 0.006,
         "silver": 0.004,
-        "bronze": 0.01
+        "bronze": 0.009
       },
       "DEN": {
-        "gold": 0.002,
-        "silver": 0.002,
-        "bronze": 0.003
+        "gold": 0.0,
+        "silver": 0.003,
+        "bronze": 0.001
       },
       "ITA": {
-        "gold": 0.0,
-        "silver": 0.001,
-        "bronze": 0.005
+        "gold": 0.002,
+        "silver": 0.003,
+        "bronze": 0.002
       },
       "FRA": {
-        "gold": 0.002,
-        "silver": 0.005,
-        "bronze": 0.0
+        "gold": 0.001,
+        "silver": 0.002,
+        "bronze": 0.001
       }
     }
   }
