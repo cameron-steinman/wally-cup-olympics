@@ -1,5 +1,6 @@
 import data from "../../data/standings.json";
 import TeamPageClient from "./TeamPageClient";
+import TeamPageClient from "./TeamPageClient";
 
 const teamLogos: Record<string, string> = {
   "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
