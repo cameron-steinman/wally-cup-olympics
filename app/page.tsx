@@ -17,9 +17,24 @@ const teamLogos: Record<string, string> = {
   "Ice Holes": "/wally-cup-olympics/logos/ice-holes.png",
 };
 
-const flagMap: Record<string, string> = {
-  CAN:"🇨🇦",USA:"🇺🇸",SWE:"🇸🇪",FIN:"🇫🇮",CZE:"🇨🇿",SUI:"🇨🇭",GER:"🇩🇪",SVK:"🇸🇰",DEN:"🇩🇰",LAT:"🇱🇻",ITA:"🇮🇹",FRA:"🇫🇷"
+const flagIso2: Record<string, string> = {
+  CAN:"ca",USA:"us",SWE:"se",FIN:"fi",CZE:"cz",SUI:"ch",GER:"de",SVK:"sk",DEN:"dk",LAT:"lv",ITA:"it",FRA:"fr"
 };
+
+function Flag({ code, size = 20 }: { code: string; size?: number }) {
+  const iso = flagIso2[code];
+  if (!iso) return <span>{code}</span>;
+  return (
+    <img
+      src={`https://flagcdn.com/w40/${iso}.png`}
+      srcSet={`https://flagcdn.com/w80/${iso}.png 2x`}
+      alt={code}
+      width={size}
+      height={Math.round(size * 0.75)}
+      style={{ display: 'inline-block', verticalAlign: 'middle', borderRadius: 2 }}
+    />
+  );
+}
 
 const medalClasses: Record<number, string> = {
   1: "medal-badge medal-gold",
@@ -142,8 +157,8 @@ export default function Home() {
           {lastGame && (
             <div className="last-game-badge">
               <span className="font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
-              <span>
-                {flagMap[lastGame.away] || lastGame.away} {lastGame.away_score}–{lastGame.home_score} {flagMap[lastGame.home] || lastGame.home}
+              <span className="inline-flex items-center gap-1.5">
+                <Flag code={lastGame.away} /> {lastGame.away_score}–{lastGame.home_score} <Flag code={lastGame.home} />
               </span>
               <span style={{ color: 'var(--text-muted)' }}>
                 {lastGameDate}
