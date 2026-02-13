@@ -247,6 +247,65 @@ export default function Home() {
         </div>
       )}
 
+      {/* Recent Milestones */}
+      {(() => {
+        const milestones = ((data as any).milestones || []).slice(0, 10);
+        if (milestones.length === 0) return null;
+        
+        const getMilestoneIcon = (type: string) => {
+          switch (type) {
+            case 'hat_trick': return '⚡';
+            case 'shutout': return '🧱';
+            case 'first_goal': return '🎯';
+            case 'new_leader': return '🏆';
+            case 'milestone_goals':
+            case 'milestone_points': return '⭐';
+            case 'big_game': return '💫';
+            default: return '🏒';
+          }
+        };
+        
+        return (
+          <div className="glass-card mb-5 px-4 py-3" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-sm font-bold" style={{ color: 'var(--accent-blue)' }}>⚡ RECENT MILESTONES</span>
+            </div>
+            <div className="space-y-2">
+              {milestones.map((milestone: any, i: number) => {
+                const logo = milestone.wally_team ? teamLogos[milestone.wally_team] : null;
+                const date = new Date(milestone.date).toLocaleDateString('en-US', {
+                  month: 'short',
+                  day: 'numeric'
+                });
+                
+                return (
+                  <div key={i} className="flex items-center gap-3 py-1">
+                    <div className="text-lg shrink-0">
+                      {getMilestoneIcon(milestone.type)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>
+                          {milestone.player}
+                        </span>
+                        <Flag code={milestone.country} size={14} />
+                        {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain" />}
+                      </div>
+                      <div className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
+                        {milestone.description}
+                      </div>
+                    </div>
+                    <div className="text-xs shrink-0" style={{ color: 'var(--text-muted)' }}>
+                      {date}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })()}
+
       {/* Section header */}
       <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mobile-stack mobile-stack-header mobile-compact">
         <div className="section-header-mobile">
@@ -257,6 +316,9 @@ export default function Home() {
             Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
           </p>
           <div className="mt-1 flex flex-col sm:flex-row gap-2">
+            <a href="/wally-cup-olympics/recap" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
+              Daily Recap →
+            </a>
             <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
               View All Olympic Players Rankings →
             </a>

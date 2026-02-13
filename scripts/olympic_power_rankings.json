@@ -1,0 +1,29 @@
+{
+  "source": "OddsShark pre-tournament betting odds (Feb 11, 2026)",
+  "note": "American odds converted to implied probabilities, vig removed (normalized to 100%)",
+  "gold_medal_probability": {
+    "CAN": 0.440,
+    "USA": 0.290,
+    "SWE": 0.129,
+    "FIN": 0.060,
+    "CZE": 0.037,
+    "SUI": 0.023,
+    "GER": 0.008,
+    "SVK": 0.006,
+    "LAT": 0.003,
+    "DEN": 0.001,
+    "ITA": 0.001,
+    "FRA": 0.001
+  },
+  "tiers": {
+    "gold_contenders": ["CAN", "USA"],
+    "medal_contenders": ["SWE", "FIN"],
+    "dark_horses": ["CZE", "SUI"],
+    "longshots": ["GER", "SVK", "LAT", "DEN", "ITA", "FRA"]
+  },
+  "groups": {
+    "A": ["CAN", "CZE", "SUI", "FRA"],
+    "B": ["SWE", "FIN", "SVK", "ITA"],
+    "C": ["USA", "GER", "DEN", "LAT"]
+  }
+}
