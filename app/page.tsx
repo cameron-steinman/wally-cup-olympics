@@ -182,6 +182,44 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Hot Players - Top 3 Performers */}
+      {(() => {
+        const hotPlayers = ((data as any).hot_players || []).slice(0, 3);
+        if (hotPlayers.length === 0) return null;
+        return (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+            {hotPlayers.map((p: any, i: number) => {
+              const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
+              const logo = p.wally_team ? teamLogos[p.wally_team] : null;
+              const hs = p.hot_48h_stats || {};
+              const isGoalie = p.pos === 'G';
+              return (
+                <div key={p.name} className="glass-card px-4 py-3 flex items-center gap-3" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
+                  <div className="text-xl">{medal}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-sm font-bold truncate" style={{ color: 'var(--text-primary)' }}>
+                        🔥 {p.name}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <Flag code={p.country} size={14} />
+                      {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain" />}
+                      <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
+                        {isGoalie
+                          ? `${hs.wins ?? 0}W · ${hs.shots_against > 0 ? (hs.saves / hs.shots_against).toFixed(3).replace(/^0/, '') : '—'} SV%`
+                          : `${hs.goals ?? 0}G · ${hs.assists ?? 0}A · ${(hs.plus_minus ?? 0) > 0 ? '+' : ''}${hs.plus_minus ?? 0} · ${hs.pim ?? 0}PIM`
+                        }
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })()}
+
       {/* Standings table */}
       <div className="glass-card overflow-hidden glass-card-mobile">
         <div className="overflow-x-auto mobile-table-scroll">

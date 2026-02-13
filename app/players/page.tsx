@@ -68,9 +68,11 @@ const PAGE_SIZE = 50;
 export default function PlayersPage() {
   const [page, setPage] = useState(0);
 
-  const allPlayers = ((data as any).all_olympic_players || []) as AllPlayer[];
-  const ranked = allPlayers.map(p => ({ ...p, fpts: calcFPts(p) })).sort((a, b) => b.fpts - a.fpts);
-  const withRanks = ranked.map((p, i) => ({ ...p, rank: ranked.findIndex(x => x.fpts === p.fpts) + 1 }));
+  const allPlayers = ((data as any).all_olympic_players || []) as (AllPlayer & { zscore?: number; zscore_rank?: number; is_hot?: boolean })[];
+  // Use z-score ranking from data pipeline (per-game rate normalized)
+  const withRanks = [...allPlayers]
+    .sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))
+    .map(p => ({ ...p, rank: p.zscore_rank ?? 999 }));
 
   const totalPages = Math.ceil(withRanks.length / PAGE_SIZE);
   const pageData = withRanks.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
@@ -155,7 +157,7 @@ export default function PlayersPage() {
                       </span>
                     </td>
                     <td className="px-3 py-2 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
-                      {p.name}
+                      {p.is_hot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.name}
                     </td>
                     <td className="px-2 py-2 text-center">
                       <Flag code={p.country} size={18} />

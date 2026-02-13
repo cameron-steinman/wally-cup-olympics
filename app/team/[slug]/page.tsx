@@ -148,14 +148,29 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
 
   const globalRankings = computeGlobalRankings();
 
+  // Build hot player + zscore rank lookups from all_olympic_players
+  const allOlympic = (data as any).all_olympic_players || [];
+  const hotLookup = new Set(allOlympic.filter((p: any) => p.is_hot).map((p: any) => `${p.name}|${p.country}`));
+  const zscoreRankLookup = new Map(allOlympic.map((p: any) => [`${p.name}|${p.country}`, p.zscore_rank ?? 999]));
+
   const skaters = team.players
     .filter(p => p.pos !== 'G' && p.status !== 'not_in_olympics')
-    .map(p => ({ ...p, fantasyPts: calcFantasyPoints(p), globalRank: globalRankings.get(`${p.name}|${p.country}`) ?? 999 }))
+    .map(p => ({
+      ...p,
+      fantasyPts: calcFantasyPoints(p),
+      globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
+      isHot: hotLookup.has(`${p.name}|${p.country}`)
+    }))
     .sort((a, b) => b.fantasyPts - a.fantasyPts);
 
   const goalies = team.players
     .filter(p => p.pos === 'G' && p.status !== 'not_in_olympics')
-    .map(p => ({ ...p, fantasyPts: calcFantasyPoints(p), globalRank: globalRankings.get(`${p.name}|${p.country}`) ?? 999 }))
+    .map(p => ({
+      ...p,
+      fantasyPts: calcFantasyPoints(p),
+      globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
+      isHot: hotLookup.has(`${p.name}|${p.country}`)
+    }))
     .sort((a, b) => b.fantasyPts - a.fantasyPts);
 
   const notPlaying = team.players.filter(p => p.status === 'not_in_olympics');
@@ -334,7 +349,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                     borderBottom: '1px solid var(--border)',
                     opacity: eliminated ? 0.4 : 1,
                   }}>
-                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.name}</td>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.isHot && <span title="Hot (top 10 last 48h)">🔥 </span>}{p.name}</td>
                     <td className="px-2 py-2.5 text-center">{p.country && <Flag code={p.country} size={18} />}</td>
                     <td className="px-2 py-2.5 text-center">
                       <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
