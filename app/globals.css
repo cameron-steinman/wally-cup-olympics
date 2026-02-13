@@ -3,28 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg-primary: #f8f9fc;
+  --bg-primary: #f0f4fa;
   --bg-secondary: rgba(255, 255, 255, 0.7);
   --bg-card: rgba(255, 255, 255, 0.6);
-  --bg-hover: rgba(99, 102, 241, 0.06);
-  --text-primary: #1a1d2e;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  --bg-hover: rgba(37, 99, 235, 0.06);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
   --accent-gold: #f59e0b;
   --accent-silver: #9ca3af;
   --accent-bronze: #d97706;
-  --accent-blue: #6366f1;
+  --accent-blue: #2563eb;
+  --accent-blue-light: #3b82f6;
+  --accent-sky: #0ea5e9;
   --accent-green: #10b981;
   --accent-red: #ef4444;
-  --border: rgba(99, 102, 241, 0.12);
+  --border: rgba(37, 99, 235, 0.1);
   --glass-bg: rgba(255, 255, 255, 0.65);
   --glass-border: rgba(255, 255, 255, 0.5);
-  --gradient-start: #6366f1;
-  --gradient-mid: #8b5cf6;
-  --gradient-end: #a78bfa;
-  --shadow-sm: 0 1px 3px rgba(99, 102, 241, 0.08);
-  --shadow-md: 0 4px 16px rgba(99, 102, 241, 0.1);
-  --shadow-lg: 0 8px 32px rgba(99, 102, 241, 0.12);
+  --gradient-start: #1d4ed8;
+  --gradient-mid: #2563eb;
+  --gradient-end: #3b82f6;
+  --shadow-sm: 0 1px 3px rgba(37, 99, 235, 0.08);
+  --shadow-md: 0 4px 16px rgba(37, 99, 235, 0.1);
+  --shadow-lg: 0 8px 32px rgba(37, 99, 235, 0.12);
   --glow-gold: 0 0 20px rgba(245, 158, 11, 0.3);
   --glow-silver: 0 0 16px rgba(156, 163, 175, 0.3);
   --glow-bronze: 0 0 16px rgba(217, 119, 6, 0.3);
@@ -33,11 +35,24 @@
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-primary);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(139, 92, 246, 0.05), transparent);
   color: var(--text-primary);
   min-height: 100vh;
+  position: relative;
+}
+
+/* Background hero image overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  background:
+    linear-gradient(to bottom, rgba(240, 244, 250, 0.3) 0%, rgba(240, 244, 250, 0.85) 60%, rgba(240, 244, 250, 1) 100%),
+    url('/wally-cup-olympics/bg-hero.jpg') center top / cover no-repeat;
+  z-index: -1;
+  pointer-events: none;
 }
 
 * {
@@ -59,13 +74,21 @@ body {
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
 }
 
+/* Olympic rings colors */
+.olympic-rings {
+  display: inline-flex;
+  gap: 2px;
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+
 /* Medal badges */
 .medal-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 10px;
   font-weight: 800;
   font-size: 14px;
@@ -89,6 +112,16 @@ body {
   box-shadow: var(--glow-bronze);
 }
 
+/* Tie indicator */
+.tie-indicator {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 2px;
+  vertical-align: super;
+}
+
 /* Table row hover */
 .table-row-hover {
   transition: all 0.2s ease;
@@ -103,28 +136,42 @@ body {
 .points-pill {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
-  font-weight: 700;
-  font-size: 16px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  font-weight: 800;
+  font-size: 17px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.points-pill-top {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(14, 165, 233, 0.18));
+  border: 1px solid rgba(37, 99, 235, 0.25);
 }
 
 /* Category cell */
-.cat-cell {
-  position: relative;
-}
-
 .cat-rank {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 1px 6px;
+  padding: 2px 7px;
   border-radius: 6px;
-  font-size: 10px;
-  background: rgba(99, 102, 241, 0.06);
+  font-size: 11px;
+  background: rgba(37, 99, 235, 0.05);
   color: var(--text-muted);
+}
+
+/* Last game badge */
+.last-game-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  font-size: 12px;
+  color: var(--text-secondary);
 }
 
 /* Scrollbar */
@@ -137,6 +184,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.2);
+  background: rgba(37, 99, 235, 0.2);
   border-radius: 3px;
 }

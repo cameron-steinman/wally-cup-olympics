@@ -1,11 +1,40 @@
 "use client";
 import data from "./data/standings.json";
 
+// Placeholder team icons — will be replaced with real ones
+const teamIcons: Record<string, string> = {
+  "Cam's Crunch": "🦞",
+  "Johnny's Scrubbers": "🧹",
+  "Ice Holes": "🕳️",
+  "Big Shooters": "🎯",
+  "Gabe's Gangsters": "🔫",
+  "Owen's Otters": "🦦",
+  "Mark's Mafia": "🤵",
+  "Willy's Warlocks": "🧙",
+  "Todd's Hitmen": "🎪",
+  "Cross's Beavers": "🦫",
+  "Bardown": "🏒",
+  "Gators": "🐊",
+};
+
+const flagMap: Record<string, string> = {
+  CAN:"🇨🇦",USA:"🇺🇸",SWE:"🇸🇪",FIN:"🇫🇮",CZE:"🇨🇿",SUI:"🇨🇭",GER:"🇩🇪",SVK:"🇸🇰",DEN:"🇩🇰",LAT:"🇱🇻",ITA:"🇮🇹",FRA:"🇫🇷"
+};
+
 const medalClasses: Record<number, string> = {
   1: "medal-badge medal-gold",
   2: "medal-badge medal-silver",
   3: "medal-badge medal-bronze",
 };
+
+const categoryLabels = [
+  { key: "goals", short: "G", full: "Goals" },
+  { key: "assists", short: "A", full: "Assists" },
+  { key: "plus_minus", short: "+/−", full: "Plus/Minus" },
+  { key: "pim", short: "PIM", full: "Penalties" },
+  { key: "goalie_wins", short: "W", full: "Goalie Wins" },
+  { key: "save_pct", short: "SV%", full: "Save %" },
+];
 
 function teamSlug(name: string) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -14,7 +43,7 @@ function teamSlug(name: string) {
 function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
   return (
     <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-      <div className="font-bold" style={{ color: 'var(--text-secondary)' }}>{label}</div>
+      <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>{label}</div>
       {sub && <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{sub}</div>}
     </th>
   );
@@ -28,13 +57,13 @@ function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct }: {
 
   return (
     <td className="px-3 py-4 text-center cat-cell">
-      <div className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+      <div className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
         {displayVal}
         {unqualified && <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent-red)', verticalAlign: 'middle' }} title="Not qualified (<20 SA)" />}
       </div>
       <div className="cat-rank mt-1 inline-flex">
         <span>{rotoPoints} pts</span>
-        <span style={{ color: 'var(--border)' }}>·</span>
+        <span style={{ opacity: 0.4 }}>·</span>
         <span>#{rank}</span>
       </div>
     </td>
@@ -49,36 +78,59 @@ export default function Home() {
     categories: Record<string, { value: number; roto_points: number; rank: number; qualified?: boolean }>;
   }>;
 
-  const updated = new Date(data.updated_at).toLocaleString('en-US', {
-    timeZone: 'America/Toronto',
-    month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true
+  // Recalculate ranks with proper tie handling
+  const rankedStandings = standings.map((s, idx) => {
+    // Find actual rank: count how many teams have MORE points
+    const teamsAbove = standings.filter(t => t.total_roto_points > s.total_roto_points).length;
+    const actualRank = teamsAbove + 1;
+    const isTied = standings.filter(t => t.total_roto_points === s.total_roto_points).length > 1;
+    return { ...s, displayRank: actualRank, isTied };
   });
+
+  // Last game processed info
+  const schedule = (data as any).schedule;
+  const games = schedule?.games || [];
+  const finalGames = games.filter((g: any) => g.status === 'FINAL');
+  const lastGame = finalGames.length > 0 ? finalGames[finalGames.length - 1] : null;
+
+  const updatedDate = new Date(data.updated_at).toLocaleString('en-US', {
+    timeZone: 'America/Toronto',
+    month: 'short', day: 'numeric', year: 'numeric',
+    hour: 'numeric', minute: '2-digit', hour12: true
+  });
+
+  const lastGameDate = lastGame ? new Date(lastGame.date + 'T20:00:00Z').toLocaleString('en-US', {
+    timeZone: 'America/Toronto',
+    month: 'short', day: 'numeric',
+  }) : null;
 
   return (
     <div>
-      {/* Stats summary cards */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="glass-card px-5 py-4">
-          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Teams</div>
-          <div className="text-2xl font-extrabold mt-1" style={{ color: 'var(--text-primary)' }}>12</div>
-        </div>
-        <div className="glass-card px-5 py-4">
-          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Categories</div>
-          <div className="text-2xl font-extrabold mt-1" style={{ color: 'var(--text-primary)' }}>6</div>
-        </div>
-        <div className="glass-card px-5 py-4">
-          <div className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Last Updated</div>
-          <div className="text-sm font-semibold mt-1.5" style={{ color: 'var(--text-primary)' }}>{updated}</div>
-        </div>
-      </div>
-
       {/* Section header */}
-      <div className="mb-5 flex items-end justify-between">
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Standings</h2>
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+            Standings
+          </h2>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            Rotisserie scoring across 6 categories
+            Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
           </p>
+        </div>
+        <div className="flex flex-col items-end gap-1.5">
+          {lastGame && (
+            <div className="last-game-badge">
+              <span className="font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game processed</span>
+              <span>
+                {flagMap[lastGame.away] || ''} {lastGame.away} {lastGame.away_score}–{lastGame.home_score} {lastGame.home} {flagMap[lastGame.home] || ''}
+              </span>
+              <span style={{ color: 'var(--text-muted)' }}>
+                {lastGameDate}
+              </span>
+            </div>
+          )}
+          <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+            Updated {updatedDate} ET
+          </div>
         </div>
       </div>
 
@@ -87,25 +139,23 @@ export default function Home() {
         <div className="overflow-x-auto">
           <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
-              <tr style={{ background: 'rgba(99, 102, 241, 0.04)' }}>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14" style={{ color: 'var(--text-muted)' }}>Rank</th>
                 <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Team</th>
-                <CategoryHeader label="G" sub="Goals" />
-                <CategoryHeader label="A" sub="Assists" />
-                <CategoryHeader label="+/−" sub="Plus/Minus" />
-                <CategoryHeader label="PIM" sub="Penalties" />
-                <CategoryHeader label="W" sub="Goalie Wins" />
-                <CategoryHeader label="SV%" sub="Save %" />
-                <th className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider" style={{ color: 'var(--gradient-start)' }}>
-                  <div>PTS</div>
+                {categoryLabels.map(c => (
+                  <CategoryHeader key={c.key} label={c.short} sub={c.full} />
+                ))}
+                <th className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider" style={{ color: 'var(--accent-blue)' }}>
+                  <div className="text-xs">PTS</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              {standings.map((s, idx) => {
-                const medalClass = medalClasses[s.rank];
-                const isTop3 = s.rank <= 3;
+              {rankedStandings.map((s, idx) => {
+                const medalClass = medalClasses[s.displayRank];
+                const isTop3 = s.displayRank <= 3;
+                const icon = teamIcons[s.team] || '🏒';
 
                 return (
                   <tr
@@ -113,30 +163,42 @@ export default function Home() {
                     className="table-row-hover"
                     style={{
                       borderBottom: '1px solid var(--border)',
-                      background: isTop3 ? 'rgba(99, 102, 241, 0.02)' : 'transparent',
+                      background: isTop3 ? 'rgba(37, 99, 235, 0.02)' : 'transparent',
                     }}
                   >
                     <td className="px-4 py-4">
                       {medalClass ? (
-                        <span className={medalClass}>{s.rank}</span>
+                        <span className={medalClass}>{s.displayRank}</span>
                       ) : (
-                        <span className="text-sm font-bold pl-1.5" style={{ color: 'var(--text-muted)' }}>{s.rank}</span>
+                        <span className="text-sm font-bold pl-1.5" style={{ color: 'var(--text-muted)' }}>
+                          {s.displayRank}
+                          {s.isTied && <span className="tie-indicator">T</span>}
+                        </span>
                       )}
                     </td>
                     <td className="px-3 py-4">
-                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+                      <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2 text-sm font-bold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+                        <span className="text-lg">{icon}</span>
                         {s.team}
                       </a>
                     </td>
-                    <CategoryCell value={s.categories.goals.value} rotoPoints={s.categories.goals.roto_points} rank={s.categories.goals.rank} />
-                    <CategoryCell value={s.categories.assists.value} rotoPoints={s.categories.assists.roto_points} rank={s.categories.assists.rank} />
-                    <CategoryCell value={s.categories.plus_minus.value} rotoPoints={s.categories.plus_minus.roto_points} rank={s.categories.plus_minus.rank} />
-                    <CategoryCell value={s.categories.pim.value} rotoPoints={s.categories.pim.roto_points} rank={s.categories.pim.rank} />
-                    <CategoryCell value={s.categories.goalie_wins.value} rotoPoints={s.categories.goalie_wins.roto_points} rank={s.categories.goalie_wins.rank} />
-                    <CategoryCell value={s.categories.save_pct.value} rotoPoints={s.categories.save_pct.roto_points} rank={s.categories.save_pct.rank} isSavePct qualified={s.categories.save_pct.qualified} />
+                    {categoryLabels.map(c => {
+                      const cat = s.categories[c.key];
+                      return (
+                        <CategoryCell
+                          key={c.key}
+                          value={cat.value}
+                          rotoPoints={cat.roto_points}
+                          rank={cat.rank}
+                          isSavePct={c.key === 'save_pct'}
+                          qualified={cat.qualified}
+                        />
+                      );
+                    })}
                     <td className="px-5 py-4 text-center">
-                      <span className="points-pill" style={isTop3 ? { background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15))' } : {}}>
+                      <span className={`points-pill ${isTop3 ? 'points-pill-top' : ''}`}>
                         {s.total_roto_points}
+                        {s.isTied && <span className="tie-indicator ml-1">T</span>}
                       </span>
                     </td>
                   </tr>
@@ -148,11 +210,12 @@ export default function Home() {
       </div>
 
       {/* Footer legend */}
-      <div className="mt-5 flex gap-6 text-[11px]" style={{ color: 'var(--text-muted)' }}>
+      <div className="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-[11px]" style={{ color: 'var(--text-muted)' }}>
         <span className="flex items-center gap-1.5">
           <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent-red)' }} />
           Save % not qualified (&lt;20 SA)
         </span>
+        <span><strong>T</strong> = tied on total roto points</span>
         <span>Roto: 12 pts for 1st, 1 pt for 12th. Ties split evenly.</span>
       </div>
     </div>
