@@ -263,6 +263,9 @@ export default function Home() {
             <a href="/wally-cup-olympics/radar" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
               View Team Radar Charts →
             </a>
+            <a href="/wally-cup-olympics/bracket" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
+              View Tournament Bracket →
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-end gap-1.5">
