@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeftIcon, StarIcon } from "@heroicons/react/24/outline";
-import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
+// Simple inline icon replacements
+const ChevronLeftIcon = ({ className }: { className?: string }) => <span className={className}>←</span>;
+const StarIconSolid = ({ className }: { className?: string }) => <span className={className}>★</span>;
+const StarIcon = ({ className }: { className?: string }) => <span className={className}>☆</span>;
 import standingsData from "../../data/standings.json";
 
 interface GameLogEntry {
@@ -23,7 +25,7 @@ interface Player {
   name: string;
   country: string;
   pos: string;
-  wally_team?: string;
+  wally_team?: string | null;
   player_id?: number;
   headshot_url?: string;
   stats: {
@@ -42,12 +44,19 @@ interface PageProps {
   params: { id: string };
 }
 
+export function generateStaticParams() {
+  const players = standingsData.all_olympic_players;
+  return players
+    .filter((p: any) => p.player_id != null)
+    .map((p: any) => ({ id: String(p.player_id) }));
+}
+
 function findPlayerById(playerId: number): Player | null {
   const players = standingsData.all_olympic_players;
   for (let i = 0; i < players.length; i++) {
     const player = { ...players[i] }; // Create a copy of the player object
     if (player.player_id != null && player.player_id === playerId) {
-      return player;
+      return player as any as Player;
     }
   }
   return null;

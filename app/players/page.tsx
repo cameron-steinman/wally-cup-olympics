@@ -296,7 +296,7 @@ export default function PlayersPage() {
                     </td>
                     <td className="px-3 py-2 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
                       {p.is_hot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.is_cold && <span title="Cold player (bottom 50 last 48h)">❄️ </span>}
-                      <a href={`/player/${p.player_id}`}>{p.name}</a>
+                      <a href={`/player/${(p as any).player_id}`}>{p.name}</a>
                     </td>
                     <td className="px-2 py-2 text-center">
                       <Flag code={p.country} size={18} />

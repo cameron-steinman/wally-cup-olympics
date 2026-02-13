@@ -33,9 +33,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </p>
               </div>
             </a>
-            <div className="flex items-center gap-1.5 text-lg">
-              <span>🥇</span><span>🥈</span><span>🥉</span>
-            </div>
+            <nav className="flex items-center gap-5 flex-wrap">
+              <a href="/wally-cup-olympics/" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Standings</a>
+              <a href="/wally-cup-olympics/bracket" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Tournament</a>
+              <a href="/wally-cup-olympics/recap" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Recap</a>
+              <a href="/wally-cup-olympics/milestones" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Milestones</a>
+              <a href="/wally-cup-olympics/predictions" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Predictions</a>
+              <a href="/wally-cup-olympics/players" className="text-sm font-medium hover:underline" style={{ color: 'var(--text-secondary)' }}>Players</a>
+              <div className="flex items-center gap-1.5 text-lg ml-2">
+                <span>🥇</span><span>🥈</span><span>🥉</span>
+              </div>
+            </nav>
           </div>
         </header>
         <main className="max-w-7xl mx-auto px-6 py-8">
