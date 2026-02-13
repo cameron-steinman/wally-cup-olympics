@@ -1,5 +1,20 @@
 import data from "../../data/standings.json";
 
+const teamLogos: Record<string, string> = {
+  "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
+  "Mark's Mafia": "/wally-cup-olympics/logos/marks-mafia.png",
+  "Todd's Hitmen": "/wally-cup-olympics/logos/todds-hitmen.png",
+  "Johnny's Scrubbers": "/wally-cup-olympics/logos/johnnys-scrubbers.png",
+  "Bardown": "/wally-cup-olympics/logos/bardown.png",
+  "Cross's Beavers": "/wally-cup-olympics/logos/crosss-beavers.png",
+  "Big Shooters": "/wally-cup-olympics/logos/big-shooters.png",
+  "Gators": "/wally-cup-olympics/logos/gators.png",
+  "Gabe's Gangsters": "/wally-cup-olympics/logos/gabes-gangsters.png",
+  "Willy's Warlocks": "/wally-cup-olympics/logos/willys-warlocks.png",
+  "Owen's Otters": "/wally-cup-olympics/logos/owens-otters.png",
+  "Ice Holes": "/wally-cup-olympics/logos/ice-holes.png",
+};
+
 const flagIso2: Record<string, string> = {
   CAN:"ca",USA:"us",SWE:"se",FIN:"fi",CZE:"cz",SUI:"ch",GER:"de",SVK:"sk",DEN:"dk",LAT:"lv",ITA:"it",FRA:"fr"
 };
@@ -183,9 +198,14 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       {/* Team header */}
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
         <div className="glass-card px-6 py-4 flex-1">
-          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-            {teamName}
-          </h2>
+          <div className="flex items-center gap-4">
+            {teamLogos[teamName] && (
+              <img src={teamLogos[teamName]} alt={teamName} className="w-14 h-14 rounded-lg object-contain" style={{ background: 'rgba(255,255,255,0.5)' }} />
+            )}
+            <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+              {teamName}
+            </h2>
+          </div>
           <div className="flex items-center gap-3 mt-2">
             <span className="text-lg font-bold" style={{ color: 'var(--text-secondary)' }}>
               {standing.total_roto_points} Roto Points
