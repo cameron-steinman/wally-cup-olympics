@@ -161,7 +161,8 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       ...p,
       fantasyPts: calcFantasyPoints(p),
       globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
-      isHot: hotLookup.has(`${p.name}|${p.country}`)
+      isHot: hotLookup.has(`${p.name}|${p.country}`),
+      isCold: coldLookup.has(`${p.name}|${p.country}`)
     }))
     .sort((a, b) => a.globalRank - b.globalRank);
 
@@ -171,7 +172,8 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       ...p,
       fantasyPts: calcFantasyPoints(p),
       globalRank: Number(zscoreRankLookup.get(`${p.name}|${p.country}`) ?? 999),
-      isHot: hotLookup.has(`${p.name}|${p.country}`)
+      isHot: hotLookup.has(`${p.name}|${p.country}`),
+      isCold: coldLookup.has(`${p.name}|${p.country}`)
     }))
     .sort((a, b) => a.globalRank - b.globalRank);
 

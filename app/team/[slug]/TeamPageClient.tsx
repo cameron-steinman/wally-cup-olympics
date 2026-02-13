@@ -29,6 +29,7 @@ type Player = {
   fantasyPts: number;
   globalRank: number;
   isHot: boolean;
+  isCold: boolean;
 };
 
 interface TeamPageClientProps {
