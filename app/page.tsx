@@ -78,9 +78,31 @@ export default function Home() {
     categories: Record<string, { value: number; roto_points: number; rank: number; qualified?: boolean }>;
   }>;
 
+  const teams = (data as any).teams as Record<string, {
+    players: Array<{ name: string; country: string | null; pos: string; stats: any; status: string }>;
+  }>;
+
+  // Get eliminated countries from data (empty initially — all countries active)
+  const countryStatus = (data as any).country_status || {};
+  const eliminatedCountries = new Set(
+    Object.entries(countryStatus)
+      .filter(([_, v]: [string, any]) => v.status === 'eliminated')
+      .map(([k]) => k)
+  );
+
+  // Calculate active Olympic players per team
+  const activePlayersPerTeam: Record<string, { active: number; total: number }> = {};
+  for (const [teamName, teamData] of Object.entries(teams)) {
+    const olympicPlayers = teamData.players.filter((p: any) => p.country !== null);
+    const activePlayers = olympicPlayers.filter((p: any) => !eliminatedCountries.has(p.country));
+    activePlayersPerTeam[teamName] = {
+      active: activePlayers.length,
+      total: olympicPlayers.length,
+    };
+  }
+
   // Recalculate ranks with proper tie handling
-  const rankedStandings = standings.map((s, idx) => {
-    // Find actual rank: count how many teams have MORE points
+  const rankedStandings = standings.map((s) => {
     const teamsAbove = standings.filter(t => t.total_roto_points > s.total_roto_points).length;
     const actualRank = teamsAbove + 1;
     const isTied = standings.filter(t => t.total_roto_points === s.total_roto_points).length > 1;
@@ -119,9 +141,9 @@ export default function Home() {
         <div className="flex flex-col items-end gap-1.5">
           {lastGame && (
             <div className="last-game-badge">
-              <span className="font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game processed</span>
+              <span className="font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
               <span>
-                {flagMap[lastGame.away] || ''} {lastGame.away} {lastGame.away_score}–{lastGame.home_score} {lastGame.home} {flagMap[lastGame.home] || ''}
+                {flagMap[lastGame.away] || lastGame.away} {lastGame.away_score}–{lastGame.home_score} {flagMap[lastGame.home] || lastGame.home}
               </span>
               <span style={{ color: 'var(--text-muted)' }}>
                 {lastGameDate}
@@ -149,6 +171,10 @@ export default function Home() {
                   <div className="text-xs">PTS</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
+                <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+                  <div className="font-bold text-xs" style={{ color: 'var(--accent-green)' }}>🟢</div>
+                  <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Active</div>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -156,6 +182,8 @@ export default function Home() {
                 const medalClass = medalClasses[s.displayRank];
                 const isTop3 = s.displayRank <= 3;
                 const icon = teamIcons[s.team] || '🏒';
+                const ap = activePlayersPerTeam[s.team] || { active: 0, total: 0 };
+                const allActive = ap.active === ap.total;
 
                 return (
                   <tr
@@ -201,6 +229,14 @@ export default function Home() {
                         {s.isTied && <span className="tie-indicator ml-1">T</span>}
                       </span>
                     </td>
+                    <td className="px-3 py-4 text-center">
+                      <div className="text-base font-bold" style={{ color: allActive ? 'var(--accent-green)' : 'var(--text-primary)' }}>
+                        {ap.active}
+                      </div>
+                      <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
+                        of {ap.total}
+                      </div>
+                    </td>
                   </tr>
                 );
               })}
@@ -216,6 +252,7 @@ export default function Home() {
           Save % not qualified (&lt;20 SA)
         </span>
         <span><strong>T</strong> = tied on total roto points</span>
+        <span>🟢 Active = players on teams still competing</span>
         <span>Roto: 12 pts for 1st, 1 pt for 12th. Ties split evenly.</span>
       </div>
     </div>
