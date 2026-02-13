@@ -297,6 +297,217 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
         eliminatedCountries={eliminatedCountries}
       />
 
+      {/* Skaters - PLACEHOLDER */}
+      <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-primary)' }}>
+        Skaters <span className="text-sm font-normal mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>({skaters.length} in Olympics)</span>
+      </h3>
+      <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+            <thead>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
+                <th 
+                  className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  Player{getSkaterSortIndicator('name')}
+                </th>
+                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  
+                >
+                  Rank{getSkaterSortIndicator('globalRank')}
+                </th>
+                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Pos</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  GP{getSkaterSortIndicator('gp')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  G{getSkaterSortIndicator('goals')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  A{getSkaterSortIndicator('assists')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  +/−{getSkaterSortIndicator('plus_minus')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  PIM{getSkaterSortIndicator('pim')}
+                </th>
+                <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedSkaters.map((p, idx) => {
+                const eliminated = p.country ? eliminatedCountries.has(p.country) : false;
+                const rowOpacity = eliminated ? 0.4 : 1;
+                const pm = p.stats?.plus_minus ?? 0;
+                return (
+                  <tr key={p.name + idx} className="table-row-hover" style={{
+                    borderBottom: '1px solid var(--border)',
+                    opacity: rowOpacity,
+                  }}>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: eliminated ? 'var(--text-muted)' : 'var(--text-primary)' }}>
+                      {p.name}
+                    </td>
+                    <td className="px-2 py-2.5 text-center">
+                      {p.country && <Flag code={p.country} size={18} />}
+                    </td>
+                    <td className="px-2 py-2.5 text-center">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                        #{p.globalRank}
+                      </span>
+                    </td>
+                    <td className="px-2 py-2.5 text-center text-xs" style={{ color: 'var(--text-secondary)' }}>{p.pos}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.gp ?? '-'}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.goals ?? 0}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.assists ?? 0}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{
+                      color: pm > 0 ? 'var(--accent-green)' : pm < 0 ? 'var(--accent-red)' : 'var(--text-primary)'
+                    }}>
+                      {pm > 0 ? '+' : ''}{pm}
+                    </td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.pim ?? 0}</td>
+                    <td className="px-3 py-2.5 text-sm next-game-mobile">
+                      <NextGameCell country={p.country} />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Goalies */}
+      <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-primary)' }}>
+        Goalies <span className="text-sm font-normal mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>({goalies.length} in Olympics)</span>
+        {!team.goalie_stats.aggregate.qualified && (
+          <span className="ml-2 text-xs font-normal px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: 'var(--accent-red)' }}>
+            Not qualified for SV% ({team.goalie_stats.aggregate.shots_against} SA &lt; 20 required)
+          </span>
+        )}
+      </h3>
+      <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
+        <div className="overflow-x-auto mobile-table-scroll">
+          <table className="w-full mobile-table player-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+            <thead>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
+                <th 
+                  className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  Goalie{getGoalieSortIndicator('name')}
+                </th>
+                <th className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Country</th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--accent-blue)' }}
+                  
+                >
+                  Rank{getGoalieSortIndicator('globalRank')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  GP{getGoalieSortIndicator('gp')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  W{getGoalieSortIndicator('wins')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  SA{getGoalieSortIndicator('shots_against')}
+                </th>
+                <th 
+                  className="px-2 py-2.5 text-center text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
+                  style={{ color: 'var(--text-muted)' }}
+                  
+                >
+                  SV%{getGoalieSortIndicator('save_pct')}
+                </th>
+                <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Next Game</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedGoalies.map((p, idx) => {
+                const eliminated = p.country ? eliminatedCountries.has(p.country) : false;
+                return (
+                  <tr key={p.name + idx} className="table-row-hover" style={{
+                    borderBottom: '1px solid var(--border)',
+                    opacity: eliminated ? 0.4 : 1,
+                  }}>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.isHot && <span title="Hot (top 10 last 48h)">🔥 </span>}{p.name}</td>
+                    <td className="px-2 py-2.5 text-center">{p.country && <Flag code={p.country} size={18} />}</td>
+                    <td className="px-2 py-2.5 text-center">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
+                        #{p.globalRank}
+                      </span>
+                    </td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.gp ?? 0}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>{p.stats?.wins ?? 0}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{p.stats?.shots_against ?? 0}</td>
+                    <td className="px-2 py-2.5 text-center text-sm" style={{ color: 'var(--text-primary)' }}>
+                      {(p.stats?.save_pct ?? 0) > 0 ? (p.stats?.save_pct ?? 0).toFixed(3).replace(/^0/, '') : '—'}
+                    </td>
+                    <td className="px-3 py-2.5 text-sm next-game-mobile">
+                      <NextGameCell country={p.country} />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            <tfoot>
+              <tr style={{ background: 'rgba(37, 99, 235, 0.04)', borderTop: '2px solid var(--border)' }}>
+                <td className="px-3 py-2.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>Team Aggregate</td>
+                <td />
+                <td />
+                <td />
+                <td className="px-2 py-2.5 text-center text-sm font-bold">{team.goalie_stats.aggregate.wins}</td>
+                <td className="px-2 py-2.5 text-center text-sm font-bold">{team.goalie_stats.aggregate.shots_against}</td>
+                <td className="px-2 py-2.5 text-center text-sm font-bold">
+                  {team.goalie_stats.aggregate.save_pct > 0 ? team.goalie_stats.aggregate.save_pct.toFixed(3).replace(/^0/, '') : '—'}
+                </td>
+                <td />
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
       {/* Not in Olympics */}
       {notPlaying.length > 0 && (
         <>

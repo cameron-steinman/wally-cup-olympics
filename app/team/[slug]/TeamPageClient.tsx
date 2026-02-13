@@ -36,9 +36,16 @@ interface TeamPageClientProps {
   goalies: Player[];
   countryStatus: Record<string, { status: string; name: string; flag: string; next_game: { vs: string; date: string; time: string } | null }>;
   eliminatedCountries: Set<string>;
+  goalieAggregateStats: {
+    wins: number;
+    saves: number;
+    shots_against: number;
+    save_pct: number;
+    qualified: boolean;
+  };
 }
 
-export default function TeamPageClient({ skaters, goalies, countryStatus, eliminatedCountries }: TeamPageClientProps) {
+export default function TeamPageClient({ skaters, goalies, countryStatus, eliminatedCountries, goalieAggregateStats }: TeamPageClientProps) {
   // Sorting state for skaters table
   const [skaterSortColumn, setSkaterSortColumn] = useState<string>('globalRank');
   const [skaterSortDirection, setSkaterSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -273,6 +280,11 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
       {/* Goalies */}
       <h3 className="text-lg font-bold mb-3 section-header-mobile" style={{ color: 'var(--text-primary)' }}>
         Goalies <span className="text-sm font-normal mobile-text-sm" style={{ color: 'var(--text-secondary)' }}>({goalies.length} in Olympics)</span>
+        {!goalieAggregateStats.qualified && (
+          <span className="ml-2 text-xs font-normal px-2 py-0.5 rounded" style={{ background: 'rgba(239,68,68,0.15)', color: 'var(--accent-red)' }}>
+            Not qualified for SV% ({goalieAggregateStats.shots_against} SA &lt; 20 required)
+          </span>
+        )}
       </h3>
       <div className="glass-card overflow-hidden mb-8 glass-card-mobile mobile-compact">
         <div className="overflow-x-auto mobile-table-scroll">
