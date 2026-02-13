@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-13T17:00:08.086994Z",
+  "updated_at": "2026-02-13T17:00:33.599432Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -109,7 +109,7 @@
         "away_score": 3,
         "home_score": 3,
         "period": 2,
-        "clock": "06:15"
+        "clock": "06:13"
       },
       {
         "id": 2025090010,
@@ -1551,32 +1551,23 @@
           {
             "team": "Cam's Crunch",
             "rank_change": 2,
-            "roto_change": 6.5,
+            "roto_change": 6.0,
             "previous_rank": 4,
             "current_rank": 2,
             "previous_roto": 44.0,
-            "current_roto": 50.5
+            "current_roto": 50.0
           },
           {
             "team": "Johnny's Scrubbers",
-            "rank_change": 1,
-            "roto_change": 2.5,
+            "rank_change": 2,
+            "roto_change": 4.5,
             "previous_rank": 10,
-            "current_rank": 9,
+            "current_rank": 8,
             "previous_roto": 29.5,
-            "current_roto": 32.0
+            "current_roto": 34.0
           }
         ],
         "fallers": [
-          {
-            "team": "Bardown",
-            "rank_change": -1,
-            "roto_change": 2.0,
-            "previous_rank": 2,
-            "current_rank": 3,
-            "previous_roto": 45.0,
-            "current_roto": 47.0
-          },
           {
             "team": "Gabe's Gangsters",
             "rank_change": -1,
@@ -1587,18 +1578,27 @@
             "current_roto": 46.0
           },
           {
+            "team": "Todd's Hitmen",
+            "rank_change": -1,
+            "roto_change": -1.0,
+            "previous_rank": 8,
+            "current_rank": 9,
+            "previous_roto": 34.5,
+            "current_roto": 33.5
+          },
+          {
             "team": "Owen's Otters",
             "rank_change": -1,
-            "roto_change": 0.5,
+            "roto_change": 0.0,
             "previous_rank": 9,
             "current_rank": 10,
             "previous_roto": 31.5,
-            "current_roto": 32.0
+            "current_roto": 31.5
           }
         ]
       },
       "milestones": [],
-      "recap_text": "Day 3 featured 2 games. The highest-scoring affair was Finland 4-1 Sweden. Louis Boudon (France) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Bardown dropped 1 spot."
+      "recap_text": "Day 3 featured 2 games. The highest-scoring affair was Finland 4-1 Sweden. Louis Boudon (France) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Gabe's Gangsters dropped 1 spot."
     }
   },
   "teams": {
@@ -24097,8 +24097,8 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.983,
-      "Gabe's Gangsters": 0.017,
+      "Big Shooters": 0.985,
+      "Gabe's Gangsters": 0.015,
       "Todd's Hitmen": 0.0,
       "Bardown": 0.0,
       "Cam's Crunch": 0.0,
@@ -24113,91 +24113,91 @@
     "podium_probabilities": {
       "Big Shooters": 1.0,
       "Gabe's Gangsters": 0.992,
-      "Cam's Crunch": 0.339,
-      "Mark's Mafia": 0.283,
-      "Ice Holes": 0.219,
-      "Bardown": 0.165,
+      "Mark's Mafia": 0.298,
+      "Cam's Crunch": 0.335,
+      "Ice Holes": 0.211,
+      "Bardown": 0.163,
       "Cross's Beavers": 0.001,
-      "Johnny's Scrubbers": 0.001,
       "Todd's Hitmen": 0.0,
       "Gators": 0.0,
+      "Johnny's Scrubbers": 0.0,
       "Owen's Otters": 0.0,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 58.3735,
-      "Gabe's Gangsters": 51.1715,
-      "Cam's Crunch": 44.3885,
-      "Ice Holes": 43.7435,
-      "Bardown": 43.608,
-      "Mark's Mafia": 44.336,
-      "Todd's Hitmen": 34.451,
-      "Cross's Beavers": 35.7705,
-      "Johnny's Scrubbers": 37.222,
-      "Gators": 27.8205,
-      "Owen's Otters": 28.5135,
-      "Willy's Warlocks": 18.6015
+      "Big Shooters": 58.3765,
+      "Gabe's Gangsters": 51.064,
+      "Mark's Mafia": 44.4875,
+      "Ice Holes": 43.6885,
+      "Cam's Crunch": 44.225,
+      "Johnny's Scrubbers": 37.279,
+      "Bardown": 43.6375,
+      "Cross's Beavers": 35.857,
+      "Todd's Hitmen": 34.475,
+      "Owen's Otters": 28.4895,
+      "Gators": 27.817,
+      "Willy's Warlocks": 18.6035
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.442,
-        "silver": 0.295,
-        "bronze": 0.167
+        "gold": 0.466,
+        "silver": 0.318,
+        "bronze": 0.139
       },
       "USA": {
-        "gold": 0.291,
-        "silver": 0.315,
-        "bronze": 0.238
+        "gold": 0.3,
+        "silver": 0.313,
+        "bronze": 0.234
       },
       "SWE": {
-        "gold": 0.135,
-        "silver": 0.168,
-        "bronze": 0.261
+        "gold": 0.103,
+        "silver": 0.181,
+        "bronze": 0.278
       },
       "FIN": {
-        "gold": 0.055,
-        "silver": 0.09,
-        "bronze": 0.124
+        "gold": 0.061,
+        "silver": 0.073,
+        "bronze": 0.134
       },
       "CZE": {
-        "gold": 0.041,
-        "silver": 0.06,
-        "bronze": 0.089
+        "gold": 0.022,
+        "silver": 0.047,
+        "bronze": 0.09
       },
       "SUI": {
-        "gold": 0.022,
-        "silver": 0.039,
-        "bronze": 0.066
+        "gold": 0.031,
+        "silver": 0.038,
+        "bronze": 0.077
       },
       "GER": {
-        "gold": 0.008,
-        "silver": 0.012,
-        "bronze": 0.021
+        "gold": 0.01,
+        "silver": 0.013,
+        "bronze": 0.027
       },
       "SVK": {
-        "gold": 0.004,
-        "silver": 0.011,
-        "bronze": 0.019
+        "gold": 0.0,
+        "silver": 0.008,
+        "bronze": 0.01
       },
       "LAT": {
-        "gold": 0.002,
+        "gold": 0.003,
         "silver": 0.006,
-        "bronze": 0.008
+        "bronze": 0.005
       },
       "DEN": {
-        "gold": 0.0,
-        "silver": 0.002,
-        "bronze": 0.003
+        "gold": 0.001,
+        "silver": 0.0,
+        "bronze": 0.001
       },
       "ITA": {
         "gold": 0.0,
-        "silver": 0.0,
-        "bronze": 0.002
+        "silver": 0.002,
+        "bronze": 0.004
       },
       "FRA": {
-        "gold": 0.0,
-        "silver": 0.002,
-        "bronze": 0.002
+        "gold": 0.003,
+        "silver": 0.001,
+        "bronze": 0.001
       }
     }
   }
