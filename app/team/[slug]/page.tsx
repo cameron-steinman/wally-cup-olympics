@@ -196,74 +196,12 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
     // Static sorting - no interactivity  
   };
 
-  // Sort the skaters
-  const sortedSkaters = [...skaters].sort((a, b) => {
-    let aVal: any, bVal: any;
-    
-    if (skaterSortColumn === 'name') {
-      aVal = a.name;
-      bVal = b.name;
-    } else if (skaterSortColumn === 'globalRank') {
-      aVal = a.globalRank;
-      bVal = b.globalRank;
-    } else if (skaterSortColumn === 'gp') {
-      aVal = a.stats?.gp ?? 0;
-      bVal = b.stats?.gp ?? 0;
-    } else if (skaterSortColumn === 'goals') {
-      aVal = a.stats?.goals ?? 0;
-      bVal = b.stats?.goals ?? 0;
-    } else if (skaterSortColumn === 'assists') {
-      aVal = a.stats?.assists ?? 0;
-      bVal = b.stats?.assists ?? 0;
-    } else if (skaterSortColumn === 'plus_minus') {
-      aVal = a.stats?.plus_minus ?? 0;
-      bVal = b.stats?.plus_minus ?? 0;
-    } else if (skaterSortColumn === 'pim') {
-      aVal = a.stats?.pim ?? 0;
-      bVal = b.stats?.pim ?? 0;
-    } else {
-      return 0;
-    }
-
-    if (typeof aVal === 'string' && typeof bVal === 'string') {
-      return skaterSortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-    }
-    
-    return skaterSortDirection === 'asc' ? aVal - bVal : bVal - aVal;
-  });
+  // Sort the skaters by globalRank (ascending)
+  const sortedSkaters = [...skaters].sort((a, b) => a.globalRank - b.globalRank);
 
   // Sort the goalies
-  const sortedGoalies = [...goalies].sort((a, b) => {
-    let aVal: any, bVal: any;
-    
-    if (goalieSortColumn === 'name') {
-      aVal = a.name;
-      bVal = b.name;
-    } else if (goalieSortColumn === 'globalRank') {
-      aVal = a.globalRank;
-      bVal = b.globalRank;
-    } else if (goalieSortColumn === 'gp') {
-      aVal = a.stats?.gp ?? 0;
-      bVal = b.stats?.gp ?? 0;
-    } else if (goalieSortColumn === 'wins') {
-      aVal = a.stats?.wins ?? 0;
-      bVal = b.stats?.wins ?? 0;
-    } else if (goalieSortColumn === 'shots_against') {
-      aVal = a.stats?.shots_against ?? 0;
-      bVal = b.stats?.shots_against ?? 0;
-    } else if (goalieSortColumn === 'save_pct') {
-      aVal = a.stats?.save_pct ?? 0;
-      bVal = b.stats?.save_pct ?? 0;
-    } else {
-      return 0;
-    }
-
-    if (typeof aVal === 'string' && typeof bVal === 'string') {
-      return goalieSortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-    }
-    
-    return goalieSortDirection === 'asc' ? aVal - bVal : bVal - aVal;
-  });
+  // Sort the goalies by globalRank (ascending)
+  const sortedGoalies = [...goalies].sort((a, b) => a.globalRank - b.globalRank);
 
   // Sort indicator functions
   const getSkaterSortIndicator = (column: string) => {
