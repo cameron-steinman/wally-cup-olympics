@@ -2,7 +2,6 @@
 import { useState } from "react";
 import data from "../data/standings.json";
 
-// Team logos — path relative to public/
 const teamLogos: Record<string, string> = {
   "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
   "Mark's Mafia": "/wally-cup-olympics/logos/marks-mafia.png",
@@ -22,6 +21,11 @@ const flagIso2: Record<string, string> = {
   CAN:"ca",USA:"us",SWE:"se",FIN:"fi",CZE:"cz",SUI:"ch",GER:"de",SVK:"sk",DEN:"dk",LAT:"lv",ITA:"it",FRA:"fr"
 };
 
+const countryNames: Record<string, string> = {
+  CAN:"Canada",USA:"United States",SWE:"Sweden",FIN:"Finland",CZE:"Czechia",SUI:"Switzerland",
+  GER:"Germany",SVK:"Slovakia",DEN:"Denmark",LAT:"Latvia",ITA:"Italy",FRA:"France"
+};
+
 function Flag({ code, size = 20 }: { code: string; size?: number }) {
   const iso = flagIso2[code];
   if (!iso) return <span>{code}</span>;
@@ -37,345 +41,248 @@ function Flag({ code, size = 20 }: { code: string; size?: number }) {
   );
 }
 
-function GameCard({ game }: { game: any }) {
-  return (
-    <div className="glass-card p-4 rounded-xl border" style={{ borderColor: 'var(--border-color)' }}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Flag code={game.away.code} size={24} />
-          <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-            {game.away.name}
-          </span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            {game.away.score}
-          </span>
-          <span style={{ color: 'var(--text-muted)' }}>-</span>
-          <span className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            {game.home.score}
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-            {game.home.name}
-          </span>
-          <Flag code={game.home.code} size={24} />
-        </div>
-      </div>
-    </div>
-  );
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr + 'T12:00:00');
+  return date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-function TopPerformerCard({ performer }: { performer: any }) {
-  const logoSrc = performer.wally_team ? teamLogos[performer.wally_team] : null;
-  
-  // Format stats display
-  let statsDisplay = "";
+function formatStats(performer: any): string {
   if (performer.pos === "G") {
-    const wins = performer.stats.wins || 0;
-    const saves = performer.stats.saves || 0;
-    const sa = performer.stats.shots_against || 0;
-    const svPct = sa > 0 ? (saves / sa * 100).toFixed(1) + "%" : "0.0%";
-    statsDisplay = `${wins}W, ${saves}SV (${svPct})`;
-  } else {
-    const goals = performer.stats.goals || 0;
-    const assists = performer.stats.assists || 0;
-    const plusMinus = performer.stats.plus_minus || 0;
-    const pim = performer.stats.pim || 0;
-    
-    let parts = [];
-    if (goals > 0) parts.push(`${goals}G`);
-    if (assists > 0) parts.push(`${assists}A`);
-    if (plusMinus !== 0) parts.push(`${plusMinus > 0 ? '+' : ''}${plusMinus}`);
-    if (pim > 0) parts.push(`${pim}PIM`);
-    
-    statsDisplay = parts.join(', ') || "0 pts";
+    const s = performer.stats || {};
+    const wins = s.wins || 0;
+    const saves = s.saves || 0;
+    const sa = s.shots_against || 0;
+    const svPct = sa > 0 ? (saves / sa).toFixed(3).replace(/^0/, '') : '—';
+    return `${wins}W, ${saves}SV, ${svPct} SV%`;
   }
-
-  return (
-    <div className="glass-card p-4 rounded-xl border" style={{ borderColor: 'var(--border-color)' }}>
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-3">
-          <Flag code={performer.country} size={20} />
-          <div>
-            <div className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-              {performer.name}
-            </div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              {performer.pos} • {(data as any).country_names?.[performer.country] || performer.country}
-            </div>
-          </div>
-        </div>
-        <div className="text-right">
-          <div className="font-bold text-lg" style={{ color: 'var(--accent-blue)' }}>
-            {performer.fantasy_points.toFixed(1)}
-          </div>
-          <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
-            fantasy pts
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-between">
-        <div className="text-sm" style={{ color: 'var(--text-primary)' }}>
-          {statsDisplay}
-        </div>
-        {performer.wally_team && (
-          <div className="flex items-center gap-2">
-            {logoSrc && (
-              <img src={logoSrc} alt={performer.wally_team} className="w-5 h-5 rounded object-contain" />
-            )}
-            <span className="text-xs font-semibold" style={{ color: 'var(--accent-blue)' }}>
-              {performer.wally_team}
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+  const s = performer.stats || {};
+  const parts: string[] = [];
+  if (s.goals) parts.push(`${s.goals}G`);
+  if (s.assists) parts.push(`${s.assists}A`);
+  if (s.plus_minus !== undefined && s.plus_minus !== 0) parts.push(`${s.plus_minus > 0 ? '+' : ''}${s.plus_minus}`);
+  if (s.pim) parts.push(`${s.pim}PIM`);
+  return parts.join(', ') || '—';
 }
 
-function StandingsChangeCard({ change, type }: { change: any; type: 'riser' | 'faller' }) {
-  const logoSrc = teamLogos[change.team];
-  const isRiser = type === 'riser';
-  const moveText = isRiser ? 
-    `↗ +${change.rank_change} ${change.rank_change === 1 ? 'spot' : 'spots'}` : 
-    `↘ ${change.rank_change} ${Math.abs(change.rank_change) === 1 ? 'spot' : 'spots'}`;
-  
+function RotoChangeDisplay({ rotoChange }: { rotoChange: number }) {
+  // Always color based on actual direction of roto change, not rank direction
+  const isPositive = rotoChange > 0;
+  const color = isPositive ? '#22c55e' : rotoChange < 0 ? '#ef4444' : 'var(--text-muted)';
+  const prefix = isPositive ? '+' : '';
   return (
-    <div className="glass-card p-4 rounded-xl border" style={{ borderColor: 'var(--border-color)' }}>
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-3">
-          {logoSrc && (
-            <img src={logoSrc} alt={change.team} className="w-6 h-6 rounded object-contain" />
-          )}
-          <div className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-            {change.team}
-          </div>
-        </div>
-        <div className="text-right">
-          <div className={`font-bold ${isRiser ? 'text-green-500' : 'text-red-500'}`}>
-            {moveText}
-          </div>
-          <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
-            #{change.previous_rank} → #{change.current_rank}
-          </div>
-        </div>
-      </div>
-      <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-        {change.previous_roto} → {change.current_roto} roto pts
-        <span style={{ color: isRiser ? 'var(--accent-green)' : 'var(--accent-red)' }}>
-          ({isRiser ? '+' : ''}{change.roto_change})
-        </span>
-      </div>
-    </div>
+    <span style={{ color }}> ({prefix}{rotoChange})</span>
   );
 }
 
 export default function RecapPage() {
-  // Get daily recaps from data
   const dailyRecaps = (data as any).daily_recaps || {};
-  const availableDates = Object.keys(dailyRecaps).sort().reverse(); // Most recent first
-  
-  // State for selected date
+  const availableDates = Object.keys(dailyRecaps).sort().reverse();
   const [selectedDate, setSelectedDate] = useState(availableDates[0] || '');
-  
-  // Get the selected recap
   const currentRecap = dailyRecaps[selectedDate];
-  
+
+  // Normalize standings_changes — could be list or dict
+  const getStandingsChanges = (recap: any) => {
+    const sc = recap?.standings_changes;
+    if (!sc) return { risers: [], fallers: [] };
+    if (Array.isArray(sc)) {
+      // Old format: flat list, split by rank_change sign
+      return {
+        risers: sc.filter((c: any) => c.rank_change > 0).sort((a: any, b: any) => b.rank_change - a.rank_change),
+        fallers: sc.filter((c: any) => c.rank_change < 0).sort((a: any, b: any) => a.rank_change - b.rank_change),
+      };
+    }
+    return { risers: sc.risers || [], fallers: sc.fallers || [] };
+  };
+
   if (!currentRecap) {
     return (
-      <div className="min-h-screen p-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-6">
-            <h1 className="text-3xl font-extrabold mb-2" style={{ color: 'var(--text-primary)' }}>
-              Daily Recap
-            </h1>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Daily summaries of Olympic hockey action and Wally Cup movement
-            </p>
-          </div>
-          
-          <div className="glass-card p-8 text-center rounded-xl">
-            <div className="text-6xl mb-4">📰</div>
-            <h2 className="text-xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-              No Recaps Available
-            </h2>
-            <p style={{ color: 'var(--text-muted)' }}>
-              Daily recaps will appear here after games are completed.
-            </p>
-          </div>
+      <div>
+        <div className="mb-6">
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Daily Recap</h2>
+          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>Daily summaries of Olympic hockey action and Wally Cup movement</p>
+        </div>
+        <div className="glass-card p-8 text-center">
+          <p className="text-lg" style={{ color: 'var(--text-secondary)' }}>No recaps available yet — check back after games are completed.</p>
         </div>
       </div>
     );
   }
 
-  // Format date for display
-  const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr + 'T00:00:00');
-    return date.toLocaleDateString('en-US', { 
-      weekday: 'long',
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
+  const sc = getStandingsChanges(currentRecap);
 
   return (
-    <div className="min-h-screen p-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-          <div>
-            <h1 className="text-3xl font-extrabold mb-2" style={{ color: 'var(--text-primary)' }}>
-              Daily Recap
-            </h1>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              Daily summaries of Olympic hockey action and Wally Cup movement
-            </p>
-            <div className="mt-2">
-              <a href="/wally-cup-olympics/" className="text-sm font-semibold no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
-                ← Back to Standings
-              </a>
-            </div>
-          </div>
-          
-          {/* Date Selector */}
-          {availableDates.length > 1 && (
-            <div>
-              <label htmlFor="date-select" className="block text-sm font-medium mb-2" style={{ color: 'var(--text-muted)' }}>
-                Select Date
-              </label>
-              <select
-                id="date-select"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                className="glass-card px-3 py-2 rounded-lg border text-sm font-medium"
-                style={{ 
-                  borderColor: 'var(--border-color)',
-                  color: 'var(--text-primary)',
-                  backgroundColor: 'var(--glass-bg)'
-                }}
-              >
-                {availableDates.map(date => (
-                  <option key={date} value={date}>
-                    {formatDate(date)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
+    <div>
+      {/* Page title */}
+      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+        <div>
+          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Daily Recap</h2>
+          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>Daily summaries of Olympic hockey action and Wally Cup movement</p>
         </div>
+        {availableDates.length > 1 && (
+          <select
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+            className="glass-card px-3 py-2 rounded-lg text-sm font-medium"
+            style={{ color: 'var(--text-primary)', background: 'var(--bg-card)' }}
+          >
+            {availableDates.map(date => (
+              <option key={date} value={date}>{formatDate(date)}</option>
+            ))}
+          </select>
+        )}
+      </div>
 
-        {/* Recap Summary */}
-        <div className="glass-card p-6 rounded-xl mb-8" style={{ borderLeft: '4px solid var(--accent-blue)' }}>
-          <div className="flex items-start gap-4 mb-4">
-            <div className="text-4xl">📰</div>
-            <div className="flex-1">
-              <h2 className="text-xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-                {formatDate(selectedDate)}
-              </h2>
-              <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                {currentRecap.recap_text}
-              </p>
-            </div>
+      {/* Recap narrative */}
+      <div className="glass-card p-5 mb-6" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
+        <h3 className="text-base font-bold mb-2" style={{ color: 'var(--text-primary)' }}>{formatDate(selectedDate)}</h3>
+        <p className="text-sm leading-relaxed" style={{ color: 'var(--text-primary)' }}>
+          {currentRecap.recap_text}
+        </p>
+      </div>
+
+      {/* Games Today */}
+      {currentRecap.games?.length > 0 && (
+        <div className="mb-6">
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Games Today</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {currentRecap.games.map((game: any, idx: number) => (
+              <div key={idx} className="glass-card p-4 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Flag code={game.away.code} size={22} />
+                  <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>{game.away.name}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>{game.away.score}</span>
+                  <span className="text-sm" style={{ color: 'var(--text-muted)' }}>–</span>
+                  <span className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>{game.home.score}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>{game.home.name}</span>
+                  <Flag code={game.home.code} size={22} />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+      )}
 
-        <div className="grid gap-8">
-          {/* Games Section */}
-          {currentRecap.games && currentRecap.games.length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                🏒 Games ({currentRecap.games.length})
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {currentRecap.games.map((game: any, idx: number) => (
-                  <GameCard key={game.id || idx} game={game} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Top Performers Section */}
-          {currentRecap.top_performers && currentRecap.top_performers.length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                ⭐ Top Performers
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {currentRecap.top_performers.slice(0, 9).map((performer: any, idx: number) => (
-                  <TopPerformerCard key={`${performer.name}-${idx}`} performer={performer} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Standings Movement Section */}
-          {currentRecap.standings_changes && (currentRecap.standings_changes.risers?.length > 0 || currentRecap.standings_changes.fallers?.length > 0) && (
-            <section>
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                📊 Standings Movement
-              </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Risers */}
-                {currentRecap.standings_changes.risers?.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3 text-green-500 flex items-center gap-2">
-                      📈 Biggest Risers
-                    </h3>
-                    <div className="space-y-3">
-                      {currentRecap.standings_changes.risers.map((change: any, idx: number) => (
-                        <StandingsChangeCard key={`riser-${idx}`} change={change} type="riser" />
-                      ))}
+      {/* Top Performers Today */}
+      {currentRecap.top_performers?.length > 0 && (
+        <div className="mb-6">
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Top Performers Today</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {currentRecap.top_performers.slice(0, 9).map((p: any, idx: number) => {
+              const logoSrc = p.wally_team ? teamLogos[p.wally_team] : null;
+              return (
+                <div key={idx} className="glass-card p-3 flex items-center gap-3">
+                  <Flag code={p.country} size={18} />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{p.name}</span>
+                      <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+                        {countryNames[p.country] || p.country}
+                      </span>
+                    </div>
+                    <div className="text-xs mt-0.5 flex items-center gap-2">
+                      <span style={{ color: 'var(--text-primary)' }}>{formatStats(p)}</span>
+                      {p.wally_team && (
+                        <span className="flex items-center gap-1">
+                          {logoSrc && <img src={logoSrc} alt="" className="w-3.5 h-3.5 rounded-sm object-contain" />}
+                          <span style={{ color: 'var(--accent-blue)' }}>{p.wally_team}</span>
+                        </span>
+                      )}
                     </div>
                   </div>
-                )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
-                {/* Fallers */}
-                {currentRecap.standings_changes.fallers?.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3 text-red-500 flex items-center gap-2">
-                      📉 Biggest Fallers
-                    </h3>
-                    <div className="space-y-3">
-                      {currentRecap.standings_changes.fallers.map((change: any, idx: number) => (
-                        <StandingsChangeCard key={`faller-${idx}`} change={change} type="faller" />
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </section>
-          )}
-
-          {/* Milestones Section */}
-          {currentRecap.milestones && currentRecap.milestones.length > 0 && (
-            <section>
-              <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                🏆 Milestones
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {currentRecap.milestones.map((milestone: any, idx: number) => (
-                  <div key={idx} className="glass-card p-4 rounded-xl border" style={{ borderColor: 'var(--border-color)' }}>
-                    <div className="flex items-center gap-3">
-                      <div className="text-2xl">🏆</div>
-                      <div>
-                        <div className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                          {milestone.title}
+      {/* Standings Movement Today */}
+      {(sc.risers.length > 0 || sc.fallers.length > 0) && (
+        <div className="mb-6">
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Standings Movement Today</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Biggest Risers */}
+            {sc.risers.length > 0 && (
+              <div>
+                <h4 className="text-sm font-bold mb-2" style={{ color: '#22c55e' }}>📈 Biggest Risers</h4>
+                <div className="space-y-2">
+                  {sc.risers.map((c: any, idx: number) => {
+                    const logoSrc = teamLogos[c.team];
+                    return (
+                      <div key={idx} className="glass-card p-3 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded object-contain" />}
+                          <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{c.team}</span>
                         </div>
-                        <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                          {milestone.description}
+                        <div className="text-right">
+                          <div className="text-sm font-bold" style={{ color: '#22c55e' }}>
+                            ↗ +{Math.abs(c.rank_change)} {Math.abs(c.rank_change) === 1 ? 'spot' : 'spots'}
+                          </div>
+                          <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+                            #{c.previous_rank} → #{c.current_rank} · {c.current_roto} pts
+                            <RotoChangeDisplay rotoChange={c.roto_change} />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    );
+                  })}
+                </div>
               </div>
-            </section>
-          )}
+            )}
+
+            {/* Biggest Fallers */}
+            {sc.fallers.length > 0 && (
+              <div>
+                <h4 className="text-sm font-bold mb-2" style={{ color: '#ef4444' }}>📉 Biggest Fallers</h4>
+                <div className="space-y-2">
+                  {sc.fallers.map((c: any, idx: number) => {
+                    const logoSrc = teamLogos[c.team];
+                    return (
+                      <div key={idx} className="glass-card p-3 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          {logoSrc && <img src={logoSrc} alt="" className="w-5 h-5 rounded object-contain" />}
+                          <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{c.team}</span>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-sm font-bold" style={{ color: '#ef4444' }}>
+                            ↘ {Math.abs(c.rank_change)} {Math.abs(c.rank_change) === 1 ? 'spot' : 'spots'}
+                          </div>
+                          <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+                            #{c.previous_rank} → #{c.current_rank} · {c.current_roto} pts
+                            <RotoChangeDisplay rotoChange={c.roto_change} />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Milestones */}
+      {currentRecap.milestones?.length > 0 && (
+        <div className="mb-6">
+          <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Milestones</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {currentRecap.milestones.map((m: any, idx: number) => (
+              <div key={idx} className="glass-card p-3 flex items-center gap-3">
+                <span className="text-xl">🏆</span>
+                <div>
+                  <div className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{m.title}</div>
+                  <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>{m.description}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
