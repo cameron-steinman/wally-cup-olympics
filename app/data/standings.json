@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-13T21:12:13.308985Z",
+  "updated_at": "2026-02-13T21:15:12.587121Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -118,10 +118,10 @@
         "away": "CAN",
         "home": "SUI",
         "status": "LIVE",
-        "away_score": 2,
+        "away_score": 3,
         "home_score": 1,
         "period": 2,
-        "clock": "17:28"
+        "clock": "15:23"
       },
       {
         "id": 2025090011,
@@ -402,8 +402,8 @@
         },
         "assists": {
           "value": 5,
-          "rank": 5,
-          "roto_points": 6.5
+          "rank": 6,
+          "roto_points": 6.0
         },
         "plus_minus": {
           "value": 4,
@@ -427,7 +427,7 @@
           "roto_points": 12
         }
       },
-      "total_roto_points": 61.0,
+      "total_roto_points": 60.5,
       "rank": 1
     },
     {
@@ -483,8 +483,8 @@
         },
         "plus_minus": {
           "value": 8,
-          "rank": 1,
-          "roto_points": 11.5
+          "rank": 2,
+          "roto_points": 11
         },
         "pim": {
           "value": 4,
@@ -503,7 +503,7 @@
           "roto_points": 8
         }
       },
-      "total_roto_points": 48.0,
+      "total_roto_points": 47.5,
       "rank": 3
     },
     {
@@ -548,9 +548,9 @@
       "team": "Bardown",
       "categories": {
         "goals": {
-          "value": 4,
-          "rank": 3,
-          "roto_points": 10
+          "value": 5,
+          "rank": 2,
+          "roto_points": 10.5
         },
         "assists": {
           "value": 2,
@@ -558,9 +558,9 @@
           "roto_points": 2.5
         },
         "plus_minus": {
-          "value": 8,
+          "value": 9,
           "rank": 1,
-          "roto_points": 11.5
+          "roto_points": 12
         },
         "pim": {
           "value": 2,
@@ -579,7 +579,7 @@
           "roto_points": 10
         }
       },
-      "total_roto_points": 44.5,
+      "total_roto_points": 45.5,
       "rank": 5
     },
     {
@@ -588,12 +588,12 @@
         "goals": {
           "value": 5,
           "rank": 2,
-          "roto_points": 11
+          "roto_points": 10.5
         },
         "assists": {
           "value": 5,
-          "rank": 5,
-          "roto_points": 6.5
+          "rank": 6,
+          "roto_points": 6.0
         },
         "plus_minus": {
           "value": 4,
@@ -617,8 +617,46 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 43.0,
+      "total_roto_points": 42.0,
       "rank": 6
+    },
+    {
+      "team": "Cross's Beavers",
+      "categories": {
+        "goals": {
+          "value": 1,
+          "rank": 9,
+          "roto_points": 3.0
+        },
+        "assists": {
+          "value": 6,
+          "rank": 3,
+          "roto_points": 9.0
+        },
+        "plus_minus": {
+          "value": 2,
+          "rank": 7,
+          "roto_points": 5.5
+        },
+        "pim": {
+          "value": 2,
+          "rank": 7,
+          "roto_points": 3.5
+        },
+        "goalie_wins": {
+          "value": 1,
+          "rank": 4,
+          "roto_points": 7.0
+        },
+        "save_pct": {
+          "value": 0.8846153846153846,
+          "rank": 4,
+          "qualified": true,
+          "roto_points": 9
+        }
+      },
+      "total_roto_points": 37.0,
+      "rank": 7
     },
     {
       "team": "Johnny's Scrubbers",
@@ -631,7 +669,7 @@
         "assists": {
           "value": 6,
           "rank": 3,
-          "roto_points": 9.5
+          "roto_points": 9.0
         },
         "plus_minus": {
           "value": -1,
@@ -655,45 +693,7 @@
           "roto_points": 7
         }
       },
-      "total_roto_points": 36.5,
-      "rank": 7
-    },
-    {
-      "team": "Cross's Beavers",
-      "categories": {
-        "goals": {
-          "value": 1,
-          "rank": 9,
-          "roto_points": 3.0
-        },
-        "assists": {
-          "value": 5,
-          "rank": 5,
-          "roto_points": 6.5
-        },
-        "plus_minus": {
-          "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
-        },
-        "pim": {
-          "value": 2,
-          "rank": 7,
-          "roto_points": 3.5
-        },
-        "goalie_wins": {
-          "value": 1,
-          "rank": 4,
-          "roto_points": 7.0
-        },
-        "save_pct": {
-          "value": 0.8846153846153846,
-          "rank": 4,
-          "qualified": true,
-          "roto_points": 9
-        }
-      },
-      "total_roto_points": 33.0,
+      "total_roto_points": 36.0,
       "rank": 8
     },
     {
@@ -707,12 +707,12 @@
         "assists": {
           "value": 6,
           "rank": 3,
-          "roto_points": 9.5
+          "roto_points": 9.0
         },
         "plus_minus": {
           "value": 2,
           "rank": 7,
-          "roto_points": 6
+          "roto_points": 5.5
         },
         "pim": {
           "value": 4,
@@ -731,7 +731,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 32.5,
+      "total_roto_points": 31.5,
       "rank": 9
     },
     {
@@ -744,8 +744,8 @@
         },
         "assists": {
           "value": 5,
-          "rank": 5,
-          "roto_points": 6.5
+          "rank": 6,
+          "roto_points": 6.0
         },
         "plus_minus": {
           "value": 0,
@@ -769,7 +769,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 28.5,
+      "total_roto_points": 28.0,
       "rank": 10
     },
     {
@@ -787,8 +787,8 @@
         },
         "plus_minus": {
           "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
+          "rank": 9,
+          "roto_points": 3.5
         },
         "pim": {
           "value": 2,
@@ -807,7 +807,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 28.0,
+      "total_roto_points": 27.5,
       "rank": 11
     },
     {
@@ -825,8 +825,8 @@
         },
         "plus_minus": {
           "value": 1,
-          "rank": 8,
-          "roto_points": 4.0
+          "rank": 9,
+          "roto_points": 3.5
         },
         "pim": {
           "value": 2,
@@ -845,7 +845,7 @@
           "roto_points": 3.5
         }
       },
-      "total_roto_points": 15.5,
+      "total_roto_points": 15.0,
       "rank": 12
     }
   ],
@@ -920,7 +920,7 @@
       "standings": [
         {
           "team": "Big Shooters",
-          "roto_points": 61.0,
+          "roto_points": 60.5,
           "rank": 1
         },
         {
@@ -930,7 +930,7 @@
         },
         {
           "team": "Cam's Crunch",
-          "roto_points": 48.0,
+          "roto_points": 47.5,
           "rank": 3
         },
         {
@@ -940,42 +940,42 @@
         },
         {
           "team": "Bardown",
-          "roto_points": 44.5,
+          "roto_points": 45.5,
           "rank": 5
         },
         {
           "team": "Ice Holes",
-          "roto_points": 43.0,
+          "roto_points": 42.0,
           "rank": 6
         },
         {
-          "team": "Johnny's Scrubbers",
-          "roto_points": 36.5,
+          "team": "Cross's Beavers",
+          "roto_points": 37.0,
           "rank": 7
         },
         {
-          "team": "Cross's Beavers",
-          "roto_points": 33.0,
+          "team": "Johnny's Scrubbers",
+          "roto_points": 36.0,
           "rank": 8
         },
         {
           "team": "Todd's Hitmen",
-          "roto_points": 32.5,
+          "roto_points": 31.5,
           "rank": 9
         },
         {
           "team": "Gators",
-          "roto_points": 28.5,
+          "roto_points": 28.0,
           "rank": 10
         },
         {
           "team": "Owen's Otters",
-          "roto_points": 28.0,
+          "roto_points": 27.5,
           "rank": 11
         },
         {
           "team": "Willy's Warlocks",
-          "roto_points": 15.5,
+          "roto_points": 15.0,
           "rank": 12
         }
       ]
@@ -1535,9 +1535,23 @@
           }
         },
         {
-          "name": "Radek Faksa",
-          "country": "CZE",
-          "wally_team": null,
+          "name": "Macklin Celebrini",
+          "country": "CAN",
+          "wally_team": "Bardown",
+          "pos": "F",
+          "fantasy_points": 10.0,
+          "stats": {
+            "gp": 1,
+            "goals": 1,
+            "assists": 0,
+            "plus_minus": 2,
+            "pim": 0
+          }
+        },
+        {
+          "name": "Nathan MacKinnon",
+          "country": "CAN",
+          "wally_team": "Cross's Beavers",
           "pos": "F",
           "fantasy_points": 10.0,
           "stats": {
@@ -1545,20 +1559,6 @@
             "goals": 0,
             "assists": 2,
             "plus_minus": 1,
-            "pim": 0
-          }
-        },
-        {
-          "name": "Martin Necas",
-          "country": "CZE",
-          "wally_team": "Gators",
-          "pos": "F",
-          "fantasy_points": 10.0,
-          "stats": {
-            "gp": 1,
-            "goals": 1,
-            "assists": 1,
-            "plus_minus": 0,
             "pim": 0
           }
         }
@@ -2101,9 +2101,9 @@
           "status": "active",
           "stats": {
             "gp": 2,
-            "goals": 1,
+            "goals": 2,
             "assists": 0,
-            "plus_minus": 2,
+            "plus_minus": 3,
             "pim": 0
           }
         },
@@ -2444,9 +2444,9 @@
         }
       },
       "totals": {
-        "goals": 4,
+        "goals": 5,
         "assists": 2,
-        "plus_minus": 8,
+        "plus_minus": 9,
         "pim": 2,
         "goalie_wins": 1,
         "save_pct": 0.8888888888888888,
@@ -3342,8 +3342,8 @@
           "stats": {
             "gp": 2,
             "goals": 1,
-            "assists": 1,
-            "plus_minus": 0,
+            "assists": 2,
+            "plus_minus": 1,
             "pim": 0
           }
         },
@@ -3686,8 +3686,8 @@
       },
       "totals": {
         "goals": 1,
-        "assists": 5,
-        "plus_minus": 1,
+        "assists": 6,
+        "plus_minus": 2,
         "pim": 2,
         "goalie_wins": 1,
         "save_pct": 0.8846153846153846,
@@ -6653,8 +6653,8 @@
           }
         }
       ],
-      "zscore": 4.15,
-      "zscore_rank": 16,
+      "zscore": 4.09,
+      "zscore_rank": 18,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -6666,7 +6666,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.1504761743994445,
+      "hot_zscore": 4.085765273751875,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -6679,7 +6679,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.1504761743994445,
+      "cold_zscore": 4.085765273751875,
       "is_cold": false
     },
     {
@@ -6720,7 +6720,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -6733,7 +6733,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -6746,7 +6746,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -6787,7 +6787,7 @@
           }
         }
       ],
-      "zscore": 1.07,
+      "zscore": 1.06,
       "zscore_rank": 79,
       "hot_72h_stats": {
         "gp": 2,
@@ -6800,7 +6800,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.0732220604577054,
+      "hot_zscore": 1.0606580841220128,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -6813,7 +6813,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.0732220604577054,
+      "cold_zscore": 1.0606580841220128,
       "is_cold": false
     },
     {
@@ -6854,7 +6854,7 @@
           }
         }
       ],
-      "zscore": 1.54,
+      "zscore": 1.51,
       "zscore_rank": 62,
       "hot_72h_stats": {
         "gp": 2,
@@ -6867,7 +6867,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.5385228813556684,
+      "hot_zscore": 1.5070245547207315,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -6880,7 +6880,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.5385228813556684,
+      "cold_zscore": 1.5070245547207315,
       "is_cold": false
     },
     {
@@ -6921,7 +6921,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 2,
@@ -6934,7 +6934,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -6947,7 +6947,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -6988,8 +6988,8 @@
           }
         }
       ],
-      "zscore": 4.81,
-      "zscore_rank": 9,
+      "zscore": 4.73,
+      "zscore_rank": 10,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -7001,7 +7001,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.805147242084715,
+      "hot_zscore": 4.732921560052782,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -7014,7 +7014,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.805147242084715,
+      "cold_zscore": 4.732921560052782,
       "is_cold": false
     },
     {
@@ -7055,8 +7055,8 @@
           }
         }
       ],
-      "zscore": 3.85,
-      "zscore_rank": 18,
+      "zscore": 3.83,
+      "zscore_rank": 20,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7068,7 +7068,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.8523330708340655,
+      "hot_zscore": 3.833457644398625,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7081,7 +7081,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.8523330708340655,
+      "cold_zscore": 3.833457644398625,
       "is_cold": false
     },
     {
@@ -7122,8 +7122,8 @@
           }
         }
       ],
-      "zscore": -0.89,
-      "zscore_rank": 154,
+      "zscore": -0.91,
+      "zscore_rank": 153,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7135,7 +7135,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.894785992100074,
+      "hot_zscore": -0.9073499684357667,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7148,7 +7148,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.894785992100074,
+      "cold_zscore": -0.9073499684357667,
       "is_cold": false
     },
     {
@@ -7189,8 +7189,8 @@
           }
         }
       ],
-      "zscore": -0.89,
-      "zscore_rank": 154,
+      "zscore": -0.91,
+      "zscore_rank": 153,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7202,7 +7202,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.894785992100074,
+      "hot_zscore": -0.9073499684357667,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7215,7 +7215,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.894785992100074,
+      "cold_zscore": -0.9073499684357667,
       "is_cold": false
     },
     {
@@ -7256,8 +7256,8 @@
           }
         }
       ],
-      "zscore": 3.51,
-      "zscore_rank": 23,
+      "zscore": 3.48,
+      "zscore_rank": 25,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7269,7 +7269,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.5065309339134476,
+      "hot_zscore": 3.4750326072785107,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7282,7 +7282,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.5065309339134476,
+      "cold_zscore": 3.4750326072785107,
       "is_cold": false
     },
     {
@@ -7324,7 +7324,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7336,7 +7336,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7349,7 +7349,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -7380,7 +7380,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -7392,7 +7392,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -7405,7 +7405,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -7446,7 +7446,7 @@
           }
         }
       ],
-      "zscore": 1.72,
+      "zscore": 1.67,
       "zscore_rank": 56,
       "hot_72h_stats": {
         "gp": 2,
@@ -7459,7 +7459,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.7171673009437018,
+      "hot_zscore": 1.671390750595377,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7472,7 +7472,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.7171673009437018,
+      "cold_zscore": 1.671390750595377,
       "is_cold": false
     },
     {
@@ -7513,7 +7513,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 2,
@@ -7526,7 +7526,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7539,7 +7539,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -7570,7 +7570,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -7582,7 +7582,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -7595,7 +7595,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -7649,7 +7649,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7662,7 +7662,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -7703,8 +7703,8 @@
           }
         }
       ],
-      "zscore": -0.89,
-      "zscore_rank": 154,
+      "zscore": -0.91,
+      "zscore_rank": 153,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7716,7 +7716,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.894785992100074,
+      "hot_zscore": -0.9073499684357667,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7729,7 +7729,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.894785992100074,
+      "cold_zscore": -0.9073499684357667,
       "is_cold": false
     },
     {
@@ -7770,8 +7770,8 @@
           }
         }
       ],
-      "zscore": 0.76,
-      "zscore_rank": 89,
+      "zscore": 0.77,
+      "zscore_rank": 88,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7783,7 +7783,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7643531296930526,
+      "hot_zscore": 0.7719268349412207,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7796,7 +7796,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7643531296930526,
+      "cold_zscore": 0.7719268349412207,
       "is_cold": false
     },
     {
@@ -7837,7 +7837,7 @@
           }
         }
       ],
-      "zscore": 1.23,
+      "zscore": 1.22,
       "zscore_rank": 74,
       "hot_72h_stats": {
         "gp": 2,
@@ -7850,7 +7850,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.229653950591016,
+      "hot_zscore": 1.2182933055399392,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7863,7 +7863,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.229653950591016,
+      "cold_zscore": 1.2182933055399392,
       "is_cold": false
     },
     {
@@ -7904,8 +7904,8 @@
           }
         }
       ],
-      "zscore": 2.7,
-      "zscore_rank": 38,
+      "zscore": 2.67,
+      "zscore_rank": 40,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -7917,7 +7917,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.6954279760948667,
+      "hot_zscore": 2.670241099559678,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -7930,7 +7930,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.6954279760948667,
+      "cold_zscore": 2.670241099559678,
       "is_cold": false
     },
     {
@@ -7964,7 +7964,7 @@
         }
       ],
       "zscore": -1.91,
-      "zscore_rank": 228,
+      "zscore_rank": 226,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -8032,7 +8032,7 @@
           }
         }
       ],
-      "zscore": 1.6,
+      "zscore": 1.64,
       "zscore_rank": 59,
       "hot_72h_stats": {
         "gp": 2,
@@ -8045,7 +8045,7 @@
         "shots_against": 59,
         "save_pct": 0.9322033898305084
       },
-      "hot_zscore": 1.6025800054976842,
+      "hot_zscore": 1.6435377647683196,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8058,7 +8058,7 @@
         "shots_against": 59,
         "save_pct": 0.9322033898305084
       },
-      "cold_zscore": 1.6025800054976842,
+      "cold_zscore": 1.6435377647683196,
       "is_cold": false
     },
     {
@@ -8099,7 +8099,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 2,
@@ -8112,7 +8112,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8125,7 +8125,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -8167,7 +8167,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8179,7 +8179,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8192,7 +8192,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -8234,7 +8234,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8246,7 +8246,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8259,7 +8259,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -8300,8 +8300,8 @@
           }
         }
       ],
-      "zscore": 4.3,
-      "zscore_rank": 13,
+      "zscore": 4.22,
+      "zscore_rank": 14,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -8313,7 +8313,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.302913215030786,
+      "hot_zscore": 4.216861301514742,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8326,7 +8326,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.302913215030786,
+      "cold_zscore": 4.216861301514742,
       "is_cold": false
     },
     {
@@ -8367,7 +8367,7 @@
           }
         }
       ],
-      "zscore": 9.19,
+      "zscore": 9.05,
       "zscore_rank": 1,
       "hot_72h_stats": {
         "gp": 2,
@@ -8380,7 +8380,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 9.191743491396995,
+      "hot_zscore": 9.052341322284457,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -8393,7 +8393,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 9.191743491396995,
+      "cold_zscore": 9.052341322284457,
       "is_cold": false
     },
     {
@@ -8434,7 +8434,7 @@
           }
         }
       ],
-      "zscore": 5.1,
+      "zscore": 4.99,
       "zscore_rank": 6,
       "hot_72h_stats": {
         "gp": 2,
@@ -8447,7 +8447,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 5.103290345650093,
+      "hot_zscore": 4.9852291894060325,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -8460,7 +8460,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 5.103290345650093,
+      "cold_zscore": 4.9852291894060325,
       "is_cold": false
     },
     {
@@ -8501,8 +8501,8 @@
           }
         }
       ],
-      "zscore": 2.19,
-      "zscore_rank": 43,
+      "zscore": 2.15,
+      "zscore_rank": 45,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8514,7 +8514,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.193193949040939,
+      "hot_zscore": 2.154180841021638,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8527,7 +8527,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.193193949040939,
+      "cold_zscore": 2.154180841021638,
       "is_cold": false
     },
     {
@@ -8569,7 +8569,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8581,7 +8581,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8594,7 +8594,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -8636,7 +8636,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8648,7 +8648,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8661,7 +8661,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -8702,7 +8702,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 2,
@@ -8715,7 +8715,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8728,7 +8728,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -8769,8 +8769,8 @@
           }
         }
       ],
-      "zscore": 2.7,
-      "zscore_rank": 38,
+      "zscore": 2.67,
+      "zscore_rank": 40,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8782,7 +8782,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.6954279760948667,
+      "hot_zscore": 2.670241099559678,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8795,7 +8795,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.6954279760948667,
+      "cold_zscore": 2.670241099559678,
       "is_cold": false
     },
     {
@@ -8836,8 +8836,8 @@
           }
         }
       ],
-      "zscore": 3.51,
-      "zscore_rank": 23,
+      "zscore": 3.48,
+      "zscore_rank": 25,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -8849,7 +8849,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.5065309339134476,
+      "hot_zscore": 3.4750326072785107,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8862,7 +8862,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.5065309339134476,
+      "cold_zscore": 3.4750326072785107,
       "is_cold": false
     },
     {
@@ -8903,8 +8903,8 @@
           }
         }
       ],
-      "zscore": 2.53,
-      "zscore_rank": 40,
+      "zscore": 2.48,
+      "zscore_rank": 42,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -8916,7 +8916,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.5282702587622827,
+      "hot_zscore": 2.4761822583142097,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8929,7 +8929,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.5282702587622827,
+      "cold_zscore": 2.4761822583142097,
       "is_cold": false
     },
     {
@@ -8970,7 +8970,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 2,
@@ -8983,7 +8983,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -8996,7 +8996,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -9037,7 +9037,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 2,
@@ -9050,7 +9050,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9063,7 +9063,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -9104,8 +9104,8 @@
           }
         }
       ],
-      "zscore": 3.82,
-      "zscore_rank": 19,
+      "zscore": 3.76,
+      "zscore_rank": 21,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -9117,7 +9117,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.8153998646781004,
+      "hot_zscore": 3.763763856459304,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9130,7 +9130,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.8153998646781004,
+      "cold_zscore": 3.763763856459304,
       "is_cold": false
     },
     {
@@ -9160,7 +9160,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 1,
@@ -9173,7 +9173,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -9186,7 +9186,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -9240,7 +9240,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9253,7 +9253,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -9295,7 +9295,7 @@
         }
       ],
       "zscore": 4.35,
-      "zscore_rank": 12,
+      "zscore_rank": 13,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -9307,7 +9307,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.354567097887994,
+      "hot_zscore": 4.3495179029366655,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9320,7 +9320,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.354567097887994,
+      "cold_zscore": 4.3495179029366655,
       "is_cold": false
     },
     {
@@ -9361,8 +9361,8 @@
           }
         }
       ],
-      "zscore": 2.04,
-      "zscore_rank": 48,
+      "zscore": 2.02,
+      "zscore_rank": 49,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -9374,7 +9374,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.040756908409597,
+      "hot_zscore": 2.0230848132587718,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9387,7 +9387,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.040756908409597,
+      "cold_zscore": 2.0230848132587718,
       "is_cold": false
     },
     {
@@ -9430,7 +9430,7 @@
           }
         }
       ],
-      "zscore": 5.55,
+      "zscore": 5.52,
       "zscore_rank": 5,
       "hot_72h_stats": {
         "gp": 2,
@@ -9443,7 +9443,7 @@
         "shots_against": 40,
         "save_pct": 0.975
       },
-      "hot_zscore": 5.546313383090908,
+      "hot_zscore": 5.524749948757218,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -9456,7 +9456,7 @@
         "shots_against": 40,
         "save_pct": 0.975
       },
-      "cold_zscore": 5.546313383090908,
+      "cold_zscore": 5.524749948757218,
       "is_cold": false
     },
     {
@@ -9499,8 +9499,8 @@
           }
         }
       ],
-      "zscore": 3.42,
-      "zscore_rank": 27,
+      "zscore": 3.51,
+      "zscore_rank": 23,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -9512,7 +9512,7 @@
         "shots_against": 20,
         "save_pct": 0.9
       },
-      "hot_zscore": 3.4186595129226873,
+      "hot_zscore": 3.5066629228262802,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9525,7 +9525,7 @@
         "shots_against": 20,
         "save_pct": 0.9
       },
-      "cold_zscore": 3.4186595129226873,
+      "cold_zscore": 3.5066629228262802,
       "is_cold": false
     },
     {
@@ -9568,7 +9568,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -9581,7 +9581,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -9623,7 +9623,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -9635,7 +9635,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9648,7 +9648,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -9689,8 +9689,8 @@
           }
         }
       ],
-      "zscore": 4.65,
-      "zscore_rank": 11,
+      "zscore": 4.58,
+      "zscore_rank": 12,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -9702,7 +9702,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.648715351951404,
+      "hot_zscore": 4.5752863386348555,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9715,7 +9715,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.648715351951404,
+      "cold_zscore": 4.5752863386348555,
       "is_cold": false
     },
     {
@@ -9756,7 +9756,7 @@
           }
         }
       ],
-      "zscore": 1.05,
+      "zscore": 0.96,
       "zscore_rank": 81,
       "hot_72h_stats": {
         "gp": 2,
@@ -9769,7 +9769,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.047775556557189,
+      "hot_zscore": 0.9612716508118684,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9782,7 +9782,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.047775556557189,
+      "cold_zscore": 0.9612716508118684,
       "is_cold": false
     },
     {
@@ -9813,7 +9813,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -9825,7 +9825,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -9838,7 +9838,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -9892,7 +9892,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9905,7 +9905,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -9946,7 +9946,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -9959,7 +9959,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -9972,7 +9972,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -10013,8 +10013,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10026,7 +10026,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10039,7 +10039,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -10081,7 +10081,7 @@
         }
       ],
       "zscore": -1.2,
-      "zscore_rank": 159,
+      "zscore_rank": 158,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10093,7 +10093,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.2036549228647269,
+      "hot_zscore": -1.1960812176165587,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10106,7 +10106,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.2036549228647269,
+      "cold_zscore": -1.1960812176165587,
       "is_cold": false
     },
     {
@@ -10148,7 +10148,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10160,7 +10160,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10173,7 +10173,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -10227,7 +10227,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10240,7 +10240,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -10281,8 +10281,8 @@
           }
         }
       ],
-      "zscore": 2.53,
-      "zscore_rank": 40,
+      "zscore": 2.48,
+      "zscore_rank": 42,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -10294,7 +10294,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.5282702587622827,
+      "hot_zscore": 2.4761822583142097,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10307,7 +10307,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.5282702587622827,
+      "cold_zscore": 2.4761822583142097,
       "is_cold": false
     },
     {
@@ -10348,7 +10348,7 @@
           }
         }
       ],
-      "zscore": -3.98,
+      "zscore": -3.97,
       "zscore_rank": 275,
       "hot_72h_stats": {
         "gp": 2,
@@ -10361,7 +10361,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.982765933241087,
+      "hot_zscore": -3.968880777893171,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10374,7 +10374,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.982765933241087,
+      "cold_zscore": -3.968880777893171,
       "is_cold": true
     },
     {
@@ -10416,7 +10416,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10428,7 +10428,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10441,7 +10441,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -10482,8 +10482,8 @@
           }
         }
       ],
-      "zscore": 4.16,
-      "zscore_rank": 15,
+      "zscore": 4.12,
+      "zscore_rank": 17,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10495,7 +10495,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.161202001598719,
+      "hot_zscore": 4.122188893579417,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10508,7 +10508,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.161202001598719,
+      "cold_zscore": 4.122188893579417,
       "is_cold": false
     },
     {
@@ -10549,7 +10549,7 @@
           }
         }
       ],
-      "zscore": 1.38,
+      "zscore": 1.35,
       "zscore_rank": 65,
       "hot_72h_stats": {
         "gp": 2,
@@ -10562,7 +10562,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.3820909912223582,
+      "hot_zscore": 1.3493893333028053,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10575,7 +10575,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.3820909912223582,
+      "cold_zscore": 1.3493893333028053,
       "is_cold": false
     },
     {
@@ -10617,7 +10617,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10629,7 +10629,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10642,7 +10642,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -10683,7 +10683,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -10696,7 +10696,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10709,7 +10709,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -10751,7 +10751,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10763,7 +10763,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10776,7 +10776,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -10817,8 +10817,8 @@
           }
         }
       ],
-      "zscore": -2.01,
-      "zscore_rank": 230,
+      "zscore": -2.0,
+      "zscore_rank": 229,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10830,7 +10830,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.014757880683308,
+      "hot_zscore": -2.000872725335392,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10843,7 +10843,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.014757880683308,
+      "cold_zscore": -2.000872725335392,
       "is_cold": true
     },
     {
@@ -10886,8 +10886,8 @@
           }
         }
       ],
-      "zscore": -1.31,
-      "zscore_rank": 162,
+      "zscore": -1.26,
+      "zscore_rank": 161,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10899,7 +10899,7 @@
         "shots_against": 54,
         "save_pct": 0.9259259259259259
       },
-      "hot_zscore": -1.3051520002852313,
+      "hot_zscore": -1.2550235488834152,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10912,7 +10912,7 @@
         "shots_against": 54,
         "save_pct": 0.9259259259259259
       },
-      "cold_zscore": -1.3051520002852313,
+      "cold_zscore": -1.2550235488834152,
       "is_cold": false
     },
     {
@@ -10955,8 +10955,8 @@
           }
         }
       ],
-      "zscore": -1.33,
-      "zscore_rank": 163,
+      "zscore": -1.28,
+      "zscore_rank": 162,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -10968,7 +10968,7 @@
         "shots_against": 40,
         "save_pct": 0.925
       },
-      "hot_zscore": -1.331419332015702,
+      "hot_zscore": -1.2799382035245368,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -10981,7 +10981,7 @@
         "shots_against": 40,
         "save_pct": 0.925
       },
-      "cold_zscore": -1.331419332015702,
+      "cold_zscore": -1.2799382035245368,
       "is_cold": false
     },
     {
@@ -11023,7 +11023,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -11035,7 +11035,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11048,7 +11048,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -11102,7 +11102,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11115,7 +11115,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -11169,7 +11169,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.5754560875116337,
+      "hot_zscore": 1.576718342660053,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11182,7 +11182,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.5754560875116337,
+      "cold_zscore": 1.576718342660053,
       "is_cold": false
     },
     {
@@ -11223,7 +11223,7 @@
           }
         }
       ],
-      "zscore": 1.88,
+      "zscore": 1.87,
       "zscore_rank": 54,
       "hot_72h_stats": {
         "gp": 2,
@@ -11236,7 +11236,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.8843250182762863,
+      "hot_zscore": 1.8654495918408456,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11249,7 +11249,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.8843250182762863,
+      "cold_zscore": 1.8654495918408456,
       "is_cold": false
     },
     {
@@ -11290,7 +11290,7 @@
           }
         }
       ],
-      "zscore": 1.07,
+      "zscore": 1.06,
       "zscore_rank": 79,
       "hot_72h_stats": {
         "gp": 2,
@@ -11303,7 +11303,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.0732220604577054,
+      "hot_zscore": 1.0606580841220128,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11316,7 +11316,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.0732220604577054,
+      "cold_zscore": 1.0606580841220128,
       "is_cold": false
     },
     {
@@ -11370,7 +11370,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11383,7 +11383,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -11424,8 +11424,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -11437,7 +11437,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11450,7 +11450,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -11491,7 +11491,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -11504,7 +11504,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11517,7 +11517,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -11559,7 +11559,7 @@
         }
       ],
       "zscore": -1.71,
-      "zscore_rank": 223,
+      "zscore_rank": 222,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -11571,7 +11571,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.7058889499186551,
+      "hot_zscore": -1.7121414761545992,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11584,7 +11584,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.7058889499186551,
+      "cold_zscore": -1.7121414761545992,
       "is_cold": false
     },
     {
@@ -11625,7 +11625,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 2,
@@ -11638,7 +11638,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11651,7 +11651,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -11692,8 +11692,8 @@
           }
         }
       ],
-      "zscore": 2.03,
-      "zscore_rank": 49,
+      "zscore": 1.96,
+      "zscore_rank": 51,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -11705,7 +11705,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.0260362317083542,
+      "hot_zscore": 1.9601219997761694,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11718,7 +11718,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.0260362317083542,
+      "cold_zscore": 1.9601219997761694,
       "is_cold": false
     },
     {
@@ -11759,7 +11759,7 @@
           }
         }
       ],
-      "zscore": -0.25,
+      "zscore": -0.3,
       "zscore_rank": 137,
       "hot_72h_stats": {
         "gp": 2,
@@ -11772,7 +11772,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.2508407516140776,
+      "hot_zscore": -0.29661730196240255,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11785,7 +11785,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.2508407516140776,
+      "cold_zscore": -0.29661730196240255,
       "is_cold": false
     },
     {
@@ -11826,8 +11826,8 @@
           }
         }
       ],
-      "zscore": 4.81,
-      "zscore_rank": 9,
+      "zscore": 4.73,
+      "zscore_rank": 10,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -11839,8 +11839,8 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.805147242084715,
-      "is_hot": true,
+      "hot_zscore": 4.732921560052782,
+      "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -11852,7 +11852,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.805147242084715,
+      "cold_zscore": 4.732921560052782,
       "is_cold": false
     },
     {
@@ -11893,8 +11893,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -11906,7 +11906,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11919,7 +11919,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -11960,7 +11960,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -11973,7 +11973,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -11986,7 +11986,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -12028,7 +12028,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -12040,7 +12040,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12053,7 +12053,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -12094,7 +12094,7 @@
           }
         }
       ],
-      "zscore": 5.77,
+      "zscore": 5.67,
       "zscore_rank": 4,
       "hot_72h_stats": {
         "gp": 2,
@@ -12107,7 +12107,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 5.768687240534637,
+      "hot_zscore": 5.668809095534481,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -12120,7 +12120,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 5.768687240534637,
+      "cold_zscore": 5.668809095534481,
       "is_cold": false
     },
     {
@@ -12161,8 +12161,8 @@
           }
         }
       ],
-      "zscore": 3.65,
-      "zscore_rank": 20,
+      "zscore": 3.57,
+      "zscore_rank": 22,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -12174,7 +12174,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.6482421473455164,
+      "hot_zscore": 3.569705015213835,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12187,7 +12187,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.6482421473455164,
+      "cold_zscore": 3.569705015213835,
       "is_cold": false
     },
     {
@@ -12229,7 +12229,7 @@
         }
       ],
       "zscore": -1.71,
-      "zscore_rank": 223,
+      "zscore_rank": 222,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -12241,7 +12241,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.7058889499186551,
+      "hot_zscore": -1.7121414761545992,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12254,7 +12254,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.7058889499186551,
+      "cold_zscore": -1.7121414761545992,
       "is_cold": false
     },
     {
@@ -12295,7 +12295,7 @@
           }
         }
       ],
-      "zscore": 1.72,
+      "zscore": 1.67,
       "zscore_rank": 56,
       "hot_72h_stats": {
         "gp": 2,
@@ -12308,7 +12308,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.7171673009437018,
+      "hot_zscore": 1.671390750595377,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12321,7 +12321,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.7171673009437018,
+      "cold_zscore": 1.671390750595377,
       "is_cold": false
     },
     {
@@ -12433,8 +12433,8 @@
           }
         }
       ],
-      "zscore": 0.37,
-      "zscore_rank": 122,
+      "zscore": 0.48,
+      "zscore_rank": 109,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -12446,7 +12446,7 @@
         "shots_against": 45,
         "save_pct": 0.8888888888888888
       },
-      "hot_zscore": 0.37380313132645737,
+      "hot_zscore": 0.47803866630224073,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12459,7 +12459,7 @@
         "shots_against": 45,
         "save_pct": 0.8888888888888888
       },
-      "cold_zscore": 0.37380313132645737,
+      "cold_zscore": 0.47803866630224073,
       "is_cold": false
     },
     {
@@ -12500,7 +12500,7 @@
           }
         }
       ],
-      "zscore": 0.57,
+      "zscore": 0.54,
       "zscore_rank": 103,
       "hot_72h_stats": {
         "gp": 2,
@@ -12513,7 +12513,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5709880334037776,
+      "hot_zscore": 0.5445978255839725,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12526,7 +12526,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5709880334037776,
+      "cold_zscore": 0.5445978255839725,
       "is_cold": false
     },
     {
@@ -12580,7 +12580,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.2621191026391243,
+      "hot_zscore": 0.2558665764031802,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12593,7 +12593,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.2621191026391243,
+      "cold_zscore": 0.2558665764031802,
       "is_cold": false
     },
     {
@@ -12634,7 +12634,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -12647,7 +12647,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12660,7 +12660,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -12701,8 +12701,8 @@
           }
         }
       ],
-      "zscore": 4.95,
-      "zscore_rank": 8,
+      "zscore": 4.83,
+      "zscore_rank": 9,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -12714,7 +12714,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.946858455516782,
+      "hot_zscore": 4.827593967988106,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -12727,7 +12727,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.946858455516782,
+      "cold_zscore": 4.827593967988106,
       "is_cold": false
     },
     {
@@ -12781,7 +12781,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.39255196504614576,
+      "hot_zscore": -0.3912897098977264,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12794,7 +12794,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.39255196504614576,
+      "cold_zscore": -0.3912897098977264,
       "is_cold": false
     },
     {
@@ -12825,7 +12825,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -12837,7 +12837,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -12850,7 +12850,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -12904,7 +12904,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12917,7 +12917,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -12958,7 +12958,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 2,
@@ -12971,7 +12971,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -12984,7 +12984,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -13026,7 +13026,7 @@
         }
       ],
       "zscore": -1.2,
-      "zscore_rank": 159,
+      "zscore_rank": 158,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13038,7 +13038,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.2036549228647269,
+      "hot_zscore": -1.1960812176165587,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13051,7 +13051,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.2036549228647269,
+      "cold_zscore": -1.1960812176165587,
       "is_cold": false
     },
     {
@@ -13092,7 +13092,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -13105,7 +13105,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13118,7 +13118,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -13160,7 +13160,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13172,7 +13172,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13185,7 +13185,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -13226,7 +13226,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -13239,7 +13239,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13252,7 +13252,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -13293,8 +13293,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13306,7 +13306,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13319,7 +13319,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -13373,7 +13373,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.39255196504614576,
+      "hot_zscore": -0.3912897098977264,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13386,7 +13386,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.39255196504614576,
+      "cold_zscore": -0.3912897098977264,
       "is_cold": false
     },
     {
@@ -13440,7 +13440,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.39255196504614576,
+      "hot_zscore": -0.3912897098977264,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13453,7 +13453,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.39255196504614576,
+      "cold_zscore": -0.3912897098977264,
       "is_cold": false
     },
     {
@@ -13494,8 +13494,8 @@
           }
         }
       ],
-      "zscore": -1.87,
-      "zscore_rank": 227,
+      "zscore": -1.91,
+      "zscore_rank": 226,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -13507,7 +13507,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.8730466672512396,
+      "hot_zscore": -1.9062003174000681,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13520,7 +13520,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.8730466672512396,
+      "cold_zscore": -1.9062003174000681,
       "is_cold": false
     },
     {
@@ -13561,7 +13561,7 @@
           }
         }
       ],
-      "zscore": 1.23,
+      "zscore": 1.22,
       "zscore_rank": 74,
       "hot_72h_stats": {
         "gp": 2,
@@ -13574,7 +13574,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.229653950591016,
+      "hot_zscore": 1.2182933055399392,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13587,7 +13587,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.229653950591016,
+      "cold_zscore": 1.2182933055399392,
       "is_cold": false
     },
     {
@@ -13628,8 +13628,8 @@
           }
         }
       ],
-      "zscore": -5.6,
-      "zscore_rank": 276,
+      "zscore": -5.58,
+      "zscore_rank": 277,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13641,7 +13641,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -5.6049718488782485,
+      "hot_zscore": -5.578463793330837,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13654,7 +13654,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -5.6049718488782485,
+      "cold_zscore": -5.578463793330837,
       "is_cold": true
     },
     {
@@ -13695,7 +13695,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -13708,7 +13708,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13721,7 +13721,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -13764,7 +13764,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -13777,7 +13777,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -13810,8 +13810,8 @@
           }
         }
       ],
-      "zscore": -1.84,
-      "zscore_rank": 226,
+      "zscore": -1.76,
+      "zscore_rank": 225,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -13823,7 +13823,7 @@
         "shots_against": 43,
         "save_pct": 0.9069767441860465
       },
-      "hot_zscore": -1.8427159984902388,
+      "hot_zscore": -1.764904853166858,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -13836,7 +13836,7 @@
         "shots_against": 43,
         "save_pct": 0.9069767441860465
       },
-      "cold_zscore": -1.8427159984902388,
+      "cold_zscore": -1.764904853166858,
       "is_cold": false
     },
     {
@@ -13879,8 +13879,8 @@
           }
         }
       ],
-      "zscore": -5.75,
-      "zscore_rank": 277,
+      "zscore": -5.47,
+      "zscore_rank": 276,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -13892,7 +13892,7 @@
         "shots_against": 26,
         "save_pct": 0.7692307692307693
       },
-      "hot_zscore": -5.750392754672778,
+      "hot_zscore": -5.471349718919562,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13905,7 +13905,7 @@
         "shots_against": 26,
         "save_pct": 0.7692307692307693
       },
-      "cold_zscore": -5.750392754672778,
+      "cold_zscore": -5.471349718919562,
       "is_cold": true
     },
     {
@@ -13946,7 +13946,7 @@
           }
         }
       ],
-      "zscore": 0.56,
+      "zscore": 0.51,
       "zscore_rank": 105,
       "hot_72h_stats": {
         "gp": 2,
@@ -13959,7 +13959,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5602622062045031,
+      "hot_zscore": 0.5081742057564302,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -13972,7 +13972,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5602622062045031,
+      "cold_zscore": 0.5081742057564302,
       "is_cold": false
     },
     {
@@ -14013,7 +14013,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 2,
@@ -14026,7 +14026,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14039,7 +14039,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -14093,7 +14093,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14106,7 +14106,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -14147,7 +14147,7 @@
           }
         }
       ],
-      "zscore": 1.54,
+      "zscore": 1.51,
       "zscore_rank": 62,
       "hot_72h_stats": {
         "gp": 2,
@@ -14160,7 +14160,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.5385228813556684,
+      "hot_zscore": 1.5070245547207315,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14173,7 +14173,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.5385228813556684,
+      "cold_zscore": 1.5070245547207315,
       "is_cold": false
     },
     {
@@ -14227,7 +14227,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14240,7 +14240,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -14281,7 +14281,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 2,
@@ -14294,7 +14294,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14307,7 +14307,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -14348,7 +14348,7 @@
           }
         }
       ],
-      "zscore": 5.1,
+      "zscore": 4.99,
       "zscore_rank": 6,
       "hot_72h_stats": {
         "gp": 2,
@@ -14361,7 +14361,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 5.103290345650093,
+      "hot_zscore": 4.9852291894060325,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -14374,7 +14374,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 5.103290345650093,
+      "cold_zscore": 4.9852291894060325,
       "is_cold": false
     },
     {
@@ -14415,7 +14415,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 2,
@@ -14428,7 +14428,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14441,7 +14441,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -14482,7 +14482,7 @@
           }
         }
       ],
-      "zscore": 1.23,
+      "zscore": 1.22,
       "zscore_rank": 74,
       "hot_72h_stats": {
         "gp": 2,
@@ -14495,7 +14495,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.229653950591016,
+      "hot_zscore": 1.2182933055399392,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14508,7 +14508,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.229653950591016,
+      "cold_zscore": 1.2182933055399392,
       "is_cold": false
     },
     {
@@ -14550,7 +14550,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14562,7 +14562,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14575,7 +14575,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -14617,7 +14617,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14629,7 +14629,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14642,7 +14642,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -14683,7 +14683,7 @@
           }
         }
       ],
-      "zscore": 0.57,
+      "zscore": 0.54,
       "zscore_rank": 103,
       "hot_72h_stats": {
         "gp": 2,
@@ -14696,7 +14696,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5709880334037776,
+      "hot_zscore": 0.5445978255839725,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14709,7 +14709,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5709880334037776,
+      "cold_zscore": 0.5445978255839725,
       "is_cold": false
     },
     {
@@ -14750,8 +14750,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14763,7 +14763,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14776,7 +14776,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -14817,8 +14817,8 @@
           }
         }
       ],
-      "zscore": 3.35,
-      "zscore_rank": 29,
+      "zscore": 3.32,
+      "zscore_rank": 31,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14830,7 +14830,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.350099043780138,
+      "hot_zscore": 3.317397385860585,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14843,7 +14843,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.350099043780138,
+      "cold_zscore": 3.317397385860585,
       "is_cold": false
     },
     {
@@ -14885,7 +14885,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14897,7 +14897,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14910,7 +14910,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -14951,8 +14951,8 @@
           }
         }
       ],
-      "zscore": 3.51,
-      "zscore_rank": 23,
+      "zscore": 3.48,
+      "zscore_rank": 25,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -14964,7 +14964,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.5065309339134476,
+      "hot_zscore": 3.4750326072785107,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -14977,7 +14977,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.5065309339134476,
+      "cold_zscore": 3.4750326072785107,
       "is_cold": false
     },
     {
@@ -15018,8 +15018,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -15031,7 +15031,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15044,7 +15044,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -15086,7 +15086,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -15098,7 +15098,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15111,7 +15111,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -15152,8 +15152,8 @@
           }
         }
       ],
-      "zscore": 2.84,
-      "zscore_rank": 36,
+      "zscore": 2.76,
+      "zscore_rank": 38,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -15165,7 +15165,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.837139189526935,
+      "hot_zscore": 2.7649135074950024,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15178,7 +15178,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.837139189526935,
+      "cold_zscore": 2.7649135074950024,
       "is_cold": false
     },
     {
@@ -15219,7 +15219,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 2,
@@ -15232,7 +15232,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15245,7 +15245,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -15263,8 +15263,8 @@
         "pim": 0,
         "wins": 1,
         "saves": 11,
-        "shots_against": 13,
-        "save_pct": 0.8461538461538461
+        "shots_against": 14,
+        "save_pct": 0.7857142857142857
       },
       "game_log": [
         {
@@ -15284,12 +15284,12 @@
             "gp": 1,
             "wins": 0,
             "saves": 11,
-            "shots_against": 13
+            "shots_against": 14
           }
         }
       ],
-      "zscore": -0.84,
-      "zscore_rank": 153,
+      "zscore": -2.3,
+      "zscore_rank": 230,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -15298,10 +15298,10 @@
         "pim": 0,
         "wins": 1,
         "saves": 11,
-        "shots_against": 13,
-        "save_pct": 0.8461538461538461
+        "shots_against": 14,
+        "save_pct": 0.7857142857142857
       },
-      "hot_zscore": -0.8385352562337819,
+      "hot_zscore": -2.298165707994287,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15311,11 +15311,11 @@
         "pim": 0,
         "wins": 1,
         "saves": 11,
-        "shots_against": 13,
-        "save_pct": 0.8461538461538461
+        "shots_against": 14,
+        "save_pct": 0.7857142857142857
       },
-      "cold_zscore": -0.8385352562337819,
-      "is_cold": false
+      "cold_zscore": -2.298165707994287,
+      "is_cold": true
     },
     {
       "name": "Leonardo Genoni",
@@ -15357,8 +15357,8 @@
           }
         }
       ],
-      "zscore": 3.53,
-      "zscore_rank": 21,
+      "zscore": 3.47,
+      "zscore_rank": 28,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -15370,7 +15370,7 @@
         "shots_against": 27,
         "save_pct": 1.0
       },
-      "hot_zscore": 3.525882938983084,
+      "hot_zscore": 3.467797223236966,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15383,7 +15383,7 @@
         "shots_against": 27,
         "save_pct": 1.0
       },
-      "cold_zscore": 3.525882938983084,
+      "cold_zscore": 3.467797223236966,
       "is_cold": false
     },
     {
@@ -15425,7 +15425,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -15437,7 +15437,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15450,7 +15450,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -15491,8 +15491,8 @@
           }
         }
       ],
-      "zscore": 3.34,
-      "zscore_rank": 30,
+      "zscore": 3.28,
+      "zscore_rank": 32,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -15504,7 +15504,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.3393732165808636,
+      "hot_zscore": 3.2809737660330427,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15517,7 +15517,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.3393732165808636,
+      "cold_zscore": 3.2809737660330427,
       "is_cold": false
     },
     {
@@ -15558,7 +15558,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 2,
@@ -15571,7 +15571,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15584,7 +15584,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -15625,8 +15625,8 @@
           }
         }
       ],
-      "zscore": 3.34,
-      "zscore_rank": 30,
+      "zscore": 3.28,
+      "zscore_rank": 32,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -15638,7 +15638,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.3393732165808636,
+      "hot_zscore": 3.2809737660330427,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15651,7 +15651,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.3393732165808636,
+      "cold_zscore": 3.2809737660330427,
       "is_cold": false
     },
     {
@@ -15663,9 +15663,9 @@
       "headshot_url": null,
       "stats": {
         "gp": 2,
-        "goals": 1,
+        "goals": 2,
         "assists": 0,
-        "plus_minus": 2,
+        "plus_minus": 3,
         "pim": 0
       },
       "game_log": [
@@ -15685,40 +15685,40 @@
           "date": "2026-02-13",
           "stats": {
             "gp": 1,
-            "goals": 0,
+            "goals": 1,
             "assists": 0,
-            "plus_minus": 1,
+            "plus_minus": 2,
             "pim": 0
           }
         }
       ],
-      "zscore": 2.18,
-      "zscore_rank": 47,
+      "zscore": 4.99,
+      "zscore_rank": 6,
       "hot_72h_stats": {
         "gp": 2,
-        "goals": 1,
+        "goals": 2,
         "assists": 0,
-        "plus_minus": 2,
+        "plus_minus": 3,
         "pim": 0,
         "wins": 0,
         "saves": 0,
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.1824681218416653,
-      "is_hot": false,
+      "hot_zscore": 4.9852291894060325,
+      "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
-        "goals": 1,
+        "goals": 2,
         "assists": 0,
-        "plus_minus": 2,
+        "plus_minus": 3,
         "pim": 0,
         "wins": 0,
         "saves": 0,
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.1824681218416653,
+      "cold_zscore": 4.9852291894060325,
       "is_cold": false
     },
     {
@@ -15731,8 +15731,8 @@
       "stats": {
         "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "plus_minus": 0,
+        "assists": 2,
+        "plus_minus": 1,
         "pim": 0
       },
       "game_log": [
@@ -15753,39 +15753,39 @@
           "stats": {
             "gp": 1,
             "goals": 0,
-            "assists": 1,
-            "plus_minus": 0,
+            "assists": 2,
+            "plus_minus": 1,
             "pim": 0
           }
         }
       ],
-      "zscore": 2.03,
-      "zscore_rank": 49,
+      "zscore": 4.22,
+      "zscore_rank": 14,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "plus_minus": 0,
+        "assists": 2,
+        "plus_minus": 1,
         "pim": 0,
         "wins": 0,
         "saves": 0,
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.0260362317083542,
+      "hot_zscore": 4.216861301514742,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 1,
-        "assists": 1,
-        "plus_minus": 0,
+        "assists": 2,
+        "plus_minus": 1,
         "pim": 0,
         "wins": 0,
         "saves": 0,
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.0260362317083542,
+      "cold_zscore": 4.216861301514742,
       "is_cold": false
     },
     {
@@ -15826,7 +15826,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 2,
@@ -15839,7 +15839,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15852,7 +15852,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -15893,7 +15893,7 @@
           }
         }
       ],
-      "zscore": 1.54,
+      "zscore": 1.51,
       "zscore_rank": 62,
       "hot_72h_stats": {
         "gp": 2,
@@ -15906,7 +15906,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.5385228813556684,
+      "hot_zscore": 1.5070245547207315,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15919,7 +15919,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.5385228813556684,
+      "cold_zscore": 1.5070245547207315,
       "is_cold": false
     },
     {
@@ -15960,7 +15960,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 2,
@@ -15973,7 +15973,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -15986,7 +15986,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -16016,7 +16016,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -16029,7 +16029,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -16042,7 +16042,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -16083,8 +16083,8 @@
           }
         }
       ],
-      "zscore": 2.19,
-      "zscore_rank": 43,
+      "zscore": 2.15,
+      "zscore_rank": 45,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16096,7 +16096,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.193193949040939,
+      "hot_zscore": 2.154180841021638,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16109,7 +16109,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.193193949040939,
+      "cold_zscore": 2.154180841021638,
       "is_cold": false
     },
     {
@@ -16150,7 +16150,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 2,
@@ -16163,7 +16163,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16176,7 +16176,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -16217,7 +16217,7 @@
           }
         }
       ],
-      "zscore": 8.86,
+      "zscore": 8.73,
       "zscore_rank": 2,
       "hot_72h_stats": {
         "gp": 2,
@@ -16230,7 +16230,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 8.856667181675652,
+      "hot_zscore": 8.730339904991887,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -16243,7 +16243,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 8.856667181675652,
+      "cold_zscore": 8.730339904991887,
       "is_cold": false
     },
     {
@@ -16284,7 +16284,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -16297,7 +16297,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16310,7 +16310,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -16351,8 +16351,8 @@
           }
         }
       ],
-      "zscore": 3.0,
-      "zscore_rank": 33,
+      "zscore": 2.96,
+      "zscore_rank": 35,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16364,7 +16364,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.0042969068595204,
+      "hot_zscore": 2.958972348740471,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16377,7 +16377,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.0042969068595204,
+      "cold_zscore": 2.958972348740471,
       "is_cold": false
     },
     {
@@ -16418,7 +16418,7 @@
           }
         }
       ],
-      "zscore": 5.93,
+      "zscore": 5.83,
       "zscore_rank": 3,
       "hot_72h_stats": {
         "gp": 2,
@@ -16431,7 +16431,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 5.925119130667948,
+      "hot_zscore": 5.826444316952408,
       "is_hot": true,
       "cold_72h_stats": {
         "gp": 2,
@@ -16444,7 +16444,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 5.925119130667948,
+      "cold_zscore": 5.826444316952408,
       "is_cold": false
     },
     {
@@ -16485,8 +16485,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16498,7 +16498,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16511,7 +16511,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -16542,7 +16542,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -16554,7 +16554,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -16567,7 +16567,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -16609,7 +16609,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16621,7 +16621,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16634,7 +16634,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -16675,7 +16675,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -16688,7 +16688,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16701,7 +16701,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -16744,8 +16744,8 @@
           }
         }
       ],
-      "zscore": 3.42,
-      "zscore_rank": 27,
+      "zscore": 3.51,
+      "zscore_rank": 23,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16757,7 +16757,7 @@
         "shots_against": 10,
         "save_pct": 0.9
       },
-      "hot_zscore": 3.4186595129226873,
+      "hot_zscore": 3.5066629228262802,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16770,7 +16770,7 @@
         "shots_against": 10,
         "save_pct": 0.9
       },
-      "cold_zscore": 3.4186595129226873,
+      "cold_zscore": 3.5066629228262802,
       "is_cold": false
     },
     {
@@ -16803,8 +16803,8 @@
           }
         }
       ],
-      "zscore": 3.53,
-      "zscore_rank": 21,
+      "zscore": 3.47,
+      "zscore_rank": 28,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -16816,7 +16816,7 @@
         "shots_against": 26,
         "save_pct": 1.0
       },
-      "hot_zscore": 3.525882938983084,
+      "hot_zscore": 3.467797223236966,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -16829,7 +16829,7 @@
         "shots_against": 26,
         "save_pct": 1.0
       },
-      "cold_zscore": 3.525882938983084,
+      "cold_zscore": 3.467797223236966,
       "is_cold": false
     },
     {
@@ -16870,7 +16870,7 @@
           }
         }
       ],
-      "zscore": 0.56,
+      "zscore": 0.51,
       "zscore_rank": 105,
       "hot_72h_stats": {
         "gp": 2,
@@ -16883,7 +16883,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5602622062045031,
+      "hot_zscore": 0.5081742057564302,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16896,7 +16896,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5602622062045031,
+      "cold_zscore": 0.5081742057564302,
       "is_cold": false
     },
     {
@@ -16937,8 +16937,8 @@
           }
         }
       ],
-      "zscore": 2.19,
-      "zscore_rank": 43,
+      "zscore": 2.15,
+      "zscore_rank": 45,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -16950,7 +16950,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.193193949040939,
+      "hot_zscore": 2.154180841021638,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -16963,7 +16963,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.193193949040939,
+      "cold_zscore": 2.154180841021638,
       "is_cold": false
     },
     {
@@ -17004,7 +17004,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 2,
@@ -17017,7 +17017,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17030,7 +17030,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -17072,7 +17072,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -17084,7 +17084,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17097,7 +17097,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -17151,7 +17151,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.5489838551794566,
+      "hot_zscore": -0.5489249313156528,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17164,7 +17164,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.5489838551794566,
+      "cold_zscore": -0.5489249313156528,
       "is_cold": false
     },
     {
@@ -17205,7 +17205,7 @@
           }
         }
       ],
-      "zscore": 1.23,
+      "zscore": 1.22,
       "zscore_rank": 74,
       "hot_72h_stats": {
         "gp": 2,
@@ -17218,7 +17218,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.229653950591016,
+      "hot_zscore": 1.2182933055399392,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17231,7 +17231,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.229653950591016,
+      "cold_zscore": 1.2182933055399392,
       "is_cold": false
     },
     {
@@ -17272,8 +17272,8 @@
           }
         }
       ],
-      "zscore": -0.89,
-      "zscore_rank": 154,
+      "zscore": -0.91,
+      "zscore_rank": 153,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -17285,7 +17285,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.894785992100074,
+      "hot_zscore": -0.9073499684357667,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17298,7 +17298,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.894785992100074,
+      "cold_zscore": -0.9073499684357667,
       "is_cold": false
     },
     {
@@ -17339,7 +17339,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -17352,7 +17352,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17365,7 +17365,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -17419,7 +17419,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.5754560875116337,
+      "hot_zscore": 1.576718342660053,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17432,7 +17432,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.5754560875116337,
+      "cold_zscore": 1.576718342660053,
       "is_cold": false
     },
     {
@@ -17473,7 +17473,7 @@
           }
         }
       ],
-      "zscore": 1.21,
+      "zscore": 1.16,
       "zscore_rank": 78,
       "hot_72h_stats": {
         "gp": 2,
@@ -17486,7 +17486,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.2149332738897736,
+      "hot_zscore": 1.1553304920573368,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17499,7 +17499,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.2149332738897736,
+      "cold_zscore": 1.1553304920573368,
       "is_cold": false
     },
     {
@@ -17540,8 +17540,8 @@
           }
         }
       ],
-      "zscore": 2.03,
-      "zscore_rank": 49,
+      "zscore": 1.96,
+      "zscore_rank": 51,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -17553,7 +17553,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.0260362317083542,
+      "hot_zscore": 1.9601219997761694,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17566,7 +17566,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.0260362317083542,
+      "cold_zscore": 1.9601219997761694,
       "is_cold": false
     },
     {
@@ -17597,7 +17597,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -17609,7 +17609,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -17622,7 +17622,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -17663,8 +17663,8 @@
           }
         }
       ],
-      "zscore": 0.4,
-      "zscore_rank": 121,
+      "zscore": 0.35,
+      "zscore_rank": 122,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -17676,7 +17676,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.40383031607119246,
+      "hot_zscore": 0.3505389843385043,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17689,7 +17689,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.40383031607119246,
+      "cold_zscore": 0.3505389843385043,
       "is_cold": false
     },
     {
@@ -17730,7 +17730,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 2,
@@ -17743,7 +17743,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17756,7 +17756,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -17797,8 +17797,8 @@
           }
         }
       ],
-      "zscore": 3.99,
-      "zscore_rank": 17,
+      "zscore": 3.93,
+      "zscore_rank": 19,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -17810,7 +17810,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.994044284266134,
+      "hot_zscore": 3.928130052333949,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17823,7 +17823,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.994044284266134,
+      "cold_zscore": 3.928130052333949,
       "is_cold": false
     },
     {
@@ -17865,7 +17865,7 @@
         }
       ],
       "zscore": -1.71,
-      "zscore_rank": 223,
+      "zscore_rank": 222,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -17877,7 +17877,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.7058889499186551,
+      "hot_zscore": -1.7121414761545992,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17890,7 +17890,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.7058889499186551,
+      "cold_zscore": -1.7121414761545992,
       "is_cold": false
     },
     {
@@ -17931,8 +17931,8 @@
           }
         }
       ],
-      "zscore": -1.05,
-      "zscore_rank": 158,
+      "zscore": -1.06,
+      "zscore_rank": 157,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -17944,7 +17944,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.0512178822333844,
+      "hot_zscore": -1.064985189853693,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -17957,7 +17957,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.0512178822333844,
+      "cold_zscore": -1.064985189853693,
       "is_cold": false
     },
     {
@@ -18000,7 +18000,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18013,7 +18013,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -18067,7 +18067,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -18080,7 +18080,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -18121,7 +18121,7 @@
           }
         }
       ],
-      "zscore": -3.17,
+      "zscore": -3.16,
       "zscore_rank": 265,
       "hot_72h_stats": {
         "gp": 2,
@@ -18134,7 +18134,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -3.1716629754225063,
+      "hot_zscore": -3.164089270174338,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -18147,7 +18147,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "is_cold": true
     },
     {
@@ -18180,7 +18180,7 @@
           }
         }
       ],
-      "zscore": -3.14,
+      "zscore": -3.0,
       "zscore_rank": 264,
       "hot_72h_stats": {
         "gp": 1,
@@ -18193,7 +18193,7 @@
         "shots_against": 36,
         "save_pct": 0.8611111111111112
       },
-      "hot_zscore": -3.1438652214182614,
+      "hot_zscore": -2.9990493737620025,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18206,7 +18206,7 @@
         "shots_against": 36,
         "save_pct": 0.8611111111111112
       },
-      "cold_zscore": -3.1438652214182614,
+      "cold_zscore": -2.9990493737620025,
       "is_cold": true
     },
     {
@@ -18249,7 +18249,7 @@
           }
         }
       ],
-      "zscore": -3.57,
+      "zscore": -3.26,
       "zscore_rank": 273,
       "hot_72h_stats": {
         "gp": 2,
@@ -18262,7 +18262,7 @@
         "shots_against": 12,
         "save_pct": 0.75
       },
-      "hot_zscore": -3.5662966282443223,
+      "hot_zscore": -3.2591595298661624,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -18275,7 +18275,7 @@
         "shots_against": 12,
         "save_pct": 0.75
       },
-      "cold_zscore": -3.5662966282443223,
+      "cold_zscore": -3.2591595298661624,
       "is_cold": true
     },
     {
@@ -18305,7 +18305,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 1,
@@ -18318,7 +18318,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18331,7 +18331,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -18361,7 +18361,7 @@
           }
         }
       ],
-      "zscore": 1.38,
+      "zscore": 1.35,
       "zscore_rank": 65,
       "hot_72h_stats": {
         "gp": 1,
@@ -18374,7 +18374,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.3820909912223582,
+      "hot_zscore": 1.3493893333028053,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18387,7 +18387,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.3820909912223582,
+      "cold_zscore": 1.3493893333028053,
       "is_cold": false
     },
     {
@@ -18418,7 +18418,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -18430,7 +18430,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18443,7 +18443,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -18486,7 +18486,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18499,7 +18499,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -18529,7 +18529,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -18542,7 +18542,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18555,7 +18555,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -18585,8 +18585,8 @@
           }
         }
       ],
-      "zscore": 3.0,
-      "zscore_rank": 33,
+      "zscore": 2.96,
+      "zscore_rank": 35,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -18598,7 +18598,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.0042969068595204,
+      "hot_zscore": 2.958972348740471,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18611,7 +18611,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.0042969068595204,
+      "cold_zscore": 2.958972348740471,
       "is_cold": false
     },
     {
@@ -18641,8 +18641,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -18654,7 +18654,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18667,7 +18667,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -18697,8 +18697,8 @@
           }
         }
       ],
-      "zscore": 4.29,
-      "zscore_rank": 14,
+      "zscore": 4.18,
+      "zscore_rank": 16,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 2,
@@ -18710,7 +18710,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 4.292187387831513,
+      "hot_zscore": 4.180437681687199,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18723,7 +18723,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 4.292187387831513,
+      "cold_zscore": 4.180437681687199,
       "is_cold": false
     },
     {
@@ -18753,7 +18753,7 @@
           }
         }
       ],
-      "zscore": 0.56,
+      "zscore": 0.51,
       "zscore_rank": 105,
       "hot_72h_stats": {
         "gp": 1,
@@ -18766,7 +18766,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5602622062045031,
+      "hot_zscore": 0.5081742057564302,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18779,7 +18779,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5602622062045031,
+      "cold_zscore": 0.5081742057564302,
       "is_cold": false
     },
     {
@@ -18822,7 +18822,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.39255196504614576,
+      "hot_zscore": -0.3912897098977264,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18835,7 +18835,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.39255196504614576,
+      "cold_zscore": -0.3912897098977264,
       "is_cold": false
     },
     {
@@ -18865,7 +18865,7 @@
           }
         }
       ],
-      "zscore": 0.56,
+      "zscore": 0.51,
       "zscore_rank": 105,
       "hot_72h_stats": {
         "gp": 1,
@@ -18878,7 +18878,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.5602622062045031,
+      "hot_zscore": 0.5081742057564302,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18891,7 +18891,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.5602622062045031,
+      "cold_zscore": 0.5081742057564302,
       "is_cold": false
     },
     {
@@ -18922,7 +18922,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -18934,7 +18934,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -18947,7 +18947,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -18977,8 +18977,8 @@
           }
         }
       ],
-      "zscore": 3.0,
-      "zscore_rank": 33,
+      "zscore": 2.96,
+      "zscore_rank": 35,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -18990,7 +18990,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.0042969068595204,
+      "hot_zscore": 2.958972348740471,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19003,7 +19003,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.0042969068595204,
+      "cold_zscore": 2.958972348740471,
       "is_cold": false
     },
     {
@@ -19033,7 +19033,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -19046,7 +19046,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19059,7 +19059,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -19089,8 +19089,8 @@
           }
         }
       ],
-      "zscore": 2.39,
-      "zscore_rank": 42,
+      "zscore": 2.38,
+      "zscore_rank": 44,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19102,7 +19102,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.3865590453302143,
+      "hot_zscore": 2.381509850378886,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19115,7 +19115,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.3865590453302143,
+      "cold_zscore": 2.381509850378886,
       "is_cold": false
     },
     {
@@ -19145,7 +19145,7 @@
           }
         }
       ],
-      "zscore": 0.07,
+      "zscore": 0.06,
       "zscore_rank": 124,
       "hot_72h_stats": {
         "gp": 1,
@@ -19158,7 +19158,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.07274885585181745,
+      "hot_zscore": 0.05507676070099232,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19171,7 +19171,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.07274885585181745,
+      "cold_zscore": 0.05507676070099232,
       "is_cold": false
     },
     {
@@ -19201,7 +19201,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 1,
@@ -19214,7 +19214,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19227,7 +19227,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -19257,8 +19257,8 @@
           }
         }
       ],
-      "zscore": 2.19,
-      "zscore_rank": 43,
+      "zscore": 2.15,
+      "zscore_rank": 45,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19270,7 +19270,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.193193949040939,
+      "hot_zscore": 2.154180841021638,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19283,7 +19283,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.193193949040939,
+      "cold_zscore": 2.154180841021638,
       "is_cold": false
     },
     {
@@ -19326,7 +19326,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19339,7 +19339,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19370,7 +19370,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19382,7 +19382,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19395,7 +19395,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -19487,8 +19487,8 @@
           }
         }
       ],
-      "zscore": 1.95,
-      "zscore_rank": 53,
+      "zscore": 1.97,
+      "zscore_rank": 50,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19500,7 +19500,7 @@
         "shots_against": 18,
         "save_pct": 0.9444444444444444
       },
-      "hot_zscore": 1.9498430351547706,
+      "hot_zscore": 1.9729179447696032,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19513,7 +19513,7 @@
         "shots_against": 18,
         "save_pct": 0.9444444444444444
       },
-      "cold_zscore": 1.9498430351547706,
+      "cold_zscore": 1.9729179447696032,
       "is_cold": false
     },
     {
@@ -19543,8 +19543,8 @@
           }
         }
       ],
-      "zscore": 3.34,
-      "zscore_rank": 30,
+      "zscore": 3.28,
+      "zscore_rank": 32,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 1,
@@ -19556,7 +19556,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.3393732165808636,
+      "hot_zscore": 3.2809737660330427,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19569,7 +19569,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.3393732165808636,
+      "cold_zscore": 3.2809737660330427,
       "is_cold": false
     },
     {
@@ -19600,7 +19600,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19612,7 +19612,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19625,7 +19625,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -19668,7 +19668,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19681,7 +19681,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19711,8 +19711,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -19724,7 +19724,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19737,7 +19737,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -19780,7 +19780,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19793,7 +19793,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19836,7 +19836,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19849,7 +19849,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19892,7 +19892,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19905,7 +19905,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19948,7 +19948,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -19961,7 +19961,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -19991,7 +19991,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 1,
@@ -20004,7 +20004,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20017,7 +20017,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -20047,8 +20047,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20060,7 +20060,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20073,7 +20073,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -20116,7 +20116,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20129,7 +20129,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -20172,7 +20172,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20185,7 +20185,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -20216,7 +20216,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20228,7 +20228,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20241,7 +20241,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -20284,7 +20284,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20297,7 +20297,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -20327,7 +20327,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 1,
@@ -20340,7 +20340,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20353,7 +20353,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -20384,7 +20384,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20396,7 +20396,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20409,7 +20409,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -20440,7 +20440,7 @@
         }
       ],
       "zscore": -1.2,
-      "zscore_rank": 159,
+      "zscore_rank": 158,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20452,7 +20452,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.2036549228647269,
+      "hot_zscore": -1.1960812176165587,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20465,7 +20465,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.2036549228647269,
+      "cold_zscore": -1.1960812176165587,
       "is_cold": false
     },
     {
@@ -20496,7 +20496,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20508,7 +20508,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20521,7 +20521,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -20564,7 +20564,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20577,7 +20577,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -20620,7 +20620,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20633,7 +20633,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -20666,7 +20666,7 @@
           }
         }
       ],
-      "zscore": -2.75,
+      "zscore": -2.63,
       "zscore_rank": 263,
       "hot_72h_stats": {
         "gp": 1,
@@ -20679,7 +20679,7 @@
         "shots_against": 32,
         "save_pct": 0.875
       },
-      "hot_zscore": -2.7498552454611844,
+      "hot_zscore": -2.6253295541451633,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20692,7 +20692,7 @@
         "shots_against": 32,
         "save_pct": 0.875
       },
-      "cold_zscore": -2.7498552454611844,
+      "cold_zscore": -2.6253295541451633,
       "is_cold": true
     },
     {
@@ -20725,7 +20725,7 @@
           }
         }
       ],
-      "zscore": -3.93,
+      "zscore": -3.75,
       "zscore_rank": 274,
       "hot_72h_stats": {
         "gp": 1,
@@ -20738,7 +20738,7 @@
         "shots_against": 6,
         "save_pct": 0.8333333333333334
       },
-      "hot_zscore": -3.931885173332418,
+      "hot_zscore": -3.746489012995684,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20751,7 +20751,7 @@
         "shots_against": 6,
         "save_pct": 0.8333333333333334
       },
-      "cold_zscore": -3.931885173332418,
+      "cold_zscore": -3.746489012995684,
       "is_cold": true
     },
     {
@@ -20782,7 +20782,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20794,7 +20794,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20807,7 +20807,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -20838,7 +20838,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -20850,7 +20850,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20863,7 +20863,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -20893,7 +20893,7 @@
           }
         }
       ],
-      "zscore": 1.72,
+      "zscore": 1.67,
       "zscore_rank": 56,
       "hot_72h_stats": {
         "gp": 1,
@@ -20906,7 +20906,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.7171673009437018,
+      "hot_zscore": 1.671390750595377,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -20919,7 +20919,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.7171673009437018,
+      "cold_zscore": 1.671390750595377,
       "is_cold": false
     },
     {
@@ -20973,7 +20973,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 2,
@@ -20986,7 +20986,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -21016,8 +21016,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21029,7 +21029,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21042,7 +21042,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -21072,7 +21072,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 1,
@@ -21085,7 +21085,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21098,7 +21098,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -21129,7 +21129,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21141,7 +21141,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21154,7 +21154,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21197,7 +21197,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21210,7 +21210,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -21241,7 +21241,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21253,7 +21253,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21266,7 +21266,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21297,7 +21297,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21309,7 +21309,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21322,7 +21322,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21353,7 +21353,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21365,7 +21365,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21378,7 +21378,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21409,7 +21409,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21421,7 +21421,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21434,7 +21434,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21477,7 +21477,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21490,7 +21490,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -21533,7 +21533,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21546,7 +21546,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -21577,7 +21577,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21589,7 +21589,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21602,7 +21602,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21633,7 +21633,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21645,7 +21645,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21658,7 +21658,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21689,7 +21689,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21701,7 +21701,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21714,7 +21714,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21744,7 +21744,7 @@
           }
         }
       ],
-      "zscore": -0.08,
+      "zscore": -0.1,
       "zscore_rank": 131,
       "hot_72h_stats": {
         "gp": 1,
@@ -21757,7 +21757,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.08368303428149326,
+      "hot_zscore": -0.10255846071693397,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21770,7 +21770,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.08368303428149326,
+      "cold_zscore": -0.10255846071693397,
       "is_cold": false
     },
     {
@@ -21801,7 +21801,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21813,7 +21813,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21826,7 +21826,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -21860,7 +21860,7 @@
         }
       ],
       "zscore": -1.91,
-      "zscore_rank": 228,
+      "zscore_rank": 226,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21886,7 +21886,7 @@
         "save_pct": 0
       },
       "cold_zscore": -1.9107538805813955,
-      "is_cold": true
+      "is_cold": false
     },
     {
       "name": "Frederik Andersen",
@@ -21918,7 +21918,7 @@
           }
         }
       ],
-      "zscore": -2.48,
+      "zscore": -2.37,
       "zscore_rank": 262,
       "hot_72h_stats": {
         "gp": 1,
@@ -21931,7 +21931,7 @@
         "shots_against": 26,
         "save_pct": 0.8846153846153846
       },
-      "hot_zscore": -2.4770791082601313,
+      "hot_zscore": -2.3666004482565826,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -21944,7 +21944,7 @@
         "shots_against": 26,
         "save_pct": 0.8846153846153846
       },
-      "cold_zscore": -2.4770791082601313,
+      "cold_zscore": -2.3666004482565826,
       "is_cold": true
     },
     {
@@ -21975,7 +21975,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -21987,7 +21987,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22000,7 +22000,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22030,8 +22030,8 @@
           }
         }
       ],
-      "zscore": 3.48,
-      "zscore_rank": 26,
+      "zscore": 3.38,
+      "zscore_rank": 30,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 2,
@@ -22043,7 +22043,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 3.4810844300129316,
+      "hot_zscore": 3.3756461739683665,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22056,7 +22056,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 3.4810844300129316,
+      "cold_zscore": 3.3756461739683665,
       "is_cold": false
     },
     {
@@ -22086,7 +22086,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -22099,7 +22099,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22112,7 +22112,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -22142,8 +22142,8 @@
           }
         }
       ],
-      "zscore": 2.03,
-      "zscore_rank": 49,
+      "zscore": 1.96,
+      "zscore_rank": 51,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 1,
@@ -22155,7 +22155,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 2.0260362317083542,
+      "hot_zscore": 1.9601219997761694,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22168,7 +22168,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 2.0260362317083542,
+      "cold_zscore": 1.9601219997761694,
       "is_cold": false
     },
     {
@@ -22199,7 +22199,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22211,7 +22211,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22224,7 +22224,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22255,7 +22255,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22267,7 +22267,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22280,7 +22280,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22311,7 +22311,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22323,7 +22323,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22336,7 +22336,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22367,7 +22367,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22379,7 +22379,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22392,7 +22392,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22435,7 +22435,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22448,7 +22448,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -22478,7 +22478,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -22491,7 +22491,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22504,7 +22504,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -22535,7 +22535,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22547,7 +22547,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22560,7 +22560,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22590,7 +22590,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -22603,7 +22603,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22616,7 +22616,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -22647,7 +22647,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22659,7 +22659,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22672,7 +22672,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22703,7 +22703,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22715,7 +22715,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22728,7 +22728,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22758,7 +22758,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -22771,7 +22771,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22784,7 +22784,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -22815,7 +22815,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22827,7 +22827,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22840,7 +22840,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22871,7 +22871,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22883,7 +22883,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22896,7 +22896,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -22926,7 +22926,7 @@
           }
         }
       ],
-      "zscore": 0.73,
+      "zscore": 0.7,
       "zscore_rank": 90,
       "hot_72h_stats": {
         "gp": 1,
@@ -22939,7 +22939,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.7274199235370875,
+      "hot_zscore": 0.7022330470018987,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -22952,7 +22952,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.7274199235370875,
+      "cold_zscore": 0.7022330470018987,
       "is_cold": false
     },
     {
@@ -22983,7 +22983,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -22995,7 +22995,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23008,7 +23008,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -23041,8 +23041,8 @@
           }
         }
       ],
-      "zscore": 2.78,
-      "zscore_rank": 37,
+      "zscore": 2.76,
+      "zscore_rank": 38,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23054,7 +23054,7 @@
         "shots_against": 38,
         "save_pct": 0.9736842105263158
       },
-      "hot_zscore": 2.7793377213801995,
+      "hot_zscore": 2.7596965123840054,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23067,7 +23067,7 @@
         "shots_against": 38,
         "save_pct": 0.9736842105263158
       },
-      "cold_zscore": 2.7793377213801995,
+      "cold_zscore": 2.7596965123840054,
       "is_cold": false
     },
     {
@@ -23157,7 +23157,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23169,7 +23169,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23182,7 +23182,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -23212,7 +23212,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 1,
@@ -23225,7 +23225,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23238,7 +23238,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -23327,7 +23327,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 1,
@@ -23340,7 +23340,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23353,7 +23353,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -23383,8 +23383,8 @@
           }
         }
       ],
-      "zscore": 0.42,
-      "zscore_rank": 109,
+      "zscore": 0.41,
+      "zscore_rank": 110,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23396,7 +23396,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 0.4185509927724349,
+      "hot_zscore": 0.4135017978211064,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23409,7 +23409,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 0.4185509927724349,
+      "cold_zscore": 0.4135017978211064,
       "is_cold": false
     },
     {
@@ -23440,7 +23440,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23452,7 +23452,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23465,7 +23465,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -23495,7 +23495,7 @@
           }
         }
       ],
-      "zscore": 1.37,
+      "zscore": 1.31,
       "zscore_rank": 67,
       "hot_72h_stats": {
         "gp": 1,
@@ -23508,7 +23508,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.371365164023084,
+      "hot_zscore": 1.312965713475263,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23521,7 +23521,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.371365164023084,
+      "cold_zscore": 1.312965713475263,
       "is_cold": false
     },
     {
@@ -23552,7 +23552,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23564,7 +23564,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23577,7 +23577,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -23679,7 +23679,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -2.360560017603925,
+      "hot_zscore": -2.3592977624555056,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23692,7 +23692,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -2.360560017603925,
+      "cold_zscore": -2.3592977624555056,
       "is_cold": true
     },
     {
@@ -23722,7 +23722,7 @@
           }
         }
       ],
-      "zscore": 1.88,
+      "zscore": 1.87,
       "zscore_rank": 54,
       "hot_72h_stats": {
         "gp": 1,
@@ -23735,7 +23735,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": 1.8843250182762863,
+      "hot_zscore": 1.8654495918408456,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23748,7 +23748,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": 1.8843250182762863,
+      "cold_zscore": 1.8654495918408456,
       "is_cold": false
     },
     {
@@ -23781,8 +23781,8 @@
           }
         }
       ],
-      "zscore": 0.8,
-      "zscore_rank": 88,
+      "zscore": 0.74,
+      "zscore_rank": 89,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23794,7 +23794,7 @@
         "shots_against": 2,
         "save_pct": 1.0
       },
-      "hot_zscore": 0.7962345381525187,
+      "hot_zscore": 0.7381488224064006,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23807,7 +23807,7 @@
         "shots_against": 2,
         "save_pct": 1.0
       },
-      "cold_zscore": 0.7962345381525187,
+      "cold_zscore": 0.7381488224064006,
       "is_cold": false
     },
     {
@@ -23838,7 +23838,7 @@
         }
       ],
       "zscore": -1.55,
-      "zscore_rank": 164,
+      "zscore_rank": 163,
       "hot_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -23850,7 +23850,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -1.5494570597853445,
+      "hot_zscore": -1.554506254736673,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23863,7 +23863,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -1.5494570597853445,
+      "cold_zscore": -1.554506254736673,
       "is_cold": false
     },
     {
@@ -23893,7 +23893,7 @@
           }
         }
       ],
-      "zscore": -0.74,
+      "zscore": -0.75,
       "zscore_rank": 143,
       "hot_72h_stats": {
         "gp": 1,
@@ -23906,7 +23906,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "hot_zscore": -0.7383541019667635,
+      "hot_zscore": -0.7497147470178404,
       "is_hot": false,
       "cold_72h_stats": {
         "gp": 1,
@@ -23919,7 +23919,7 @@
         "shots_against": 0,
         "save_pct": 0
       },
-      "cold_zscore": -0.7383541019667635,
+      "cold_zscore": -0.7497147470178404,
       "is_cold": false
     },
     {
@@ -23988,7 +23988,7 @@
       "country": "SVK",
       "wally_team": "Cam's Crunch",
       "pos": "F",
-      "hot_zscore": 9.191743491396995,
+      "hot_zscore": 9.052341322284457,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -24006,7 +24006,7 @@
       "country": "CAN",
       "wally_team": "Gators",
       "pos": "F",
-      "hot_zscore": 8.856667181675652,
+      "hot_zscore": 8.730339904991887,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -24024,7 +24024,7 @@
       "country": "CAN",
       "wally_team": "Ice Holes",
       "pos": "D",
-      "hot_zscore": 5.925119130667948,
+      "hot_zscore": 5.826444316952408,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -24042,7 +24042,7 @@
       "country": "SWE",
       "wally_team": "Mark's Mafia",
       "pos": "D",
-      "hot_zscore": 5.768687240534637,
+      "hot_zscore": 5.668809095534481,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -24060,7 +24060,7 @@
       "country": "SVK",
       "wally_team": null,
       "pos": "G",
-      "hot_zscore": 5.546313383090908,
+      "hot_zscore": 5.524749948757218,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24078,7 +24078,7 @@
       "country": "SVK",
       "wally_team": null,
       "pos": "F",
-      "hot_zscore": 5.103290345650093,
+      "hot_zscore": 4.9852291894060325,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -24096,7 +24096,25 @@
       "country": "SUI",
       "wally_team": "Big Shooters",
       "pos": "F",
-      "hot_zscore": 5.103290345650093,
+      "hot_zscore": 4.9852291894060325,
+      "hot_72h_stats": {
+        "gp": 2,
+        "goals": 2,
+        "assists": 0,
+        "plus_minus": 3,
+        "pim": 0,
+        "wins": 0,
+        "saves": 0,
+        "shots_against": 0,
+        "save_pct": 0
+      }
+    },
+    {
+      "name": "Macklin Celebrini",
+      "country": "CAN",
+      "wally_team": "Bardown",
+      "pos": "F",
+      "hot_zscore": 4.9852291894060325,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -24114,7 +24132,7 @@
       "country": "FRA",
       "wally_team": null,
       "pos": "F",
-      "hot_zscore": 4.946858455516782,
+      "hot_zscore": 4.827593967988106,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 2,
@@ -24132,25 +24150,7 @@
       "country": "FIN",
       "wally_team": null,
       "pos": "F",
-      "hot_zscore": 4.805147242084715,
-      "hot_72h_stats": {
-        "gp": 2,
-        "goals": 1,
-        "assists": 1,
-        "plus_minus": 1,
-        "pim": 2,
-        "wins": 0,
-        "saves": 0,
-        "shots_against": 0,
-        "save_pct": 0
-      }
-    },
-    {
-      "name": "Mika Zibanejad",
-      "country": "SWE",
-      "wally_team": "Mark's Mafia",
-      "pos": "F",
-      "hot_zscore": 4.805147242084715,
+      "hot_zscore": 4.732921560052782,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 1,
@@ -24166,29 +24166,11 @@
   ],
   "cold_players": [
     {
-      "name": "Martin Neckar",
-      "country": "FRA",
-      "wally_team": null,
-      "pos": "G",
-      "cold_zscore": -5.750392754672778,
-      "cold_72h_stats": {
-        "gp": 2,
-        "goals": 0,
-        "assists": 0,
-        "plus_minus": 0,
-        "pim": 0,
-        "wins": 0,
-        "saves": 20,
-        "shots_against": 26,
-        "save_pct": 0.7692307692307693
-      }
-    },
-    {
       "name": "Jules Boscq",
       "country": "FRA",
       "wally_team": null,
       "pos": "D",
-      "cold_zscore": -5.6049718488782485,
+      "cold_zscore": -5.578463793330837,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24202,11 +24184,29 @@
       }
     },
     {
+      "name": "Martin Neckar",
+      "country": "FRA",
+      "wally_team": null,
+      "pos": "G",
+      "cold_zscore": -5.471349718919562,
+      "cold_72h_stats": {
+        "gp": 2,
+        "goals": 0,
+        "assists": 0,
+        "plus_minus": 0,
+        "pim": 0,
+        "wins": 0,
+        "saves": 20,
+        "shots_against": 26,
+        "save_pct": 0.7692307692307693
+      }
+    },
+    {
       "name": "Jason Seed",
       "country": "ITA",
       "wally_team": null,
       "pos": "D",
-      "cold_zscore": -3.982765933241087,
+      "cold_zscore": -3.968880777893171,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24224,7 +24224,7 @@
       "country": "LAT",
       "wally_team": null,
       "pos": "G",
-      "cold_zscore": -3.931885173332418,
+      "cold_zscore": -3.746489012995684,
       "cold_72h_stats": {
         "gp": 1,
         "goals": 0,
@@ -24242,7 +24242,7 @@
       "country": "CZE",
       "wally_team": "Johnny's Scrubbers",
       "pos": "G",
-      "cold_zscore": -3.5662966282443223,
+      "cold_zscore": -3.2591595298661624,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24260,7 +24260,7 @@
       "country": "FIN",
       "wally_team": "Johnny's Scrubbers",
       "pos": "F",
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24278,7 +24278,7 @@
       "country": "ITA",
       "wally_team": null,
       "pos": "F",
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24296,7 +24296,7 @@
       "country": "SWE",
       "wally_team": "Johnny's Scrubbers",
       "pos": "D",
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24314,7 +24314,7 @@
       "country": "FRA",
       "wally_team": null,
       "pos": "F",
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24332,7 +24332,7 @@
       "country": "FRA",
       "wally_team": null,
       "pos": "F",
-      "cold_zscore": -3.1716629754225063,
+      "cold_zscore": -3.164089270174338,
       "cold_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -24377,122 +24377,122 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Gabe's Gangsters": 0.2204,
-      "Cross's Beavers": 0.0244,
-      "Big Shooters": 0.417,
-      "Mark's Mafia": 0.1334,
-      "Cam's Crunch": 0.0128,
-      "Ice Holes": 0.1242,
-      "Johnny's Scrubbers": 0.0258,
-      "Bardown": 0.0322,
-      "Owen's Otters": 0.0062,
-      "Todd's Hitmen": 0.0022,
-      "Gators": 0.0014,
+      "Big Shooters": 0.4302,
+      "Ice Holes": 0.115,
+      "Cross's Beavers": 0.0378,
+      "Owen's Otters": 0.003,
+      "Gabe's Gangsters": 0.2236,
+      "Mark's Mafia": 0.1226,
+      "Johnny's Scrubbers": 0.0236,
+      "Bardown": 0.032,
+      "Cam's Crunch": 0.01,
+      "Gators": 0.001,
+      "Todd's Hitmen": 0.0012,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Gabe's Gangsters": 0.563,
-      "Big Shooters": 0.8002,
-      "Mark's Mafia": 0.4714,
-      "Cross's Beavers": 0.1374,
-      "Johnny's Scrubbers": 0.184,
-      "Todd's Hitmen": 0.0308,
-      "Cam's Crunch": 0.1276,
-      "Bardown": 0.2058,
-      "Ice Holes": 0.408,
-      "Gators": 0.0328,
-      "Owen's Otters": 0.039,
+      "Big Shooters": 0.7934,
+      "Johnny's Scrubbers": 0.1736,
+      "Mark's Mafia": 0.4604,
+      "Ice Holes": 0.398,
+      "Cross's Beavers": 0.1922,
+      "Gabe's Gangsters": 0.5574,
+      "Owen's Otters": 0.0326,
+      "Bardown": 0.214,
+      "Cam's Crunch": 0.118,
+      "Todd's Hitmen": 0.0302,
+      "Gators": 0.0302,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Gabe's Gangsters": 49.8981,
-      "Big Shooters": 54.7323,
-      "Mark's Mafia": 46.9852,
-      "Gators": 30.6905,
-      "Bardown": 41.3021,
-      "Cam's Crunch": 39.3852,
-      "Johnny's Scrubbers": 39.4083,
-      "Todd's Hitmen": 32.7424,
-      "Owen's Otters": 31.4966,
-      "Ice Holes": 44.9114,
-      "Cross's Beavers": 38.0184,
-      "Willy's Warlocks": 18.4295
+      "Big Shooters": 54.921,
+      "Johnny's Scrubbers": 39.0408,
+      "Mark's Mafia": 46.6589,
+      "Todd's Hitmen": 32.4934,
+      "Cam's Crunch": 38.9855,
+      "Gabe's Gangsters": 49.7685,
+      "Bardown": 41.9715,
+      "Cross's Beavers": 39.9799,
+      "Owen's Otters": 30.98,
+      "Ice Holes": 44.4371,
+      "Gators": 30.4161,
+      "Willy's Warlocks": 18.3473
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.4374,
-        "silver": 0.3178,
-        "bronze": 0.1624
+        "gold": 0.4462,
+        "silver": 0.31,
+        "bronze": 0.16
       },
       "USA": {
-        "gold": 0.299,
-        "silver": 0.3136,
-        "bronze": 0.2262
+        "gold": 0.2912,
+        "silver": 0.3194,
+        "bronze": 0.2216
       },
       "SWE": {
-        "gold": 0.1268,
-        "silver": 0.1704,
-        "bronze": 0.2704
+        "gold": 0.1182,
+        "silver": 0.1772,
+        "bronze": 0.2718
       },
       "FIN": {
-        "gold": 0.058,
-        "silver": 0.0828,
-        "bronze": 0.139
+        "gold": 0.0602,
+        "silver": 0.0816,
+        "bronze": 0.1366
       },
       "CZE": {
-        "gold": 0.038,
-        "silver": 0.0484,
-        "bronze": 0.0966
+        "gold": 0.0358,
+        "silver": 0.0522,
+        "bronze": 0.098
       },
       "SUI": {
-        "gold": 0.0222,
-        "silver": 0.037,
-        "bronze": 0.0552
+        "gold": 0.0268,
+        "silver": 0.0306,
+        "bronze": 0.0604
       },
       "GER": {
-        "gold": 0.0076,
+        "gold": 0.0082,
         "silver": 0.0118,
-        "bronze": 0.0178
+        "bronze": 0.024
       },
       "SVK": {
-        "gold": 0.0054,
+        "gold": 0.0062,
         "silver": 0.0088,
-        "bronze": 0.0138
+        "bronze": 0.015
       },
       "LAT": {
-        "gold": 0.0048,
-        "silver": 0.0046,
-        "bronze": 0.0084
+        "gold": 0.0044,
+        "silver": 0.0044,
+        "bronze": 0.0074
       },
       "DEN": {
-        "gold": 0.0,
-        "silver": 0.001,
-        "bronze": 0.0044
+        "gold": 0.0008,
+        "silver": 0.0012,
+        "bronze": 0.0012
       },
       "ITA": {
-        "gold": 0.0002,
-        "silver": 0.0024,
-        "bronze": 0.0032
+        "gold": 0.0008,
+        "silver": 0.0022,
+        "bronze": 0.0016
       },
       "FRA": {
-        "gold": 0.0006,
-        "silver": 0.0014,
-        "bronze": 0.0026
+        "gold": 0.0012,
+        "silver": 0.0006,
+        "bronze": 0.0024
       }
     },
     "country_knockout_odds": {
       "CAN": 1.0,
       "USA": 1.0,
-      "SWE": 0.9996,
-      "FIN": 0.9974,
-      "CZE": 0.9928,
+      "SWE": 0.9998,
+      "FIN": 0.9964,
+      "CZE": 0.9918,
       "SUI": 1.0,
-      "GER": 0.5478,
-      "SVK": 0.462,
-      "LAT": 0.8908,
-      "DEN": 0.0946,
+      "GER": 0.5552,
+      "SVK": 0.4566,
+      "LAT": 0.8896,
+      "DEN": 0.0974,
       "ITA": 0.0,
-      "FRA": 0.015
+      "FRA": 0.0132
     }
   }
 }
