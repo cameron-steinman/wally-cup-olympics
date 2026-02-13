@@ -13,8 +13,8 @@ const teamLogos: Record<string, string> = {
   "Gators": "/wally-cup-olympics/logos/gators.png",
   "Gabe's Gangsters": "/wally-cup-olympics/logos/gabes-gangsters.png",
   "Willy's Warlocks": "/wally-cup-olympics/logos/willys-warlocks.png",
-  "Owen's Otters": "",  // pending
-  "Ice Holes": "",  // pending
+  "Owen's Otters": "/wally-cup-olympics/logos/owens-otters.png",
+  "Ice Holes": "/wally-cup-olympics/logos/ice-holes.png",
 };
 
 const flagMap: Record<string, string> = {
