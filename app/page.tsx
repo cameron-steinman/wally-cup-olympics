@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import data from "./data/standings.json";
 
 // Team logos — path relative to public/
