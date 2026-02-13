@@ -247,7 +247,7 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
                     opacity: rowOpacity,
                   }}>
                     <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: eliminated ? 'var(--text-muted)' : 'var(--text-primary)' }}>
-                      {p.isHot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.isCold && <span title="Cold player (bottom 100 last 48h)">❄️ </span>}{p.name}
+                      {p.isHot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.isCold && <span title="Cold player (bottom 50 last 48h)">❄️ </span>}{p.name}
                     </td>
                     <td className="px-2 py-2.5 text-center">
                       {p.country && <Flag code={p.country} size={18} />}
@@ -346,7 +346,7 @@ export default function TeamPageClient({ skaters, goalies, countryStatus, elimin
                     borderBottom: '1px solid var(--border)',
                     opacity: eliminated ? 0.4 : 1,
                   }}>
-                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.isHot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.isCold && <span title="Cold player (bottom 100 last 48h)">❄️ </span>}{p.name}</td>
+                    <td className="px-3 py-2.5 text-sm font-medium mobile-text-sm" style={{ color: 'var(--text-primary)' }}>{p.isHot && <span title="Hot player (top 10 last 48h)">🔥 </span>}{p.isCold && <span title="Cold player (bottom 50 last 48h)">❄️ </span>}{p.name}</td>
                     <td className="px-2 py-2.5 text-center">{p.country && <Flag code={p.country} size={18} />}</td>
                     <td className="px-2 py-2.5 text-center">
                       <span className="text-xs font-bold px-2 py-0.5 rounded-full rank-badge-mobile" style={{ background: 'rgba(37,99,235,0.1)', color: 'var(--accent-blue)' }}>
