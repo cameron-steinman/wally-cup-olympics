@@ -165,7 +165,7 @@ export default function Home() {
               </span>
             </div>
           )}
-          <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+          <div className="glass-card text-[11px] px-3 py-1.5" style={{ color: 'var(--text-secondary)', borderRadius: '8px' }}>
             Updated {updatedDate} ET
           </div>
         </div>
