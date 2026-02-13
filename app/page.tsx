@@ -72,7 +72,7 @@ function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct, isPlusMin
   const unqualified = isSavePct && qualified === false;
 
   return (
-    <td className="px-3 py-4 text-center cat-cell">
+    <td className="px-3 py-4 text-center cat-cell" style={{ verticalAlign: 'top' }}>
       <div className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
         {displayVal}
         {unqualified && <span className="ml-1.5 inline-block w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent-red)', verticalAlign: 'middle' }} title="Not qualified (<20 SA)" />}
@@ -395,7 +395,7 @@ export default function Home() {
                       background: isTop3 ? 'rgba(37, 99, 235, 0.02)' : 'transparent',
                     }}
                   >
-                    <td className="px-4 py-4">
+                    <td className="px-4 py-4" style={{ verticalAlign: 'top' }}>
                       {medalClass ? (
                         <span className={medalClass}>{s.displayRank}</span>
                       ) : (
@@ -405,7 +405,7 @@ export default function Home() {
                         </span>
                       )}
                     </td>
-                    <td className="px-3 py-4">
+                    <td className="px-3 py-4" style={{ verticalAlign: 'top' }}>
                       <a href={`/wally-cup-olympics/team/${teamSlug(s.team)}`} className="flex items-center gap-2.5 text-sm font-bold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
                         {logoSrc ? (
                           <img src={logoSrc} alt={s.team} className="w-7 h-7 rounded-md object-contain team-logo-mobile" />
@@ -415,10 +415,13 @@ export default function Home() {
                         {s.team}
                       </a>
                     </td>
-                    <td className="px-2 py-4 text-center">
-                      <span className="text-base font-medium" style={{ color: 'var(--text-muted)' }}>
+                    <td className="px-2 py-4 text-center" style={{ verticalAlign: 'top' }}>
+                      <div className="text-base font-medium" style={{ color: 'var(--text-muted)' }}>
                         {gpPerTeam[s.team] ?? 0}
-                      </span>
+                      </div>
+                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}>
+                        <span>&nbsp;</span>
+                      </div>
                     </td>
                     {categoryLabels.map(c => {
                       const cat = s.categories[c.key];
@@ -434,13 +437,16 @@ export default function Home() {
                         />
                       );
                     })}
-                    <td className="px-5 py-4 text-center">
+                    <td className="px-5 py-4 text-center" style={{ verticalAlign: 'top' }}>
                       <span className={`points-pill ${isTop3 ? 'points-pill-top' : ''}`}>
                         {s.total_roto_points}
                         {s.isTied && <span className="tie-indicator ml-1">T</span>}
                       </span>
+                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}>
+                        <span>&nbsp;</span>
+                      </div>
                     </td>
-                    <td className="px-3 py-4 text-center">
+                    <td className="px-3 py-4 text-center" style={{ verticalAlign: 'top' }}>
                       <div className="text-base font-bold" style={{ color: allActive ? 'var(--accent-green)' : 'var(--text-primary)' }}>
                         {ap.active}
                       </div>

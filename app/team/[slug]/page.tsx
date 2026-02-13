@@ -149,9 +149,10 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
 
   const globalRankings = computeGlobalRankings();
 
-  // Build hot player + zscore rank lookups from all_olympic_players
+  // Build hot player + cold player + zscore rank lookups from all_olympic_players
   const allOlympic = (data as any).all_olympic_players || [];
   const hotLookup = new Set(allOlympic.filter((p: any) => p.is_hot).map((p: any) => `${p.name}|${p.country}`));
+  const coldLookup = new Set(allOlympic.filter((p: any) => p.is_cold).map((p: any) => `${p.name}|${p.country}`));
   const zscoreRankLookup = new Map(allOlympic.map((p: any) => [`${p.name}|${p.country}`, p.zscore_rank ?? 999]));
 
   const skaters = team.players
