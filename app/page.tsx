@@ -2,7 +2,6 @@
 import { useState } from "react";
 import data from "./data/standings.json";
 
-// Team logos — path relative to public/
 const teamLogos: Record<string, string> = {
   "Cam's Crunch": "/wally-cup-olympics/logos/cams-crunch.png",
   "Mark's Mafia": "/wally-cup-olympics/logos/marks-mafia.png",
@@ -56,21 +55,11 @@ function teamSlug(name: string) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-function CategoryHeader({ label, sub }: { label: string; sub?: string }) {
-  return (
-    <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile" style={{ color: 'var(--text-muted)' }}>
-      <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>{label}</div>
-      {sub && <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{sub}</div>}
-    </th>
-  );
-}
-
 function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct, isPlusMinus }: {
   value: number; rotoPoints: number; rank: number; qualified?: boolean; isSavePct?: boolean; isPlusMinus?: boolean;
 }) {
   const displayVal = isSavePct ? (value > 0 ? value.toFixed(3).replace(/^0/, '') : '—') : isPlusMinus ? `${value > 0 ? '+' : ''}${value}` : value;
   const unqualified = isSavePct && qualified === false;
-
   return (
     <td className="px-3 py-4 text-center cat-cell" style={{ verticalAlign: 'top' }}>
       <div className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
@@ -88,9 +77,7 @@ function CategoryCell({ value, rotoPoints, rank, qualified, isSavePct, isPlusMin
 
 export default function Home() {
   const standings = data.standings as Array<{
-    team: string;
-    rank: number;
-    total_roto_points: number;
+    team: string; rank: number; total_roto_points: number;
     categories: Record<string, { value: number; roto_points: number; rank: number; qualified?: boolean }>;
   }>;
 
@@ -98,15 +85,11 @@ export default function Home() {
     players: Array<{ name: string; country: string | null; pos: string; stats: any; status: string }>;
   }>;
 
-  // Get eliminated countries from data (empty initially — all countries active)
   const countryStatus = (data as any).country_status || {};
   const eliminatedCountries = new Set(
-    Object.entries(countryStatus)
-      .filter(([_, v]: [string, any]) => v.status === 'eliminated')
-      .map(([k]) => k)
+    Object.entries(countryStatus).filter(([_, v]: [string, any]) => v.status === 'eliminated').map(([k]) => k)
   );
 
-  // Calculate total GP per team (sum of all Olympic players' games played)
   const gpPerTeam: Record<string, number> = {};
   for (const [teamName, teamData] of Object.entries(teams)) {
     gpPerTeam[teamName] = teamData.players
@@ -114,18 +97,13 @@ export default function Home() {
       .reduce((sum: number, p: any) => sum + (p.stats?.gp ?? 0), 0);
   }
 
-  // Calculate active Olympic players per team
   const activePlayersPerTeam: Record<string, { active: number; total: number }> = {};
   for (const [teamName, teamData] of Object.entries(teams)) {
     const olympicPlayers = teamData.players.filter((p: any) => p.country !== null);
     const activePlayers = olympicPlayers.filter((p: any) => !eliminatedCountries.has(p.country));
-    activePlayersPerTeam[teamName] = {
-      active: activePlayers.length,
-      total: olympicPlayers.length,
-    };
+    activePlayersPerTeam[teamName] = { active: activePlayers.length, total: olympicPlayers.length };
   }
 
-  // Recalculate ranks with proper tie handling
   const rankedStandings = standings.map((s) => {
     const teamsAbove = standings.filter(t => t.total_roto_points > s.total_roto_points).length;
     const actualRank = teamsAbove + 1;
@@ -133,11 +111,9 @@ export default function Home() {
     return { ...s, displayRank: actualRank, isTied };
   });
 
-  // Sorting state
   const [sortColumn, setSortColumn] = useState<string>('total_roto_points');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
-  // Sort function
   const handleSort = (column: string) => {
     if (sortColumn === column) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
@@ -147,89 +123,80 @@ export default function Home() {
     }
   };
 
-  // Sort the data
   const sortedStandings = [...rankedStandings].sort((a, b) => {
     let aVal: any, bVal: any;
-    
-    if (sortColumn === 'displayRank') {
-      aVal = a.displayRank;
-      bVal = b.displayRank;
-    } else if (sortColumn === 'team') {
-      aVal = a.team;
-      bVal = b.team;
-    } else if (sortColumn === 'gp') {
-      aVal = gpPerTeam[a.team] ?? 0;
-      bVal = gpPerTeam[b.team] ?? 0;
-    } else if (sortColumn === 'total_roto_points') {
-      aVal = a.total_roto_points;
-      bVal = b.total_roto_points;
-    } else if (sortColumn === 'players_remaining') {
-      aVal = activePlayersPerTeam[a.team]?.active ?? 0;
-      bVal = activePlayersPerTeam[b.team]?.active ?? 0;
-    } else if (categoryLabels.some(c => c.key === sortColumn)) {
-      // Category column - sort by value
-      aVal = a.categories[sortColumn]?.value ?? 0;
-      bVal = b.categories[sortColumn]?.value ?? 0;
-    } else {
-      return 0;
-    }
-
-    if (typeof aVal === 'string' && typeof bVal === 'string') {
-      return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-    }
-    
+    if (sortColumn === 'displayRank') { aVal = a.displayRank; bVal = b.displayRank; }
+    else if (sortColumn === 'team') { aVal = a.team; bVal = b.team; }
+    else if (sortColumn === 'gp') { aVal = gpPerTeam[a.team] ?? 0; bVal = gpPerTeam[b.team] ?? 0; }
+    else if (sortColumn === 'total_roto_points') { aVal = a.total_roto_points; bVal = b.total_roto_points; }
+    else if (sortColumn === 'players_remaining') { aVal = activePlayersPerTeam[a.team]?.active ?? 0; bVal = activePlayersPerTeam[b.team]?.active ?? 0; }
+    else if (categoryLabels.some(c => c.key === sortColumn)) { aVal = a.categories[sortColumn]?.value ?? 0; bVal = b.categories[sortColumn]?.value ?? 0; }
+    else return 0;
+    if (typeof aVal === 'string' && typeof bVal === 'string') return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
     return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
   });
 
-  // Sort indicator function
   const getSortIndicator = (column: string) => {
     if (sortColumn !== column) return '';
     return sortDirection === 'asc' ? ' ▲' : ' ▼';
   };
 
-  // Last game processed info
-  const schedule = (data as any).schedule;
-  const games = schedule?.games || [];
-  const finalGames = games.filter((g: any) => g.status === 'FINAL');
-  const lastGame = finalGames.length > 0 ? finalGames[finalGames.length - 1] : null;
-
-  const updatedDate = new Date(data.updated_at).toLocaleString('en-US', {
-    timeZone: 'America/Toronto',
-    month: 'short', day: 'numeric', year: 'numeric',
-    hour: 'numeric', minute: '2-digit', hour12: true
-  });
-
-  const lastGameDate = lastGame ? new Date(lastGame.date + 'T20:00:00Z').toLocaleString('en-US', {
-    timeZone: 'America/Toronto',
-    month: 'short', day: 'numeric',
-  }) : null;
-
-  // Live game ticker data
+  // Schedule / last game / live ticker
   const scheduleGames = ((data as any).schedule?.games || []) as Array<{
     id: number; date: string; away: string; home: string; status: string;
     away_score: number; home_score: number; period?: number | null; clock?: string | null; time?: string;
   }>;
-  const todayGames = scheduleGames.filter(g => g.status === 'LIVE' || g.status === 'FINAL' || g.status === 'FUT');
+  const finalGames = scheduleGames.filter(g => g.status === 'FINAL');
+  const lastGame = finalGames.length > 0 ? finalGames[finalGames.length - 1] : null;
   const liveGames = scheduleGames.filter(g => g.status === 'LIVE');
-  const todayDate = scheduleGames.filter(g => g.status === 'LIVE').length > 0
-    ? scheduleGames.find(g => g.status === 'LIVE')!.date
+  const todayDate = liveGames.length > 0
+    ? liveGames[0].date
     : scheduleGames.filter(g => g.status === 'FUT')[0]?.date || scheduleGames[scheduleGames.length - 1]?.date;
   const dayGames = scheduleGames.filter(g => g.date === todayDate || g.status === 'LIVE');
 
+  const updatedDate = new Date(data.updated_at).toLocaleString('en-US', {
+    timeZone: 'America/Toronto', month: 'short', day: 'numeric', year: 'numeric',
+    hour: 'numeric', minute: '2-digit', hour12: true
+  });
+  const lastGameDate = lastGame ? new Date(lastGame.date + 'T20:00:00Z').toLocaleString('en-US', {
+    timeZone: 'America/Toronto', month: 'short', day: 'numeric',
+  }) : null;
+
+  // Milestones — filter out first_goal, show 5 most recent
+  const allMilestones = ((data as any).milestones || []).filter((m: any) => m.type !== 'first_goal');
+  const recentEvents = allMilestones.slice(0, 5);
+
+  // Hot players
+  const hotPlayers = ((data as any).hot_players || []).slice(0, 3);
+
+  const getMilestoneIcon = (type: string) => {
+    switch (type) {
+      case 'hat_trick': return '⚡';
+      case 'shutout': return '🧱';
+      case 'new_leader': return '🏆';
+      case 'milestone_goals': case 'milestone_points': return '⭐';
+      case 'big_game': return '💫';
+      default: return '🏒';
+    }
+  };
+
   return (
     <div>
-      {/* Navigation */}
-      <div className="glass-card mb-5 px-4 py-3">
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg font-bold" style={{ color: 'var(--text-primary)' }}>
-            📊 Current Standings
-          </h2>
-          <a 
-            href="/predictions" 
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 text-sm"
-          >
-            🎲 Predictions →
-          </a>
+      {/* Meta info row: last game + updated */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-5">
+        <div className="flex items-center gap-4 flex-wrap">
+          {lastGame && (
+            <div className="glass-card inline-flex items-center gap-3 px-4 py-2" style={{ borderRadius: '10px' }}>
+              <span className="text-xs font-semibold" style={{ color: 'var(--accent-blue)' }}>Last game</span>
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+                <Flag code={lastGame.away} /> {lastGame.away_score}–{lastGame.home_score} <Flag code={lastGame.home} />
+              </span>
+              <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{lastGameDate}</span>
+            </div>
+          )}
+          <div className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+            Updated {updatedDate} ET
+          </div>
         </div>
       </div>
 
@@ -262,126 +229,54 @@ export default function Home() {
         </div>
       )}
 
-      {/* Recent Milestones */}
-      {(() => {
-        const milestones = ((data as any).milestones || []).slice(0, 10);
-        if (milestones.length === 0) return null;
-        
-        const getMilestoneIcon = (type: string) => {
-          switch (type) {
-            case 'hat_trick': return '⚡';
-            case 'shutout': return '🧱';
-            case 'first_goal': return '🎯';
-            case 'new_leader': return '🏆';
-            case 'milestone_goals':
-            case 'milestone_points': return '⭐';
-            case 'big_game': return '💫';
-            default: return '🏒';
-          }
-        };
-        
-        return (
-          <div className="glass-card mb-5 px-4 py-3" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-sm font-bold" style={{ color: 'var(--accent-blue)' }}>⚡ RECENT MILESTONES</span>
-            </div>
-            <div className="space-y-2">
-              {milestones.map((milestone: any, i: number) => {
-                const logo = milestone.wally_team ? teamLogos[milestone.wally_team] : null;
-                const date = new Date(milestone.date).toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric'
-                });
-                
-                return (
-                  <div key={i} className="flex items-center gap-3 py-1">
-                    <div className="text-lg shrink-0">
-                      {getMilestoneIcon(milestone.type)}
+      {/* Recent Events (top 5 from milestones, excluding first_goal) */}
+      {recentEvents.length > 0 && (
+        <div className="glass-card mb-5 px-4 py-3" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-sm font-bold" style={{ color: 'var(--accent-blue)' }}>⚡ Recent Events</span>
+            <a href="/wally-cup-olympics/milestones" className="text-xs font-medium no-underline hover:underline" style={{ color: 'var(--accent-blue)' }}>
+              View all →
+            </a>
+          </div>
+          <div className="space-y-2">
+            {recentEvents.map((m: any, i: number) => {
+              const logo = m.wally_team ? teamLogos[m.wally_team] : null;
+              const date = new Date(m.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+              return (
+                <div key={i} className="flex items-center gap-3 py-1">
+                  <div className="text-lg shrink-0">{getMilestoneIcon(m.type)}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>{m.player}</span>
+                      <Flag code={m.country} size={14} />
+                      {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain" />}
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>
-                          {milestone.player}
-                        </span>
-                        <Flag code={milestone.country} size={14} />
-                        {logo && <img src={logo} alt="" className="w-4 h-4 rounded-sm object-contain" />}
-                      </div>
-                      <div className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
-                        {milestone.description}
-                      </div>
-                    </div>
-                    <div className="text-xs shrink-0" style={{ color: 'var(--text-muted)' }}>
-                      {date}
-                    </div>
+                    <div className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>{m.description}</div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })()}
-
-      {/* Section header */}
-      <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mobile-stack mobile-stack-header mobile-compact">
-        <div className="section-header-mobile">
-          <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-            Standings
-          </h2>
-          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            Rotisserie scoring across 6 categories: {categoryLabels.map(c => c.full).join(', ')}
-          </p>
-          <div className="mt-1 flex flex-col sm:flex-row gap-2">
-            <a href="/wally-cup-olympics/recap" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
-              Daily Recap →
-            </a>
-            <a href="/wally-cup-olympics/players" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
-              View All Olympic Players Rankings →
-            </a>
-            <a href="/wally-cup-olympics/radar" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
-              View Team Radar Charts →
-            </a>
-            <a href="/wally-cup-olympics/bracket" className="text-sm font-semibold no-underline hover:underline mobile-text-sm" style={{ color: 'var(--accent-blue)' }}>
-              View Tournament Bracket →
-            </a>
+                  <div className="text-xs shrink-0" style={{ color: 'var(--text-muted)' }}>{date}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="flex flex-col items-end gap-1.5">
-          {lastGame && (
-            <div className="glass-card inline-flex items-center gap-3 px-4 py-2.5 last-game-mobile" style={{ borderRadius: '10px' }}>
-              <span className="text-xs font-semibold mobile-text-xs" style={{ color: 'var(--accent-blue)' }}>Last game</span>
-              <span className="inline-flex items-center gap-1.5 text-sm font-bold mobile-text-sm" style={{ color: 'var(--text-primary)' }}>
-                <Flag code={lastGame.away} /> {lastGame.away_score}–{lastGame.home_score} <Flag code={lastGame.home} />
-              </span>
-              <span className="text-xs mobile-text-xs" style={{ color: 'var(--text-muted)' }}>
-                {lastGameDate}
-              </span>
-            </div>
-          )}
-          <div className="glass-card text-[11px] px-3 py-1.5" style={{ color: 'var(--text-secondary)', borderRadius: '8px' }}>
-            Updated {updatedDate} ET
-          </div>
-        </div>
-      </div>
+      )}
 
-      {/* Hot Players - Top 3 Performers */}
-      {(() => {
-        const hotPlayers = ((data as any).hot_players || []).slice(0, 3);
-        if (hotPlayers.length === 0) return null;
-        return (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+      {/* 🔥 Hot Players - Top 3 */}
+      {hotPlayers.length > 0 && (
+        <div className="mb-5">
+          <h3 className="text-sm font-bold mb-3" style={{ color: 'var(--text-secondary)' }}>🔥 Hottest Players (Last 72h)</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {hotPlayers.map((p: any, i: number) => {
               const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉';
               const logo = p.wally_team ? teamLogos[p.wally_team] : null;
-              const hs = p.hot_48h_stats || {};
+              const hs = p.hot_72h_stats || {};
               const isGoalie = p.pos === 'G';
               return (
                 <div key={p.name} className="glass-card px-4 py-3 flex items-center gap-3" style={{ borderLeft: '3px solid var(--accent-blue)' }}>
                   <div className="text-xl">{medal}</div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5">
-                      <span className="text-sm font-bold truncate" style={{ color: 'var(--text-primary)' }}>
-                        🔥 {p.name}
-                      </span>
+                      <span className="text-sm font-bold truncate" style={{ color: 'var(--text-primary)' }}>🔥 {p.name}</span>
                     </div>
                     <div className="flex items-center gap-2 mt-0.5">
                       <Flag code={p.country} size={14} />
@@ -398,61 +293,46 @@ export default function Home() {
               );
             })}
           </div>
-        );
-      })()}
+        </div>
+      )}
+
+      {/* Standings Section */}
+      <div className="mb-4">
+        <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          Standings
+        </h2>
+        <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
+          Rotisserie scoring across 6 categories
+        </p>
+      </div>
 
       {/* Standings table */}
       <div className="glass-card overflow-hidden glass-card-mobile">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0,  }}>
+          <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
-                <th 
-                  className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col cursor-pointer hover:bg-gray-50" 
-                  style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSort('displayRank')}
-                >
+                <th className="px-4 py-4 text-left text-[11px] font-semibold uppercase tracking-wider w-14 standings-rank-col cursor-pointer" style={{ color: 'var(--text-muted)' }} onClick={() => handleSort('displayRank')}>
                   Rank{getSortIndicator('displayRank')}
                 </th>
-                <th 
-                  className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col cursor-pointer hover:bg-gray-50" 
-                  style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSort('team')}
-                >
+                <th className="px-3 py-4 text-left text-[11px] font-semibold uppercase tracking-wider standings-team-col cursor-pointer" style={{ color: 'var(--text-muted)' }} onClick={() => handleSort('team')}>
                   Team{getSortIndicator('team')}
                 </th>
-                <th 
-                  className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer hover:bg-gray-50" 
-                  style={{ color: 'var(--text-muted)' }}
-                  onClick={() => handleSort('gp')}
-                >
+                <th className="px-2 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer" style={{ color: 'var(--text-muted)' }} onClick={() => handleSort('gp')}>
                   <div className="font-bold text-xs" style={{ color: 'var(--text-muted)' }}>GP{getSortIndicator('gp')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Games</div>
                 </th>
                 {categoryLabels.map(c => (
-                  <th 
-                    key={c.key} 
-                    className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer hover:bg-gray-50" 
-                    style={{ color: 'var(--text-muted)' }}
-                    onClick={() => handleSort(c.key)}
-                  >
+                  <th key={c.key} className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider category-header-mobile cursor-pointer" style={{ color: 'var(--text-muted)' }} onClick={() => handleSort(c.key)}>
                     <div className="font-bold text-xs" style={{ color: 'var(--text-secondary)' }}>{c.short}{getSortIndicator(c.key)}</div>
                     <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>{c.full}</div>
                   </th>
                 ))}
-                <th 
-                  className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
-                  style={{ color: 'var(--accent-blue)' }}
-                  onClick={() => handleSort('total_roto_points')}
-                >
+                <th className="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-wider cursor-pointer" style={{ color: 'var(--accent-blue)' }} onClick={() => handleSort('total_roto_points')}>
                   <div className="text-xs">PTS{getSortIndicator('total_roto_points')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Total</div>
                 </th>
-                <th 
-                  className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-gray-50" 
-                  style={{ color: 'var(--text-muted)', minWidth: '80px' }}
-                  onClick={() => handleSort('players_remaining')}
-                >
+                <th className="px-3 py-4 text-center text-[11px] font-semibold uppercase tracking-wider cursor-pointer" style={{ color: 'var(--text-muted)', minWidth: '80px' }} onClick={() => handleSort('players_remaining')}>
                   <div className="font-bold text-[10px]" style={{ color: 'var(--text-secondary)' }}>Players{getSortIndicator('players_remaining')}</div>
                   <div className="text-[9px] font-medium mt-0.5" style={{ color: 'var(--text-muted)' }}>Remaining</div>
                 </th>
@@ -465,23 +345,14 @@ export default function Home() {
                 const logoSrc = teamLogos[s.team];
                 const ap = activePlayersPerTeam[s.team] || { active: 0, total: 0 };
                 const allActive = ap.active === ap.total;
-
                 return (
-                  <tr
-                    key={s.team}
-                    className="table-row-hover"
-                    style={{
-                      borderBottom: '1px solid var(--border)',
-                      background: isTop3 ? 'rgba(37, 99, 235, 0.02)' : 'transparent',
-                    }}
-                  >
+                  <tr key={s.team} className="table-row-hover" style={{ borderBottom: '1px solid var(--border)', background: isTop3 ? 'rgba(37, 99, 235, 0.02)' : 'transparent' }}>
                     <td className="px-4 py-4" style={{ verticalAlign: 'top' }}>
                       {medalClass ? (
                         <span className={medalClass}>{s.displayRank}</span>
                       ) : (
                         <span className="text-sm font-bold pl-1.5" style={{ color: 'var(--text-muted)' }}>
-                          {s.displayRank}
-                          {s.isTied && <span className="tie-indicator">T</span>}
+                          {s.displayRank}{s.isTied && <span className="tie-indicator">T</span>}
                         </span>
                       )}
                     </td>
@@ -496,43 +367,25 @@ export default function Home() {
                       </a>
                     </td>
                     <td className="px-2 py-4 text-center" style={{ verticalAlign: 'top' }}>
-                      <div className="text-base font-medium" style={{ color: 'var(--text-muted)' }}>
-                        {gpPerTeam[s.team] ?? 0}
-                      </div>
-                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}>
-                        <span>&nbsp;</span>
-                      </div>
+                      <div className="text-base font-medium" style={{ color: 'var(--text-muted)' }}>{gpPerTeam[s.team] ?? 0}</div>
+                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}><span>&nbsp;</span></div>
                     </td>
                     {categoryLabels.map(c => {
                       const cat = s.categories[c.key];
                       return (
-                        <CategoryCell
-                          key={c.key}
-                          value={cat.value}
-                          rotoPoints={cat.roto_points}
-                          rank={cat.rank}
-                          isSavePct={c.key === 'save_pct'}
-                          isPlusMinus={c.key === 'plus_minus'}
-                          qualified={cat.qualified}
-                        />
+                        <CategoryCell key={c.key} value={cat.value} rotoPoints={cat.roto_points} rank={cat.rank}
+                          isSavePct={c.key === 'save_pct'} isPlusMinus={c.key === 'plus_minus'} qualified={cat.qualified} />
                       );
                     })}
                     <td className="px-5 py-4 text-center" style={{ verticalAlign: 'top' }}>
                       <span className={`points-pill ${isTop3 ? 'points-pill-top' : ''}`}>
-                        {s.total_roto_points}
-                        {s.isTied && <span className="tie-indicator ml-1">T</span>}
+                        {s.total_roto_points}{s.isTied && <span className="tie-indicator ml-1">T</span>}
                       </span>
-                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}>
-                        <span>&nbsp;</span>
-                      </div>
+                      <div className="cat-rank mt-1 inline-flex" style={{ visibility: 'hidden' }}><span>&nbsp;</span></div>
                     </td>
                     <td className="px-3 py-4 text-center" style={{ verticalAlign: 'top' }}>
-                      <div className="text-base font-bold" style={{ color: allActive ? 'var(--accent-green)' : 'var(--text-primary)' }}>
-                        {ap.active}
-                      </div>
-                      <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
-                        of {ap.total}
-                      </div>
+                      <div className="text-base font-bold" style={{ color: allActive ? 'var(--accent-green)' : 'var(--text-primary)' }}>{ap.active}</div>
+                      <div className="text-[10px]" style={{ color: 'var(--text-muted)' }}>of {ap.total}</div>
                     </td>
                   </tr>
                 );
