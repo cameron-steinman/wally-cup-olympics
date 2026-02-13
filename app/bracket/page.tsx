@@ -33,6 +33,9 @@ interface PlayerStats {
   assists: number;
   plus_minus: number;
   pim: number;
+  wins: number;
+  saves: number;
+  shots_against: number;
 }
 
 interface CountryData {
@@ -79,25 +82,23 @@ export default function BracketPage() {
   // Group players by country
   const countryData: Record<string, CountryData> = {};
   
+  // Initialize all countries (even if no Wally players)
+  Object.keys(countryNames).forEach(code => {
+    countryData[code] = {
+      code,
+      name: countryNames[code] || code,
+      playerCount: 0,
+      totalStats: { gp: 0, goals: 0, assists: 0, plus_minus: 0, pim: 0, wins: 0, saves: 0, shots_against: 0 },
+      players: []
+    };
+  });
+
   allOlympicPlayers.forEach((player: any) => {
     const country = player.country;
-    if (!country) return;
+    if (!country || !countryData[country]) return;
     
-    if (!countryData[country]) {
-      countryData[country] = {
-        code: country,
-        name: countryNames[country] || country,
-        playerCount: 0,
-        totalStats: {
-          gp: 0,
-          goals: 0,
-          assists: 0,
-          plus_minus: 0,
-          pim: 0
-        },
-        players: []
-      };
-    }
+    // Only count players on active Wally Cup teams
+    if (!player.wally_team) return;
     
     const stats = player.stats || {};
     countryData[country].playerCount++;
@@ -106,6 +107,9 @@ export default function BracketPage() {
     countryData[country].totalStats.assists += stats.assists || 0;
     countryData[country].totalStats.plus_minus += stats.plus_minus || 0;
     countryData[country].totalStats.pim += stats.pim || 0;
+    countryData[country].totalStats.wins += stats.wins || 0;
+    countryData[country].totalStats.saves += stats.saves || 0;
+    countryData[country].totalStats.shots_against += stats.shots_against || 0;
     
     countryData[country].players.push({
       name: player.name,
@@ -157,30 +161,32 @@ export default function BracketPage() {
           {country.playerCount} Wally Player{country.playerCount !== 1 ? 's' : ''}
         </div>
         
-        <div className="grid grid-cols-2 gap-2 text-xs">
+        <div className="grid grid-cols-3 gap-2 text-xs">
           <div>
-            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
-              {country.totalStats.goals}
-            </div>
-            <div style={{ color: 'var(--text-muted)' }}>Goals</div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>{country.totalStats.goals}</div>
+            <div style={{ color: 'var(--text-muted)' }}>G</div>
           </div>
           <div>
-            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
-              {country.totalStats.assists}
-            </div>
-            <div style={{ color: 'var(--text-muted)' }}>Assists</div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>{country.totalStats.assists}</div>
+            <div style={{ color: 'var(--text-muted)' }}>A</div>
           </div>
           <div>
-            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
-              {country.totalStats.plus_minus > 0 ? '+' : ''}{country.totalStats.plus_minus}
-            </div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>{country.totalStats.plus_minus > 0 ? '+' : ''}{country.totalStats.plus_minus}</div>
             <div style={{ color: 'var(--text-muted)' }}>+/-</div>
           </div>
           <div>
-            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
-              {country.totalStats.pim}
-            </div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>{country.totalStats.pim}</div>
             <div style={{ color: 'var(--text-muted)' }}>PIM</div>
+          </div>
+          <div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>{country.totalStats.wins}</div>
+            <div style={{ color: 'var(--text-muted)' }}>W</div>
+          </div>
+          <div>
+            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
+              {country.totalStats.shots_against > 0 ? (country.totalStats.saves / country.totalStats.shots_against).toFixed(3).replace(/^0/, '') : '—'}
+            </div>
+            <div style={{ color: 'var(--text-muted)' }}>SV%</div>
           </div>
         </div>
         
@@ -343,40 +349,54 @@ export default function BracketPage() {
         <h4 className="text-lg font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
           Tournament Summary
         </h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent-blue)' }}>
-              {Object.values(countryData).reduce((sum, country) => sum + country.playerCount, 0)}
+        {(() => {
+          const allCountries = Object.values(countryData);
+          const totalPlayers = allCountries.reduce((s, c) => s + c.playerCount, 0);
+          const totalG = allCountries.reduce((s, c) => s + c.totalStats.goals, 0);
+          const totalA = allCountries.reduce((s, c) => s + c.totalStats.assists, 0);
+          const totalPM = allCountries.reduce((s, c) => s + c.totalStats.plus_minus, 0);
+          const totalPIM = allCountries.reduce((s, c) => s + c.totalStats.pim, 0);
+          const totalW = allCountries.reduce((s, c) => s + c.totalStats.wins, 0);
+          const totalSaves = allCountries.reduce((s, c) => s + c.totalStats.saves, 0);
+          const totalSA = allCountries.reduce((s, c) => s + c.totalStats.shots_against, 0);
+          const svpct = totalSA > 0 ? (totalSaves / totalSA).toFixed(3).replace(/^0/, '') : '—';
+          return (
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--accent-blue)' }}>{totalPlayers}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Wally Players</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalG}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Goals</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalA}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Assists</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalPM > 0 ? '+' : ''}{totalPM}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>+/-</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalPIM}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>PIM</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalW}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Wins</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{svpct}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>SV%</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{totalG + totalA}</div>
+                <div className="text-xs" style={{ color: 'var(--text-muted)' }}>Points</div>
+              </div>
             </div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              Total Wally Players
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent-green)' }}>
-              {Object.values(countryData).reduce((sum, country) => sum + country.totalStats.goals, 0)}
-            </div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              Combined Goals
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent-sky)' }}>
-              {Object.values(countryData).reduce((sum, country) => sum + country.totalStats.assists, 0)}
-            </div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              Combined Assists
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent-red)' }}>
-              {Object.values(countryData).reduce((sum, country) => sum + country.totalStats.pim, 0)}
-            </div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              Total Penalty Minutes
-            </div>
-          </div>
-        </div>
+          );
+        })()}
       </div>
 
       {/* Footer */}
