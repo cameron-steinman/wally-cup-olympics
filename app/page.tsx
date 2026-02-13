@@ -324,7 +324,7 @@ export default function Home() {
       {/* Standings table */}
       <div className="glass-card overflow-hidden glass-card-mobile">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+          <table className="w-full mobile-table standings-table" style={{ borderCollapse: 'separate', borderSpacing: 0, tableLayout: 'fixed' }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th 

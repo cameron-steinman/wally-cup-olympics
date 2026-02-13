@@ -194,7 +194,7 @@ export default function PlayersPage() {
 
       <div className="glass-card overflow-hidden glass-card-mobile">
         <div className="overflow-x-auto mobile-table-scroll">
-          <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
+          <table className="w-full mobile-table all-players-table" style={{ borderCollapse: 'separate', borderSpacing: 0, tableLayout: 'fixed' }}>
             <thead>
               <tr style={{ background: 'rgba(37, 99, 235, 0.04)' }}>
                 <th 
@@ -290,7 +290,7 @@ export default function PlayersPage() {
                 return (
                   <tr key={p.name + p.country + idx} className="table-row-hover" style={{ borderBottom: '1px solid var(--border)' }}>
                     <td className="px-2 py-2 text-center">
-                      <span className="text-xs font-bold" style={{ color: p.rank <= 3 ? 'var(--accent-blue)' : 'var(--text-muted)' }}>
+                      <span className="text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                         {p.rank}
                       </span>
                     </td>
