@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-14T13:48:12.543898Z",
+  "updated_at": "2026-02-14T13:51:12.680136Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -129,11 +129,11 @@
         "time": "2026-02-14T11:00:00Z",
         "away": "SWE",
         "home": "SVK",
-        "status": "LIVE",
+        "status": "FINAL",
         "away_score": 5,
         "home_score": 3,
-        "period": 3,
-        "clock": "00:11"
+        "period": null,
+        "clock": null
       },
       {
         "id": 2025090012,
@@ -1702,6 +1702,22 @@
     "2026-02-14": {
       "games": [
         {
+          "id": 2025090011,
+          "away": {
+            "code": "SWE",
+            "name": "Sweden",
+            "flag": "\ud83c\uddf8\ud83c\uddea",
+            "score": 5
+          },
+          "home": {
+            "code": "SVK",
+            "name": "Slovakia",
+            "flag": "\ud83c\uddf8\ud83c\uddf0",
+            "score": 3
+          },
+          "final_score": "5-3"
+        },
+        {
           "id": 2025090012,
           "away": {
             "code": "GER",
@@ -1863,19 +1879,19 @@
         "risers": [
           {
             "team": "Cross's Beavers",
-            "rank_change": 5,
-            "roto_change": 12.0,
+            "rank_change": 4,
+            "roto_change": 11.0,
             "previous_rank": 7,
-            "current_rank": 2,
+            "current_rank": 3,
             "previous_roto": 38.0,
-            "current_roto": 50.0
+            "current_roto": 49.0
           },
           {
             "team": "Ice Holes",
-            "rank_change": 1,
+            "rank_change": 2,
             "roto_change": 1.5,
             "previous_rank": 4,
-            "current_rank": 3,
+            "current_rank": 2,
             "previous_roto": 48.0,
             "current_roto": 49.5
           },
@@ -1911,16 +1927,16 @@
           {
             "team": "Bardown",
             "rank_change": -4,
-            "roto_change": -5.5,
+            "roto_change": -4.5,
             "previous_rank": 2,
             "current_rank": 6,
             "previous_roto": 49.5,
-            "current_roto": 44.0
+            "current_roto": 45.0
           }
         ]
       },
       "milestones": [],
-      "recap_text": "Day 4 featured 1 game. The highest-scoring affair was Germany 3-4 Latvia. Lucas Raymond (Sweden) led the day with 1G 2A. In Wally Cup standings, Cross's Beavers moved up 5 spots. Johnny's Scrubbers dropped 1 spot."
+      "recap_text": "Day 4 featured 2 games. The highest-scoring affair was Sweden 5-3 Slovakia. Lucas Raymond (Sweden) led the day with 1G 2A. In Wally Cup standings, Cross's Beavers moved up 4 spots. Johnny's Scrubbers dropped 1 spot."
     }
   },
   "teams": {
@@ -25852,122 +25868,122 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Cross's Beavers": 0.1298,
-      "Big Shooters": 0.342,
-      "Bardown": 0.0778,
-      "Gabe's Gangsters": 0.1442,
-      "Johnny's Scrubbers": 0.0152,
-      "Cam's Crunch": 0.0226,
-      "Mark's Mafia": 0.0818,
-      "Ice Holes": 0.184,
-      "Todd's Hitmen": 0.0018,
+      "Ice Holes": 0.179,
+      "Bardown": 0.0834,
+      "Gabe's Gangsters": 0.1688,
+      "Big Shooters": 0.3424,
+      "Mark's Mafia": 0.073,
+      "Cam's Crunch": 0.0136,
+      "Cross's Beavers": 0.1162,
+      "Todd's Hitmen": 0.0016,
+      "Johnny's Scrubbers": 0.0214,
       "Gators": 0.0006,
-      "Willy's Warlocks": 0.0002,
-      "Owen's Otters": 0.0
+      "Owen's Otters": 0.0,
+      "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Cross's Beavers": 0.4008,
-      "Gabe's Gangsters": 0.39,
+      "Ice Holes": 0.5148,
+      "Big Shooters": 0.7094,
+      "Cross's Beavers": 0.3716,
+      "Bardown": 0.3322,
       "Mark's Mafia": 0.3468,
-      "Big Shooters": 0.7016,
-      "Ice Holes": 0.518,
-      "Bardown": 0.3234,
-      "Johnny's Scrubbers": 0.1082,
-      "Cam's Crunch": 0.14,
-      "Todd's Hitmen": 0.0482,
-      "Gators": 0.0206,
-      "Owen's Otters": 0.0022,
-      "Willy's Warlocks": 0.0002
+      "Gabe's Gangsters": 0.4162,
+      "Johnny's Scrubbers": 0.1186,
+      "Cam's Crunch": 0.1202,
+      "Todd's Hitmen": 0.0494,
+      "Willy's Warlocks": 0.0002,
+      "Gators": 0.018,
+      "Owen's Otters": 0.0026
     },
     "projected_points": {
-      "Cross's Beavers": 45.915,
-      "Gabe's Gangsters": 46.1388,
-      "Mark's Mafia": 44.2956,
-      "Johnny's Scrubbers": 36.4272,
-      "Bardown": 43.7017,
-      "Big Shooters": 52.8912,
-      "Todd's Hitmen": 34.8416,
-      "Ice Holes": 48.8237,
-      "Willy's Warlocks": 20.1007,
-      "Gators": 29.276,
-      "Cam's Crunch": 39.6477,
-      "Owen's Otters": 25.9408
+      "Ice Holes": 49.0856,
+      "Big Shooters": 53.1117,
+      "Cross's Beavers": 45.4589,
+      "Todd's Hitmen": 34.9575,
+      "Gators": 29.1503,
+      "Gabe's Gangsters": 46.6982,
+      "Cam's Crunch": 39.199,
+      "Mark's Mafia": 44.1902,
+      "Bardown": 44.0172,
+      "Johnny's Scrubbers": 37.0635,
+      "Owen's Otters": 25.5124,
+      "Willy's Warlocks": 19.5555
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.4412,
-        "silver": 0.3022,
-        "bronze": 0.1708
+        "gold": 0.4444,
+        "silver": 0.2992,
+        "bronze": 0.166
       },
       "USA": {
-        "gold": 0.2924,
-        "silver": 0.3156,
-        "bronze": 0.2288
+        "gold": 0.2928,
+        "silver": 0.3124,
+        "bronze": 0.2258
       },
       "SWE": {
-        "gold": 0.1274,
-        "silver": 0.1712,
-        "bronze": 0.2718
+        "gold": 0.127,
+        "silver": 0.1786,
+        "bronze": 0.258
       },
       "FIN": {
-        "gold": 0.0594,
-        "silver": 0.091,
-        "bronze": 0.1416
+        "gold": 0.0602,
+        "silver": 0.085,
+        "bronze": 0.1504
       },
       "CZE": {
-        "gold": 0.0374,
-        "silver": 0.0536,
-        "bronze": 0.081
+        "gold": 0.0324,
+        "silver": 0.0538,
+        "bronze": 0.0908
       },
       "SUI": {
-        "gold": 0.0226,
-        "silver": 0.0362,
-        "bronze": 0.0562
+        "gold": 0.0198,
+        "silver": 0.0372,
+        "bronze": 0.0594
       },
       "GER": {
-        "gold": 0.0076,
-        "silver": 0.0108,
-        "bronze": 0.019
+        "gold": 0.0106,
+        "silver": 0.016,
+        "bronze": 0.0198
       },
       "SVK": {
-        "gold": 0.0036,
-        "silver": 0.0102,
-        "bronze": 0.0158
+        "gold": 0.0056,
+        "silver": 0.0096,
+        "bronze": 0.0152
       },
       "LAT": {
-        "gold": 0.0044,
-        "silver": 0.004,
-        "bronze": 0.0074
+        "gold": 0.003,
+        "silver": 0.0034,
+        "bronze": 0.0058
       },
       "DEN": {
-        "gold": 0.0008,
-        "silver": 0.002,
-        "bronze": 0.003
+        "gold": 0.0018,
+        "silver": 0.0018,
+        "bronze": 0.0028
       },
       "ITA": {
-        "gold": 0.002,
+        "gold": 0.0014,
         "silver": 0.0018,
-        "bronze": 0.0016
+        "bronze": 0.0032
       },
       "FRA": {
-        "gold": 0.0012,
-        "silver": 0.0014,
-        "bronze": 0.003
+        "gold": 0.001,
+        "silver": 0.0012,
+        "bronze": 0.0028
       }
     },
     "country_knockout_odds": {
       "CAN": 1.0,
       "USA": 1.0,
-      "SWE": 0.9998,
-      "FIN": 0.9994,
-      "CZE": 0.994,
-      "SUI": 0.9986,
-      "GER": 0.1788,
-      "SVK": 0.8278,
-      "LAT": 0.9944,
-      "DEN": 0.0064,
+      "SWE": 1.0,
+      "FIN": 0.998,
+      "CZE": 0.9948,
+      "SUI": 0.9992,
+      "GER": 0.4506,
+      "SVK": 0.5566,
+      "LAT": 0.994,
+      "DEN": 0.0046,
       "ITA": 0.0,
-      "FRA": 0.0008
+      "FRA": 0.0022
     }
   }
 }
