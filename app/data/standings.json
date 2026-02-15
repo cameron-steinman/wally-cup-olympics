@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15T18:06:12.711700Z",
+  "updated_at": "2026-02-15T18:09:12.362929Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -189,11 +189,11 @@
         "time": "2026-02-15T15:30:00Z",
         "away": "CAN",
         "home": "FRA",
-        "status": "LIVE",
+        "status": "FINAL",
         "away_score": 10,
         "home_score": 2,
-        "period": 3,
-        "clock": "01:48"
+        "period": null,
+        "clock": null
       },
       {
         "id": 2025090017,
@@ -2029,6 +2029,22 @@
             "score": 3
           },
           "final_score": "4-3"
+        },
+        {
+          "id": 2025090016,
+          "away": {
+            "code": "CAN",
+            "name": "Canada",
+            "flag": "\ud83c\udde8\ud83c\udde6",
+            "score": 10
+          },
+          "home": {
+            "code": "FRA",
+            "name": "France",
+            "flag": "\ud83c\uddeb\ud83c\uddf7",
+            "score": 2
+          },
+          "final_score": "10-2"
         }
       ],
       "top_performers": [
@@ -2177,20 +2193,20 @@
           {
             "team": "Cam's Crunch",
             "rank_change": 2,
-            "roto_change": 9.0,
+            "roto_change": 8.0,
             "previous_rank": 4,
             "current_rank": 2,
             "previous_roto": 45.5,
-            "current_roto": 54.5
+            "current_roto": 53.5
           },
           {
             "team": "Gabe's Gangsters",
             "rank_change": 1,
-            "roto_change": 1.0,
+            "roto_change": 0.5,
             "previous_rank": 7,
             "current_rank": 6,
             "previous_roto": 40.5,
-            "current_roto": 41.5
+            "current_roto": 41.0
           },
           {
             "team": "Todd's Hitmen",
@@ -2233,7 +2249,7 @@
         ]
       },
       "milestones": [],
-      "recap_text": "Day 5 featured 1 game. The highest-scoring affair was Switzerland 4-3 Czechia. Macklin Celebrini (Canada) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Bardown dropped 1 spot."
+      "recap_text": "Day 5 featured 2 games. The highest-scoring affair was Canada 10-2 France. Macklin Celebrini (Canada) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Bardown dropped 1 spot."
     }
   },
   "teams": {
@@ -28147,107 +28163,107 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.4434,
-      "Ice Holes": 0.1958,
-      "Gabe's Gangsters": 0.1256,
-      "Bardown": 0.0544,
-      "Cam's Crunch": 0.0794,
-      "Mark's Mafia": 0.0616,
-      "Johnny's Scrubbers": 0.0022,
-      "Cross's Beavers": 0.0336,
-      "Todd's Hitmen": 0.003,
-      "Owen's Otters": 0.001,
-      "Gators": 0.0,
+      "Big Shooters": 0.488,
+      "Mark's Mafia": 0.0572,
+      "Ice Holes": 0.1686,
+      "Gabe's Gangsters": 0.1186,
+      "Todd's Hitmen": 0.0042,
+      "Cam's Crunch": 0.0716,
+      "Bardown": 0.056,
+      "Gators": 0.0006,
+      "Cross's Beavers": 0.033,
+      "Johnny's Scrubbers": 0.0018,
+      "Owen's Otters": 0.0004,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Big Shooters": 0.7418,
-      "Bardown": 0.305,
-      "Gabe's Gangsters": 0.3514,
-      "Mark's Mafia": 0.2652,
-      "Ice Holes": 0.5298,
-      "Todd's Hitmen": 0.0978,
-      "Cam's Crunch": 0.4424,
-      "Cross's Beavers": 0.1718,
-      "Johnny's Scrubbers": 0.0704,
-      "Gators": 0.0168,
-      "Owen's Otters": 0.0076,
+      "Big Shooters": 0.7892,
+      "Todd's Hitmen": 0.102,
+      "Mark's Mafia": 0.2266,
+      "Cam's Crunch": 0.4312,
+      "Ice Holes": 0.524,
+      "Gabe's Gangsters": 0.3566,
+      "Bardown": 0.3048,
+      "Cross's Beavers": 0.1638,
+      "Gators": 0.0156,
+      "Johnny's Scrubbers": 0.0736,
+      "Owen's Otters": 0.0126,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 55.6372,
-      "Bardown": 43.8905,
-      "Gabe's Gangsters": 45.8064,
-      "Cam's Crunch": 46.9312,
-      "Mark's Mafia": 41.6071,
-      "Ice Holes": 49.7287,
-      "Todd's Hitmen": 37.3537,
-      "Johnny's Scrubbers": 36.5015,
-      "Cross's Beavers": 39.8084,
-      "Gators": 29.5733,
-      "Owen's Otters": 24.7152,
-      "Willy's Warlocks": 16.4468
+      "Big Shooters": 56.4419,
+      "Todd's Hitmen": 37.1427,
+      "Mark's Mafia": 40.703,
+      "Ice Holes": 49.6223,
+      "Cross's Beavers": 39.5276,
+      "Cam's Crunch": 46.8301,
+      "Gators": 28.9834,
+      "Bardown": 43.9591,
+      "Gabe's Gangsters": 45.7183,
+      "Owen's Otters": 25.1856,
+      "Johnny's Scrubbers": 37.0286,
+      "Willy's Warlocks": 16.8574
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.438,
-        "silver": 0.313,
-        "bronze": 0.167
+        "gold": 0.4464,
+        "silver": 0.3108,
+        "bronze": 0.1688
       },
       "USA": {
-        "gold": 0.2982,
-        "silver": 0.3174,
-        "bronze": 0.2258
+        "gold": 0.281,
+        "silver": 0.3146,
+        "bronze": 0.2354
       },
       "SWE": {
-        "gold": 0.1262,
-        "silver": 0.1756,
-        "bronze": 0.2638
+        "gold": 0.134,
+        "silver": 0.1676,
+        "bronze": 0.2602
       },
       "FIN": {
-        "gold": 0.0604,
-        "silver": 0.0816,
-        "bronze": 0.1478
+        "gold": 0.0606,
+        "silver": 0.0922,
+        "bronze": 0.1354
       },
       "CZE": {
-        "gold": 0.0386,
-        "silver": 0.0496,
-        "bronze": 0.0848
+        "gold": 0.036,
+        "silver": 0.0536,
+        "bronze": 0.0816
       },
       "SUI": {
-        "gold": 0.0206,
-        "silver": 0.0298,
-        "bronze": 0.0626
+        "gold": 0.0222,
+        "silver": 0.0294,
+        "bronze": 0.065
       },
       "GER": {
-        "gold": 0.0062,
-        "silver": 0.013,
-        "bronze": 0.0202
+        "gold": 0.0086,
+        "silver": 0.015,
+        "bronze": 0.0222
       },
       "SVK": {
-        "gold": 0.007,
-        "silver": 0.0082,
-        "bronze": 0.013
+        "gold": 0.0058,
+        "silver": 0.008,
+        "bronze": 0.0156
       },
       "LAT": {
-        "gold": 0.0028,
-        "silver": 0.0052,
-        "bronze": 0.0082
+        "gold": 0.0026,
+        "silver": 0.0048,
+        "bronze": 0.0094
       },
       "DEN": {
-        "gold": 0.0004,
-        "silver": 0.0024,
-        "bronze": 0.0016
+        "gold": 0.001,
+        "silver": 0.001,
+        "bronze": 0.0022
       },
       "ITA": {
-        "gold": 0.0004,
-        "silver": 0.0016,
-        "bronze": 0.003
+        "gold": 0.0012,
+        "silver": 0.0008,
+        "bronze": 0.0022
       },
       "FRA": {
-        "gold": 0.0012,
-        "silver": 0.0026,
-        "bronze": 0.0022
+        "gold": 0.0006,
+        "silver": 0.0022,
+        "bronze": 0.002
       }
     },
     "country_knockout_odds": {
@@ -28255,14 +28271,14 @@
       "USA": 1.0,
       "SWE": 1.0,
       "FIN": 1.0,
-      "CZE": 0.9198,
+      "CZE": 0.9098,
       "SUI": 1.0,
-      "GER": 0.4906,
-      "SVK": 0.5896,
-      "LAT": 0.997,
+      "GER": 0.4918,
+      "SVK": 0.5984,
+      "LAT": 0.9984,
       "DEN": 0.0016,
       "ITA": 0.0,
-      "FRA": 0.0014
+      "FRA": 0.0
     }
   }
 }
