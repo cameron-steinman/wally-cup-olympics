@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15T20:36:12.071418Z",
+  "updated_at": "2026-02-15T20:39:12.797143Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -201,11 +201,11 @@
         "time": "2026-02-15T18:00:00Z",
         "away": "DEN",
         "home": "LAT",
-        "status": "LIVE",
+        "status": "FINAL",
         "away_score": 4,
         "home_score": 2,
-        "period": 3,
-        "clock": "01:08"
+        "period": null,
+        "clock": null
       },
       {
         "id": 2025090018,
@@ -217,7 +217,7 @@
         "away_score": 0,
         "home_score": 0,
         "period": 1,
-        "clock": "04:57"
+        "clock": "03:03"
       },
       {
         "id": 2025090019,
@@ -2029,6 +2029,22 @@
             "score": 2
           },
           "final_score": "10-2"
+        },
+        {
+          "id": 2025090017,
+          "away": {
+            "code": "DEN",
+            "name": "Denmark",
+            "flag": "\ud83c\udde9\ud83c\uddf0",
+            "score": 4
+          },
+          "home": {
+            "code": "LAT",
+            "name": "Latvia",
+            "flag": "\ud83c\uddf1\ud83c\uddfb",
+            "score": 2
+          },
+          "final_score": "4-2"
         }
       ],
       "top_performers": [
@@ -2234,7 +2250,7 @@
         ]
       },
       "milestones": [],
-      "recap_text": "Day 5 featured 2 games. The highest-scoring affair was Canada 10-2 France. Macklin Celebrini (Canada) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Bardown dropped 1 spot."
+      "recap_text": "Day 5 featured 3 games. The highest-scoring affair was Canada 10-2 France. Macklin Celebrini (Canada) led the day with 2G 1A. In Wally Cup standings, Cam's Crunch moved up 2 spots. Bardown dropped 1 spot."
     }
   },
   "teams": {
@@ -29237,106 +29253,106 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Cross's Beavers": 0.0416,
-      "Big Shooters": 0.5026,
-      "Ice Holes": 0.199,
-      "Gabe's Gangsters": 0.0648,
-      "Bardown": 0.0418,
-      "Cam's Crunch": 0.0812,
-      "Mark's Mafia": 0.0604,
-      "Todd's Hitmen": 0.005,
-      "Johnny's Scrubbers": 0.0026,
-      "Gators": 0.001,
-      "Owen's Otters": 0.0,
+      "Big Shooters": 0.4976,
+      "Cam's Crunch": 0.0662,
+      "Ice Holes": 0.2114,
+      "Cross's Beavers": 0.0402,
+      "Gabe's Gangsters": 0.075,
+      "Bardown": 0.0358,
+      "Mark's Mafia": 0.0652,
+      "Todd's Hitmen": 0.0056,
+      "Johnny's Scrubbers": 0.0028,
+      "Owen's Otters": 0.0002,
+      "Gators": 0.0,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Cross's Beavers": 0.1976,
-      "Mark's Mafia": 0.2436,
-      "Big Shooters": 0.7896,
-      "Gabe's Gangsters": 0.2656,
-      "Bardown": 0.2752,
-      "Ice Holes": 0.5602,
-      "Cam's Crunch": 0.4724,
-      "Johnny's Scrubbers": 0.0772,
-      "Todd's Hitmen": 0.0988,
-      "Gators": 0.0176,
-      "Owen's Otters": 0.0022,
+      "Big Shooters": 0.787,
+      "Ice Holes": 0.5584,
+      "Cam's Crunch": 0.4422,
+      "Todd's Hitmen": 0.1056,
+      "Mark's Mafia": 0.242,
+      "Gabe's Gangsters": 0.294,
+      "Cross's Beavers": 0.1852,
+      "Bardown": 0.2872,
+      "Johnny's Scrubbers": 0.079,
+      "Gators": 0.0166,
+      "Owen's Otters": 0.0028,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Cross's Beavers": 41.2498,
-      "Mark's Mafia": 41.2774,
-      "Big Shooters": 56.5701,
-      "Cam's Crunch": 47.1961,
-      "Ice Holes": 50.2477,
-      "Gabe's Gangsters": 43.7382,
-      "Bardown": 43.3191,
-      "Todd's Hitmen": 37.4859,
-      "Johnny's Scrubbers": 37.7758,
-      "Gators": 29.7294,
-      "Owen's Otters": 23.5598,
-      "Willy's Warlocks": 15.8507
+      "Big Shooters": 56.6383,
+      "Ice Holes": 50.2639,
+      "Cam's Crunch": 46.8247,
+      "Bardown": 43.5501,
+      "Johnny's Scrubbers": 37.5542,
+      "Gabe's Gangsters": 44.3292,
+      "Cross's Beavers": 40.9702,
+      "Todd's Hitmen": 37.6033,
+      "Mark's Mafia": 41.2361,
+      "Gators": 29.6889,
+      "Willy's Warlocks": 15.7998,
+      "Owen's Otters": 23.5413
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.4416,
-        "silver": 0.3162,
-        "bronze": 0.161
+        "gold": 0.4418,
+        "silver": 0.3106,
+        "bronze": 0.1686
       },
       "USA": {
-        "gold": 0.283,
-        "silver": 0.324,
-        "bronze": 0.2228
+        "gold": 0.2914,
+        "silver": 0.3064,
+        "bronze": 0.2314
       },
       "SWE": {
-        "gold": 0.1314,
-        "silver": 0.1624,
-        "bronze": 0.2646
+        "gold": 0.1288,
+        "silver": 0.1778,
+        "bronze": 0.2628
       },
       "FIN": {
-        "gold": 0.0638,
-        "silver": 0.084,
-        "bronze": 0.143
+        "gold": 0.0582,
+        "silver": 0.086,
+        "bronze": 0.144
       },
       "CZE": {
-        "gold": 0.0342,
-        "silver": 0.05,
-        "bronze": 0.0964
+        "gold": 0.0336,
+        "silver": 0.0564,
+        "bronze": 0.0892
       },
       "SUI": {
         "gold": 0.0228,
-        "silver": 0.032,
-        "bronze": 0.0588
+        "silver": 0.0324,
+        "bronze": 0.0542
       },
       "GER": {
-        "gold": 0.0096,
-        "silver": 0.0124,
-        "bronze": 0.021
+        "gold": 0.01,
+        "silver": 0.0102,
+        "bronze": 0.0198
       },
       "SVK": {
-        "gold": 0.0072,
-        "silver": 0.0102,
-        "bronze": 0.018
+        "gold": 0.0068,
+        "silver": 0.0118,
+        "bronze": 0.015
       },
       "LAT": {
-        "gold": 0.0032,
-        "silver": 0.0052,
-        "bronze": 0.0076
+        "gold": 0.004,
+        "silver": 0.0044,
+        "bronze": 0.0082
       },
       "DEN": {
-        "gold": 0.0016,
-        "silver": 0.0012,
-        "bronze": 0.0016
+        "gold": 0.0004,
+        "silver": 0.0008,
+        "bronze": 0.002
       },
       "ITA": {
         "gold": 0.0014,
-        "silver": 0.002,
-        "bronze": 0.0022
+        "silver": 0.0018,
+        "bronze": 0.0018
       },
       "FRA": {
-        "gold": 0.0002,
-        "silver": 0.0004,
+        "gold": 0.0008,
+        "silver": 0.0014,
         "bronze": 0.003
       }
     },
@@ -29345,14 +29361,14 @@
       "USA": 1.0,
       "SWE": 1.0,
       "FIN": 1.0,
-      "CZE": 0.9152,
+      "CZE": 0.9078,
       "SUI": 1.0,
-      "GER": 0.4928,
-      "SVK": 0.592,
-      "LAT": 0.9988,
-      "DEN": 0.0008,
+      "GER": 0.498,
+      "SVK": 0.5942,
+      "LAT": 0.8932,
+      "DEN": 0.1048,
       "ITA": 0.0,
-      "FRA": 0.0004
+      "FRA": 0.002
     }
   }
 }
