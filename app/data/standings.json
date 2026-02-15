@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15T12:18:12.490750Z",
+  "updated_at": "2026-02-15T12:21:11.962538Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -181,7 +181,7 @@
         "away_score": 0,
         "home_score": 1,
         "period": 2,
-        "clock": "12:08"
+        "clock": "11:15"
       },
       {
         "id": 2025090016,
@@ -473,7 +473,7 @@
           "roto_points": 10.5
         },
         "save_pct": {
-          "value": 0.8688524590163934,
+          "value": 0.8709677419354839,
           "rank": 7,
           "qualified": true,
           "roto_points": 6
@@ -5585,10 +5585,10 @@
           "stats": {
             "gp": 2,
             "wins": 1,
-            "saves": 44,
-            "shots_against": 49,
-            "save_pct": 0.9193548387096774,
-            "toi_minutes": 25.7
+            "saves": 45,
+            "shots_against": 50,
+            "save_pct": 0.921875,
+            "toi_minutes": 28.183333333333334
           }
         },
         {
@@ -5726,9 +5726,9 @@
       "goalie_stats": {
         "aggregate": {
           "wins": 3,
-          "saves": 53,
-          "shots_against": 61,
-          "save_pct": 0.8688524590163934,
+          "saves": 54,
+          "shots_against": 62,
+          "save_pct": 0.8709677419354839,
           "qualified": true
         }
       },
@@ -5738,7 +5738,7 @@
         "plus_minus": 9,
         "pim": 2,
         "goalie_wins": 3,
-        "save_pct": 0.8688524590163934,
+        "save_pct": 0.8709677419354839,
         "sv_qualified": true
       }
     },
@@ -10331,7 +10331,7 @@
           }
         }
       ],
-      "zscore": 2.92,
+      "zscore": 2.91,
       "zscore_rank": 44,
       "hot_72h_stats": {
         "gp": 3,
@@ -13622,7 +13622,7 @@
           }
         }
       ],
-      "zscore": 2.76,
+      "zscore": 2.75,
       "zscore_rank": 49,
       "hot_72h_stats": {
         "gp": 3,
@@ -16743,7 +16743,7 @@
           }
         }
       ],
-      "zscore": 0.08,
+      "zscore": 0.07,
       "zscore_rank": 119,
       "hot_72h_stats": {
         "gp": 2,
@@ -16786,9 +16786,9 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 35,
-        "shots_against": 36,
-        "save_pct": 0.9722222222222222
+        "saves": 38,
+        "shots_against": 39,
+        "save_pct": 0.9743589743589743
       },
       "game_log": [
         {
@@ -16817,13 +16817,13 @@
           "stats": {
             "gp": 1,
             "wins": 0,
-            "saves": 8,
-            "shots_against": 9
+            "saves": 11,
+            "shots_against": 12
           }
         }
       ],
-      "zscore": 1.26,
-      "zscore_rank": 73,
+      "zscore": 1.28,
+      "zscore_rank": 72,
       "hot_72h_stats": {
         "gp": 2,
         "goals": 0,
@@ -19827,9 +19827,9 @@
         "plus_minus": 0,
         "pim": 0,
         "wins": 1,
-        "saves": 44,
-        "shots_against": 49,
-        "save_pct": 0.8979591836734694
+        "saves": 45,
+        "shots_against": 50,
+        "save_pct": 0.9
       },
       "game_log": [
         {
@@ -19848,12 +19848,12 @@
           "stats": {
             "gp": 1,
             "wins": 1,
-            "saves": 13,
-            "shots_against": 13
+            "saves": 14,
+            "shots_against": 14
           }
         }
       ],
-      "zscore": 0.5,
+      "zscore": 0.52,
       "zscore_rank": 101,
       "hot_72h_stats": {
         "gp": 1,
@@ -27474,107 +27474,107 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.4752,
-      "Bardown": 0.0802,
-      "Gabe's Gangsters": 0.1168,
-      "Cross's Beavers": 0.067,
-      "Ice Holes": 0.1894,
-      "Mark's Mafia": 0.0396,
-      "Cam's Crunch": 0.0052,
-      "Todd's Hitmen": 0.0018,
-      "Owen's Otters": 0.0008,
-      "Johnny's Scrubbers": 0.0236,
-      "Gators": 0.0004,
+      "Ice Holes": 0.1738,
+      "Mark's Mafia": 0.0398,
+      "Bardown": 0.081,
+      "Cross's Beavers": 0.0624,
+      "Big Shooters": 0.4952,
+      "Gabe's Gangsters": 0.116,
+      "Johnny's Scrubbers": 0.0212,
+      "Cam's Crunch": 0.0062,
+      "Todd's Hitmen": 0.0022,
+      "Gators": 0.0008,
+      "Owen's Otters": 0.0014,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Big Shooters": 0.8168,
-      "Cross's Beavers": 0.2924,
-      "Gabe's Gangsters": 0.3648,
-      "Todd's Hitmen": 0.0604,
-      "Bardown": 0.369,
-      "Ice Holes": 0.5454,
-      "Mark's Mafia": 0.2338,
-      "Johnny's Scrubbers": 0.2126,
-      "Cam's Crunch": 0.0728,
-      "Owen's Otters": 0.0148,
-      "Gators": 0.0172,
+      "Ice Holes": 0.537,
+      "Big Shooters": 0.8176,
+      "Gabe's Gangsters": 0.3708,
+      "Mark's Mafia": 0.227,
+      "Bardown": 0.367,
+      "Cross's Beavers": 0.289,
+      "Todd's Hitmen": 0.0606,
+      "Johnny's Scrubbers": 0.2234,
+      "Cam's Crunch": 0.0692,
+      "Owen's Otters": 0.0184,
+      "Gators": 0.02,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 57.0107,
-      "Cross's Beavers": 42.9022,
-      "Gabe's Gangsters": 45.9411,
-      "Ice Holes": 49.8728,
-      "Todd's Hitmen": 35.9232,
-      "Bardown": 44.3643,
-      "Johnny's Scrubbers": 41.4614,
-      "Owen's Otters": 26.4929,
-      "Mark's Mafia": 41.1123,
-      "Cam's Crunch": 37.1947,
-      "Gators": 27.2939,
-      "Willy's Warlocks": 18.4305
+      "Ice Holes": 49.6613,
+      "Big Shooters": 57.01,
+      "Gabe's Gangsters": 45.8642,
+      "Cross's Beavers": 42.9365,
+      "Bardown": 44.1656,
+      "Cam's Crunch": 37.0602,
+      "Mark's Mafia": 40.8639,
+      "Johnny's Scrubbers": 41.5901,
+      "Todd's Hitmen": 36.1316,
+      "Owen's Otters": 26.6211,
+      "Gators": 27.4091,
+      "Willy's Warlocks": 18.6864
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.4358,
-        "silver": 0.3162,
-        "bronze": 0.1616
+        "gold": 0.4356,
+        "silver": 0.3124,
+        "bronze": 0.1596
       },
       "USA": {
-        "gold": 0.2902,
-        "silver": 0.299,
-        "bronze": 0.2388
+        "gold": 0.2892,
+        "silver": 0.32,
+        "bronze": 0.2228
       },
       "SWE": {
-        "gold": 0.1342,
-        "silver": 0.175,
-        "bronze": 0.2714
+        "gold": 0.1226,
+        "silver": 0.17,
+        "bronze": 0.2626
       },
       "FIN": {
-        "gold": 0.0604,
-        "silver": 0.0906,
-        "bronze": 0.1406
+        "gold": 0.0618,
+        "silver": 0.0802,
+        "bronze": 0.1488
       },
       "CZE": {
-        "gold": 0.039,
-        "silver": 0.0566,
-        "bronze": 0.0876
+        "gold": 0.0432,
+        "silver": 0.0538,
+        "bronze": 0.0886
       },
       "SUI": {
-        "gold": 0.0224,
-        "silver": 0.0342,
-        "bronze": 0.0536
+        "gold": 0.0258,
+        "silver": 0.0334,
+        "bronze": 0.0618
       },
       "GER": {
-        "gold": 0.007,
-        "silver": 0.0098,
-        "bronze": 0.0208
+        "gold": 0.0102,
+        "silver": 0.0142,
+        "bronze": 0.023
       },
       "SVK": {
-        "gold": 0.0046,
-        "silver": 0.0088,
-        "bronze": 0.0142
+        "gold": 0.0056,
+        "silver": 0.0094,
+        "bronze": 0.0158
       },
       "LAT": {
-        "gold": 0.0026,
-        "silver": 0.0042,
-        "bronze": 0.0054
+        "gold": 0.0024,
+        "silver": 0.0036,
+        "bronze": 0.0078
       },
       "DEN": {
-        "gold": 0.0012,
-        "silver": 0.0024,
-        "bronze": 0.0022
+        "gold": 0.001,
+        "silver": 0.001,
+        "bronze": 0.0024
       },
       "ITA": {
-        "gold": 0.0012,
-        "silver": 0.001,
-        "bronze": 0.002
+        "gold": 0.0014,
+        "silver": 0.0006,
+        "bronze": 0.0036
       },
       "FRA": {
-        "gold": 0.0014,
-        "silver": 0.0022,
-        "bronze": 0.0018
+        "gold": 0.0012,
+        "silver": 0.0014,
+        "bronze": 0.0032
       }
     },
     "country_knockout_odds": {
@@ -27582,14 +27582,14 @@
       "USA": 1.0,
       "SWE": 1.0,
       "FIN": 1.0,
-      "CZE": 0.9958,
-      "SUI": 0.9994,
-      "GER": 0.4434,
-      "SVK": 0.5608,
-      "LAT": 0.9982,
-      "DEN": 0.0012,
+      "CZE": 0.9974,
+      "SUI": 0.9988,
+      "GER": 0.4624,
+      "SVK": 0.5402,
+      "LAT": 0.9978,
+      "DEN": 0.002,
       "ITA": 0.0,
-      "FRA": 0.0012
+      "FRA": 0.0014
     }
   }
 }
