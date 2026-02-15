@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15T18:09:12.362929Z",
+  "updated_at": "2026-02-15T18:12:12.178967Z",
   "tournament_status": "group_stage",
   "schedule": {
     "games": [
@@ -201,11 +201,11 @@
         "time": "2026-02-15T18:00:00Z",
         "away": "DEN",
         "home": "LAT",
-        "status": "FUT",
+        "status": "LIVE",
         "away_score": 0,
         "home_score": 0,
-        "period": null,
-        "clock": null
+        "period": 1,
+        "clock": "19:37"
       },
       {
         "id": 2025090018,
@@ -330,21 +330,13 @@
       "status": "active",
       "name": "Denmark",
       "flag": "\ud83c\udde9\ud83c\uddf0",
-      "next_game": {
-        "vs": "LAT",
-        "date": "2026-02-15",
-        "time": "2026-02-15T18:00:00Z"
-      }
+      "next_game": null
     },
     "LAT": {
       "status": "active",
       "name": "Latvia",
       "flag": "\ud83c\uddf1\ud83c\uddfb",
-      "next_game": {
-        "vs": "DEN",
-        "date": "2026-02-15",
-        "time": "2026-02-15T18:00:00Z"
-      }
+      "next_game": null
     },
     "ITA": {
       "status": "active",
@@ -3878,7 +3870,7 @@
           "pos": "G",
           "status": "active",
           "stats": {
-            "gp": 2,
+            "gp": 3,
             "wins": 1,
             "saves": 28,
             "shots_against": 32,
@@ -4292,12 +4284,12 @@
           "pos": "G",
           "status": "active",
           "stats": {
-            "gp": 1,
+            "gp": 2,
             "wins": 0,
             "saves": 23,
             "shots_against": 26,
             "save_pct": 0.8846153846153846,
-            "toi_minutes": 56.43333333333333
+            "toi_minutes": 0.0
           }
         }
       ],
@@ -5632,7 +5624,7 @@
           "pos": "F",
           "status": "active",
           "stats": {
-            "gp": 2,
+            "gp": 3,
             "goals": 0,
             "assists": 2,
             "plus_minus": 1,
@@ -5906,7 +5898,7 @@
           "pos": "F",
           "status": "active",
           "stats": {
-            "gp": 2,
+            "gp": 3,
             "goals": 0,
             "assists": 0,
             "plus_minus": 0,
@@ -22038,7 +22030,7 @@
       "player_id": 8481137,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8481137.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 1,
         "plus_minus": 1,
@@ -22066,12 +22058,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 3.38,
       "zscore_rank": 21,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 1,
         "plus_minus": 1,
@@ -22084,7 +22087,7 @@
       "hot_zscore": 3.677887864288431,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 1,
         "plus_minus": 1,
@@ -22105,7 +22108,7 @@
       "player_id": 8483704,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8483704.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 0,
         "plus_minus": -1,
@@ -22133,12 +22136,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.33,
       "zscore_rank": 106,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 0,
         "plus_minus": -1,
@@ -22151,7 +22165,7 @@
       "hot_zscore": 0.5305208613152885,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 2,
         "assists": 0,
         "plus_minus": -1,
@@ -22172,7 +22186,7 @@
       "player_id": 8479042,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8479042.jpg",
       "stats": {
-        "gp": 3,
+        "gp": 5,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22211,12 +22225,34 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.95,
       "zscore_rank": 269,
       "hot_72h_stats": {
-        "gp": 3,
+        "gp": 5,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22229,7 +22265,7 @@
       "hot_zscore": -2.9115188758150556,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 3,
+        "gp": 5,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22250,7 +22286,7 @@
       "player_id": 8473484,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8473484.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -22278,12 +22314,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.1,
       "zscore_rank": 113,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -22296,7 +22343,7 @@
       "hot_zscore": 0.2358481271580879,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -22317,7 +22364,7 @@
       "player_id": 8478832,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8478832.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22345,12 +22392,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.42,
       "zscore_rank": 250,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22363,7 +22421,7 @@
       "hot_zscore": -2.370048335016328,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22384,7 +22442,7 @@
       "player_id": 8478870,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8478870.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -2,
@@ -22412,12 +22470,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.01,
       "zscore_rank": 239,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -2,
@@ -22430,7 +22499,7 @@
       "hot_zscore": -1.915013862478502,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -2,
@@ -22451,7 +22520,7 @@
       "player_id": 8483771,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8483771.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22479,12 +22548,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.42,
       "zscore_rank": 250,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22497,7 +22577,7 @@
       "hot_zscore": -2.370048335016328,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22518,7 +22598,7 @@
       "player_id": 8476927,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8476927.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22546,12 +22626,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.95,
       "zscore_rank": 269,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22564,7 +22655,7 @@
       "hot_zscore": -2.9115188758150556,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -22585,7 +22676,7 @@
       "player_id": 8476878,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8476878.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 3,
         "plus_minus": 1,
@@ -22613,12 +22704,23 @@
             "plus_minus": 1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 1.44,
       "zscore_rank": 67,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 3,
         "plus_minus": 1,
@@ -22631,7 +22733,7 @@
       "hot_zscore": 1.7024077865907856,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 3,
         "plus_minus": 1,
@@ -22652,7 +22754,7 @@
       "player_id": 8482631,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8482631.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 1,
@@ -22680,12 +22782,23 @@
             "plus_minus": 1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 1.07,
       "zscore_rank": 76,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 1,
@@ -22698,7 +22811,7 @@
       "hot_zscore": 1.2310982527860697,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 1,
@@ -22719,7 +22832,7 @@
       "player_id": 8483110,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8483110.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22747,12 +22860,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.42,
       "zscore_rank": 250,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22765,7 +22889,7 @@
       "hot_zscore": -2.370048335016328,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22786,7 +22910,7 @@
       "player_id": 8485953,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8485953.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22814,12 +22938,23 @@
             "plus_minus": 0,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.36,
       "zscore_rank": 175,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22832,7 +22967,7 @@
       "hot_zscore": -1.3021274269771923,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -22909,7 +23044,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -22937,12 +23072,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.48,
       "zscore_rank": 189,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -22955,7 +23101,7 @@
       "hot_zscore": -1.3735433216797748,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -22976,7 +23122,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 1,
@@ -23004,12 +23150,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -0.43,
       "zscore_rank": 137,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 1,
@@ -23022,7 +23179,7 @@
       "hot_zscore": -0.2906022400823209,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 1,
@@ -23099,7 +23256,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -3,
@@ -23127,12 +23284,23 @@
             "plus_minus": -1,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.35,
       "zscore_rank": 174,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -3,
@@ -23145,7 +23313,7 @@
       "hot_zscore": -1.3171476005355105,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -3,
@@ -23166,7 +23334,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -23194,12 +23362,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -0.96,
       "zscore_rank": 160,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -23212,7 +23391,7 @@
       "hot_zscore": -0.832072780881048,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 0,
@@ -23233,7 +23412,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23261,12 +23440,23 @@
             "plus_minus": -1,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.89,
       "zscore_rank": 194,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23279,7 +23469,7 @@
       "hot_zscore": -1.8435979677759198,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23300,7 +23490,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23328,12 +23518,23 @@
             "plus_minus": 0,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.36,
       "zscore_rank": 175,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23346,7 +23547,7 @@
       "hot_zscore": -1.3021274269771923,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23367,7 +23568,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23397,12 +23598,22 @@
             "saves": 0,
             "shots_against": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0
+          }
         }
       ],
       "zscore": 0.25,
       "zscore_rank": 107,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23415,7 +23626,7 @@
       "hot_zscore": 0.7125412311742685,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23436,7 +23647,7 @@
       "player_id": 8481668,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8481668.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23466,12 +23677,22 @@
             "saves": 26,
             "shots_against": 29
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0
+          }
         }
       ],
       "zscore": 0.37,
       "zscore_rank": 105,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23484,7 +23705,7 @@
       "hot_zscore": 0.8246608573975059,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23505,7 +23726,7 @@
       "player_id": 8485924,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8485924.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23533,12 +23754,23 @@
             "plus_minus": -2,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.95,
       "zscore_rank": 269,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23551,7 +23783,7 @@
       "hot_zscore": -2.9115188758150556,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -23572,7 +23804,7 @@
       "player_id": 8480384,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8480384.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 2,
@@ -23600,12 +23832,23 @@
             "plus_minus": 2,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.09,
       "zscore_rank": 115,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 2,
@@ -23618,7 +23861,7 @@
       "hot_zscore": 0.25086830071640603,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": 2,
@@ -23639,7 +23882,7 @@
       "player_id": 8484168,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8484168.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 1,
         "plus_minus": -2,
@@ -23667,12 +23910,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.43,
       "zscore_rank": 101,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 1,
         "plus_minus": -2,
@@ -23685,7 +23939,7 @@
       "hot_zscore": 0.6031916437264419,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 1,
         "plus_minus": -2,
@@ -23706,7 +23960,7 @@
       "player_id": 8476482,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8476482.jpg",
       "stats": {
-        "gp": 4,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "plus_minus": -3,
@@ -23756,12 +24010,34 @@
             "plus_minus": -2,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.1,
       "zscore_rank": 242,
       "hot_72h_stats": {
-        "gp": 4,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "plus_minus": -3,
@@ -23774,7 +24050,7 @@
       "hot_zscore": -2.0027048184479743,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 4,
+        "gp": 6,
         "goals": 1,
         "assists": 0,
         "plus_minus": -3,
@@ -23795,7 +24071,7 @@
       "player_id": 8474189,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8474189.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23823,12 +24099,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.36,
       "zscore_rank": 175,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23841,7 +24128,7 @@
       "hot_zscore": -1.3021274269771923,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -23862,7 +24149,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 2,
         "plus_minus": 1,
@@ -23890,12 +24177,23 @@
             "plus_minus": 1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.51,
       "zscore_rank": 96,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 2,
         "plus_minus": 1,
@@ -23908,7 +24206,7 @@
       "hot_zscore": 0.7059027732542325,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 2,
         "plus_minus": 1,
@@ -23929,7 +24227,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23957,12 +24255,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23975,7 +24284,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -23996,7 +24305,7 @@
       "player_id": 8479690,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8479690.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24024,12 +24333,23 @@
             "plus_minus": 1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24042,7 +24362,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24063,7 +24383,7 @@
       "player_id": 8485923,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8485923.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24091,12 +24411,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24109,7 +24440,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24130,7 +24461,7 @@
       "player_id": 8479466,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8479466.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -24158,12 +24489,23 @@
             "plus_minus": -2,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.89,
       "zscore_rank": 194,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -24176,7 +24518,7 @@
       "hot_zscore": -1.8435979677759198,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -2,
@@ -24197,7 +24539,7 @@
       "player_id": 8485925,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8485925.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24225,12 +24567,23 @@
             "plus_minus": -1,
             "pim": 2
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.36,
       "zscore_rank": 175,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24243,7 +24596,7 @@
       "hot_zscore": -1.3021274269771923,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24264,7 +24617,7 @@
       "player_id": 8479571,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8479571.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24292,12 +24645,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24310,7 +24674,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24331,7 +24695,7 @@
       "player_id": 8485922,
       "headshot_url": "https://cms.nhl.com/images/headshots/current/168x168/8485922.jpg",
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": -1,
@@ -24359,12 +24723,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.05,
       "zscore_rank": 167,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": -1,
@@ -24377,7 +24752,7 @@
       "hot_zscore": -0.91976373685052,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": -1,
@@ -24398,7 +24773,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24426,12 +24801,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.48,
       "zscore_rank": 189,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24444,7 +24830,7 @@
       "hot_zscore": -1.3735433216797748,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24465,7 +24851,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24493,12 +24879,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24511,7 +24908,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24532,7 +24929,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24560,12 +24957,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -2.42,
       "zscore_rank": 250,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24578,7 +24986,7 @@
       "hot_zscore": -2.370048335016328,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": -1,
@@ -24599,7 +25007,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24627,12 +25035,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24645,7 +25064,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24666,7 +25085,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24694,12 +25113,23 @@
             "plus_minus": -1,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.48,
       "zscore_rank": 189,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24712,7 +25142,7 @@
       "hot_zscore": -1.3735433216797748,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 0,
         "assists": 1,
         "plus_minus": -1,
@@ -24733,7 +25163,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 2,
@@ -24761,12 +25191,23 @@
             "plus_minus": 2,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": 0.53,
       "zscore_rank": 93,
       "hot_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 2,
@@ -24779,7 +25220,7 @@
       "hot_zscore": 0.704647885545661,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 2,
+        "gp": 3,
         "goals": 1,
         "assists": 0,
         "plus_minus": 2,
@@ -24869,7 +25310,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24889,12 +25330,22 @@
             "saves": 23,
             "shots_against": 26
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0
+          }
         }
       ],
       "zscore": -1.7,
       "zscore_rank": 193,
       "hot_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -24907,7 +25358,7 @@
       "hot_zscore": -1.3405923986822068,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27548,7 +27999,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27565,12 +28016,23 @@
             "plus_minus": 0,
             "pim": 0
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "goals": 0,
+            "assists": 0,
+            "plus_minus": 0,
+            "pim": 0
+          }
         }
       ],
       "zscore": -1.9,
       "zscore_rank": 201,
       "hot_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27583,7 +28045,7 @@
       "hot_zscore": -1.8285777942176011,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27604,7 +28066,7 @@
       "player_id": null,
       "headshot_url": null,
       "stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27624,12 +28086,22 @@
             "saves": 0,
             "shots_against": 1
           }
+        },
+        {
+          "game_id": 2025090017,
+          "date": "2026-02-15",
+          "stats": {
+            "gp": 1,
+            "wins": 0,
+            "saves": 0,
+            "shots_against": 0
+          }
         }
       ],
       "zscore": -11.1,
       "zscore_rank": 285,
       "hot_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27642,7 +28114,7 @@
       "hot_zscore": -10.59764871762646,
       "is_hot": false,
       "cold_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -27958,7 +28430,7 @@
       "pos": "G",
       "cold_zscore": -10.59764871762646,
       "cold_72h_stats": {
-        "gp": 1,
+        "gp": 2,
         "goals": 0,
         "assists": 0,
         "plus_minus": 0,
@@ -28163,107 +28635,107 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.488,
-      "Mark's Mafia": 0.0572,
-      "Ice Holes": 0.1686,
-      "Gabe's Gangsters": 0.1186,
-      "Todd's Hitmen": 0.0042,
-      "Cam's Crunch": 0.0716,
-      "Bardown": 0.056,
-      "Gators": 0.0006,
-      "Cross's Beavers": 0.033,
-      "Johnny's Scrubbers": 0.0018,
+      "Big Shooters": 0.483,
+      "Ice Holes": 0.1848,
+      "Gabe's Gangsters": 0.1262,
+      "Mark's Mafia": 0.0508,
+      "Bardown": 0.0538,
+      "Cam's Crunch": 0.0654,
+      "Cross's Beavers": 0.028,
+      "Todd's Hitmen": 0.004,
+      "Johnny's Scrubbers": 0.0032,
+      "Gators": 0.0004,
       "Owen's Otters": 0.0004,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Big Shooters": 0.7892,
-      "Todd's Hitmen": 0.102,
-      "Mark's Mafia": 0.2266,
-      "Cam's Crunch": 0.4312,
-      "Ice Holes": 0.524,
-      "Gabe's Gangsters": 0.3566,
-      "Bardown": 0.3048,
-      "Cross's Beavers": 0.1638,
-      "Gators": 0.0156,
-      "Johnny's Scrubbers": 0.0736,
-      "Owen's Otters": 0.0126,
+      "Big Shooters": 0.7846,
+      "Bardown": 0.3072,
+      "Cross's Beavers": 0.1622,
+      "Ice Holes": 0.5364,
+      "Mark's Mafia": 0.2268,
+      "Johnny's Scrubbers": 0.0746,
+      "Cam's Crunch": 0.418,
+      "Todd's Hitmen": 0.0996,
+      "Gabe's Gangsters": 0.3636,
+      "Gators": 0.014,
+      "Owen's Otters": 0.013,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 56.4419,
-      "Todd's Hitmen": 37.1427,
-      "Mark's Mafia": 40.703,
-      "Ice Holes": 49.6223,
-      "Cross's Beavers": 39.5276,
-      "Cam's Crunch": 46.8301,
-      "Gators": 28.9834,
-      "Bardown": 43.9591,
-      "Gabe's Gangsters": 45.7183,
-      "Owen's Otters": 25.1856,
-      "Johnny's Scrubbers": 37.0286,
-      "Willy's Warlocks": 16.8574
+      "Big Shooters": 56.3844,
+      "Bardown": 44.0053,
+      "Cross's Beavers": 39.4479,
+      "Ice Holes": 49.7776,
+      "Cam's Crunch": 46.4598,
+      "Gabe's Gangsters": 45.8849,
+      "Mark's Mafia": 40.9844,
+      "Todd's Hitmen": 37.461,
+      "Johnny's Scrubbers": 36.6926,
+      "Gators": 29.0223,
+      "Owen's Otters": 25.1238,
+      "Willy's Warlocks": 16.756
     },
     "country_medal_odds": {
       "CAN": {
-        "gold": 0.4464,
-        "silver": 0.3108,
-        "bronze": 0.1688
+        "gold": 0.4414,
+        "silver": 0.3114,
+        "bronze": 0.1616
       },
       "USA": {
-        "gold": 0.281,
-        "silver": 0.3146,
-        "bronze": 0.2354
+        "gold": 0.2854,
+        "silver": 0.3082,
+        "bronze": 0.2422
       },
       "SWE": {
-        "gold": 0.134,
-        "silver": 0.1676,
-        "bronze": 0.2602
+        "gold": 0.132,
+        "silver": 0.1738,
+        "bronze": 0.257
       },
       "FIN": {
-        "gold": 0.0606,
-        "silver": 0.0922,
+        "gold": 0.0628,
+        "silver": 0.0926,
         "bronze": 0.1354
       },
       "CZE": {
-        "gold": 0.036,
-        "silver": 0.0536,
-        "bronze": 0.0816
+        "gold": 0.0356,
+        "silver": 0.0516,
+        "bronze": 0.0972
       },
       "SUI": {
-        "gold": 0.0222,
-        "silver": 0.0294,
-        "bronze": 0.065
+        "gold": 0.023,
+        "silver": 0.034,
+        "bronze": 0.055
       },
       "GER": {
-        "gold": 0.0086,
-        "silver": 0.015,
-        "bronze": 0.0222
+        "gold": 0.0088,
+        "silver": 0.0096,
+        "bronze": 0.021
       },
       "SVK": {
-        "gold": 0.0058,
-        "silver": 0.008,
-        "bronze": 0.0156
+        "gold": 0.0056,
+        "silver": 0.0094,
+        "bronze": 0.0168
       },
       "LAT": {
-        "gold": 0.0026,
+        "gold": 0.0036,
         "silver": 0.0048,
-        "bronze": 0.0094
+        "bronze": 0.006
       },
       "DEN": {
-        "gold": 0.001,
-        "silver": 0.001,
-        "bronze": 0.0022
+        "gold": 0.0004,
+        "silver": 0.0018,
+        "bronze": 0.0026
       },
       "ITA": {
-        "gold": 0.0012,
-        "silver": 0.0008,
+        "gold": 0.0004,
+        "silver": 0.0012,
         "bronze": 0.0022
       },
       "FRA": {
-        "gold": 0.0006,
-        "silver": 0.0022,
-        "bronze": 0.002
+        "gold": 0.001,
+        "silver": 0.0016,
+        "bronze": 0.003
       }
     },
     "country_knockout_odds": {
@@ -28271,14 +28743,14 @@
       "USA": 1.0,
       "SWE": 1.0,
       "FIN": 1.0,
-      "CZE": 0.9098,
+      "CZE": 0.9092,
       "SUI": 1.0,
-      "GER": 0.4918,
-      "SVK": 0.5984,
-      "LAT": 0.9984,
-      "DEN": 0.0016,
+      "GER": 0.5066,
+      "SVK": 0.5842,
+      "LAT": 0.999,
+      "DEN": 0.0006,
       "ITA": 0.0,
-      "FRA": 0.0
+      "FRA": 0.0004
     }
   }
 }
