@@ -73,10 +73,23 @@ export default function CelebrationBanner() {
     .filter(p => p.pos === 'D')
     .sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))[0];
   
-  // Best Goalie: highest save_pct among goalies with 3+ GP
-  const bestG = [...activePlayers]
-    .filter(p => p.pos === 'G' && p.stats.gp >= 3 && (p.stats.save_pct ?? 0) > 0)
-    .sort((a, b) => (b.stats.save_pct ?? 0) - (a.stats.save_pct ?? 0))[0];
+  // Best Goalie: composite of wins and save_pct (normalized and combined)
+  // Wins are weighted heavily since they reflect team success, SV% reflects individual brilliance
+  const qualifiedGoalies = [...activePlayers]
+    .filter(p => p.pos === 'G' && p.stats.gp >= 2 && (p.stats.save_pct ?? 0) > 0);
+  const maxWins = Math.max(...qualifiedGoalies.map(g => g.stats.wins ?? 0), 1);
+  const bestG = qualifiedGoalies
+    .sort((a, b) => {
+      // Normalize wins to 0-1 scale, SV% is already 0-1
+      const aWinScore = (a.stats.wins ?? 0) / maxWins;
+      const bWinScore = (b.stats.wins ?? 0) / maxWins;
+      const aSvScore = a.stats.save_pct ?? 0;
+      const bSvScore = b.stats.save_pct ?? 0;
+      // 60% wins, 40% save percentage
+      const aTotal = aWinScore * 0.6 + aSvScore * 0.4;
+      const bTotal = bWinScore * 0.6 + bSvScore * 0.4;
+      return bTotal - aTotal;
+    })[0];
   
   // Grittiest Player: composite of plus_minus + pim (both normalized)
   // Simple approach: rank by (plus_minus * 2 + pim), favoring players who are both physical AND effective
