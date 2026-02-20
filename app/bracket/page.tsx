@@ -19,7 +19,7 @@ const flagIso2: Record<string, string> = {
 
 function Flag({ code, size = 24 }: { code: string; size?: number }) {
   const iso = flagIso2[code];
-  if (!iso) return <span>{code}</span>;
+  if (!iso || code === 'TBD') return <span className="w-6 h-4 inline-block bg-gray-600 rounded-sm"></span>;
   return (
     <img
       src={`https://flagcdn.com/w40/${iso}.png`}
@@ -34,7 +34,7 @@ function Flag({ code, size = 24 }: { code: string; size?: number }) {
 
 const countryNames: Record<string, string> = {
   CAN:"Canada",USA:"United States",SWE:"Sweden",FIN:"Finland",CZE:"Czechia",SUI:"Switzerland",
-  GER:"Germany",SVK:"Slovakia",DEN:"Denmark",LAT:"Latvia",ITA:"Italy",FRA:"France"
+  GER:"Germany",SVK:"Slovakia",DEN:"Denmark",LAT:"Latvia",ITA:"Italy",FRA:"France", TBD: "TBD"
 };
 
 function GameScore({ game, eliminatedTeams }: { game: Game; eliminatedTeams: Set<string> }) {
@@ -46,7 +46,7 @@ function GameScore({ game, eliminatedTeams }: { game: Game; eliminatedTeams: Set
   const awayEliminated = eliminatedTeams.has(game.away);
   const homeEliminated = eliminatedTeams.has(game.home);
 
-  const winner = game.home_score > game.away_score ? game.home : game.away;
+  const winner = isFinal ? (game.home_score > game.away_score ? game.home : game.away) : null;
 
   if (isFinal) {
     return (
@@ -94,31 +94,30 @@ export default function BracketPage() {
 
   const scheduleGames : Game[] = (data as any).schedule?.games || [];
 
-  // Filter games by stage
+  const getWinner = (game: Game | undefined) => game && game.status === 'FINAL' ? (game.home_score > game.away_score ? game.home : game.away) : 'TBD';
+  const getLoser = (game: Game | undefined) => game && game.status === 'FINAL' ? (game.home_score < game.away_score ? game.home : game.away) : 'TBD';
+  
+  // Find all knockout games from the schedule
   const quarterFinalGames = scheduleGames.filter((g: Game) => g.id >= 2025090023 && g.id <= 2025090026);
   const semiFinalGames = scheduleGames.filter((g: Game) => g.id >= 2025090027 && g.id <= 2025090028);
-  const bronzeMedalGame = scheduleGames.find((g: Game) => g.id === 2025090029);
-  const goldMedalGame = scheduleGames.find((g: Game) => g.id === 2025090030);
+  let bronzeMedalGame = scheduleGames.find((g: Game) => g.id === 2025090029);
+  let goldMedalGame = scheduleGames.find((g: Game) => g.id === 2025090030);
 
+  // Dynamically determine participants for future games
+  const sf1_winner = getWinner(semiFinalGames[0]);
+  const sf2_winner = getWinner(semiFinalGames[1]);
+  const sf1_loser = getLoser(semiFinalGames[0]);
+  const sf2_loser = getLoser(semiFinalGames[1]);
   
-  // Manually define semifinalist pairings based on QF winners
-  const qfWinners = quarterFinalGames.map((g:any) => g.home_score > g.away_score ? g.home : g.away);
-  
-  // This is a bit of a hack since the TBD games don't have teams yet.
-  // We'll manually set them for the UI.
-  if(semiFinalGames[0]) {
-    semiFinalGames[0].home = "CAN"; // CAN
-    semiFinalGames[0].away = "FIN"; // FIN
+  if (goldMedalGame && goldMedalGame.home === 'TBD') {
+      goldMedalGame = {...goldMedalGame, home: sf1_winner, away: sf2_winner};
   }
-   if(semiFinalGames[1]) {
-    semiFinalGames[1].home = "USA"; // USA
-    semiFinalGames[1].away = "SVK"; // SVK
+  if (bronzeMedalGame && bronzeMedalGame.home === 'TBD') {
+      bronzeMedalGame = {...bronzeMedalGame, home: sf1_loser, away: sf2_loser};
   }
-
 
   return (
     <div>
-      {/* Page title — consistent treatment */}
       <div className="mb-6">
         <h2 className="text-2xl font-extrabold" style={{ color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
           Tournament Bracket
@@ -139,15 +138,9 @@ export default function BracketPage() {
           ))}
         </div>
 
-        {/* Connectors */}
-        <div className="flex flex-col justify-around h-full mx-4">
-           <div className="h-48 flex items-center"> <div className="w-8 h-px bg-gray-500"></div></div>
-           <div className="h-48 flex items-center"> <div className="w-8 h-px bg-gray-500"></div></div>
-        </div>
-
         {/* Semifinals */}
-        <div className="flex flex-col justify-around h-full space-y-32">
-          <h3 className="text-lg font-bold text-center mb-4" style={{ color: 'var(--text-primary)' }}>Semifinals</h3>
+        <div className="flex flex-col justify-around h-full space-y-32 pt-24 ml-8">
+          <h3 className="text-lg font-bold text-center -mt-20 mb-4" style={{ color: 'var(--text-primary)' }}>Semifinals</h3>
           {semiFinalGames.map((game: Game) => (
             <div key={game.id} className="glass-card p-2 w-48">
               <GameScore game={game} eliminatedTeams={eliminatedCountries} />
@@ -155,14 +148,9 @@ export default function BracketPage() {
           ))}
         </div>
         
-        {/* Connectors */}
-        <div className="flex flex-col justify-around h-full mx-4">
-           <div className="h-96 flex items-center"> <div className="w-8 h-px bg-gray-500"></div></div>
-        </div>
-
         {/* Finals */}
-        <div className="flex flex-col justify-around h-full">
-            <h3 className="text-lg font-bold text-center mb-4" style={{ color: 'var(--text-primary)' }}>Finals</h3>
+        <div className="flex flex-col justify-around h-full pt-48 ml-8">
+            <h3 className="text-lg font-bold text-center -mt-44 mb-4" style={{ color: 'var(--text-primary)' }}>Finals</h3>
             <div className="space-y-8">
                 {goldMedalGame && (
                     <div className="glass-card p-2 w-48" style={{ borderLeft: '3px solid #ffd700' }}>
@@ -171,7 +159,7 @@ export default function BracketPage() {
                     </div>
                 )}
                 {bronzeMedalGame && (
-                    <div className="glass-card p-2 w-48" style={{ borderLeft: '3px solid #cd7f32' }}>
+                    <div className="glass-card p-2 w-48 mt-16" style={{ borderLeft: '3px solid #cd7f32' }}>
                         <h5 className="font-bold text-sm text-center mb-2" style={{ color: '#cd7f32' }}>🥉 Bronze Medal</h5>
                         <GameScore game={bronzeMedalGame} eliminatedTeams={eliminatedCountries} />
                     </div>
