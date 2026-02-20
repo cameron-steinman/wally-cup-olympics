@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-20T19:00:14.130678Z",
+  "updated_at": "2026-02-20T19:54:19.838078Z",
   "tournament_status": "semifinals",
   "schedule": {
     "games": [
@@ -319,8 +319,8 @@
         "id": 2025090027,
         "date": "2026-02-20",
         "time": "2026-02-20T15:30:00Z",
-        "away": "CAN",
-        "home": "USA",
+        "away": "FIN",
+        "home": "CAN",
         "status": "FINAL",
         "away_score": 2,
         "home_score": 3,
@@ -332,7 +332,7 @@
         "date": "2026-02-20",
         "time": "2026-02-20T20:00:00Z",
         "away": "SVK",
-        "home": "FIN",
+        "home": "USA",
         "status": "FUT",
         "away_score": 0,
         "home_score": 0,
@@ -380,7 +380,11 @@
       "status": "active",
       "name": "United States",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
-      "next_game": null
+      "next_game": {
+        "vs": "SVK",
+        "date": "2026-02-20",
+        "time": "2026-02-20T20:00:00Z"
+      }
     },
     "SWE": {
       "status": "eliminated",
@@ -389,13 +393,13 @@
       "next_game": null
     },
     "FIN": {
-      "status": "active",
+      "status": "eliminated",
       "name": "Finland",
       "flag": "\ud83c\uddeb\ud83c\uddee",
       "next_game": {
-        "vs": "SVK",
-        "date": "2026-02-20",
-        "time": "2026-02-20T20:00:00Z"
+        "vs": "TBD",
+        "date": "2026-02-21",
+        "time": "2026-02-21T19:30:00Z"
       }
     },
     "CZE": {
@@ -421,7 +425,7 @@
       "name": "Slovakia",
       "flag": "\ud83c\uddf8\ud83c\uddf0",
       "next_game": {
-        "vs": "FIN",
+        "vs": "USA",
         "date": "2026-02-20",
         "time": "2026-02-20T20:00:00Z"
       }
@@ -2561,15 +2565,15 @@
         {
           "id": 2025090027,
           "away": {
-            "code": "CAN",
-            "name": "Canada",
-            "flag": "\ud83c\udde8\ud83c\udde6",
+            "code": "FIN",
+            "name": "Finland",
+            "flag": "\ud83c\uddeb\ud83c\uddee",
             "score": 2
           },
           "home": {
-            "code": "USA",
-            "name": "United States",
-            "flag": "\ud83c\uddfa\ud83c\uddf8",
+            "code": "CAN",
+            "name": "Canada",
+            "flag": "\ud83c\udde8\ud83c\udde6",
             "score": 3
           },
           "final_score": "2-3"
@@ -2718,15 +2722,6 @@
       "standings_changes": {
         "risers": [
           {
-            "team": "Gabe's Gangsters",
-            "rank_change": 1,
-            "roto_change": 2.5,
-            "previous_rank": 6,
-            "current_rank": 5,
-            "previous_roto": 41.5,
-            "current_roto": 44.0
-          },
-          {
             "team": "Gators",
             "rank_change": 1,
             "roto_change": 1.5,
@@ -2737,15 +2732,6 @@
           }
         ],
         "fallers": [
-          {
-            "team": "Ice Holes",
-            "rank_change": -1,
-            "roto_change": -0.5,
-            "previous_rank": 5,
-            "current_rank": 6,
-            "previous_roto": 43.5,
-            "current_roto": 43.0
-          },
           {
             "team": "Owen's Otters",
             "rank_change": -1,
@@ -2758,7 +2744,7 @@
         ]
       },
       "milestones": [],
-      "recap_text": "Day 10 featured 1 game. The highest-scoring affair was Canada 2-3 United States. Juuse Saros (Finland) led the day with 0 wins, 36 saves. In Wally Cup standings, Gabe's Gangsters moved up 1 spot. Ice Holes dropped 1 spot."
+      "recap_text": "Day 10 featured 1 game. The highest-scoring affair was Finland 2-3 Canada. Juuse Saros (Finland) led the day with 0 wins, 36 saves. In Wally Cup standings, Gators moved up 1 spot. Owen's Otters dropped 1 spot."
     }
   },
   "teams": {
@@ -33742,66 +33728,66 @@
   "predictions": {
     "win_probabilities": {
       "Big Shooters": 0.938,
-      "Johnny's Scrubbers": 0.0564,
-      "Ice Holes": 0.0026,
-      "Bardown": 0.003,
+      "Johnny's Scrubbers": 0.056,
+      "Gabe's Gangsters": 0.0006,
+      "Bardown": 0.0042,
+      "Ice Holes": 0.0012,
       "Todd's Hitmen": 0.0,
       "Cam's Crunch": 0.0,
       "Cross's Beavers": 0.0,
-      "Gabe's Gangsters": 0.0,
       "Gators": 0.0,
       "Mark's Mafia": 0.0,
       "Owen's Otters": 0.0,
       "Willy's Warlocks": 0.0
     },
     "podium_probabilities": {
-      "Big Shooters": 1.0,
-      "Johnny's Scrubbers": 0.8228,
-      "Bardown": 0.2446,
-      "Ice Holes": 0.2496,
-      "Gabe's Gangsters": 0.2932,
-      "Cam's Crunch": 0.2996,
-      "Todd's Hitmen": 0.0828,
-      "Cross's Beavers": 0.003,
-      "Mark's Mafia": 0.0044,
+      "Big Shooters": 0.9998,
+      "Ice Holes": 0.2492,
+      "Bardown": 0.2548,
+      "Johnny's Scrubbers": 0.8194,
+      "Gabe's Gangsters": 0.2844,
+      "Cam's Crunch": 0.305,
+      "Todd's Hitmen": 0.0808,
+      "Mark's Mafia": 0.0026,
+      "Cross's Beavers": 0.004,
       "Gators": 0.0,
       "Owen's Otters": 0.0,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 61.4866,
-      "Johnny's Scrubbers": 52.501,
-      "Bardown": 44.0966,
-      "Cam's Crunch": 45.1196,
-      "Gabe's Gangsters": 44.5975,
-      "Ice Holes": 44.7251,
-      "Cross's Beavers": 36.692,
-      "Todd's Hitmen": 39.7251,
-      "Mark's Mafia": 37.1477,
-      "Gators": 25.0025,
-      "Owen's Otters": 26.5154,
-      "Willy's Warlocks": 10.3909
+      "Big Shooters": 61.599,
+      "Ice Holes": 44.7295,
+      "Bardown": 44.0917,
+      "Gabe's Gangsters": 44.5909,
+      "Johnny's Scrubbers": 52.529,
+      "Todd's Hitmen": 39.7231,
+      "Cross's Beavers": 36.6912,
+      "Mark's Mafia": 37.1446,
+      "Cam's Crunch": 45.0933,
+      "Gators": 24.9202,
+      "Owen's Otters": 26.4932,
+      "Willy's Warlocks": 10.3943
     },
     "country_medal_odds": {
       "USA": {
-        "gold": 0.4004,
-        "silver": 0.3328,
-        "bronze": 0.214
+        "gold": 0.393,
+        "silver": 0.3376,
+        "bronze": 0.2216
       },
       "CAN": {
-        "gold": 0.3524,
-        "silver": 0.331,
-        "bronze": 0.2536
+        "gold": 0.3528,
+        "silver": 0.3412,
+        "bronze": 0.2512
       },
       "FIN": {
-        "gold": 0.1976,
-        "silver": 0.2628,
-        "bronze": 0.3926
+        "gold": 0.2,
+        "silver": 0.2544,
+        "bronze": 0.3876
       },
       "SVK": {
-        "gold": 0.0496,
-        "silver": 0.0734,
-        "bronze": 0.1398
+        "gold": 0.0542,
+        "silver": 0.0668,
+        "bronze": 0.1396
       },
       "SWE": {
         "gold": 0.0,

@@ -72,6 +72,14 @@ export default function PlayersPage() {
   const [sortColumn, setSortColumn] = useState<string>('rank');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
+  // Build set of eliminated countries for greying out players
+  const countryStatus = (data as any).country_status || {};
+  const eliminatedCountries = new Set(
+    Object.entries(countryStatus)
+      .filter(([_, v]: [string, any]) => v.status === 'eliminated')
+      .map(([k]) => k)
+  );
+
   const allPlayers = ((data as any).all_olympic_players || []) as (AllPlayer & { zscore?: number; zscore_rank?: number; is_hot?: boolean; is_cold?: boolean })[];
   // Use z-score ranking from data pipeline (per-game rate normalized)
   const withRanks = [...allPlayers]
@@ -282,9 +290,10 @@ export default function PlayersPage() {
                 const saves = p.stats.saves ?? 0;
                 const svPct = sa > 0 ? (saves / sa) : 0;
                 const isGoalie = p.pos === 'G';
+                const isEliminated = eliminatedCountries.has(p.country);
 
                 return (
-                  <tr key={p.name + p.country + idx} className="table-row-hover" style={{ borderBottom: '1px solid var(--border)' }}>
+                  <tr key={p.name + p.country + idx} className="table-row-hover" style={{ borderBottom: '1px solid var(--border)', opacity: isEliminated ? 0.4 : 1 }}>
                     <td className="px-2 py-2 text-center">
                       <span className="text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                         {p.rank}
