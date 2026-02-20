@@ -73,31 +73,33 @@ export default function CelebrationBanner() {
     .filter(p => p.pos === 'D')
     .sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))[0];
   
-  // Best Goalie: composite of wins and save_pct (normalized and combined)
-  // Wins are weighted heavily since they reflect team success, SV% reflects individual brilliance
+  // Best Goalie: composite of wins (35%) and save_pct (65%), both min-max normalized
+  // SV% is weighted more because a .958 vs .914 gap is enormous in goaltending
   const qualifiedGoalies = [...activePlayers]
     .filter(p => p.pos === 'G' && p.stats.gp >= 2 && (p.stats.save_pct ?? 0) > 0);
-  const maxWins = Math.max(...qualifiedGoalies.map(g => g.stats.wins ?? 0), 1);
+  const goalieWins = qualifiedGoalies.map(g => g.stats.wins ?? 0);
+  const goalieSvs = qualifiedGoalies.map(g => g.stats.save_pct ?? 0);
+  const maxW = Math.max(...goalieWins, 1);
+  const minW = Math.min(...goalieWins, 0);
+  const maxSV = Math.max(...goalieSvs, 0.9);
+  const minSV = Math.min(...goalieSvs, 0.8);
   const bestG = qualifiedGoalies
     .sort((a, b) => {
-      // Normalize wins to 0-1 scale, SV% is already 0-1
-      const aWinScore = (a.stats.wins ?? 0) / maxWins;
-      const bWinScore = (b.stats.wins ?? 0) / maxWins;
-      const aSvScore = a.stats.save_pct ?? 0;
-      const bSvScore = b.stats.save_pct ?? 0;
-      // 60% wins, 40% save percentage
-      const aTotal = aWinScore * 0.6 + aSvScore * 0.4;
-      const bTotal = bWinScore * 0.6 + bSvScore * 0.4;
-      return bTotal - aTotal;
+      const aWN = maxW > minW ? ((a.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
+      const bWN = maxW > minW ? ((b.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
+      const aSN = maxSV > minSV ? ((a.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
+      const bSN = maxSV > minSV ? ((b.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
+      return (bWN * 0.35 + bSN * 0.65) - (aWN * 0.35 + aSN * 0.65);
     })[0];
   
-  // Grittiest Player: composite of plus_minus + pim (both normalized)
-  // Simple approach: rank by (plus_minus * 2 + pim), favoring players who are both physical AND effective
+  // Grittiest Player: composite of plus_minus and pim
+  // Plus/minus is weighted heavily (x5) because grit means being effective AND physical.
+  // PIM adds flavor but shouldn't dominate — a guy who's -1 with 33 PIM isn't "gritty," he's just undisciplined.
   const skaters = activePlayers.filter(p => p.pos !== 'G' && p.stats.gp >= 3);
   const grittiest = [...skaters]
     .sort((a, b) => {
-      const aScore = a.stats.plus_minus * 2 + a.stats.pim;
-      const bScore = b.stats.plus_minus * 2 + b.stats.pim;
+      const aScore = a.stats.plus_minus * 5 + a.stats.pim;
+      const bScore = b.stats.plus_minus * 5 + b.stats.pim;
       return bScore - aScore;
     })[0];
 
