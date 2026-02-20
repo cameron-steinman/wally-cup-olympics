@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CelebrationBanner from "./components/CelebrationBanner";
 
 export const metadata: Metadata = {
   title: "Wally Cup Olympic Extravaganza 2026",
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         <main className="max-w-7xl mx-auto px-6 py-8">
+          <CelebrationBanner />
           {children}
         </main>
       </body>
