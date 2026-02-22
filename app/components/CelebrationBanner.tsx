@@ -61,47 +61,77 @@ export default function CelebrationBanner() {
   // Olympic gold medal winner
   const olympicGoldWinner = goldGame.home_score > goldGame.away_score ? goldGame.home : goldGame.away;
   
-  // Player awards
+  // Player awards — use manual overrides from JSON if present, otherwise compute
   const allPlayers = ((data as any).all_olympic_players || []) as Player[];
   const activePlayers = allPlayers.filter(p => p.stats.gp > 0);
+  const awardsOverride = (data as any).awards as {
+    mvp?: string[];
+    best_defenseman?: string[];
+    best_goaltender?: string[];
+    grittiest?: string[];
+  } | undefined;
   
-  // MVP: highest zscore among all players
-  const mvp = [...activePlayers].sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))[0];
+  function findPlayer(name: string): Player | undefined {
+    return activePlayers.find(p => p.name === name);
+  }
   
-  // Best Defenseman: highest zscore among D
-  const bestD = [...activePlayers]
-    .filter(p => p.pos === 'D')
-    .sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0))[0];
+  function findPlayers(names: string[]): Player[] {
+    return names.map(n => findPlayer(n)).filter(Boolean) as Player[];
+  }
   
-  // Best Goalie: composite of wins (35%) and save_pct (65%), both min-max normalized
-  // SV% is weighted more because a .958 vs .914 gap is enormous in goaltending
-  const qualifiedGoalies = [...activePlayers]
-    .filter(p => p.pos === 'G' && p.stats.gp >= 2 && (p.stats.save_pct ?? 0) > 0);
-  const goalieWins = qualifiedGoalies.map(g => g.stats.wins ?? 0);
-  const goalieSvs = qualifiedGoalies.map(g => g.stats.save_pct ?? 0);
-  const maxW = Math.max(...goalieWins, 1);
-  const minW = Math.min(...goalieWins, 0);
-  const maxSV = Math.max(...goalieSvs, 0.9);
-  const minSV = Math.min(...goalieSvs, 0.8);
-  const bestG = qualifiedGoalies
-    .sort((a, b) => {
-      const aWN = maxW > minW ? ((a.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
-      const bWN = maxW > minW ? ((b.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
-      const aSN = maxSV > minSV ? ((a.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
-      const bSN = maxSV > minSV ? ((b.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
-      return (bWN * 0.35 + bSN * 0.65) - (aWN * 0.35 + aSN * 0.65);
-    })[0];
+  // MVP
+  const mvpPlayers: Player[] = awardsOverride?.mvp
+    ? findPlayers(awardsOverride.mvp)
+    : (() => {
+        const sorted = [...activePlayers].sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0));
+        return sorted.length ? [sorted[0]] : [];
+      })();
+  const mvp = mvpPlayers[0];
   
-  // Grittiest Player: composite of plus_minus and pim
-  // Plus/minus is weighted heavily (x5) because grit means being effective AND physical.
-  // PIM adds flavor but shouldn't dominate — a guy who's -1 with 33 PIM isn't "gritty," he's just undisciplined.
-  const skaters = activePlayers.filter(p => p.pos !== 'G' && p.stats.gp >= 3);
-  const grittiest = [...skaters]
-    .sort((a, b) => {
-      const aScore = a.stats.plus_minus * 5 + a.stats.pim;
-      const bScore = b.stats.plus_minus * 5 + b.stats.pim;
-      return bScore - aScore;
-    })[0];
+  // Best Defenseman (supports ties)
+  const bestDPlayers: Player[] = awardsOverride?.best_defenseman
+    ? findPlayers(awardsOverride.best_defenseman)
+    : (() => {
+        const sorted = [...activePlayers].filter(p => p.pos === 'D').sort((a, b) => (b.zscore ?? 0) - (a.zscore ?? 0));
+        return sorted.length ? [sorted[0]] : [];
+      })();
+  const bestD = bestDPlayers[0];
+  
+  // Best Goalie
+  const bestGPlayers: Player[] = awardsOverride?.best_goaltender
+    ? findPlayers(awardsOverride.best_goaltender)
+    : (() => {
+        const qualifiedGoalies = [...activePlayers]
+          .filter(p => p.pos === 'G' && p.stats.gp >= 2 && (p.stats.save_pct ?? 0) > 0);
+        const goalieWins = qualifiedGoalies.map(g => g.stats.wins ?? 0);
+        const goalieSvs = qualifiedGoalies.map(g => g.stats.save_pct ?? 0);
+        const maxW = Math.max(...goalieWins, 1);
+        const minW = Math.min(...goalieWins, 0);
+        const maxSV = Math.max(...goalieSvs, 0.9);
+        const minSV = Math.min(...goalieSvs, 0.8);
+        const sorted = qualifiedGoalies.sort((a, b) => {
+          const aWN = maxW > minW ? ((a.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
+          const bWN = maxW > minW ? ((b.stats.wins ?? 0) - minW) / (maxW - minW) : 0.5;
+          const aSN = maxSV > minSV ? ((a.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
+          const bSN = maxSV > minSV ? ((b.stats.save_pct ?? 0) - minSV) / (maxSV - minSV) : 0.5;
+          return (bWN * 0.35 + bSN * 0.65) - (aWN * 0.35 + aSN * 0.65);
+        });
+        return sorted.length ? [sorted[0]] : [];
+      })();
+  const bestG = bestGPlayers[0];
+  
+  // Grittiest Player
+  const grittiestPlayers: Player[] = awardsOverride?.grittiest
+    ? findPlayers(awardsOverride.grittiest)
+    : (() => {
+        const skaters = activePlayers.filter(p => p.pos !== 'G' && p.stats.gp >= 3);
+        const sorted = [...skaters].sort((a, b) => {
+          const aScore = a.stats.plus_minus * 5 + a.stats.pim;
+          const bScore = b.stats.plus_minus * 5 + b.stats.pim;
+          return bScore - aScore;
+        });
+        return sorted.length ? [sorted[0]] : [];
+      })();
 
   return (
     <div style={{
@@ -215,7 +245,7 @@ export default function CelebrationBanner() {
         zIndex: 1,
       }}>
         {/* MVP */}
-        {mvp && (
+        {mvpPlayers.length > 0 && (
           <div style={{
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '10px',
@@ -225,19 +255,23 @@ export default function CelebrationBanner() {
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
               ⭐ Tournament MVP
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Flag code={mvp.country} size={18} />
-              <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{mvp.name}</span>
-            </div>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
-              {mvp.stats.goals}G · {mvp.stats.assists}A · {mvp.stats.goals + mvp.stats.assists}P · {mvp.stats.plus_minus > 0 ? '+' : ''}{mvp.stats.plus_minus}
-              {mvp.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({mvp.wally_team})</span>}
-            </div>
+            {mvpPlayers.map((p, i) => (
+              <div key={p.name} style={{ marginTop: i > 0 ? '8px' : '0' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Flag code={p.country} size={18} />
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{p.name}</span>
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
+                  {p.stats.goals}G · {p.stats.assists}A · {p.stats.goals + p.stats.assists}P · {p.stats.plus_minus > 0 ? '+' : ''}{p.stats.plus_minus}
+                  {p.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({p.wally_team})</span>}
+                </div>
+              </div>
+            ))}
           </div>
         )}
         
-        {/* Best Defenseman */}
-        {bestD && (
+        {/* Best Defenseman (supports ties) */}
+        {bestDPlayers.length > 0 && (
           <div style={{
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '10px',
@@ -245,21 +279,25 @@ export default function CelebrationBanner() {
             border: '1px solid rgba(255,255,255,0.08)',
           }}>
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
-              🛡️ Best Defenseman
+              🛡️ Best Defenseman{bestDPlayers.length > 1 ? ' (tie)' : ''}
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Flag code={bestD.country} size={18} />
-              <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{bestD.name}</span>
-            </div>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
-              {bestD.stats.goals}G · {bestD.stats.assists}A · {bestD.stats.goals + bestD.stats.assists}P · {bestD.stats.plus_minus > 0 ? '+' : ''}{bestD.stats.plus_minus}
-              {bestD.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({bestD.wally_team})</span>}
-            </div>
+            {bestDPlayers.map((dp, i) => (
+              <div key={dp.name} style={{ marginTop: i > 0 ? '8px' : '0' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Flag code={dp.country} size={18} />
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{dp.name}</span>
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
+                  {dp.stats.goals}G · {dp.stats.assists}A · {dp.stats.goals + dp.stats.assists}P · {dp.stats.plus_minus > 0 ? '+' : ''}{dp.stats.plus_minus}
+                  {dp.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({dp.wally_team})</span>}
+                </div>
+              </div>
+            ))}
           </div>
         )}
         
         {/* Best Goalie */}
-        {bestG && (
+        {bestGPlayers.length > 0 && (
           <div style={{
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '10px',
@@ -269,19 +307,23 @@ export default function CelebrationBanner() {
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
               🧤 Best Goaltender
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Flag code={bestG.country} size={18} />
-              <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{bestG.name}</span>
-            </div>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
-              {bestG.stats.wins ?? 0}W · {(bestG.stats.save_pct ?? 0).toFixed(3).replace(/^0/, '')} SV% · {bestG.stats.gp}GP
-              {bestG.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({bestG.wally_team})</span>}
-            </div>
+            {bestGPlayers.map((gp, i) => (
+              <div key={gp.name} style={{ marginTop: i > 0 ? '8px' : '0' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Flag code={gp.country} size={18} />
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{gp.name}</span>
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
+                  {gp.stats.wins ?? 0}W · {(gp.stats.save_pct ?? 0).toFixed(3).replace(/^0/, '')} SV% · {gp.stats.gp}GP
+                  {gp.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({gp.wally_team})</span>}
+                </div>
+              </div>
+            ))}
           </div>
         )}
         
         {/* Grittiest Player */}
-        {grittiest && (
+        {grittiestPlayers.length > 0 && (
           <div style={{
             background: 'rgba(255,255,255,0.05)',
             borderRadius: '10px',
@@ -291,14 +333,18 @@ export default function CelebrationBanner() {
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
               💪 Grittiest Player
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Flag code={grittiest.country} size={18} />
-              <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{grittiest.name}</span>
-            </div>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
-              {grittiest.stats.plus_minus > 0 ? '+' : ''}{grittiest.stats.plus_minus} · {grittiest.stats.pim} PIM · {grittiest.stats.gp}GP
-              {grittiest.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({grittiest.wally_team})</span>}
-            </div>
+            {grittiestPlayers.map((gp, i) => (
+              <div key={gp.name} style={{ marginTop: i > 0 ? '8px' : '0' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Flag code={gp.country} size={18} />
+                  <span style={{ color: '#fff', fontSize: '14px', fontWeight: 700 }}>{gp.name}</span>
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', marginTop: '4px' }}>
+                  {gp.stats.plus_minus > 0 ? '+' : ''}{gp.stats.plus_minus} · {gp.stats.pim} PIM · {gp.stats.gp}GP
+                  {gp.wally_team && <span style={{ color: 'rgba(255,215,0,0.6)', marginLeft: '6px' }}>({gp.wally_team})</span>}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
