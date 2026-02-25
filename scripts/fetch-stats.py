@@ -17,7 +17,7 @@ def strip_diacritics(s: str) -> str:
 # Configuration
 BASE_URL = "https://api-web.nhle.com/v1/gamecenter/{}/boxscore"
 USER_AGENT = "Mozilla/5.0"
-WORKSPACE_PATH = "/Users/cams_macmini/.openclaw/workspace/wally-cup"
+WORKSPACE_PATH = "/Users/cams_macmini/.openclaw/workspace/projects/009-wally-cup-olympics/wally-cup"
 ROSTERS_PATH = f"{WORKSPACE_PATH}/rosters.json"
 STANDINGS_PATH = f"{WORKSPACE_PATH}/site/public/data/standings.json"
 SNAPSHOTS_PATH = f"{WORKSPACE_PATH}/snapshots"
