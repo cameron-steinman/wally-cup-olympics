@@ -1,20 +1,5 @@
 {
-  "updated_at": "2026-02-22T17:10:21.036160Z",
-  "awards": {
-    "mvp": [
-      "Connor McDavid"
-    ],
-    "best_defenseman": [
-      "Zach Werenski",
-      "Quinn Hughes"
-    ],
-    "best_goaltender": [
-      "Connor Hellebuyck"
-    ],
-    "grittiest": [
-      "Tom Wilson"
-    ]
-  },
+  "updated_at": "2026-02-25T18:30:27.920361Z",
   "tournament_status": "complete",
   "schedule": {
     "games": [
@@ -388,7 +373,7 @@
       "next_game": null
     },
     "USA": {
-      "status": "eliminated",
+      "status": "active",
       "name": "United States",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
       "next_game": null
@@ -1175,6 +1160,71 @@
     },
     {
       "date": "2026-02-22",
+      "standings": [
+        {
+          "team": "Big Shooters",
+          "roto_points": 63,
+          "rank": 1
+        },
+        {
+          "team": "Johnny's Scrubbers",
+          "roto_points": 56.5,
+          "rank": 2
+        },
+        {
+          "team": "Gabe's Gangsters",
+          "roto_points": 47.5,
+          "rank": 3
+        },
+        {
+          "team": "Cam's Crunch",
+          "roto_points": 43.0,
+          "rank": 4
+        },
+        {
+          "team": "Mark's Mafia",
+          "roto_points": 42.0,
+          "rank": 5
+        },
+        {
+          "team": "Bardown",
+          "roto_points": 41.0,
+          "rank": 6
+        },
+        {
+          "team": "Ice Holes",
+          "roto_points": 41.0,
+          "rank": 7
+        },
+        {
+          "team": "Todd's Hitmen",
+          "roto_points": 39.0,
+          "rank": 8
+        },
+        {
+          "team": "Cross's Beavers",
+          "roto_points": 34.0,
+          "rank": 9
+        },
+        {
+          "team": "Owen's Otters",
+          "roto_points": 25.5,
+          "rank": 10
+        },
+        {
+          "team": "Gators",
+          "roto_points": 24.5,
+          "rank": 11
+        },
+        {
+          "team": "Willy's Warlocks",
+          "roto_points": 11.0,
+          "rank": 12
+        }
+      ]
+    },
+    {
+      "date": "2026-02-25",
       "standings": [
         {
           "team": "Big Shooters",
@@ -31919,8 +31969,8 @@
   ],
   "predictions": {
     "win_probabilities": {
-      "Big Shooters": 0.9838,
-      "Johnny's Scrubbers": 0.0162,
+      "Big Shooters": 0.9846,
+      "Johnny's Scrubbers": 0.0154,
       "Todd's Hitmen": 0.0,
       "Bardown": 0.0,
       "Cam's Crunch": 0.0,
@@ -31934,52 +31984,52 @@
     },
     "podium_probabilities": {
       "Big Shooters": 1.0,
-      "Johnny's Scrubbers": 0.979,
-      "Ice Holes": 0.0656,
-      "Gabe's Gangsters": 0.8272,
-      "Todd's Hitmen": 0.0492,
-      "Cam's Crunch": 0.0308,
-      "Bardown": 0.0432,
-      "Mark's Mafia": 0.005,
+      "Johnny's Scrubbers": 0.974,
+      "Gabe's Gangsters": 0.8284,
+      "Bardown": 0.041,
+      "Todd's Hitmen": 0.0576,
+      "Mark's Mafia": 0.0082,
+      "Cam's Crunch": 0.0294,
+      "Ice Holes": 0.0614,
       "Cross's Beavers": 0.0,
       "Gators": 0.0,
       "Owen's Otters": 0.0,
       "Willy's Warlocks": 0.0
     },
     "projected_points": {
-      "Big Shooters": 63.2347,
-      "Johnny's Scrubbers": 55.2174,
-      "Ice Holes": 42.5871,
-      "Gabe's Gangsters": 49.0558,
-      "Todd's Hitmen": 39.7134,
-      "Mark's Mafia": 39.6654,
-      "Cam's Crunch": 42.055,
-      "Bardown": 40.6691,
-      "Cross's Beavers": 33.7442,
-      "Owen's Otters": 26.8664,
-      "Gators": 24.4019,
-      "Willy's Warlocks": 10.7896
+      "Big Shooters": 63.1917,
+      "Johnny's Scrubbers": 55.0808,
+      "Gabe's Gangsters": 49.1595,
+      "Mark's Mafia": 39.5894,
+      "Cam's Crunch": 42.0655,
+      "Ice Holes": 42.613,
+      "Bardown": 40.6672,
+      "Todd's Hitmen": 39.8164,
+      "Cross's Beavers": 33.7382,
+      "Owen's Otters": 26.8069,
+      "Gators": 24.4783,
+      "Willy's Warlocks": 10.7931
     },
     "country_medal_odds": {
       "USA": {
-        "gold": 0.3994,
-        "silver": 0.3416,
-        "bronze": 0.2094
+        "gold": 0.3958,
+        "silver": 0.343,
+        "bronze": 0.2118
       },
       "CAN": {
-        "gold": 0.3476,
-        "silver": 0.343,
-        "bronze": 0.248
+        "gold": 0.352,
+        "silver": 0.3238,
+        "bronze": 0.263
       },
       "FIN": {
-        "gold": 0.2032,
-        "silver": 0.242,
-        "bronze": 0.3988
+        "gold": 0.2008,
+        "silver": 0.2596,
+        "bronze": 0.387
       },
       "SVK": {
-        "gold": 0.0498,
-        "silver": 0.0734,
-        "bronze": 0.1438
+        "gold": 0.0514,
+        "silver": 0.0736,
+        "bronze": 0.1382
       },
       "SWE": {
         "gold": 0.0,
